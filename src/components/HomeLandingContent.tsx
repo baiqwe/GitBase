@@ -52,13 +52,14 @@ const howToHomeCopy = {
 export function HomeLandingContent({ locale, categories, content }: HomeLandingContentProps) {
   const faqJsonLd = buildFaqJsonLd({ faqs: content.faqs })
   const howTo = howToHomeCopy[locale]
+  const ui = trustPageCopy[locale].ui
 
   return (
     <>
       <div className="container mx-auto space-y-10 px-4 pb-20 md:px-6">
         <section className="grid gap-8 rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)] lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Why this homepage exists</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.whyThisExists}</p>
             <h2 className="max-w-3xl text-4xl leading-tight text-slate-950 md:text-5xl">{content.introTitle}</h2>
             <p className="max-w-3xl text-base leading-8 text-slate-600">{content.introBody}</p>
           </div>
@@ -73,7 +74,7 @@ export function HomeLandingContent({ locale, categories, content }: HomeLandingC
         </section>
 
         <section className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">How to use</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.howToLabel}</p>
           <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{howTo.title}</h2>
           <ol className="mt-6 space-y-4">
             {howTo.steps.map((step, index) => (
@@ -89,7 +90,7 @@ export function HomeLandingContent({ locale, categories, content }: HomeLandingC
 
         <section className="space-y-5">
           <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Featured categories</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.featuredCategoriesLabel}</p>
             <h2 className="text-3xl text-slate-950 md:text-4xl">{content.categoryTitle}</h2>
             <p className="max-w-3xl text-base leading-7 text-slate-600">{content.categoryLead}</p>
           </div>
@@ -102,12 +103,12 @@ export function HomeLandingContent({ locale, categories, content }: HomeLandingC
               >
                 <div className="flex h-full flex-col justify-between rounded-[1.7rem] bg-white/90 p-6 backdrop-blur">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">Category</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-400">{ui.categoryLabel}</p>
                     <h3 className="mt-3 text-2xl text-slate-950">{category.translation.name}</h3>
                     <p className="mt-3 text-sm leading-6 text-slate-600">{category.translation.description}</p>
                   </div>
                   <p className="mt-8 text-sm font-medium text-slate-900 transition group-hover:translate-x-1">
-                    Open generator
+                    {ui.openGenerator}
                   </p>
                 </div>
               </Link>
@@ -117,7 +118,7 @@ export function HomeLandingContent({ locale, categories, content }: HomeLandingC
 
         <section className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="rounded-[2rem] border border-black/5 bg-slate-950 p-8 text-white shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">Use cases</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">{ui.useCasesLabel}</p>
             <h2 className="mt-3 text-3xl md:text-4xl">{content.useCasesTitle}</h2>
             <div className="mt-6 flex flex-wrap gap-3">
               {content.useCases.map((useCase) => (
@@ -132,7 +133,7 @@ export function HomeLandingContent({ locale, categories, content }: HomeLandingC
           </div>
 
           <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">FAQ</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.faqLabel}</p>
             <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{content.faqTitle}</h2>
             <div className="mt-6 space-y-4">
               {content.faqs.map((faq) => (

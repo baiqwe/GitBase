@@ -15,6 +15,10 @@ export const metadata: Metadata = createMetadata({
 
 export default function Home() {
   const categories = getLocalizedCategories('en')
+  const items = getLocalizedObjects('en')
+  const featuredItems = ['animal-elephant', 'house-kettle', 'food-apple']
+    .map((id) => items.find((item) => item.id === id))
+    .filter((item): item is NonNullable<typeof item> => Boolean(item))
 
   return (
     <>
@@ -29,7 +33,9 @@ export default function Home() {
         bulkTitle="Generate a batch and copy it"
         bulkDescription="Need ten or a hundred prompt ideas at once? Bulk mode creates a quick list you can copy into docs, slides, or worksheets."
         categories={categories}
-        items={getLocalizedObjects('en')}
+        items={items}
+        featuredItems={featuredItems}
+        defaultVisualCount={4}
       />
       <HomeLandingContent locale="en" categories={categories} content={enDict.home.landing} />
     </>

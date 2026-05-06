@@ -14,6 +14,8 @@
 /out/
 .open-next/
 .next.stale/
+.next.broken-*/
+.next.corrupt-*/
 
 # production
 /build

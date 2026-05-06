@@ -2,10 +2,13 @@
 
 import { useMemo, useState } from 'react'
 import { Shuffle } from 'lucide-react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+import type { Locale } from '@/lib/i18n-config'
 import type { LocalizedObject } from '@/lib/objects'
+import { trustPageCopy } from '@/lib/site-copy'
 
 function pickRandomItems<T>(items: T[], count: number, allowDuplicates: boolean) {
   if (allowDuplicates) {
@@ -23,15 +26,32 @@ function pickRandomItems<T>(items: T[], count: number, allowDuplicates: boolean)
 }
 
 interface VisualGeneratorProps {
+  locale: Locale
   items: LocalizedObject[]
   title: string
   description: string
+  featuredItems?: LocalizedObject[]
+  defaultCount?: number
 }
 
-export function VisualGenerator({ items, title, description }: VisualGeneratorProps) {
-  const [countInput, setCountInput] = useState('1')
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void
+  }
+}
+
+export function VisualGenerator({
+  locale,
+  items,
+  title,
+  description,
+  featuredItems,
+  defaultCount = 3,
+}: VisualGeneratorProps) {
+  const ui = trustPageCopy[locale].ui
+  const [countInput, setCountInput] = useState(String(defaultCount))
   const [allowDuplicates, setAllowDuplicates] = useState(true)
-  const [appliedCount, setAppliedCount] = useState(1)
+  const [appliedCount, setAppliedCount] = useState(defaultCount)
   const [appliedAllowDuplicates, setAppliedAllowDuplicates] = useState(true)
   const [seed, setSeed] = useState(1)
   const count = Math.max(1, Math.min(100, Number.parseInt(countInput || '1', 10) || 1))
@@ -39,74 +59,127 @@ export function VisualGenerator({ items, title, description }: VisualGeneratorPr
 
   const selection = useMemo(() => {
     void seed
+    if (seed === 1 && featuredItems?.length) {
+      const seededItems = featuredItems.slice(0, Math.min(appliedCount, featuredItems.length))
+
+      if (seededItems.length >= appliedCount) {
+        return seededItems
+      }
+
+      const missingCount = appliedCount - seededItems.length
+      const remainingPool = items.filter((item) => !seededItems.some((featured) => featured.id === item.id))
+      return [...seededItems, ...pickRandomItems(remainingPool, missingCount, appliedAllowDuplicates)]
+    }
     return pickRandomItems(items, appliedCount, appliedAllowDuplicates)
-  }, [appliedAllowDuplicates, appliedCount, items, seed])
+  }, [appliedAllowDuplicates, appliedCount, featuredItems, items, seed])
 
   function handleGenerate() {
     setAppliedCount(count)
     setAppliedAllowDuplicates(allowDuplicates)
     setSeed((current) => current + 1)
+    window.gtag?.('event', 'generate_visual', {
+      event_category: 'engagement',
+      event_label: locale,
+      count,
+      allow_repeats: allowDuplicates,
+    })
   }
 
   return (
-    <section className="space-y-6">
-      <div className="flex flex-col gap-4 rounded-[2rem] border border-black/10 bg-white/80 p-6 shadow-[0_18px_80px_rgba(15,23,42,0.08)] backdrop-blur md:flex-row md:items-end md:justify-between">
-        <div className="space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Visual mode</p>
-          <h2 className="text-2xl font-semibold text-slate-900">{title}</h2>
-          <p className="max-w-2xl text-sm leading-6 text-slate-600">{description}</p>
-        </div>
-        <div className="flex flex-col items-start gap-3 md:items-end">
-          <div className="flex flex-wrap items-center gap-3">
-            <label className="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-600">
-              <span>Count</span>
-              <Input
-                type="number"
-                min={1}
-                max={100}
-                value={countInput}
-                onChange={(event) => setCountInput(event.target.value)}
-                className="h-7 w-20 border-0 bg-transparent p-0 text-right shadow-none focus-visible:ring-0"
-              />
-            </label>
-            <label className="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-600">
-              <input
-                type="checkbox"
-                checked={allowDuplicates}
-                onChange={(event) => setAllowDuplicates(event.target.checked)}
-                className="h-4 w-4 rounded border-slate-300 text-slate-900 focus:ring-slate-900"
-              />
-              <span>Allow repeats</span>
-            </label>
+    <section id="visual-generator" className="scroll-mt-24 space-y-5">
+      <div className="sticky top-16 z-20 rounded-[1.5rem] border border-black/10 bg-white/88 p-3 shadow-[0_18px_60px_rgba(15,23,42,0.08)] backdrop-blur">
+        <div className="flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
+          <div className="min-w-0">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-slate-500">{ui.visualMode}</p>
+            <div className="mt-1 flex flex-col gap-1 md:flex-row md:items-baseline md:gap-3">
+              <h2 className="text-base font-semibold text-slate-950 md:text-lg">{title}</h2>
+              <p className="max-w-2xl text-xs leading-5 text-slate-500 md:text-sm">{description}</p>
+            </div>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-col gap-3 xl:items-end">
+            <div className="flex flex-wrap items-center gap-2">
+              <label className="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-600">
+                <span>{ui.count}</span>
+                <Input
+                  type="number"
+                  min={1}
+                  max={100}
+                  value={countInput}
+                  onChange={(event) => setCountInput(event.target.value)}
+                  className="h-7 w-16 border-0 bg-transparent p-0 text-right shadow-none focus-visible:ring-0"
+                />
+              </label>
+              <label className="flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-600">
+                <input
+                  type="checkbox"
+                  checked={allowDuplicates}
+                  onChange={(event) => setAllowDuplicates(event.target.checked)}
+                  className="h-4 w-4 rounded border-slate-300 text-slate-900 focus:ring-slate-900"
+                />
+                <span>{ui.allowRepeats}</span>
+              </label>
+              <Button className="gap-2 rounded-full px-4 py-5 text-sm md:px-5" onClick={handleGenerate}>
+                <Shuffle className="h-4 w-4" />
+                {seed === 1 ? ui.generateCta : ui.generateAgainCta.replace('{count}', String(count))}
+              </Button>
+            </div>
             {!allowDuplicates && count > items.length ? (
-              <p className="text-xs text-slate-500">Limited to {items.length} unique items on this page.</p>
+              <p className="text-xs text-slate-500">
+                {ui.limitedTo.replace('{count}', String(items.length))}
+              </p>
             ) : null}
-            <Button className="gap-2 rounded-full px-5" onClick={handleGenerate}>
-              <Shuffle className="h-4 w-4" />
-              Generate
-            </Button>
           </div>
         </div>
       </div>
 
-      <div className={`grid gap-4 ${visibleCount === 1 ? 'md:grid-cols-1' : visibleCount === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
-        {selection.map((item) => (
-          <Card key={item.id} className="overflow-hidden rounded-[1.75rem] border-white/80 bg-white/90 shadow-[0_12px_40px_rgba(15,23,42,0.08)]">
-            <CardHeader className="space-y-4">
-              <div className="flex h-24 w-24 items-center justify-center rounded-[1.5rem] bg-gradient-to-br from-slate-100 via-white to-slate-200 text-5xl shadow-inner">
-                {item.icon}
-              </div>
-              <div>
-                <CardTitle className="text-2xl text-slate-900">{item.translation.name}</CardTitle>
-                <CardDescription className="mt-2 text-sm leading-6 text-slate-600">
-                  {item.translation.description}
-                </CardDescription>
-              </div>
+      <div
+        className={`grid gap-2.5 md:gap-3 ${
+          visibleCount === 1
+            ? 'grid-cols-1'
+            : visibleCount === 2
+              ? 'grid-cols-1 md:grid-cols-2'
+              : visibleCount === 3
+                ? 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-3'
+                : visibleCount === 4
+                  ? 'grid-cols-2 xl:grid-cols-4'
+                  : visibleCount <= 6
+                    ? 'grid-cols-2 md:grid-cols-3 xl:grid-cols-5'
+                    : 'grid-cols-2 md:grid-cols-4 xl:grid-cols-6'
+        }`}
+      >
+        {selection.map((item, index) => (
+          <Card
+            key={`${item.id}-${seed}-${index}`}
+            className="overflow-hidden rounded-[1.25rem] border-white/80 bg-white/90 shadow-[0_10px_32px_rgba(15,23,42,0.08)] transition duration-200 hover:-translate-y-1"
+          >
+            <CardHeader className="space-y-0 p-0">
+              {item.image ? (
+                <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-amber-50 via-white to-teal-50">
+                  <Image
+                    src={item.image}
+                    alt={item.translation.name}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 20vw"
+                    className="object-cover"
+                    priority={seed === 1 && index < 3}
+                  />
+                </div>
+              ) : (
+                <div className="flex aspect-square items-center justify-center bg-gradient-to-br from-amber-50 via-white to-teal-50 text-6xl shadow-inner">
+                  {item.icon}
+                </div>
+              )}
             </CardHeader>
-            <CardContent>
-              <p className="text-xs font-medium uppercase tracking-[0.25em] text-slate-400">{item.category}</p>
+            <CardContent className="space-y-2 px-3.5 py-3.5">
+              <div className="flex items-center justify-between gap-3">
+                <CardTitle className="text-base leading-tight text-slate-950 md:text-lg">{item.translation.name}</CardTitle>
+                <span className="rounded-full border border-slate-200 bg-slate-50 px-2 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-slate-500">
+                  {item.category}
+                </span>
+              </div>
+              <CardDescription className="line-clamp-2 text-xs leading-5 text-slate-600 md:text-sm">
+                {item.translation.description}
+              </CardDescription>
             </CardContent>
           </Card>
         ))}

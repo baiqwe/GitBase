@@ -42,6 +42,7 @@ export type ObjectRecord = {
   id: string
   category: string
   icon: string
+  image?: string
   i18n: Record<Locale, LocalizedText>
 }
 
@@ -74,6 +75,11 @@ export function getObjectsByCategory(slug: string) {
   return getObjects().filter((item) => item.category === slug)
 }
 
+export function getObjectsByCategories(slugs: string[]) {
+  const slugSet = new Set(slugs)
+  return getObjects().filter((item) => slugSet.has(item.category))
+}
+
 export function localizeCategory(category: CategoryRecord, locale: Locale): LocalizedCategory {
   return {
     ...category,
@@ -96,4 +102,8 @@ export function getLocalizedCategories(locale: Locale) {
 export function getLocalizedObjects(locale: Locale, categorySlug?: string) {
   const records = categorySlug ? getObjectsByCategory(categorySlug) : getObjects()
   return records.map((item) => localizeObject(item, locale))
+}
+
+export function getLocalizedObjectsByCategories(locale: Locale, categorySlugs: string[]) {
+  return getObjectsByCategories(categorySlugs).map((item) => localizeObject(item, locale))
 }

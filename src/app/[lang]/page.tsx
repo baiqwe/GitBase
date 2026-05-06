@@ -47,6 +47,7 @@ export default async function Home({ params }: LocalizedHomePageProps) {
         bulkDescription={dict.home.bulkDescription}
         categories={categories}
         items={getLocalizedObjects(locale)}
+        defaultVisualCount={4}
       />
       <HomeLandingContent locale={locale} categories={categories} content={dict.home.landing} />
     </>

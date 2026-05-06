@@ -50,6 +50,16 @@ export async function Footer() {
                 Random object generator
               </Link>
             </li>
+            <li>
+              <Link href={getLocalizedPath(locale, '/random-object-to-draw')} className="text-base text-slate-500 hover:text-slate-900">
+                {ui.drawPromptsLink}
+              </Link>
+            </li>
+            <li>
+              <Link href={getLocalizedPath(locale, '/random-objects-for-kids')} className="text-base text-slate-500 hover:text-slate-900">
+                {ui.kidsObjectsLink}
+              </Link>
+            </li>
             {categories.map((category) => (
               <li key={category.id}>
                 <Link href={getLocalizedPath(locale, category.href)} className="text-base text-slate-500 hover:text-slate-900">
@@ -65,11 +75,6 @@ export async function Footer() {
             <li>
               <a href="https://github.com/baiqwe/object" target="_blank" rel="noreferrer" className="text-base text-slate-500 hover:text-slate-900">
                 GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://vercel.com/" target="_blank" rel="noreferrer" className="text-base text-slate-500 hover:text-slate-900">
-                Vercel-ready
               </a>
             </li>
           </ul>

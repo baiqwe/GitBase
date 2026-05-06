@@ -37,6 +37,34 @@ export const trustPageCopy: Record<
       featureRandomValue: string
       featureCopyTitle: string
       featureCopyBody: string
+      visualMode: string
+      bulkMode: string
+      count: string
+      allowRepeats: string
+      limitedTo: string
+      generateCta: string
+      generateAgainCta: string
+      jumpToCards: string
+      jumpToList: string
+      refreshList: string
+      copyList: string
+      copied: string
+      object: string
+      descriptionLabel: string
+      bestFor: string
+      chipDrawing: string
+      chipClassroom: string
+      chipBrainstorm: string
+      chipGames: string
+      whyThisExists: string
+      howToLabel: string
+      featuredCategoriesLabel: string
+      categoryLabel: string
+      openGenerator: string
+      useCasesLabel: string
+      faqLabel: string
+      drawPromptsLink: string
+      kidsObjectsLink: string
     }
   }
 > = {
@@ -90,6 +118,34 @@ export const trustPageCopy: Record<
       featureRandomValue: '1 click',
       featureCopyTitle: 'Copy-ready lists',
       featureCopyBody: 'Create a clean batch on the current page and copy it fast for docs, worksheets, or brainstorming.',
+      visualMode: 'Visual mode',
+      bulkMode: 'Bulk mode',
+      count: 'Count',
+      allowRepeats: 'Allow repeats',
+      limitedTo: 'Limited to {count} unique items on this page.',
+      generateCta: 'Generate now',
+      generateAgainCta: 'Show {count} new objects',
+      jumpToCards: 'Jump to cards',
+      jumpToList: 'Open bulk list',
+      refreshList: 'Refresh list',
+      copyList: 'Copy list',
+      copied: 'Copied',
+      object: 'Object',
+      descriptionLabel: 'Description',
+      bestFor: 'Best for',
+      chipDrawing: 'Drawing prompts',
+      chipClassroom: 'Classroom warmups',
+      chipBrainstorm: 'Brainstorming',
+      chipGames: 'Party games',
+      whyThisExists: 'Why this homepage exists',
+      howToLabel: 'How to use',
+      featuredCategoriesLabel: 'Featured categories',
+      categoryLabel: 'Category',
+      openGenerator: 'Open generator',
+      useCasesLabel: 'Use cases',
+      faqLabel: 'FAQ',
+      drawPromptsLink: 'Random object to draw',
+      kidsObjectsLink: 'Random objects for kids',
     },
   },
   zh: {
@@ -142,6 +198,34 @@ export const trustPageCopy: Record<
       featureRandomValue: '一键',
       featureCopyTitle: '可复制清单',
       featureCopyBody: '在当前页面快速生成一批结果，并直接复制到文档、教案、表格或脑暴清单里。',
+      visualMode: '卡片模式',
+      bulkMode: '批量模式',
+      count: '数量',
+      allowRepeats: '允许重复',
+      limitedTo: '当前页面最多可展示 {count} 个不重复结果。',
+      generateCta: '立即生成',
+      generateAgainCta: '再来 {count} 个新结果',
+      jumpToCards: '查看卡片结果',
+      jumpToList: '打开批量列表',
+      refreshList: '刷新列表',
+      copyList: '复制列表',
+      copied: '已复制',
+      object: '物品',
+      descriptionLabel: '描述',
+      bestFor: '适合用于',
+      chipDrawing: '绘画灵感',
+      chipClassroom: '课堂热身',
+      chipBrainstorm: '头脑风暴',
+      chipGames: '小游戏',
+      whyThisExists: '为什么需要这个首页',
+      howToLabel: '如何使用',
+      featuredCategoriesLabel: '精选分类',
+      categoryLabel: '分类',
+      openGenerator: '打开生成器',
+      useCasesLabel: '使用场景',
+      faqLabel: '常见问题',
+      drawPromptsLink: '随机绘画物品',
+      kidsObjectsLink: '适合孩子的随机物品',
     },
   },
   ja: {
@@ -194,6 +278,34 @@ export const trustPageCopy: Record<
       featureRandomValue: '1クリック',
       featureCopyTitle: 'コピーしやすい一覧',
       featureCopyBody: 'このページ内で複数の結果をすばやく作成し、ドキュメントやワークシートへそのままコピーできます。',
+      visualMode: 'カード表示',
+      bulkMode: '一括表示',
+      count: '数',
+      allowRepeats: '重複を許可',
+      limitedTo: 'このページでは重複なしで最大 {count} 件まで表示できます。',
+      generateCta: '今すぐ生成',
+      generateAgainCta: '{count} 件の新しい結果を表示',
+      jumpToCards: 'カードを見る',
+      jumpToList: '一覧を見る',
+      refreshList: '一覧を更新',
+      copyList: '一覧をコピー',
+      copied: 'コピー済み',
+      object: '項目',
+      descriptionLabel: '説明',
+      bestFor: 'おすすめ用途',
+      chipDrawing: '描画のお題',
+      chipClassroom: '授業の導入',
+      chipBrainstorm: '発想整理',
+      chipGames: 'パーティーゲーム',
+      whyThisExists: 'このホームページの役割',
+      howToLabel: '使い方',
+      featuredCategoriesLabel: '注目カテゴリ',
+      categoryLabel: 'カテゴリ',
+      openGenerator: 'ジェネレーターを開く',
+      useCasesLabel: '活用シーン',
+      faqLabel: 'FAQ',
+      drawPromptsLink: '描くためのランダムオブジェクト',
+      kidsObjectsLink: '子ども向けランダムオブジェクト',
     },
   },
 }
