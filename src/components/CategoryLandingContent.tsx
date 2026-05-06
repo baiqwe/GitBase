@@ -57,19 +57,20 @@ export function CategoryLandingContent({
 }: CategoryLandingContentProps) {
   const faqJsonLd = buildFaqJsonLd({ faqs: content.faqs })
   const howTo = howToCopy[locale](categoryName)
+  const ui = trustPageCopy[locale].ui
 
   return (
     <>
       <section className="container mx-auto space-y-8 px-4 pb-20 md:px-6">
         <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Category guide</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.whatLabel}</p>
           <h2 className="mt-3 text-4xl leading-tight text-slate-950 md:text-5xl">{content.introTitle}</h2>
           <p className="mt-4 max-w-4xl text-base leading-8 text-slate-600">{content.introBody}</p>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr]">
           <div className="rounded-[2rem] border border-black/5 bg-slate-950 p-8 text-white shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">Use cases</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-white/60">{ui.useCasesLabel}</p>
             <h2 className="mt-3 text-3xl md:text-4xl">{content.useCasesTitle}</h2>
             <div className="mt-6 flex flex-wrap gap-3">
               {content.useCases.map((useCase) => (
@@ -81,7 +82,7 @@ export function CategoryLandingContent({
           </div>
 
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Why this page is different</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.whyLabel}</p>
             <h2 className="text-3xl text-slate-950 md:text-4xl">{content.reasonsTitle}</h2>
             <div className="grid gap-4">
               {content.reasons.map((reason) => (
@@ -95,7 +96,7 @@ export function CategoryLandingContent({
         </div>
 
         <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">How to use</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.howToLabel}</p>
           <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{howTo.heading}</h2>
           <ol className="mt-6 space-y-4">
             {howTo.steps.map((step, index) => (
@@ -112,7 +113,7 @@ export function CategoryLandingContent({
         <RelatedGenerators locale={locale} categories={categories} currentSlug={currentSlug} />
 
         <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">FAQ</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.faqLabel}</p>
           <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{content.faqTitle}</h2>
           <div className="mt-6 space-y-4">
             {content.faqs.map((faq) => (

@@ -1,6 +1,6 @@
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import type { Locale } from '@/lib/i18n-config'
-import { getLocalizedPath } from '@/lib/seo'
+import { siteConfig } from '@/lib/site-config'
 import { trustPageCopy } from '@/lib/site-copy'
 
 interface ContentPageShellProps {
@@ -33,6 +33,25 @@ export function ContentPageShell({ locale, slug }: ContentPageShellProps) {
               {paragraph}
             </p>
           ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap gap-3">
+          <a
+            href={siteConfig.repositoryUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-700 transition hover:border-slate-300 hover:bg-white"
+          >
+            {ui.sourceCode}
+          </a>
+          <a
+            href={siteConfig.feedbackUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-700 transition hover:border-slate-300 hover:bg-white"
+          >
+            {ui.reportIssue}
+          </a>
         </div>
       </article>
     </div>

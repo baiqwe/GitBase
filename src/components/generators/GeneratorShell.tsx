@@ -20,6 +20,7 @@ interface GeneratorShellProps {
   categories: LocalizedCategory[]
   items: LocalizedObject[]
   featuredItems?: LocalizedObject[]
+  breadcrumbItems?: Array<{ label: string; href: string }>
   activeCategorySlug?: string
   defaultVisualCount?: number
 }
@@ -37,6 +38,7 @@ export function GeneratorShell({
   categories,
   items,
   featuredItems,
+  breadcrumbItems,
   activeCategorySlug,
   defaultVisualCount,
 }: GeneratorShellProps) {
@@ -47,7 +49,7 @@ export function GeneratorShell({
     path,
   })
 
-  const breadcrumbItems = activeCategorySlug
+  const fallbackBreadcrumbItems = activeCategorySlug
     ? [
         { label: trustPageCopy[locale].ui.breadcrumbHome, href: '/' },
         { label: title, href: path },
@@ -59,7 +61,9 @@ export function GeneratorShell({
     <div className="relative overflow-hidden">
       <div className="absolute inset-x-0 top-0 -z-10 h-[34rem] bg-[radial-gradient(circle_at_top_left,_rgba(251,191,36,0.24),_transparent_35%),radial-gradient(circle_at_top_right,_rgba(45,212,191,0.25),_transparent_38%),linear-gradient(180deg,_#fffaf0_0%,_#ffffff_58%)]" />
       <div className="container mx-auto space-y-7 px-4 py-8 md:px-6 md:py-10">
-        {breadcrumbItems ? <Breadcrumbs locale={locale} items={breadcrumbItems} /> : null}
+        {(breadcrumbItems ?? fallbackBreadcrumbItems) ? (
+          <Breadcrumbs locale={locale} items={(breadcrumbItems ?? fallbackBreadcrumbItems)!} />
+        ) : null}
 
         <section className="space-y-4">
           <div className="space-y-3">

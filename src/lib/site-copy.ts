@@ -57,14 +57,19 @@ export const trustPageCopy: Record<
       chipBrainstorm: string
       chipGames: string
       whyThisExists: string
+      whatLabel: string
+      whyLabel: string
       howToLabel: string
       featuredCategoriesLabel: string
       categoryLabel: string
       openGenerator: string
       useCasesLabel: string
       faqLabel: string
+      internalLinksLabel: string
       drawPromptsLink: string
       kidsObjectsLink: string
+      sourceCode: string
+      reportIssue: string
     }
   }
 > = {
@@ -75,9 +80,10 @@ export const trustPageCopy: Record<
         'Learn who made Random Object Generator, why it exists, and how it helps teachers, writers, artists, and facilitators find fast prompt ideas.',
       eyebrow: 'About this project',
       body: [
-        'Random Object Generator is an independent tool built to make prompt generation feel more useful, visual, and reusable than the average random noun site.',
-        'The project exists for people who need fast creative input without friction: teachers planning classroom warmups, artists looking for drawing prompts, facilitators running icebreakers, and writers who need a quick object to start from.',
-        'Our goal is simple. Build a small but trustworthy multilingual utility site that is easy to understand, quick to use, and clear about what it offers.'
+        'Random Object Generator is an independent utility site built to make prompt generation feel more useful, more visual, and more reusable than the average random noun page. The project is maintained as a lightweight public web tool rather than a closed product with a sign-in wall, which is why the core generator is available immediately on the homepage and on category-specific pages.',
+        'The site is designed for people who need fast creative input without friction: teachers planning classroom warmups, artists looking for drawing prompts, facilitators running icebreakers, language tutors preparing speaking rounds, and writers who need a quick object to start from. Instead of burying the result behind forms or content gates, the product tries to show the utility immediately and let people move from idea to activity in seconds.',
+        'From an operational perspective, the site currently runs on Cloudflare infrastructure and uses Google Analytics 4 to understand which pages are being used, which generators are clicked, and where the experience needs work. The goal is not to collect unnecessary personal data, but to keep the product stable, measure usefulness, and improve the information architecture over time.',
+        'If you need to verify how the site is built or want to suggest improvements, the source repository and issue tracker are the primary public contact points for the project. That makes the site easier to audit, easier to improve, and clearer about who is responsible for its current direction.'
       ],
     },
     privacy: {
@@ -86,9 +92,10 @@ export const trustPageCopy: Record<
         'Read the privacy policy for Random Object Generator, including how basic analytics, logs, and voluntary interactions may be handled.',
       eyebrow: 'Privacy',
       body: [
-        'Random Object Generator is designed as a lightweight public utility. We do not require an account to use the core generator and we do not ask for unnecessary personal information.',
-        'Like most websites, basic server logs, anonymous analytics, and performance data may be collected to keep the service stable, improve usability, and understand which pages are being used.',
-        'If third-party services such as hosting, analytics, or advertising are used in the future, they may process limited technical data according to their own policies. This page should be treated as the source of truth for how the site approaches privacy.'
+        'Random Object Generator is designed as a lightweight public utility. You do not need an account to use the core generator, and the site does not intentionally ask for unnecessary personal information in order to show random object results.',
+        'Like most websites, the service may collect basic technical data such as server logs, page requests, device and browser information, referrer data, and anonymous usage events. At the time of writing, the product uses Cloudflare for delivery and Google Analytics 4 for basic measurement, which helps the project understand page performance, click behavior, and which pages are actually useful to visitors.',
+        'The purpose of this data handling is operational: keep the service stable, improve page quality, measure feature adoption, and identify which search-oriented pages satisfy user intent. The site is not designed as a personal profile system, and the core generator can be used without creating an account or providing a name.',
+        'If the site later introduces additional third-party services such as advertising, email capture, or richer analytics, this page should be updated so the policy reflects the live production setup. For questions, corrections, or privacy-related concerns, the public repository issue tracker is currently the clearest contact route.'
       ],
     },
     terms: {
@@ -97,9 +104,10 @@ export const trustPageCopy: Record<
         'Review the usage terms for Random Object Generator, including basic limitations, permitted use, and content ownership expectations.',
       eyebrow: 'Terms',
       body: [
-        'Random Object Generator is provided as a free online utility. You may use the site for personal, educational, and general creative purposes.',
-        'You agree not to abuse the service, automate excessive requests, attempt to disrupt availability, or misuse any content in a way that harms the project or other users.',
-        'We may update, remove, or refine features at any time as the product evolves. Continued use of the site means you accept the current version of these terms.'
+        'Random Object Generator is provided as a free online utility for personal, educational, workshop, and general creative use. The purpose of the product is to help people generate object prompts quickly, not to restrict access behind a paid wall for the core experience.',
+        'You agree not to abuse the service, automate excessive requests in ways that damage site stability, attempt to interfere with availability, or reuse the site in a way that harms the project or other users. The content and interface may change as the object pool, intent pages, and multilingual support continue to evolve.',
+        'The project may add, remove, or refine features at any time, including category pages, structured content, analytics, or visual assets. Continued use of the site means you accept the live version of the product and these terms as they are presented on the site.',
+        'If you discover a factual issue, a policy mismatch, or a technical bug that affects trust or usability, the recommended route today is to report it through the public project issue tracker so it can be reviewed and resolved transparently.'
       ],
     },
     ui: {
@@ -138,14 +146,19 @@ export const trustPageCopy: Record<
       chipBrainstorm: 'Brainstorming',
       chipGames: 'Party games',
       whyThisExists: 'Why this homepage exists',
+      whatLabel: 'What',
+      whyLabel: 'Why',
       howToLabel: 'How to use',
       featuredCategoriesLabel: 'Featured categories',
       categoryLabel: 'Category',
       openGenerator: 'Open generator',
       useCasesLabel: 'Use cases',
       faqLabel: 'FAQ',
+      internalLinksLabel: 'Internal links',
       drawPromptsLink: 'Random object to draw',
       kidsObjectsLink: 'Random objects for kids',
+      sourceCode: 'Source code',
+      reportIssue: 'Report an issue',
     },
   },
   zh: {
@@ -155,9 +168,10 @@ export const trustPageCopy: Record<
         '了解这个网站是谁做的、为什么要做，以及它如何帮助老师、写作者、画师和活动组织者快速获得灵感。',
       eyebrow: '关于这个项目',
       body: [
-        'Random Object Generator 是一个由独立开发者打造的小型工具站，目标是把随机提示词做得比普通随机名词网站更直观、更好用。',
-        '这个项目主要服务于那些需要快速灵感输入的人，比如准备课堂热身的老师、寻找绘画提示的画师、组织破冰活动的主持人，以及需要一个起点的写作者。',
-        '我们的目标很简单：做一个可信、轻量、多语言的实用网站，让用户一眼看懂、打开即用，并且清楚知道这个产品为什么存在。'
+        'Random Object Generator 是一个由独立开发者维护的小型工具站，目标是把随机提示词做得比普通随机名词网站更直观、更好用、更容易复用。它不是一个需要先登录才能使用的封闭产品，而是一个尽量降低摩擦、打开即可生成结果的公开工具。',
+        '这个项目主要服务于那些需要快速灵感输入的人，比如准备课堂热身的老师、寻找绘画提示的画师、组织破冰活动的主持人、做语言训练的老师，以及需要一个起点的写作者。相比只吐出一个词的工具，这个站点更强调视觉化结果、批量复制能力和更清晰的分类结构。',
+        '从运行方式来看，站点目前部署在 Cloudflare 环境中，并接入 Google Analytics 4 来观察页面访问、按钮点击和使用行为。这样做的目的不是采集多余信息，而是为了让产品更稳定，判断哪些页面真的满足用户意图，并持续优化站点结构。',
+        '如果你想确认站点是如何建设的，或者想反馈问题、提出改进建议，当前最明确的公开联系入口是项目源码仓库和 issue 列表。对一个工具站来说，明确的责任主体和公开的反馈通道，本身也是 EEAT 的一部分。'
       ],
     },
     privacy: {
@@ -166,9 +180,10 @@ export const trustPageCopy: Record<
         '查看 Random Object Generator 的隐私政策，包括基础日志、匿名统计以及必要的技术数据处理方式。',
       eyebrow: '隐私',
       body: [
-        'Random Object Generator 是一个轻量级公开工具，核心生成器不需要注册，也不会主动索取不必要的个人信息。',
-        '和大多数网站一样，为了保障稳定性、改进体验以及了解页面使用情况，系统可能会记录基础日志、匿名统计或性能数据。',
-        '如果未来接入第三方托管、统计或广告服务，这些服务可能会按照各自政策处理有限的技术信息。本页面将作为站点隐私策略的主要说明。'
+        'Random Object Generator 是一个轻量级公开工具，核心生成器不需要注册，也不会为了展示随机结果而主动索取不必要的个人信息。',
+        '和大多数网站一样，为了保障稳定性、改进体验以及了解页面使用情况，系统可能会记录基础技术数据，例如服务日志、页面请求、设备与浏览器信息、来源信息以及匿名化的交互事件。当前站点部署在 Cloudflare 环境中，并使用 Google Analytics 4 做基础访问与行为统计。',
+        '这些技术数据的用途主要是运维和改进产品，例如判断页面是否正常工作、哪些页面点击率更高、哪些生成器被真正使用，以及哪些专题页需要继续优化，而不是建立用户画像或要求用户先交出身份信息。',
+        '如果未来站点接入更多第三方服务，例如广告、邮件订阅或更复杂的统计方案，本页面应同步更新为真实运行状态。若你认为隐私描述与实际行为不一致，当前推荐通过公开 issue 入口提出反馈。'
       ],
     },
     terms: {
@@ -177,9 +192,10 @@ export const trustPageCopy: Record<
         '查看 Random Object Generator 的使用条款，包括可接受使用方式、限制以及功能变更说明。',
       eyebrow: '条款',
       body: [
-        'Random Object Generator 目前作为免费的在线工具提供服务，你可以将其用于个人、教育和一般创意场景。',
-        '你不得滥用服务、进行过量自动请求、影响网站稳定性，或以损害项目和其他用户的方式使用网站内容。',
-        '随着产品迭代，我们可能会随时调整、删除或新增功能。继续使用网站即表示你接受当前版本的条款。'
+        'Random Object Generator 目前作为免费的在线工具提供服务，你可以将其用于个人、教育、活动组织和一般创意场景。当前产品定位是一个公开的随机灵感工具，而不是对核心能力设置付费墙的封闭 SaaS。',
+        '你不得滥用服务、进行过量自动请求、影响网站稳定性，或以损害项目和其他用户的方式使用网站内容。站点中的图片、文案、结构化页面和分类功能可能会持续调整，以便更好地服务课堂、创作和游戏类使用场景。',
+        '随着产品迭代，我们可能会新增、修改或删除功能，包括分类页、专题页、分析埋点、对象素材和多语言支持。继续使用网站，即表示你接受当下线上版本及其展示出来的服务规则。',
+        '如果你发现条款、事实描述或页面行为存在明显问题，建议通过公开 issue 入口提交反馈，这样站点维护者可以以可追踪的方式处理问题。'
       ],
     },
     ui: {
@@ -218,14 +234,19 @@ export const trustPageCopy: Record<
       chipBrainstorm: '头脑风暴',
       chipGames: '小游戏',
       whyThisExists: '为什么需要这个首页',
+      whatLabel: '是什么',
+      whyLabel: '为什么',
       howToLabel: '如何使用',
       featuredCategoriesLabel: '精选分类',
       categoryLabel: '分类',
       openGenerator: '打开生成器',
       useCasesLabel: '使用场景',
       faqLabel: '常见问题',
+      internalLinksLabel: '站内链接',
       drawPromptsLink: '随机绘画物品',
       kidsObjectsLink: '适合孩子的随机物品',
+      sourceCode: '源码仓库',
+      reportIssue: '反馈问题',
     },
   },
   ja: {
@@ -235,9 +256,10 @@ export const trustPageCopy: Record<
         'このサイトの目的、制作者、そして教師・ライター・イラスト制作者・進行役にどう役立つかを紹介します。',
       eyebrow: 'このプロジェクトについて',
       body: [
-        'Random Object Generator は、一般的なランダム名詞サイトよりも、見やすく再利用しやすい発想ツールを目指して作られた独立系プロジェクトです。',
-        '授業の導入を考える先生、絵のお題を探す人、アイスブレイクを用意するファシリテーター、書き出しのきっかけが欲しいライターなど、素早い発想入力が必要な人のために作られています。',
-        '目標はシンプルです。小さくても信頼できる多言語ツールサイトとして、分かりやすく、使いやすく、存在理由が明確な形で運営することです。'
+        'Random Object Generator は、一般的なランダム名詞サイトよりも、見やすく、使いやすく、再利用しやすい発想ツールを目指して作られた独立系のユーティリティサイトです。ログインを前提にした閉じたサービスではなく、まず結果を見せることを重視した公開ツールとして設計されています。',
+        'このプロジェクトは、授業の導入ネタを探す先生、描画のお題が欲しい人、アイスブレイクを回すファシリテーター、語彙練習をしたい講師、そして物語のきっかけが欲しい書き手のように、短時間で発想の起点が必要な人のために存在しています。視覚カード、コピーできる一覧、カテゴリ別ページを組み合わせて、単なるランダム単語サイトよりも実用性を高めています。',
+        '現在のサイトは Cloudflare 環境で配信され、Google Analytics 4 を使って閲覧やクリックの傾向を把握しています。目的は余計な個人情報を集めることではなく、どのページが役に立っているか、どこに改善余地があるかを判断して、情報設計を良くしていくことです。',
+        '技術的な実装や改善方針を確認したい場合は、公開リポジトリと issue 一覧が現時点で最も明確な問い合わせ先です。誰が運営していて、どう改善しているかが見えることも、信頼性の一部だと考えています。'
       ],
     },
     privacy: {
@@ -247,8 +269,9 @@ export const trustPageCopy: Record<
       eyebrow: 'プライバシー',
       body: [
         'Random Object Generator は、ログイン不要で使える軽量な公開ツールです。コア機能の利用にあたり、不要な個人情報の提出は求めません。',
-        '多くのウェブサイトと同様に、安定運用、使い勝手の改善、利用状況の把握のために、基本的なサーバーログ、匿名解析、性能データが記録される場合があります。',
-        '今後ホスティング、解析、広告などの外部サービスを利用する場合、それぞれのポリシーに従って限定的な技術データが処理されることがあります。本ページを当サイトのプライバシー方針の基準とします。'
+        '多くのウェブサイトと同様に、安定運用、使い勝手の改善、どのページが使われているかの把握のために、基本的な技術データが記録される場合があります。これには、サーバーログ、ページリクエスト、端末やブラウザ情報、参照元、匿名の利用イベントなどが含まれます。現在のサイトは Cloudflare 環境で配信され、Google Analytics 4 を用いて基礎的なアクセス計測を行っています。',
+        'こうしたデータ処理の目的は、サービスを安定させ、役に立つページを判断し、ジェネレーターや導線の改善点を見つけることです。ユーザーアカウントを作らせたり、個人プロフィールを構築したりするための設計ではありません。',
+        '将来、広告やメール購読、追加の解析ツールなど別の第三者サービスを導入する場合は、このページを更新して実際の本番構成と一致させるべきです。説明と実態に差があると思われる場合は、公開 issue を通じて知らせてください。'
       ],
     },
     terms: {
@@ -257,9 +280,10 @@ export const trustPageCopy: Record<
         'Random Object Generator の利用規約です。利用方法、制限事項、機能更新に関する基本方針を確認できます。',
       eyebrow: '利用規約',
       body: [
-        'Random Object Generator は、個人利用、教育利用、一般的な創作用途を想定した無料オンラインツールです。',
-        '過度な自動アクセス、サービス妨害、他ユーザーやプロジェクトに損害を与える使い方は禁止します。',
-        '機能は今後の運用や改善に応じて追加、変更、削除されることがあります。継続利用は最新の規約への同意とみなされます。'
+        'Random Object Generator は、個人利用、教育利用、ワークショップ、一般的な創作目的で利用できる無料オンラインツールです。現時点では、コア機能を有料の壁で囲うよりも、すぐ使える公開ツールとしての価値を優先しています。',
+        'サービスを乱用したり、過剰な自動リクエストを送ったり、可用性を妨げたり、プロジェクトや他ユーザーに害を与える形でコンテンツを利用したりしてはいけません。画像、カテゴリページ、構造化された説明文、多言語ページなどは、品質改善のために随時見直される可能性があります。',
+        '今後の改善にあわせて、機能は追加・変更・削除される場合があります。カテゴリ構成、意図別ページ、分析タグ、画像素材、多言語サポートもその対象です。サイトを使い続けることで、その時点の公開版に同意したものとみなされます。',
+        'もし事実誤認、ポリシーの不一致、または利用に関わる重大な問題を見つけた場合は、公開 issue を通じて知らせるのが現在の推奨ルートです。'
       ],
     },
     ui: {
@@ -298,14 +322,19 @@ export const trustPageCopy: Record<
       chipBrainstorm: '発想整理',
       chipGames: 'パーティーゲーム',
       whyThisExists: 'このホームページの役割',
+      whatLabel: '何ができるか',
+      whyLabel: 'なぜ重要か',
       howToLabel: '使い方',
       featuredCategoriesLabel: '注目カテゴリ',
       categoryLabel: 'カテゴリ',
       openGenerator: 'ジェネレーターを開く',
       useCasesLabel: '活用シーン',
       faqLabel: 'FAQ',
+      internalLinksLabel: '内部リンク',
       drawPromptsLink: '描くためのランダムオブジェクト',
       kidsObjectsLink: '子ども向けランダムオブジェクト',
+      sourceCode: 'ソースコード',
+      reportIssue: '問題を報告',
     },
   },
 }

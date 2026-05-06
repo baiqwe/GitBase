@@ -59,9 +59,13 @@ export function HomeLandingContent({ locale, categories, content }: HomeLandingC
       <div className="container mx-auto space-y-10 px-4 pb-20 md:px-6">
         <section className="grid gap-8 rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)] lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.whyThisExists}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.whatLabel}</p>
             <h2 className="max-w-3xl text-4xl leading-tight text-slate-950 md:text-5xl">{content.introTitle}</h2>
             <p className="max-w-3xl text-base leading-8 text-slate-600">{content.introBody}</p>
+            <div className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+              <h3 className="text-2xl text-slate-950">{content.featureTitle}</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">{content.featureLead}</p>
+            </div>
           </div>
           <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
             {content.features.map((feature) => (
@@ -90,7 +94,7 @@ export function HomeLandingContent({ locale, categories, content }: HomeLandingC
 
         <section className="space-y-5">
           <div className="space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.featuredCategoriesLabel}</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.whyLabel}</p>
             <h2 className="text-3xl text-slate-950 md:text-4xl">{content.categoryTitle}</h2>
             <p className="max-w-3xl text-base leading-7 text-slate-600">{content.categoryLead}</p>
           </div>

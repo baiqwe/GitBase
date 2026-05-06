@@ -19,7 +19,7 @@ export function RelatedGenerators({ locale, categories, currentSlug }: RelatedGe
 
   return (
     <section className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
-      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">Internal links</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{trustPageCopy[locale].ui.internalLinksLabel}</p>
       <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{trustPageCopy[locale].ui.relatedGenerators}</h2>
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         {related.map((category) => (

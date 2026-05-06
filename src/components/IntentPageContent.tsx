@@ -7,6 +7,7 @@ import {
   getLocalizedObjectsByCategories,
   type LocalizedCategory,
 } from '@/lib/objects'
+import { trustPageCopy } from '@/lib/site-copy'
 
 type IntentPageContentProps = {
   locale: Locale
@@ -27,6 +28,10 @@ export function IntentPageContent({ locale, path, intentPage }: IntentPageConten
       <GeneratorShell
         locale={locale}
         path={path}
+        breadcrumbItems={[
+          { label: trustPageCopy[locale].ui.breadcrumbHome, href: '/' },
+          { label: copy.title, href: path },
+        ]}
         heroEyebrow={copy.heroEyebrow}
         title={copy.title}
         description={copy.description}

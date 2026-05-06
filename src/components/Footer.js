@@ -73,8 +73,13 @@ export async function Footer() {
           <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-600">{ui.connect}</h3>
           <ul className="mt-4 space-y-4">
             <li>
-              <a href="https://github.com/baiqwe/object" target="_blank" rel="noreferrer" className="text-base text-slate-500 hover:text-slate-900">
-                GitHub
+              <a href={siteConfig.repositoryUrl} target="_blank" rel="noreferrer" className="text-base text-slate-500 hover:text-slate-900">
+                {ui.sourceCode}
+              </a>
+            </li>
+            <li>
+              <a href={siteConfig.feedbackUrl} target="_blank" rel="noreferrer" className="text-base text-slate-500 hover:text-slate-900">
+                {ui.reportIssue}
               </a>
             </li>
           </ul>

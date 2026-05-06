@@ -4,6 +4,8 @@ export const siteConfig = {
   description:
     'Generate random objects, animals, foods, and funny prompts in seconds. Fast, visual, and ready for games, classrooms, and creative work.',
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://randomobject.co',
+  repositoryUrl: 'https://github.com/baiqwe/object',
+  feedbackUrl: 'https://github.com/baiqwe/object/issues',
   featuredCategories: ['animals', 'household', 'food', 'funny'] as const,
   quantities: [1, 5, 10, 20, 50, 100],
 } as const
