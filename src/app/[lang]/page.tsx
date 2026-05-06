@@ -32,6 +32,10 @@ export default async function Home({ params }: LocalizedHomePageProps) {
   const locale = (i18n.locales.includes(lang as Locale) ? lang : i18n.defaultLocale) as Locale
   const dict = await getDictionary(locale)
   const categories = getLocalizedCategories(locale)
+  const items = getLocalizedObjects(locale)
+  const featuredItems = ['animal-elephant', 'house-kettle', 'food-apple', 'nature-rainbow', 'funny-rubber-duck']
+    .map((id) => items.find((item) => item.id === id))
+    .filter((item): item is NonNullable<typeof item> => Boolean(item))
 
   return (
     <>
@@ -46,8 +50,9 @@ export default async function Home({ params }: LocalizedHomePageProps) {
         bulkTitle={dict.home.bulkTitle}
         bulkDescription={dict.home.bulkDescription}
         categories={categories}
-        items={getLocalizedObjects(locale)}
-        defaultVisualCount={4}
+        items={items}
+        featuredItems={featuredItems}
+        defaultVisualCount={5}
       />
       <HomeLandingContent locale={locale} categories={categories} content={dict.home.landing} />
     </>

@@ -16,7 +16,7 @@ export const metadata: Metadata = createMetadata({
 export default function Home() {
   const categories = getLocalizedCategories('en')
   const items = getLocalizedObjects('en')
-  const featuredItems = ['animal-elephant', 'house-kettle', 'food-apple']
+  const featuredItems = ['animal-elephant', 'house-kettle', 'food-apple', 'nature-rainbow', 'funny-rubber-duck']
     .map((id) => items.find((item) => item.id === id))
     .filter((item): item is NonNullable<typeof item> => Boolean(item))
 
@@ -35,7 +35,7 @@ export default function Home() {
         categories={categories}
         items={items}
         featuredItems={featuredItems}
-        defaultVisualCount={4}
+        defaultVisualCount={5}
       />
       <HomeLandingContent locale="en" categories={categories} content={enDict.home.landing} />
     </>

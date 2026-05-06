@@ -47,7 +47,7 @@ export const intentPages: IntentPageConfig[] = [
   {
     slug: 'random-object-to-draw',
     categories: ['animals', 'household', 'food', 'nature'],
-    defaultVisualCount: 4,
+    defaultVisualCount: 5,
     i18n: {
       en: {
         heroEyebrow: 'Drawing prompts',
@@ -248,7 +248,7 @@ export const intentPages: IntentPageConfig[] = [
   {
     slug: 'random-objects-for-kids',
     categories: ['animals', 'household', 'food', 'funny'],
-    defaultVisualCount: 4,
+    defaultVisualCount: 5,
     i18n: {
       en: {
         heroEyebrow: 'Kids prompts',

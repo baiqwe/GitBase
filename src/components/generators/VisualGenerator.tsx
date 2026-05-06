@@ -46,13 +46,13 @@ export function VisualGenerator({
   title,
   description,
   featuredItems,
-  defaultCount = 3,
+  defaultCount = 5,
 }: VisualGeneratorProps) {
   const ui = trustPageCopy[locale].ui
   const [countInput, setCountInput] = useState(String(defaultCount))
-  const [allowDuplicates, setAllowDuplicates] = useState(true)
+  const [allowDuplicates, setAllowDuplicates] = useState(false)
   const [appliedCount, setAppliedCount] = useState(defaultCount)
-  const [appliedAllowDuplicates, setAppliedAllowDuplicates] = useState(true)
+  const [appliedAllowDuplicates, setAppliedAllowDuplicates] = useState(false)
   const [seed, setSeed] = useState(1)
   const count = Math.max(1, Math.min(100, Number.parseInt(countInput || '1', 10) || 1))
   const visibleCount = appliedAllowDuplicates ? appliedCount : Math.min(appliedCount, items.length)
