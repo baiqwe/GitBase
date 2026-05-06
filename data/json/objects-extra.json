@@ -1,0 +1,252 @@
+[
+  {
+    "id": "animal-giraffe",
+    "category": "animals",
+    "icon": "🦒",
+    "i18n": {
+      "en": { "name": "Giraffe", "description": "Tall, graceful, and easy to recognize from a distance." },
+      "zh": { "name": "长颈鹿", "description": "轮廓鲜明，远远一眼就能认出来。" },
+      "ja": { "name": "キリン", "description": "首の長いシルエットが印象的な動物です。" }
+    }
+  },
+  {
+    "id": "animal-lion",
+    "category": "animals",
+    "icon": "🦁",
+    "i18n": {
+      "en": { "name": "Lion", "description": "Bold and dramatic, with instant story energy." },
+      "zh": { "name": "狮子", "description": "气场很强，很容易带出戏剧感。" },
+      "ja": { "name": "ライオン", "description": "力強く、物語性を作りやすい動物です。" }
+    }
+  },
+  {
+    "id": "animal-rabbit",
+    "category": "animals",
+    "icon": "🐇",
+    "i18n": {
+      "en": { "name": "Rabbit", "description": "Soft, quick, and perfect for gentle prompt ideas." },
+      "zh": { "name": "兔子", "description": "轻巧可爱，很适合温和类灵感。" },
+      "ja": { "name": "ウサギ", "description": "やわらかく軽やかな印象を作りやすいです。" }
+    }
+  },
+  {
+    "id": "animal-turtle",
+    "category": "animals",
+    "icon": "🐢",
+    "i18n": {
+      "en": { "name": "Turtle", "description": "A calm prompt with strong shape and texture." },
+      "zh": { "name": "乌龟", "description": "形状和纹理都很鲜明，节奏也很慢。" },
+      "ja": { "name": "カメ", "description": "形が分かりやすく、落ち着いた印象のある動物です。" }
+    }
+  },
+  {
+    "id": "animal-owl",
+    "category": "animals",
+    "icon": "🦉",
+    "i18n": {
+      "en": { "name": "Owl", "description": "A night-themed favorite with strong visual character." },
+      "zh": { "name": "猫头鹰", "description": "夜晚氛围很强，自带独特神情。" },
+      "ja": { "name": "フクロウ", "description": "夜や静けさのイメージを作りやすい鳥です。" }
+    }
+  },
+  {
+    "id": "house-chair",
+    "category": "household",
+    "icon": "🪑",
+    "i18n": {
+      "en": { "name": "Chair", "description": "Simple, familiar, and useful for everyday scenes." },
+      "zh": { "name": "椅子", "description": "非常日常，也很容易放进具体场景里。" },
+      "ja": { "name": "椅子", "description": "身近で使いやすい日常アイテムです。" }
+    }
+  },
+  {
+    "id": "house-pillow",
+    "category": "household",
+    "icon": "🛏️",
+    "i18n": {
+      "en": { "name": "Pillow", "description": "Soft and domestic, great for cozy prompts." },
+      "zh": { "name": "枕头", "description": "柔软又有居家感，很适合温暖类画面。" },
+      "ja": { "name": "枕", "description": "やわらかく家庭的な雰囲気を出しやすいです。" }
+    }
+  },
+  {
+    "id": "house-toothbrush",
+    "category": "household",
+    "icon": "🪥",
+    "i18n": {
+      "en": { "name": "Toothbrush", "description": "A tiny object with very clear daily-life context." },
+      "zh": { "name": "牙刷", "description": "体积小，但生活场景非常明确。" },
+      "ja": { "name": "歯ブラシ", "description": "小さいけれど生活感の強いアイテムです。" }
+    }
+  },
+  {
+    "id": "house-frying-pan",
+    "category": "household",
+    "icon": "🍳",
+    "i18n": {
+      "en": { "name": "Frying Pan", "description": "Excellent for kitchen prompts and action scenes." },
+      "zh": { "name": "平底锅", "description": "厨房感很强，也容易带动作。" },
+      "ja": { "name": "フライパン", "description": "キッチンや動きのある場面に向いています。" }
+    }
+  },
+  {
+    "id": "house-umbrella",
+    "category": "household",
+    "icon": "☂️",
+    "i18n": {
+      "en": { "name": "Umbrella", "description": "Useful for weather scenes and strong silhouettes." },
+      "zh": { "name": "雨伞", "description": "轮廓明显，也很容易联想到天气场景。" },
+      "ja": { "name": "傘", "description": "天気やシルエットの印象を出しやすい道具です。" }
+    }
+  },
+  {
+    "id": "food-banana",
+    "category": "food",
+    "icon": "🍌",
+    "i18n": {
+      "en": { "name": "Banana", "description": "Bright, playful, and easy to spot instantly." },
+      "zh": { "name": "香蕉", "description": "颜色鲜明，第一眼就能认出来。" },
+      "ja": { "name": "バナナ", "description": "色も形も分かりやすい定番フルーツです。" }
+    }
+  },
+  {
+    "id": "food-pizza",
+    "category": "food",
+    "icon": "🍕",
+    "i18n": {
+      "en": { "name": "Pizza Slice", "description": "Great for fast, energetic, crowd-friendly prompts." },
+      "zh": { "name": "披萨", "description": "节奏很快，也很适合热闹的场景。" },
+      "ja": { "name": "ピザ", "description": "にぎやかな場面や軽い発想に向いています。" }
+    }
+  },
+  {
+    "id": "food-croissant",
+    "category": "food",
+    "icon": "🥐",
+    "i18n": {
+      "en": { "name": "Croissant", "description": "A soft bakery prompt with rich texture." },
+      "zh": { "name": "可颂", "description": "面包层次很丰富，质感也很强。" },
+      "ja": { "name": "クロワッサン", "description": "層のある質感をイメージしやすいパンです。" }
+    }
+  },
+  {
+    "id": "food-sushi",
+    "category": "food",
+    "icon": "🍣",
+    "i18n": {
+      "en": { "name": "Sushi", "description": "Compact, clean, and very recognizable." },
+      "zh": { "name": "寿司", "description": "小巧精致，也很容易辨认。" },
+      "ja": { "name": "寿司", "description": "小さくて印象が強く、すぐ伝わる食べ物です。" }
+    }
+  },
+  {
+    "id": "food-ice-cream",
+    "category": "food",
+    "icon": "🍨",
+    "i18n": {
+      "en": { "name": "Ice Cream", "description": "Fun, colorful, and ideal for cheerful ideas." },
+      "zh": { "name": "冰淇淋", "description": "色彩和情绪都很轻快，适合欢乐类题材。" },
+      "ja": { "name": "アイスクリーム", "description": "明るく楽しい雰囲気を作りやすいです。" }
+    }
+  },
+  {
+    "id": "nature-sunflower",
+    "category": "nature",
+    "icon": "🌻",
+    "i18n": {
+      "en": { "name": "Sunflower", "description": "Bright, bold, and packed with visual energy." },
+      "zh": { "name": "向日葵", "description": "颜色强烈，很容易成为画面中心。" },
+      "ja": { "name": "ひまわり", "description": "明るさと存在感のある花です。" }
+    }
+  },
+  {
+    "id": "nature-cactus",
+    "category": "nature",
+    "icon": "🌵",
+    "i18n": {
+      "en": { "name": "Cactus", "description": "Distinct shape, dry mood, and sharp texture." },
+      "zh": { "name": "仙人掌", "description": "造型独特，也很有干燥气质。" },
+      "ja": { "name": "サボテン", "description": "形が独特で、乾いた空気感も出せます。" }
+    }
+  },
+  {
+    "id": "nature-moon",
+    "category": "nature",
+    "icon": "🌙",
+    "i18n": {
+      "en": { "name": "Moon", "description": "Perfect for quiet scenes and nighttime prompts." },
+      "zh": { "name": "月亮", "description": "很适合夜晚、安静和情绪化场景。" },
+      "ja": { "name": "月", "description": "夜や静けさを表現しやすいモチーフです。" }
+    }
+  },
+  {
+    "id": "nature-waterfall",
+    "category": "nature",
+    "icon": "💧",
+    "i18n": {
+      "en": { "name": "Waterfall", "description": "Strong motion, texture, and scenic scale." },
+      "zh": { "name": "瀑布", "description": "动感和场景感都很强，画面尺度也大。" },
+      "ja": { "name": "滝", "description": "動きとスケールのある自然モチーフです。" }
+    }
+  },
+  {
+    "id": "nature-maple-leaf",
+    "category": "nature",
+    "icon": "🍁",
+    "i18n": {
+      "en": { "name": "Maple Leaf", "description": "A small nature prompt with strong seasonal feeling." },
+      "zh": { "name": "枫叶", "description": "虽然很小，但季节感特别鲜明。" },
+      "ja": { "name": "もみじ", "description": "小さくても季節感を強く出せる葉です。" }
+    }
+  },
+  {
+    "id": "funny-party-hat",
+    "category": "funny",
+    "icon": "🎉",
+    "i18n": {
+      "en": { "name": "Party Hat", "description": "A tiny prop that instantly makes things sillier." },
+      "zh": { "name": "派对帽", "description": "小小一顶，但马上就会让画面变轻松。" },
+      "ja": { "name": "パーティーハット", "description": "つけるだけで空気が明るくなる小道具です。" }
+    }
+  },
+  {
+    "id": "funny-clown-nose",
+    "category": "funny",
+    "icon": "🔴",
+    "i18n": {
+      "en": { "name": "Party Horn", "description": "Loud, silly, and built for instant celebration energy." },
+      "zh": { "name": "派对喇叭", "description": "又吵又好玩，很适合节庆和搞笑场景。" },
+      "ja": { "name": "パーティーホーン", "description": "にぎやかさとおかしさをすぐ出せる小物です。" }
+    }
+  },
+  {
+    "id": "funny-yoyo",
+    "category": "funny",
+    "icon": "🪀",
+    "i18n": {
+      "en": { "name": "Yo-Yo", "description": "Small, playful, and easy to turn into movement." },
+      "zh": { "name": "悠悠球", "description": "小巧又有动作感，很适合游戏提示。" },
+      "ja": { "name": "ヨーヨー", "description": "小さくて動きにつなげやすい道具です。" }
+    }
+  },
+  {
+    "id": "funny-pirate-hat",
+    "category": "funny",
+    "icon": "🏴‍☠️",
+    "i18n": {
+      "en": { "name": "Pirate Hat", "description": "A costume object with instant character energy." },
+      "zh": { "name": "海盗帽", "description": "一出现就有角色感，很适合表演类题材。" },
+      "ja": { "name": "海賊帽", "description": "かぶるだけでキャラクター性が出る小道具です。" }
+    }
+  },
+  {
+    "id": "funny-confetti",
+    "category": "funny",
+    "icon": "🎊",
+    "i18n": {
+      "en": { "name": "Confetti", "description": "Messy, bright, and full of celebration energy." },
+      "zh": { "name": "彩纸碎片", "description": "凌乱又热闹，很适合庆祝感场景。" },
+      "ja": { "name": "紙吹雪", "description": "にぎやかでお祝いの空気を作りやすいです。" }
+    }
+  }
+]

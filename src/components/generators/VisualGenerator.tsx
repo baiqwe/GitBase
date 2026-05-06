@@ -162,6 +162,8 @@ export function VisualGenerator({
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 20vw"
                     className="object-cover"
                     priority={seed === 1 && index < 3}
+                    placeholder={item.blurDataUrl ? 'blur' : 'empty'}
+                    blurDataURL={item.blurDataUrl}
                   />
                 </div>
               ) : (

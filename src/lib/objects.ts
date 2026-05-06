@@ -2,6 +2,8 @@ import { cache } from 'react'
 import type { Locale } from '@/lib/i18n-config'
 import categoriesData from '../../data/json/categories.json'
 import objectsData from '../../data/json/objects.json'
+import objectsExtraData from '../../data/json/objects-extra.json'
+import objectImageMetaData from '../../data/json/object-image-meta.json'
 
 type SeoFaq = {
   question: string
@@ -43,6 +45,7 @@ export type ObjectRecord = {
   category: string
   icon: string
   image?: string
+  blurDataUrl?: string
   i18n: Record<Locale, LocalizedText>
 }
 
@@ -60,7 +63,14 @@ export const getCategories = cache((): CategoryRecord[] => {
 })
 
 export const getObjects = cache((): ObjectRecord[] => {
-  return objectsData as ObjectRecord[]
+  const baseObjects = [...(objectsData as ObjectRecord[]), ...(objectsExtraData as ObjectRecord[])]
+  const imageMeta = objectImageMetaData as Record<string, { image?: string; blurDataUrl?: string }>
+
+  return baseObjects.map((item) => ({
+    ...item,
+    image: imageMeta[item.id]?.image ?? item.image,
+    blurDataUrl: imageMeta[item.id]?.blurDataUrl,
+  }))
 })
 
 export function getCategoryPageSlug(slug: string) {
