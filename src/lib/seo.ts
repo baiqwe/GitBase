@@ -26,14 +26,10 @@ export function getLocalizedPath(locale: Locale, path: string) {
 }
 
 export function buildAlternates(path: string) {
-  const languages = Object.fromEntries(
-    i18n.locales.map((locale) => [locale, joinUrl(siteConfig.baseUrl, getLocalizedPath(locale, path))])
-  )
-
-  return {
-    languages,
-    'x-default': joinUrl(siteConfig.baseUrl, path),
-  }
+  return Object.fromEntries([
+    ...i18n.locales.map((locale) => [locale, joinUrl(siteConfig.baseUrl, getLocalizedPath(locale, path))]),
+    ['x-default', joinUrl(siteConfig.baseUrl, path)],
+  ])
 }
 
 export function createMetadata({
@@ -54,7 +50,7 @@ export function createMetadata({
     description,
     alternates: {
       canonical: joinUrl(siteConfig.baseUrl, localizedPath),
-      languages: buildAlternates(path).languages,
+      languages: buildAlternates(path),
     },
     robots: {
       index: true,

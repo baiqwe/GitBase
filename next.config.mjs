@@ -12,6 +12,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/en',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/en/:path*',
+        destination: '/:path*',
+        permanent: true,
+      },
+      {
         source: '/c/:category',
         destination: '/random-:category-generator',
         permanent: true,
