@@ -157,11 +157,11 @@ export function VisualGenerator({
                 <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-amber-50 via-white to-teal-50">
                   <Image
                     src={item.image}
-                    alt={item.translation.name}
+                    alt={item.imageAltText ?? item.translation.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 20vw"
                     className="object-cover"
-                    priority={seed === 1 && index < 3}
+                    priority={seed === 1 && index < Math.min(5, selection.length)}
                     placeholder={item.blurDataUrl ? 'blur' : 'empty'}
                     blurDataURL={item.blurDataUrl}
                   />

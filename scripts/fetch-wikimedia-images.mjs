@@ -1,7 +1,7 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 
-const imageDir = path.join(process.cwd(), 'public/images/objects')
+const imageDir = path.join(process.cwd(), 'assets/object-photo-sources')
 
 const records = [
   ['animal-elephant', 'Elephant'],
@@ -123,7 +123,7 @@ async function saveImage(id, sourceUrl) {
     contentType.includes('png') ? 'png' : contentType.includes('webp') ? 'webp' : 'jpg'
   const outputPath = path.join(imageDir, `${id}.${extension}`)
   await fs.writeFile(outputPath, buffer)
-  return `/images/objects/${id}.${extension}`
+  return `/assets/object-photo-sources/${id}.${extension}`
 }
 
 async function main() {

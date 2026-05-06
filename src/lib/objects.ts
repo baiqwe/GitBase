@@ -46,6 +46,7 @@ export type ObjectRecord = {
   icon: string
   image?: string
   blurDataUrl?: string
+  imageAlt?: Partial<Record<Locale, string>>
   i18n: Record<Locale, LocalizedText>
 }
 
@@ -56,6 +57,7 @@ export type LocalizedCategory = CategoryRecord & {
 
 export type LocalizedObject = ObjectRecord & {
   translation: LocalizedText
+  imageAltText?: string
 }
 
 export const getCategories = cache((): CategoryRecord[] => {
@@ -64,12 +66,16 @@ export const getCategories = cache((): CategoryRecord[] => {
 
 export const getObjects = cache((): ObjectRecord[] => {
   const baseObjects = [...(objectsData as ObjectRecord[]), ...(objectsExtraData as ObjectRecord[])]
-  const imageMeta = objectImageMetaData as Record<string, { image?: string; blurDataUrl?: string }>
+  const imageMeta = objectImageMetaData as Record<
+    string,
+    { image?: string; blurDataUrl?: string; alt?: Partial<Record<Locale, string>> }
+  >
 
   return baseObjects.map((item) => ({
     ...item,
     image: imageMeta[item.id]?.image ?? item.image,
     blurDataUrl: imageMeta[item.id]?.blurDataUrl,
+    imageAlt: imageMeta[item.id]?.alt,
   }))
 })
 
@@ -102,6 +108,11 @@ export function localizeObject(item: ObjectRecord, locale: Locale): LocalizedObj
   return {
     ...item,
     translation: item.i18n[locale] ?? item.i18n.en,
+    imageAltText:
+      item.imageAlt?.[locale] ??
+      item.imageAlt?.en ??
+      item.i18n[locale]?.name ??
+      item.i18n.en.name,
   }
 }
 

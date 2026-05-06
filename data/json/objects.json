@@ -3,7 +3,7 @@
     "id": "animal-elephant",
     "category": "animals",
     "icon": "🐘",
-    "image": "/images/objects/animal-elephant.jpg",
+    "image": "/images/objects/animal-elephant.webp",
     "i18n": {
       "en": {
         "name": "Elephant",
@@ -23,7 +23,7 @@
     "id": "animal-fox",
     "category": "animals",
     "icon": "🦊",
-    "image": "/images/objects/animal-fox.jpg",
+    "image": "/images/objects/animal-fox.webp",
     "i18n": {
       "en": {
         "name": "Fox",
@@ -43,7 +43,7 @@
     "id": "animal-penguin",
     "category": "animals",
     "icon": "🐧",
-    "image": "/images/objects/animal-penguin.jpg",
+    "image": "/images/objects/animal-penguin.webp",
     "i18n": {
       "en": {
         "name": "Penguin",
@@ -63,7 +63,7 @@
     "id": "animal-octopus",
     "category": "animals",
     "icon": "🐙",
-    "image": "/images/objects/animal-octopus.jpg",
+    "image": "/images/objects/animal-octopus.webp",
     "i18n": {
       "en": {
         "name": "Octopus",
@@ -83,7 +83,7 @@
     "id": "animal-butterfly",
     "category": "animals",
     "icon": "🦋",
-    "image": "/images/objects/animal-butterfly.jpg",
+    "image": "/images/objects/animal-butterfly.webp",
     "i18n": {
       "en": {
         "name": "Butterfly",
@@ -103,7 +103,7 @@
     "id": "house-lamp",
     "category": "household",
     "icon": "🛋️",
-    "image": "/images/objects/house-lamp.jpg",
+    "image": "/images/objects/house-lamp.webp",
     "i18n": {
       "en": {
         "name": "Reading Lamp",
@@ -123,7 +123,7 @@
     "id": "house-kettle",
     "category": "household",
     "icon": "🫖",
-    "image": "/images/objects/house-kettle.jpg",
+    "image": "/images/objects/house-kettle.webp",
     "i18n": {
       "en": {
         "name": "Tea Kettle",
@@ -143,7 +143,7 @@
     "id": "house-clock",
     "category": "household",
     "icon": "⏰",
-    "image": "/images/objects/house-clock.jpg",
+    "image": "/images/objects/house-clock.webp",
     "i18n": {
       "en": {
         "name": "Alarm Clock",
@@ -163,7 +163,7 @@
     "id": "house-broom",
     "category": "household",
     "icon": "🧹",
-    "image": "/images/objects/house-broom.jpg",
+    "image": "/images/objects/house-broom.webp",
     "i18n": {
       "en": {
         "name": "Broom",
@@ -183,7 +183,7 @@
     "id": "house-key",
     "category": "household",
     "icon": "🔑",
-    "image": "/images/objects/house-key.jpg",
+    "image": "/images/objects/house-key.webp",
     "i18n": {
       "en": {
         "name": "House Key",
@@ -203,7 +203,7 @@
     "id": "food-apple",
     "category": "food",
     "icon": "🍎",
-    "image": "/images/objects/food-apple.jpg",
+    "image": "/images/objects/food-apple.webp",
     "i18n": {
       "en": {
         "name": "Apple",
@@ -223,7 +223,7 @@
     "id": "food-ramen",
     "category": "food",
     "icon": "🍜",
-    "image": "/images/objects/food-ramen.jpg",
+    "image": "/images/objects/food-ramen.webp",
     "i18n": {
       "en": {
         "name": "Ramen Bowl",
@@ -243,7 +243,7 @@
     "id": "food-taco",
     "category": "food",
     "icon": "🌮",
-    "image": "/images/objects/food-taco.jpg",
+    "image": "/images/objects/food-taco.webp",
     "i18n": {
       "en": {
         "name": "Taco",
@@ -263,7 +263,7 @@
     "id": "food-birthday-cake",
     "category": "food",
     "icon": "🎂",
-    "image": "/images/objects/food-birthday-cake.jpg",
+    "image": "/images/objects/food-birthday-cake.webp",
     "i18n": {
       "en": {
         "name": "Birthday Cake",
@@ -283,7 +283,7 @@
     "id": "food-popcorn",
     "category": "food",
     "icon": "🍿",
-    "image": "/images/objects/food-popcorn.jpg",
+    "image": "/images/objects/food-popcorn.webp",
     "i18n": {
       "en": {
         "name": "Popcorn",
@@ -303,7 +303,7 @@
     "id": "nature-rainbow",
     "category": "nature",
     "icon": "🌈",
-    "image": "/images/objects/nature-rainbow.jpg",
+    "image": "/images/objects/nature-rainbow.webp",
     "i18n": {
       "en": {
         "name": "Rainbow",
@@ -323,7 +323,7 @@
     "id": "nature-pinecone",
     "category": "nature",
     "icon": "🌲",
-    "image": "/images/objects/nature-pinecone.jpg",
+    "image": "/images/objects/nature-pinecone.webp",
     "i18n": {
       "en": {
         "name": "Pinecone",
@@ -343,7 +343,7 @@
     "id": "nature-shell",
     "category": "nature",
     "icon": "🐚",
-    "image": "/images/objects/nature-shell.jpg",
+    "image": "/images/objects/nature-shell.webp",
     "i18n": {
       "en": {
         "name": "Seashell",
@@ -363,7 +363,7 @@
     "id": "nature-mushroom",
     "category": "nature",
     "icon": "🍄",
-    "image": "/images/objects/nature-mushroom.jpg",
+    "image": "/images/objects/nature-mushroom.webp",
     "i18n": {
       "en": {
         "name": "Mushroom",
@@ -383,7 +383,7 @@
     "id": "nature-cloud",
     "category": "nature",
     "icon": "☁️",
-    "image": "/images/objects/nature-cloud.jpg",
+    "image": "/images/objects/nature-cloud.webp",
     "i18n": {
       "en": {
         "name": "Cloud",
@@ -403,7 +403,7 @@
     "id": "funny-rubber-duck",
     "category": "funny",
     "icon": "🦆",
-    "image": "/images/objects/funny-rubber-duck.jpg",
+    "image": "/images/objects/funny-rubber-duck.webp",
     "i18n": {
       "en": {
         "name": "Rubber Duck",
@@ -423,7 +423,7 @@
     "id": "funny-disco-ball",
     "category": "funny",
     "icon": "🪩",
-    "image": "/images/objects/funny-disco-ball.jpg",
+    "image": "/images/objects/funny-disco-ball.webp",
     "i18n": {
       "en": {
         "name": "Disco Ball",
@@ -443,7 +443,7 @@
     "id": "funny-toothbrush-mustache",
     "category": "funny",
     "icon": "🪥",
-    "image": "/images/objects/funny-toothbrush-mustache.jpg",
+    "image": "/images/objects/funny-toothbrush-mustache.webp",
     "i18n": {
       "en": {
         "name": "Toothbrush Mustache",
@@ -463,7 +463,7 @@
     "id": "funny-banana-phone",
     "category": "funny",
     "icon": "🍌",
-    "image": "/images/objects/funny-banana-phone.jpg",
+    "image": "/images/objects/funny-banana-phone.webp",
     "i18n": {
       "en": {
         "name": "Banana Phone",
@@ -483,7 +483,7 @@
     "id": "funny-tiny-crown",
     "category": "funny",
     "icon": "👑",
-    "image": "/images/objects/funny-tiny-crown.jpg",
+    "image": "/images/objects/funny-tiny-crown.webp",
     "i18n": {
       "en": {
         "name": "Tiny Crown",
