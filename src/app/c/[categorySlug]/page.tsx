@@ -68,6 +68,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           locale="en"
           categoryName={category.i18n.en.name}
           categories={getLocalizedCategories('en')}
+          sampleItems={getLocalizedObjects('en', category.slug)}
           currentSlug={category.slug}
           content={category.i18n.en.seo}
         />

@@ -81,6 +81,7 @@ export default async function LocalizedCategoryPage({
           locale={locale}
           categoryName={translation.name}
           categories={getLocalizedCategories(locale)}
+          sampleItems={getLocalizedObjects(locale, category.slug)}
           currentSlug={category.slug}
           content={translation.seo}
         />

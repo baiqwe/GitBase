@@ -43,6 +43,13 @@ export type IntentPageConfig = {
   i18n: Record<Locale, IntentPageCopy>
 }
 
+export type LocalizedIntentLink = {
+  href: string
+  title: string
+  description: string
+  categories: string[]
+}
+
 export const intentPages: IntentPageConfig[] = [
   {
     slug: 'random-object-to-draw',
@@ -1541,4 +1548,17 @@ export const intentPages: IntentPageConfig[] = [
 
 export function getIntentPageBySlug(slug: string) {
   return intentPages.find((page) => page.slug === slug) ?? null
+}
+
+export function getLocalizedIntentLinks(locale: Locale): LocalizedIntentLink[] {
+  return intentPages.map((page) => {
+    const copy = page.i18n[locale] ?? page.i18n.en
+
+    return {
+      href: `/${page.slug}`,
+      title: copy.title,
+      description: copy.description,
+      categories: page.categories,
+    }
+  })
 }

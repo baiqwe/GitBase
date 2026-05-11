@@ -1,13 +1,15 @@
 import type { Locale } from '@/lib/i18n-config'
-import type { LocalizedCategory } from '@/lib/objects'
+import type { LocalizedCategory, LocalizedObject } from '@/lib/objects'
 import { buildFaqJsonLd } from '@/lib/seo'
 import { trustPageCopy } from '@/lib/site-copy'
 import { RelatedGenerators } from '@/components/RelatedGenerators'
+import { ExampleObjectsSection, TrustBlockSection } from '@/components/SupportSections'
 
 interface CategoryLandingContentProps {
   locale: Locale
   categoryName: string
   categories: LocalizedCategory[]
+  sampleItems: LocalizedObject[]
   currentSlug: string
   content: {
     introTitle: string
@@ -52,12 +54,62 @@ export function CategoryLandingContent({
   locale,
   categoryName,
   categories,
+  sampleItems,
   currentSlug,
   content,
 }: CategoryLandingContentProps) {
   const faqJsonLd = buildFaqJsonLd({ faqs: content.faqs })
   const howTo = howToCopy[locale](categoryName)
   const ui = trustPageCopy[locale].ui
+  const exampleCopy = {
+    en: {
+      title: `Example ${categoryName.toLowerCase()} prompts from this page`,
+      lead:
+        `These examples show the kind of ${categoryName.toLowerCase()} objects this page is tuned to generate, so users can judge fit before they keep clicking.`,
+    },
+    zh: {
+      title: `这个页面会生成的${categoryName}示例`,
+      lead:
+        `这些示例可以帮助用户更快判断这个分类是否符合需求，也让页面不只是“一个按钮加几段说明”。`,
+    },
+    ja: {
+      title: `このページで出てくる ${categoryName} の例`,
+      lead:
+        `このカテゴリでどんな対象が出るのかを先に見せることで、使い始める前の判断がしやすくなります。`,
+    },
+  }[locale]
+  const trustBlock = {
+    en: {
+      title: `How this ${categoryName.toLowerCase()} page stays specific`,
+      lead:
+        `Category pages work best when they feel genuinely narrower than the homepage. This page keeps a tighter object pool, clear examples, and related links so it can satisfy a more specific search intent without becoming a doorway page.`,
+      bullets: [
+        `Only ${categoryName.toLowerCase()} objects are used on this page.`,
+        'Real image cards make the prompt pool easier to evaluate at a glance.',
+        'Related generators help users move to nearby intents instead of bouncing away.',
+      ],
+    },
+    zh: {
+      title: `这个 ${categoryName} 页面为什么更具体`,
+      lead:
+        `分类页只有在真的比首页更聚焦时才有价值。这个页面通过更窄的对象池、直接示例和相关内链，让它更像一个独立可用的落地页，而不是模板页。`,
+      bullets: [
+        `这个页面只使用 ${categoryName} 相关对象。`,
+        '真实图片卡片让用户更容易判断结果是否合适。',
+        '相关生成器会把用户继续引导到相邻需求，而不是直接流失。',
+      ],
+    },
+    ja: {
+      title: `この ${categoryName} ページが具体的である理由`,
+      lead:
+        `カテゴリページは、トップページより明確に絞られていて初めて価値があります。このページは対象プール、具体例、関連リンクを絞ることで、独立した着地先として機能するようにしています。`,
+      bullets: [
+        `このページでは ${categoryName} 関連の対象だけを使います。`,
+        '実写カードで結果の雰囲気をすぐ判断できます。',
+        '関連ページへの導線で近い意図へ自然に移動できます。',
+      ],
+    },
+  }[locale]
 
   return (
     <>
@@ -110,7 +162,9 @@ export function CategoryLandingContent({
           </ol>
         </div>
 
+        <ExampleObjectsSection locale={locale} title={exampleCopy.title} lead={exampleCopy.lead} items={sampleItems.slice(0, 6)} />
         <RelatedGenerators locale={locale} categories={categories} currentSlug={currentSlug} />
+        <TrustBlockSection locale={locale} block={trustBlock} />
 
         <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.faqLabel}</p>

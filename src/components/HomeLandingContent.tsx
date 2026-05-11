@@ -1,12 +1,20 @@
 import Link from 'next/link'
 import type { Locale } from '@/lib/i18n-config'
 import { buildFaqJsonLd, getLocalizedPath } from '@/lib/seo'
-import type { LocalizedCategory } from '@/lib/objects'
+import type { LocalizedCategory, LocalizedObject } from '@/lib/objects'
 import { trustPageCopy } from '@/lib/site-copy'
+import { EditorialLinksSection, ExampleObjectsSection, TrustBlockSection } from '@/components/SupportSections'
 
 interface HomeLandingContentProps {
   locale: Locale
   categories: LocalizedCategory[]
+  sampleItems: LocalizedObject[]
+  editorialLinks?: Array<{ href: string; label: string; description: string }>
+  trustBlock: {
+    title: string
+    lead: string
+    bullets: string[]
+  }
   content: {
     introTitle: string
     introBody: string
@@ -49,10 +57,34 @@ const howToHomeCopy = {
   },
 }
 
-export function HomeLandingContent({ locale, categories, content }: HomeLandingContentProps) {
+export function HomeLandingContent({
+  locale,
+  categories,
+  sampleItems,
+  editorialLinks,
+  trustBlock,
+  content,
+}: HomeLandingContentProps) {
   const faqJsonLd = buildFaqJsonLd({ faqs: content.faqs })
   const howTo = howToHomeCopy[locale]
   const ui = trustPageCopy[locale].ui
+  const exampleCopy = {
+    en: {
+      title: 'Example objects you can pull from this page',
+      lead:
+        'These examples make the page more concrete for users and search engines alike. The generator is meant to surface recognizable, usable prompts rather than a thin wall of random nouns.',
+    },
+    zh: {
+      title: '这个页面会生成的示例物品',
+      lead:
+        '把示例直接放出来，会比只讲功能更扎实。这样用户一眼就能知道结果大概长什么样，搜索引擎也更容易理解这个页面的实际价值。',
+    },
+    ja: {
+      title: 'このページで出てくるサンプルオブジェクト',
+      lead:
+        'サンプルを見せることで、単なる説明文よりもページの価値が伝わりやすくなります。検索エンジンにも実際の中身が伝わりやすくなります。',
+    },
+  }[locale]
 
   return (
     <>
@@ -149,6 +181,10 @@ export function HomeLandingContent({ locale, categories, content }: HomeLandingC
             </div>
           </div>
         </section>
+
+        <ExampleObjectsSection locale={locale} title={exampleCopy.title} lead={exampleCopy.lead} items={sampleItems.slice(0, 6)} />
+        <EditorialLinksSection locale={locale} links={editorialLinks ?? []} />
+        <TrustBlockSection locale={locale} block={trustBlock} />
       </div>
 
       <script
