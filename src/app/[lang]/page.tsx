@@ -5,7 +5,7 @@ import { getDictionary } from '@/lib/get-dictionary'
 import { GeneratorShell } from '@/components/generators/GeneratorShell'
 import { getLocalizedCategories, getLocalizedObjects } from '@/lib/objects'
 import { createMetadata } from '@/lib/seo'
-import { getLocalizedIntentLinks } from '@/lib/intent-pages'
+import { expandedIntentPageSlugs, getLocalizedIntentLinks } from '@/lib/intent-pages'
 
 type LocalizedHomePageProps = {
   params: Promise<{ lang: string }>
@@ -38,11 +38,7 @@ export default async function Home({ params }: LocalizedHomePageProps) {
     .map((id) => items.find((item) => item.id === id))
     .filter((item): item is NonNullable<typeof item> => Boolean(item))
   const editorialLinks = getLocalizedIntentLinks(locale)
-    .filter((link) =>
-      ['random-object-to-draw', 'random-objects-for-kids', 'random-objects-for-charades', 'random-objects-for-writing-prompts'].includes(
-        link.href.slice(1)
-      )
-    )
+    .filter((link) => expandedIntentPageSlugs.includes(link.href.slice(1) as (typeof expandedIntentPageSlugs)[number]))
     .map(({ href, title, description }) => ({ href, label: title, description }))
   const trustBlock = {
     en: {

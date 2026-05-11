@@ -38,6 +38,14 @@ export type IntentPageConfig = {
     | 'random-objects-for-party-games'
     | 'random-things-to-describe'
     | 'random-objects-for-writing-prompts'
+    | 'random-objects-for-pictionary'
+    | 'random-objects-for-improv'
+    | 'random-objects-for-icebreakers'
+    | 'random-objects-for-scavenger-hunt'
+    | 'easy-objects-to-draw'
+    | 'random-kitchen-objects'
+    | 'random-classroom-objects'
+    | 'random-office-objects'
   categories: string[]
   defaultVisualCount: number
   i18n: Record<Locale, IntentPageCopy>
@@ -49,6 +57,17 @@ export type LocalizedIntentLink = {
   description: string
   categories: string[]
 }
+
+export const expandedIntentPageSlugs = [
+  'random-objects-for-pictionary',
+  'random-objects-for-improv',
+  'random-objects-for-icebreakers',
+  'random-objects-for-scavenger-hunt',
+  'easy-objects-to-draw',
+  'random-kitchen-objects',
+  'random-classroom-objects',
+  'random-office-objects',
+] as const
 
 export const intentPages: IntentPageConfig[] = [
   {
@@ -1539,6 +1558,1274 @@ export const intentPages: IntentPageConfig[] = [
             { question: 'ランダムオブジェクトはライティングにどう役立ちますか？', answer: 'ひとつの物体が、場面、記憶、行動、細部の入口になってくれるからです。' },
             { question: 'なぜライティング専用ページが必要ですか？', answer: '創作では、遊び用のお題よりも、書きやすく広げやすい対象の方が役立つためです。' },
             { question: '複数のお題をまとめて作れますか？', answer: 'はい。一括生成で授業や自習向けのリストをすぐ作れます。' },
+          ],
+        },
+      },
+    },
+  },
+  {
+    slug: 'random-objects-for-pictionary',
+    categories: ['animals', 'food', 'household', 'nature'],
+    defaultVisualCount: 5,
+    i18n: {
+      en: {
+        heroEyebrow: 'Pictionary prompts',
+        title: 'Random Objects For Pictionary',
+        description:
+          'Generate simple, drawable object prompts that work well for Pictionary rounds at home, in class, or during team games.',
+        visualTitle: 'Pull a Pictionary-ready object',
+        visualDescription:
+          'This page leans toward objects people can sketch quickly and other players can recognize without a long explanation.',
+        bulkTitle: 'Build a Pictionary round list',
+        bulkDescription:
+          'Generate a longer list when you need several rounds for game night, classrooms, or workshop warmups.',
+        seoTitle: 'Random Objects For Pictionary Generator',
+        seoDescription:
+          'Generate random objects for Pictionary with visual cards, copyable lists, and prompt ideas that are easier to draw and guess.',
+        landing: {
+          introTitle: 'Pictionary works best when the object is quick to draw and easy to guess.',
+          introBody:
+            'A good Pictionary page should not throw abstract or impossible prompts at the player. This page narrows the object pool toward things with clearer silhouettes, familiar meanings, and enough variety to keep the rounds lively. That makes it more useful for classrooms, family game nights, and team activities than a broad random object page.',
+          featureTitle: 'Why this page fits Pictionary better',
+          featureLead: 'The goal is faster rounds, cleaner guesses, and fewer dead prompts.',
+          features: [
+            { title: 'More drawable prompts', body: 'The object mix leans toward items that can be sketched in a few strokes instead of requiring detailed illustration.' },
+            { title: 'More guessable results', body: 'Familiar animals, foods, and everyday items keep the game moving and lower the chance of confusion.' },
+            { title: 'Ready for multiple rounds', body: 'Bulk mode makes it easy to prepare a whole set for a classroom, party, or workshop.' },
+          ],
+          categoryTitle: 'Best categories for Pictionary',
+          categoryLead: 'Animals, food, household items, and nature prompts tend to produce the cleanest drawings and fastest guesses.',
+          useCasesTitle: 'Common Pictionary use cases',
+          useCases: ['Family game night', 'Classroom warmups', 'Team-building rounds', 'Kids party activities', 'ESL guessing games', 'Workshop icebreakers'],
+          faqTitle: 'Pictionary page FAQ',
+          faqs: [
+            { question: 'What makes a good Pictionary object?', answer: 'The best prompts are familiar, visual, and easy to sketch quickly without extra explanation.' },
+            { question: 'Why use a dedicated Pictionary page instead of the homepage?', answer: 'Because the game needs more drawable and guessable objects than a general-purpose random generator provides.' },
+            { question: 'Can I generate a full set for several rounds?', answer: 'Yes. Use the quantity field or bulk mode to create a longer list for multiple rounds.' },
+          ],
+        },
+      },
+      zh: {
+        heroEyebrow: '你画我猜',
+        title: '你画我猜随机物品',
+        description:
+          '生成更适合你画我猜的随机物品，适用于家庭游戏、课堂互动和团队破冰。',
+        visualTitle: '抽一个更适合你画我猜的物品',
+        visualDescription:
+          '这里更偏向轮廓清楚、容易画、也容易被别人猜中的对象。',
+        bulkTitle: '生成一整组你画我猜题目',
+        bulkDescription:
+          '如果你需要做多轮游戏，可以一次生成更长的题目列表，直接复制使用。',
+        seoTitle: '你画我猜随机物品生成器',
+        seoDescription:
+          '生成适合你画我猜的随机物品，支持视觉卡片和批量复制，适合课堂、派对和团队活动。',
+        landing: {
+          introTitle: '你画我猜最怕的，不是题目太简单，而是题目根本不好画。',
+          introBody:
+            '一个真正适合你画我猜的页面，应该优先给出轮廓清楚、容易下笔、又足够常见的物品，而不是把任何随机词都塞进来。这个页面就是围绕“更容易画、也更容易猜”的原则来组织对象池的，所以它比通用首页更适合直接开玩。',
+          featureTitle: '为什么这个页面更适合你画我猜',
+          featureLead: '重点不是更多，而是更适合快速出题和快速猜中。',
+          features: [
+            { title: '更容易画', body: '结果更偏向可快速勾出轮廓的对象，而不是需要复杂细节的题目。' },
+            { title: '更容易猜', body: '常见动物、食物和日常物件更适合多人互动，也更少卡壳。' },
+            { title: '适合多轮', body: '批量模式可以直接帮你准备一整组课堂或聚会题目。' },
+          ],
+          categoryTitle: '更适合你画我猜的分类',
+          categoryLead: '动物、食物、家居和自然物体往往更直观，也更适合快速出题。',
+          useCasesTitle: '常见使用场景',
+          useCases: ['家庭聚会', '课堂热身', '团队破冰', '儿童派对', '英语猜词', '工作坊暖场'],
+          faqTitle: '你画我猜页面常见问题',
+          faqs: [
+            { question: '什么样的物品更适合你画我猜？', answer: '常见、视觉特征明确、几笔就能表达出来的物品，通常最适合这个游戏。' },
+            { question: '为什么要单独做你画我猜页面？', answer: '因为游戏场景更需要“好画、好猜”的对象，而不是泛泛的随机词。' },
+            { question: '可以一次生成多轮题目吗？', answer: '可以。你可以直接输入数量或使用批量模式准备整套题目。' },
+          ],
+        },
+      },
+      ja: {
+        heroEyebrow: 'お絵描き当てゲーム',
+        title: 'ピクショナリー向けランダムオブジェクト',
+        description:
+          'ピクショナリーやお絵描き当てゲームに向いた、描きやすく分かりやすいオブジェクトを生成します。',
+        visualTitle: 'ピクショナリー向けの対象を引く',
+        visualDescription:
+          '短時間で描けて、相手にも伝わりやすい対象を中心にしています。',
+        bulkTitle: 'ゲーム用のお題リストを作る',
+        bulkDescription:
+          '授業やパーティーで何ラウンドも回すなら、まとめてお題を作ってそのまま使えます。',
+        seoTitle: 'ピクショナリー向けランダムオブジェクトジェネレーター',
+        seoDescription:
+          'ピクショナリー向けのランダムオブジェクトを生成。描きやすいお題をカード表示と一覧で使えます。',
+        landing: {
+          introTitle: 'ピクショナリーでは、描きやすさと伝わりやすさが最優先です。',
+          introBody:
+            'このページは、ただランダムに名詞を返すのではなく、短時間で描けて相手が推測しやすい対象を優先するために作られています。動物、食べ物、日用品、自然物のように、視覚的に分かりやすいカテゴリを中心にしているため、一般ページよりゲーム用途に向いています。',
+          featureTitle: 'このページがゲーム向きな理由',
+          featureLead: 'ゲームが止まりにくい対象を優先しています。',
+          features: [
+            { title: '描きやすい', body: '形が取りやすい対象が多く、短い制限時間でも対応しやすいです。' },
+            { title: '当てやすい', body: '見慣れたモチーフが多いので、説明なしでも推測しやすくなります。' },
+            { title: '複数ラウンド向き', body: '一括生成でゲーム用のお題セットをすぐ作れます。' },
+          ],
+          categoryTitle: 'ピクショナリー向きのカテゴリ',
+          categoryLead: '動物、食べ物、日用品、自然物は、描く側にも当てる側にも扱いやすいカテゴリです。',
+          useCasesTitle: 'よくある使い方',
+          useCases: ['家族のゲーム時間', '授業の導入', 'チームビルディング', '子ども会', '英語クラス', 'ワークショップの導入'],
+          faqTitle: 'ピクショナリーページ FAQ',
+          faqs: [
+            { question: 'ピクショナリー向きのオブジェクトとは？', answer: '短時間で描けて、見た相手が連想しやすいものが向いています。' },
+            { question: 'なぜ専用ページが必要ですか？', answer: 'ゲームでは、一般的なランダム単語よりも、描きやすく伝わりやすい対象の方が役立つからです。' },
+            { question: '複数ラウンド分をまとめて作れますか？', answer: 'はい。一括生成で複数ラウンド用のお題をすぐ用意できます。' },
+          ],
+        },
+      },
+    },
+  },
+  {
+    slug: 'random-objects-for-improv',
+    categories: ['household', 'funny', 'food', 'animals'],
+    defaultVisualCount: 5,
+    i18n: {
+      en: {
+        heroEyebrow: 'Improv prompts',
+        title: 'Random Objects For Improv',
+        description:
+          'Generate prop-style object prompts for improv scenes, acting warmups, and fast creative performance games.',
+        visualTitle: 'Get an improv-ready object prompt',
+        visualDescription:
+          'This page favors objects that can quickly turn into status cues, scene anchors, or prop jokes.',
+        bulkTitle: 'Build a list for improv rounds',
+        bulkDescription:
+          'Create a larger batch when you need several rounds for rehearsal, class exercises, or workshop games.',
+        seoTitle: 'Random Objects For Improv Generator',
+        seoDescription:
+          'Generate random objects for improv scenes, prop games, and acting warmups with visual cards and copyable lists.',
+        landing: {
+          introTitle: 'In improv, the best object prompt is one that creates action, not just recognition.',
+          introBody:
+            'This page is tuned for improvisers who need fast scene fuel: props people can mime, react to, protect, lose, or transform into status signals. Instead of aiming for pure drawability, the object mix is shaped around playability, scene movement, and the kinds of prompts that make short-form or classroom improv easier to start.',
+          featureTitle: 'Why this page fits improv better',
+          featureLead: 'The results aim to create action and relationships, not just labels.',
+          features: [
+            { title: 'More playable props', body: 'Everyday items and slightly funny objects work better in scenes than abstract nouns or overly technical prompts.' },
+            { title: 'Faster scene starts', body: 'Recognizable props give performers something to act on immediately instead of overthinking the setup.' },
+            { title: 'Useful in workshops', body: 'Bulk lists help teachers and coaches prepare object rounds without building prompts by hand.' },
+          ],
+          categoryTitle: 'Best categories for improv prompts',
+          categoryLead: 'Household objects, funny items, foods, and some animals tend to produce the most playable scene hooks.',
+          useCasesTitle: 'Common improv use cases',
+          useCases: ['Prop games', 'Scene warmups', 'Status exercises', 'Object transformation rounds', 'Class rehearsals', 'Workshop activities'],
+          faqTitle: 'Improv page FAQ',
+          faqs: [
+            { question: 'What makes an object good for improv?', answer: 'It should be easy to mime, react to, or build a relationship around inside a short scene.' },
+            { question: 'Why have a separate improv page?', answer: 'Because improv needs playable props and action cues, which is a narrower need than a general object generator.' },
+            { question: 'Can I generate a full workshop set?', answer: 'Yes. Use the quantity field or bulk mode to build a larger prompt list for several rounds.' },
+          ],
+        },
+      },
+      zh: {
+        heroEyebrow: '即兴表演',
+        title: '即兴表演随机物品',
+        description:
+          '为即兴表演、表演热身和创意小游戏生成更适合拿来做道具的随机物品。',
+        visualTitle: '抽一个更适合即兴表演的物品',
+        visualDescription:
+          '这里更偏向能快速变成道具、关系线索或笑点触发器的对象。',
+        bulkTitle: '生成一组即兴表演题目',
+        bulkDescription:
+          '如果你要做多轮练习、课堂活动或工作坊热身，可以一次生成更长的列表。',
+        seoTitle: '即兴表演随机物品生成器',
+        seoDescription:
+          '生成适合即兴表演的随机物品，用于道具练习、表演热身和创意游戏，支持卡片和批量列表。',
+        landing: {
+          introTitle: '即兴表演最需要的，不是一个词，而是一个能立刻引出动作的物品。',
+          introBody:
+            '这个页面专门偏向“可拿来演”的对象。好的即兴物品不仅要看得懂，更要容易被模仿、被争夺、被误用，或者能立刻变成场景中的一个关系支点。所以这里的对象比普通随机页更偏道具感，也更适合排练、课堂和工作坊。',
+          featureTitle: '为什么这个页面更适合即兴表演',
+          featureLead: '重点是可玩性，而不是单纯的随机。',
+          features: [
+            { title: '更像道具', body: '日常物件和带一点趣味感的对象，更容易立刻被演员拿来做动作。' },
+            { title: '更容易开场', body: '结果更偏向能够迅速引出场景，而不是让大家停下来想半天。' },
+            { title: '适合工作坊', body: '批量模式适合老师、主持人和教练直接准备整组练习。' },
+          ],
+          categoryTitle: '更适合即兴表演的分类',
+          categoryLead: '家居、搞怪物品、食物和部分动物，往往更容易被转化成角色关系和舞台动作。',
+          useCasesTitle: '常见使用场景',
+          useCases: ['道具练习', '场景热身', '状态游戏', '物品变形', '课堂排练', '工作坊活动'],
+          faqTitle: '即兴表演页面常见问题',
+          faqs: [
+            { question: '什么样的物品更适合即兴表演？', answer: '容易模仿、容易拿来做动作，或者能快速制造关系和冲突的物品，更适合即兴场景。' },
+            { question: '为什么要单独做即兴页？', answer: '因为即兴表演需要的是可演的道具和动作线索，而不是泛泛的随机名词。' },
+            { question: '可以一次准备一整组训练题吗？', answer: '可以。你可以批量生成一组对象，用于多轮练习或课堂活动。' },
+          ],
+        },
+      },
+      ja: {
+        heroEyebrow: '即興演技',
+        title: '即興向けランダムオブジェクト',
+        description:
+          '即興シーン、演技ウォームアップ、創作ゲームに使いやすいオブジェクトを生成します。',
+        visualTitle: '即興で使いやすい対象を引く',
+        visualDescription:
+          '小道具として扱いやすく、場面や関係をすぐ作りやすい対象を中心にしています。',
+        bulkTitle: '即興ラウンド用のお題を作る',
+        bulkDescription:
+          '授業、リハーサル、ワークショップ向けに複数ラウンド分の対象をまとめて用意できます。',
+        seoTitle: '即興向けランダムオブジェクトジェネレーター',
+        seoDescription:
+          '即興シーンや小道具ゲームに向いたランダムオブジェクトを生成。カード表示と一覧コピーに対応しています。',
+        landing: {
+          introTitle: '即興では、見た瞬間に動けるオブジェクトが強いです。',
+          introBody:
+            'このページは、ただ分かりやすいだけでなく、演技のきっかけになりやすい対象を集めています。持つ、隠す、失う、奪い合う、誤解する、といった行動に結びつきやすい対象を優先しているため、一般ページよりも即興用途に向いています。',
+          featureTitle: 'このページが即興向きな理由',
+          featureLead: '重要なのは、見た目よりもシーンが動くことです。',
+          features: [
+            { title: '小道具として使いやすい', body: '日用品や少し変なアイテムは、すぐに演技へつなげやすくなります。' },
+            { title: '場面が始まりやすい', body: '見た瞬間に扱い方を思いつきやすい対象が多く、立ち上がりが速くなります。' },
+            { title: '授業やワークショップ向き', body: '一括生成で即興用のお題セットをすぐ作れます。' },
+          ],
+          categoryTitle: '即興向きのカテゴリ',
+          categoryLead: '日用品、おもしろアイテム、食べ物、一部の動物は、シーンのきっかけを作りやすいカテゴリです。',
+          useCasesTitle: 'よくある使い方',
+          useCases: ['小道具ゲーム', 'シーンの導入', 'ステータス練習', '物体変換', '授業の練習', 'ワークショップ'],
+          faqTitle: '即興ページ FAQ',
+          faqs: [
+            { question: '即興向きのオブジェクトとは？', answer: 'すぐに持てる、使える、反応できるなど、行動に結びつきやすいものが向いています。' },
+            { question: 'なぜ即興専用ページが必要ですか？', answer: '即興では、一般的なランダム単語よりも、小道具として扱いやすい対象の方が役立つからです。' },
+            { question: '複数ラウンド分をまとめて作れますか？', answer: 'はい。一括生成で授業やワークショップ向けのセットを作れます。' },
+          ],
+        },
+      },
+    },
+  },
+  {
+    slug: 'random-objects-for-icebreakers',
+    categories: ['household', 'funny', 'food'],
+    defaultVisualCount: 5,
+    i18n: {
+      en: {
+        heroEyebrow: 'Icebreaker prompts',
+        title: 'Random Objects For Icebreakers',
+        description:
+          'Generate simple object prompts that help groups talk, compare, guess, and loosen up without complicated rules.',
+        visualTitle: 'Get an object for a fast icebreaker',
+        visualDescription:
+          'The results are tuned for talking prompts, warmups, and group activities that need low-friction objects.',
+        bulkTitle: 'Create an icebreaker prompt set',
+        bulkDescription:
+          'Build a longer list when you need several rounds for team meetings, classrooms, or workshops.',
+        seoTitle: 'Random Objects For Icebreakers Generator',
+        seoDescription:
+          'Generate random objects for icebreakers, warmups, and group activities with visual cards and copyable prompt lists.',
+        landing: {
+          introTitle: 'A good icebreaker object should open a conversation instead of stopping one.',
+          introBody:
+            'This page is built for low-pressure speaking and group warmups. Instead of aiming for extreme surprise, it favors simple objects that invite quick stories, comparisons, preferences, and guesses. That makes it more useful in classrooms, onboarding sessions, team meetings, and workshops where people need to start talking fast.',
+          featureTitle: 'Why this page works for icebreakers',
+          featureLead: 'The object pool is tuned for easy conversation, not complexity.',
+          features: [
+            { title: 'Low-friction prompts', body: 'Simple objects reduce the time people spend interpreting the prompt and increase the time spent actually speaking.' },
+            { title: 'Good for groups', body: 'The results work well for compare-and-share, memory prompts, and quick guessing activities.' },
+            { title: 'Easy to scale', body: 'Bulk mode helps teachers and facilitators build a full warmup sequence in one go.' },
+          ],
+          categoryTitle: 'Best categories for icebreakers',
+          categoryLead: 'Household items, funny objects, and familiar foods usually create the easiest talking prompts.',
+          useCasesTitle: 'Common icebreaker use cases',
+          useCases: ['Team meetings', 'Workshops', 'Class introductions', 'Conversation clubs', 'Camp warmups', 'Language classes'],
+          faqTitle: 'Icebreaker page FAQ',
+          faqs: [
+            { question: 'What makes an object good for an icebreaker?', answer: 'The best prompts are familiar enough to talk about quickly and flexible enough to spark stories or opinions.' },
+            { question: 'Why have a separate icebreaker page?', answer: 'Because group warmups need objects that reduce friction and open conversation, not just random novelty.' },
+            { question: 'Can I prepare a whole session at once?', answer: 'Yes. Generate several prompts at once and copy the list into your lesson plan or agenda.' },
+          ],
+        },
+      },
+      zh: {
+        heroEyebrow: '破冰提示',
+        title: '破冰活动随机物品',
+        description:
+          '生成更适合破冰和暖场的随机物品，帮助团队、课堂和活动参与者更快开口。',
+        visualTitle: '抽一个适合破冰的物品',
+        visualDescription:
+          '这里更偏向简单、熟悉、容易引出联想和表达的对象。',
+        bulkTitle: '生成一组破冰活动题目',
+        bulkDescription:
+          '如果你要带一个完整的暖场环节，可以一次生成多轮物品并直接复制使用。',
+        seoTitle: '破冰活动随机物品生成器',
+        seoDescription:
+          '生成适合破冰、暖场和小组交流的随机物品，支持卡片和批量清单。',
+        landing: {
+          introTitle: '好的破冰物品，应该让人更容易开口，而不是先停下来理解规则。',
+          introBody:
+            '这个页面面向团队暖场、课堂开场和活动破冰。它会优先给出更熟悉、更容易引发故事、偏好和联想的对象，而不是为了随机而随机。这样用户拿到结果后，更容易快速进入交流状态。',
+          featureTitle: '为什么这个页面更适合破冰',
+          featureLead: '重点是降低开口门槛，让对话更快开始。',
+          features: [
+            { title: '更容易聊', body: '对象更简单、更熟悉，参与者不需要先想太久就能表达。' },
+            { title: '更适合群体互动', body: '结果适合拿来做比较、回忆、偏好表达和猜测类小游戏。' },
+            { title: '适合主持人准备', body: '批量模式可以快速生成整组暖场题目，方便直接放进流程。' },
+          ],
+          categoryTitle: '更适合破冰的分类',
+          categoryLead: '家居物件、搞怪小物和熟悉食物，更容易让人迅速产生联想并愿意开口。',
+          useCasesTitle: '常见使用场景',
+          useCases: ['团队会议', '工作坊', '课堂开场', '口语角', '夏令营暖场', '语言课程'],
+          faqTitle: '破冰页面常见问题',
+          faqs: [
+            { question: '什么样的物品更适合破冰？', answer: '常见、好理解、容易引出故事或偏好的对象，通常最适合暖场。' },
+            { question: '为什么要单独做破冰页？', answer: '因为破冰活动需要的是低门槛、能促成交流的对象，而不是泛泛的随机词。' },
+            { question: '可以一次准备完整一场暖场吗？', answer: '可以。你可以直接批量生成一组物品，作为整场活动的题目库。' },
+          ],
+        },
+      },
+      ja: {
+        heroEyebrow: 'アイスブレイク',
+        title: 'アイスブレイク向けランダムオブジェクト',
+        description:
+          '会話のきっかけ、授業の導入、チームの暖気運転に使いやすいオブジェクトを生成します。',
+        visualTitle: 'アイスブレイク向けの対象を引く',
+        visualDescription:
+          '話しやすく、思い出や好みに結びつけやすい対象を中心にしています。',
+        bulkTitle: 'アイスブレイク用のお題をまとめて作る',
+        bulkDescription:
+          '会議や授業で何ラウンドも使う場合は、複数のお題をまとめて生成できます。',
+        seoTitle: 'アイスブレイク向けランダムオブジェクトジェネレーター',
+        seoDescription:
+          'アイスブレイクや会話ウォームアップ向けのランダムオブジェクトを生成。カード表示と一覧コピーに対応しています。',
+        landing: {
+          introTitle: 'アイスブレイクでは、話しやすさがいちばん大切です。',
+          introBody:
+            'このページは、チームの導入、授業の始まり、ワークショップの暖気運転のために作られています。難しい対象や説明が必要な単語ではなく、すぐに思い出や好みや比較に結びつけられる対象を優先しているため、会話が始まりやすくなります。',
+          featureTitle: 'このページがアイスブレイク向きな理由',
+          featureLead: '会話の入口を作りやすい対象を集めています。',
+          features: [
+            { title: '話しやすい', body: '身近な対象が多いため、考え込みすぎずにすぐ話し始めやすくなります。' },
+            { title: 'グループ向き', body: '比較、思い出、推測などの短い活動に使いやすい対象が多いです。' },
+            { title: '進行がしやすい', body: '一括生成でファシリテーターが複数ラウンド分をすぐ用意できます。' },
+          ],
+          categoryTitle: 'アイスブレイク向きのカテゴリ',
+          categoryLead: '日用品、おもしろアイテム、身近な食べ物は会話を始めやすいカテゴリです。',
+          useCasesTitle: 'よくある使い方',
+          useCases: ['チーム会議', 'ワークショップ', '授業の導入', '会話クラブ', '合宿の暖気運転', '語学クラス'],
+          faqTitle: 'アイスブレイクページ FAQ',
+          faqs: [
+            { question: 'アイスブレイク向きのオブジェクトとは？', answer: 'すぐに話題にしやすく、思い出や好みにつなげやすい対象が向いています。' },
+            { question: 'なぜ専用ページが必要ですか？', answer: 'アイスブレイクでは、ランダム性よりも話しやすさの方が重要だからです。' },
+            { question: '複数ラウンド用にまとめて作れますか？', answer: 'はい。一括生成で会議や授業向けのセットを作れます。' },
+          ],
+        },
+      },
+    },
+  },
+  {
+    slug: 'random-objects-for-scavenger-hunt',
+    categories: ['household', 'food', 'nature'],
+    defaultVisualCount: 5,
+    i18n: {
+      en: {
+        heroEyebrow: 'Scavenger hunt',
+        title: 'Random Objects For Scavenger Hunt',
+        description:
+          'Generate easy-to-find object prompts for scavenger hunts at home, in class, or during team activities.',
+        visualTitle: 'Pull a scavenger-hunt object',
+        visualDescription:
+          'The page favors concrete objects people can actually locate instead of abstract or impossible targets.',
+        bulkTitle: 'Build a scavenger-hunt list',
+        bulkDescription:
+          'Generate a larger set when you need a full round for classrooms, camps, or at-home games.',
+        seoTitle: 'Random Objects For Scavenger Hunt Generator',
+        seoDescription:
+          'Generate random objects for scavenger hunts with visual cards and copyable lists for home, classroom, and team activities.',
+        landing: {
+          introTitle: 'A scavenger-hunt object should be findable in the real world, not just interesting on paper.',
+          introBody:
+            'This page narrows the object pool toward items people are likely to spot around the home, classroom, or nearby environment. That matters because scavenger-hunt prompts fail when they are too abstract, too rare, or too context-specific. A dedicated page makes the task more practical and easier to run.',
+          featureTitle: 'Why this page works for scavenger hunts',
+          featureLead: 'The results aim for findability, not randomness for its own sake.',
+          features: [
+            { title: 'More realistic targets', body: 'Household items, simple foods, and nature objects are much easier to use than abstract nouns.' },
+            { title: 'Better for kids and groups', body: 'The prompts are easier to explain, verify, and turn into fast-moving hunt rounds.' },
+            { title: 'Simple to prepare', body: 'Bulk mode helps you create a whole hunt list without writing clues from scratch.' },
+          ],
+          categoryTitle: 'Best categories for scavenger hunts',
+          categoryLead: 'Household, food, and nature prompts strike the best balance between recognizability and real-world availability.',
+          useCasesTitle: 'Common scavenger-hunt use cases',
+          useCases: ['Home hunts', 'Classroom games', 'Camp activities', 'Birthday parties', 'Team events', 'Rainy-day games'],
+          faqTitle: 'Scavenger-hunt page FAQ',
+          faqs: [
+            { question: 'What makes an object good for a scavenger hunt?', answer: 'It should be realistic to find, easy to identify, and appropriate for the space people are searching in.' },
+            { question: 'Why use a separate scavenger-hunt page?', answer: 'Because this use case needs findable real-world objects, not a fully open-ended random pool.' },
+            { question: 'Can I generate a full hunt list at once?', answer: 'Yes. Use the count field or bulk mode to build a longer prompt set for one full game.' },
+          ],
+        },
+      },
+      zh: {
+        heroEyebrow: '寻宝游戏',
+        title: '寻宝游戏随机物品',
+        description:
+          '生成更适合家庭、课堂和团队活动的寻宝物品，结果更具体也更容易找到。',
+        visualTitle: '抽一个适合寻宝的物品',
+        visualDescription:
+          '这里更偏向现实中真的能找到的对象，而不是抽象或过于罕见的题目。',
+        bulkTitle: '生成一整组寻宝题目',
+        bulkDescription:
+          '如果你要带完整一轮寻宝活动，可以一次生成更长的题目列表。',
+        seoTitle: '寻宝游戏随机物品生成器',
+        seoDescription:
+          '生成适合家庭、课堂和团队活动的随机寻宝物品，支持视觉卡片和批量清单。',
+        landing: {
+          introTitle: '寻宝活动最重要的，不是随机，而是真的找得到。',
+          introBody:
+            '这个页面会优先给出更容易在家里、教室或周边环境里找到的对象。因为寻宝类活动最怕的，就是题目虽然看起来有趣，但参与者根本没法在现实场景中快速找到。把对象池收窄到更具体的类别后，活动会顺畅很多。',
+          featureTitle: '为什么这个页面更适合寻宝',
+          featureLead: '重点是可执行，而不是随机得很离谱。',
+          features: [
+            { title: '更容易找到', body: '家居、食物和自然物件比抽象词更适合直接拿来做寻宝。' },
+            { title: '更适合孩子和多人活动', body: '对象更好解释，也更容易快速核对结果。' },
+            { title: '更方便主持人准备', body: '批量模式可以直接帮你生成一整套活动题目。' },
+          ],
+          categoryTitle: '更适合寻宝的分类',
+          categoryLead: '家居、食物和自然物体在好找和好理解之间有更好的平衡。',
+          useCasesTitle: '常见使用场景',
+          useCases: ['家庭寻宝', '课堂游戏', '夏令营活动', '生日派对', '团队活动', '雨天室内游戏'],
+          faqTitle: '寻宝页面常见问题',
+          faqs: [
+            { question: '什么样的物品更适合寻宝？', answer: '真实可找、容易识别、适合当前场景的物品，通常最适合拿来做寻宝题目。' },
+            { question: '为什么要单独做寻宝页？', answer: '因为寻宝活动需要的是现实中可找到的对象，而不是完全开放的随机池。' },
+            { question: '可以一次生成整场活动题目吗？', answer: '可以。你可以直接输入数量或使用批量模式准备完整题库。' },
+          ],
+        },
+      },
+      ja: {
+        heroEyebrow: '宝探し',
+        title: '宝探し向けランダムオブジェクト',
+        description:
+          '家や教室、グループ活動で使いやすい、見つけやすいオブジェクトを生成します。',
+        visualTitle: '宝探し向けの対象を引く',
+        visualDescription:
+          '現実に探しやすい対象を優先し、抽象的すぎるお題を避けています。',
+        bulkTitle: '宝探し用のお題リストを作る',
+        bulkDescription:
+          '授業やイベントで何問も必要な場合は、一括生成でまとめて作れます。',
+        seoTitle: '宝探し向けランダムオブジェクトジェネレーター',
+        seoDescription:
+          '家や教室で使いやすい宝探し向けのランダムオブジェクトを生成。カード表示と一覧コピーに対応しています。',
+        landing: {
+          introTitle: '宝探しでは、面白さより先に見つけられるかが重要です。',
+          introBody:
+            'このページは、家の中、教室、近くの環境で実際に見つけやすい対象を優先しています。宝探しのお題が抽象的すぎたり、珍しすぎたりするとゲームが止まってしまうため、現実に見つけやすいカテゴリへ絞ることが大切です。',
+          featureTitle: 'このページが宝探し向きな理由',
+          featureLead: '実行しやすさを優先した対象を集めています。',
+          features: [
+            { title: '見つけやすい', body: '日用品、食べ物、自然物は実際の空間で探しやすく、活動が止まりにくくなります。' },
+            { title: '子どもやグループ向き', body: '説明しやすく、確認しやすい対象が多いです。' },
+            { title: '準備が速い', body: '一括生成でイベント用のお題セットをすぐ作れます。' },
+          ],
+          categoryTitle: '宝探し向きのカテゴリ',
+          categoryLead: '日用品、食べ物、自然物は、見つけやすさと分かりやすさのバランスが良いカテゴリです。',
+          useCasesTitle: 'よくある使い方',
+          useCases: ['家庭内の宝探し', '授業のゲーム', 'キャンプ活動', '誕生日会', 'チームイベント', '雨の日の室内遊び'],
+          faqTitle: '宝探しページ FAQ',
+          faqs: [
+            { question: '宝探し向きのオブジェクトとは？', answer: '実際に探しやすく、見つけたかどうかを確認しやすいものが向いています。' },
+            { question: 'なぜ専用ページが必要ですか？', answer: '宝探しでは、現実に存在して見つけやすい対象へ絞ることが重要だからです。' },
+            { question: '一回でフルセットを作れますか？', answer: 'はい。一括生成で複数問のお題リストを作れます。' },
+          ],
+        },
+      },
+    },
+  },
+  {
+    slug: 'easy-objects-to-draw',
+    categories: ['household', 'food', 'animals', 'nature'],
+    defaultVisualCount: 5,
+    i18n: {
+      en: {
+        heroEyebrow: 'Easy drawing ideas',
+        title: 'Easy Objects To Draw',
+        description:
+          'Generate simple, sketch-friendly object prompts when you want drawing ideas that feel approachable instead of overwhelming.',
+        visualTitle: 'Pull an easy thing to draw',
+        visualDescription:
+          'This page favors objects with clear outlines and familiar forms so you can start drawing without spending time filtering difficult prompts.',
+        bulkTitle: 'Make an easy drawing practice list',
+        bulkDescription:
+          'Create a longer set of easy objects when you need warmups for beginners, classrooms, or a daily sketch routine.',
+        seoTitle: 'Easy Objects To Draw Generator With Visual Prompts',
+        seoDescription:
+          'Generate easy objects to draw with visual cards, copyable prompt lists, and beginner-friendly ideas for sketch practice.',
+        landing: {
+          introTitle: 'Easy drawing prompts should remove friction, not add another decision layer.',
+          introBody:
+            'People searching for easy objects to draw are usually not looking for novelty. They want a prompt that is recognizable, has a clean silhouette, and feels manageable enough to start right away. This page narrows the pool toward simpler everyday objects, foods, animals, and nature items so the first result is more likely to feel drawable for beginners and warmup sessions.',
+          featureTitle: 'Why this page is better for easy drawing ideas',
+          featureLead: 'The object pool is curated toward clarity, simplicity, and lower drawing resistance.',
+          features: [
+            {
+              title: 'Cleaner shapes first',
+              body: 'Objects with simple edges and familiar structures are easier to sketch than highly detailed or awkward prompts.',
+            },
+            {
+              title: 'Useful for beginners',
+              body: 'The page works well for new artists, casual doodlers, and teachers who need low-pressure prompts.',
+            },
+            {
+              title: 'Good for repetition',
+              body: 'Bulk mode helps you build a full set of manageable prompts for drills, homework, or daily warmups.',
+            },
+          ],
+          categoryTitle: 'Best categories for easy drawing',
+          categoryLead:
+            'Food, household items, simple animals, and nature objects produce the cleanest, least intimidating prompts for sketch practice.',
+          useCasesTitle: 'Common easy-drawing uses',
+          useCases: [
+            'Beginner sketch practice',
+            'Daily doodle warmups',
+            'Classroom drawing starters',
+            'Kids art activities',
+            'Low-pressure creative breaks',
+            'Simple shape studies',
+          ],
+          faqTitle: 'Easy drawing page FAQ',
+          faqs: [
+            {
+              question: 'What makes an object easy to draw?',
+              answer:
+                'Usually it has a clear silhouette, familiar proportions, and fewer small details, which makes it easier to start and finish confidently.',
+            },
+            {
+              question: 'Why use a separate easy objects page?',
+              answer:
+                'Because the broader generator includes objects that may be fun but less approachable. This page keeps the prompt pool simpler and more beginner-friendly.',
+            },
+            {
+              question: 'Can I use this for classes or daily practice?',
+              answer:
+                'Yes. It is well suited to classroom warmups, art homework, and daily sketch routines where easier prompts are more useful than random difficulty spikes.',
+            },
+          ],
+        },
+      },
+      zh: {
+        heroEyebrow: '简单绘画题目',
+        title: '简单物品绘画生成器',
+        description:
+          '生成更简单、更容易下笔的物品提示，适合初学者、日常速写和低门槛绘画练习。',
+        visualTitle: '抽一个简单好画的物品',
+        visualDescription:
+          '这个页面会更偏向轮廓清晰、结构熟悉的对象，减少你在“太难了”上的犹豫时间。',
+        bulkTitle: '生成一组简单绘画练习',
+        bulkDescription:
+          '如果你要做初学者练习、课堂热身或每日速写，可以一次生成一整组更简单的对象。',
+        seoTitle: '简单物品绘画生成器 - 适合初学者的随机画画题目',
+        seoDescription:
+          '生成简单好画的随机物品，支持视觉卡片和批量清单，适合初学者、课堂和日常绘画练习。',
+        landing: {
+          introTitle: '简单绘画页的意义，不是“更无聊”，而是更容易开始。',
+          introBody:
+            '搜“简单物品来画”的用户，真正要解决的问题通常不是“没题目”，而是“有题目也懒得画，因为看起来太难”。这个页面会把对象池往更清晰、更熟悉、更容易落笔的方向收窄，例如家居物、食物、简单动物和自然物体，让结果更适合初学者和日常热身。',
+          featureTitle: '为什么这个页面更适合简单练习',
+          featureLead: '重点是让你更快开始，而不是在随机结果里继续筛难度。',
+          features: [
+            {
+              title: '优先更清晰的形状',
+              body: '轮廓更明确、结构更熟悉的对象，会比细节过多的结果更适合马上拿来练习。',
+            },
+            {
+              title: '对新手更友好',
+              body: '它更适合刚开始画画的人，也适合老师给学生安排低门槛的热身题。',
+            },
+            {
+              title: '适合整组重复训练',
+              body: '批量模式可以直接生成一组简单对象，用来做重复练习、作业或每日打卡。',
+            },
+          ],
+          categoryTitle: '更适合简单绘画的分类',
+          categoryLead:
+            '食物、家居、简单动物和自然物体通常更容易形成轮廓感，也更不容易让初学者卡住。',
+          useCasesTitle: '常见使用场景',
+          useCases: [
+            '初学者速写',
+            '每日涂鸦热身',
+            '课堂开场练习',
+            '儿童绘画活动',
+            '低压力创作休息',
+            '基础形体练习',
+          ],
+          faqTitle: '简单绘画页常见问题',
+          faqs: [
+            {
+              question: '什么样的物品算容易画？',
+              answer: '通常是轮廓清晰、比例容易理解、细节不至于太多的对象，会更适合快速开始和完成。',
+            },
+            {
+              question: '为什么要单独做一个简单绘画页？',
+              answer: '因为大池子里会混进一些更复杂的结果。独立页面能更稳定地给出初学者友好的对象。',
+            },
+            {
+              question: '这个页面适合课堂和日常练习吗？',
+              answer: '很适合。它可以直接作为课堂热身、作业题库和每日速写材料来用。',
+            },
+          ],
+        },
+      },
+      ja: {
+        heroEyebrow: '簡単なお絵描き',
+        title: '簡単に描けるオブジェクト',
+        description:
+          '描き始めやすい、わかりやすい形のオブジェクトを生成。初心者や毎日のスケッチ練習に向いています。',
+        visualTitle: '簡単に描けるモノを引く',
+        visualDescription:
+          '輪郭が取りやすく、形を理解しやすい対象を中心にしているため、迷わず描き始めやすくなります。',
+        bulkTitle: '簡単なお題をまとめて作る',
+        bulkDescription:
+          '初心者練習、授業の導入、毎日のスケッチ用に、簡単な対象をまとめて生成できます。',
+        seoTitle: '簡単に描けるオブジェクトジェネレーター',
+        seoDescription:
+          '簡単に描けるランダムオブジェクトを生成。初心者向けのスケッチ練習や授業のお題に便利です。',
+        landing: {
+          introTitle: '簡単に描けるページの役割は、発想を増やすより先に手を動かしやすくすることです。',
+          introBody:
+            '「簡単に描けるもの」を探している人は、珍しいお題よりも描き始めやすさを求めています。このページは日用品、食べ物、シンプルな動物、自然物に寄せることで、輪郭を取りやすく、初心者にも扱いやすい結果を出しやすくしています。',
+          featureTitle: '簡単に描きやすい理由',
+          featureLead: '難易度を下げるのではなく、始めやすさを高めるための構成です。',
+          features: [
+            {
+              title: '形がわかりやすい',
+              body: '輪郭や大まかな構造をつかみやすい対象が多く、描き始めのハードルが低くなります。',
+            },
+            {
+              title: '初心者に向いている',
+              body: 'はじめてのスケッチや、授業での軽いウォームアップにも使いやすい内容です。',
+            },
+            {
+              title: '繰り返し練習しやすい',
+              body: '一括生成で、毎日の練習や宿題用に複数のお題をまとめて作れます。',
+            },
+          ],
+          categoryTitle: '簡単に描きやすいカテゴリ',
+          categoryLead:
+            '食べ物、日用品、シンプルな動物、自然物は、形を理解しやすく初心者に優しいカテゴリです。',
+          useCasesTitle: 'よくある使い方',
+          useCases: [
+            '初心者のスケッチ練習',
+            '毎日の落書き',
+            '授業の導入',
+            '子どものお絵描き',
+            '気軽な創作休憩',
+            '基本形の練習',
+          ],
+          faqTitle: '簡単に描けるページ FAQ',
+          faqs: [
+            {
+              question: '何が「簡単に描ける」対象ですか？',
+              answer: '輪郭がはっきりしていて、形を理解しやすく、細かすぎない対象が描きやすいです。',
+            },
+            {
+              question: 'なぜ専用ページが必要ですか？',
+              answer: '通常のランダム生成では少し難しい対象も混ざるため、初心者向けに絞った方が使いやすいからです。',
+            },
+            {
+              question: '授業や毎日の練習にも使えますか？',
+              answer: 'はい。授業の導入、宿題、毎日のスケッチ練習に向いています。',
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    slug: 'random-kitchen-objects',
+    categories: ['household', 'food'],
+    defaultVisualCount: 5,
+    i18n: {
+      en: {
+        heroEyebrow: 'Kitchen prompts',
+        title: 'Random Kitchen Objects',
+        description:
+          'Generate kitchen-related objects for cooking classes, vocabulary practice, drawing prompts, and home activity ideas.',
+        visualTitle: 'Pull a kitchen object prompt',
+        visualDescription:
+          'This page keeps the results centered on kitchen tools, food-adjacent objects, and familiar home items instead of fully open random results.',
+        bulkTitle: 'Build a kitchen object list',
+        bulkDescription:
+          'Generate a larger kitchen-themed set for lesson plans, scavenger hunts, writing prompts, or family activities.',
+        seoTitle: 'Random Kitchen Objects Generator',
+        seoDescription:
+          'Generate random kitchen objects with visual cards and copyable lists for cooking classes, ESL, drawing, and home games.',
+        landing: {
+          introTitle: 'A kitchen-object page should feel practical, not just thematic.',
+          introBody:
+            'Users searching for random kitchen objects often want something more specific than a broad object generator. They may be looking for cooking vocabulary, drawing references, classroom prompts, or scavenger-hunt ideas around the home. By tightening the object pool around household and food-adjacent items, this page becomes more useful and more topically focused than a generic random list.',
+          featureTitle: 'Why this page works for kitchen-themed use',
+          featureLead: 'The object pool is narrowed around common kitchen contexts, which makes the results easier to use immediately.',
+          features: [
+            {
+              title: 'More context-rich prompts',
+              body: 'Kitchen tools and food-related objects are easier to place in practical tasks than disconnected random nouns.',
+            },
+            {
+              title: 'Useful across home and classroom settings',
+              body: 'The same objects can support cooking vocabulary, still-life drawing, scavenger hunts, and descriptive writing.',
+            },
+            {
+              title: 'Better thematic batches',
+              body: 'Bulk mode lets you build a kitchen-only list without manual filtering, which is useful for themed worksheets and games.',
+            },
+          ],
+          categoryTitle: 'Best categories for kitchen objects',
+          categoryLead:
+            'Household and food categories work together here because kitchens sit between daily tools, ingredients, and familiar routines.',
+          useCasesTitle: 'Common kitchen-object uses',
+          useCases: [
+            'Cooking vocabulary practice',
+            'Kitchen scavenger hunts',
+            'Still-life drawing prompts',
+            'Home learning games',
+            'Descriptive writing tasks',
+            'Family activity cards',
+          ],
+          faqTitle: 'Kitchen objects page FAQ',
+          faqs: [
+            {
+              question: 'Why use a kitchen-specific random object page?',
+              answer:
+                'Because kitchen-related prompts are often used for themed lessons, games, and practical tasks where a generic random pool adds too much irrelevant noise.',
+            },
+            {
+              question: 'Is this page only for cooking lessons?',
+              answer:
+                'No. It also works for drawing, writing prompts, vocabulary games, and home scavenger hunts where kitchen objects are easier to source.',
+            },
+            {
+              question: 'Can I generate a longer themed list?',
+              answer:
+                'Yes. You can generate multiple kitchen-focused prompts at once and copy them into a worksheet, activity plan, or notes doc.',
+            },
+          ],
+        },
+      },
+      zh: {
+        heroEyebrow: '厨房主题',
+        title: '随机厨房物品',
+        description:
+          '生成更聚焦厨房场景的随机物品，适合烹饪课堂、词汇练习、绘画参考和家庭活动。',
+        visualTitle: '抽一个厨房相关物品',
+        visualDescription:
+          '这里会把结果更集中在厨房工具、食物相关对象和常见家居用品上，而不是完全开放的随机池。',
+        bulkTitle: '生成一组厨房物品清单',
+        bulkDescription:
+          '如果你要做主题课堂、家庭寻宝或写作练习，可以一次生成一整组厨房物品。',
+        seoTitle: '随机厨房物品生成器',
+        seoDescription:
+          '生成随机厨房物品，支持视觉卡片和批量清单，适用于烹饪课堂、ESL、绘画和家庭活动。',
+        landing: {
+          introTitle: '厨房物品页的价值，在于它足够具体，能直接进入主题场景。',
+          introBody:
+            '搜“随机厨房物品”的用户，通常不是想要一个宽泛的随机词，而是想围绕厨房这个具体场景做课堂、活动、绘画或写作。所以这个页面会把对象池收缩到家居和食物相关对象，让结果更贴近日常厨房环境，也更适合真实使用。',
+          featureTitle: '为什么厨房主题更适合独立成页',
+          featureLead: '专题明确之后，结果就能直接服务于更具体的任务。',
+          features: [
+            {
+              title: '结果更有场景感',
+              body: '厨房工具和食物相关对象比散乱的名词更容易直接进入活动、课堂和创作任务。',
+            },
+            {
+              title: '家庭和课堂都能用',
+              body: '同一组对象可以同时服务词汇练习、静物绘画、寻宝游戏和描述写作。',
+            },
+            {
+              title: '更容易做主题清单',
+              body: '批量模式可以快速生成纯厨房主题的对象集，不用自己再手动筛选。',
+            },
+          ],
+          categoryTitle: '更适合厨房主题的分类',
+          categoryLead:
+            '厨房同时连接着日用品和食物，所以家居类与食物类组合在这里会特别自然。',
+          useCasesTitle: '常见使用场景',
+          useCases: [
+            '烹饪词汇练习',
+            '厨房寻宝游戏',
+            '静物绘画提示',
+            '家庭学习活动',
+            '描述性写作任务',
+            '亲子卡片游戏',
+          ],
+          faqTitle: '厨房物品页常见问题',
+          faqs: [
+            {
+              question: '为什么要单独做一个厨房物品页？',
+              answer: '因为很多任务本来就是围绕厨房场景展开的。独立页面能减少无关结果，让对象更贴近实际用途。',
+            },
+            {
+              question: '这个页面只适合烹饪课吗？',
+              answer: '不是。它也适合绘画、写作、词汇练习和家庭寻宝等需要厨房主题对象的场景。',
+            },
+            {
+              question: '可以一次生成一长串厨房题目吗？',
+              answer: '可以。你可以批量生成并复制，用到课堂、活动方案或素材清单里。',
+            },
+          ],
+        },
+      },
+      ja: {
+        heroEyebrow: 'キッチンテーマ',
+        title: 'ランダムなキッチンオブジェクト',
+        description:
+          'キッチンに関係するオブジェクトを生成。料理授業、語彙練習、スケッチ、家庭アクティビティに使いやすい構成です。',
+        visualTitle: 'キッチン系オブジェクトを引く',
+        visualDescription:
+          '結果はキッチン用品、食べ物まわりの対象、家庭で見つけやすい道具に寄せています。',
+        bulkTitle: 'キッチンオブジェクトの一覧を作る',
+        bulkDescription:
+          '授業、宝探し、ライティング課題向けに、キッチンテーマの対象をまとめて生成できます。',
+        seoTitle: 'ランダムなキッチンオブジェクトジェネレーター',
+        seoDescription:
+          'キッチン関連のランダムオブジェクトを生成。料理授業、ESL、描画、家庭ゲームに使えます。',
+        landing: {
+          introTitle: 'キッチン向けページは、テーマがはっきりしているぶん実用性が上がります。',
+          introBody:
+            'キッチンオブジェクトを探す人は、広いランダム性よりもテーマの一致を求めています。料理、家庭学習、スケッチ、語彙練習など、キッチンを軸にした使い方が多いため、日用品と食べ物系の対象を中心に絞ることで、ページ全体の使いやすさが大きく上がります。',
+          featureTitle: 'キッチン向けに使いやすい理由',
+          featureLead: '対象がテーマに沿っていると、授業や活動にそのまま流し込みやすくなります。',
+          features: [
+            {
+              title: '場面が想像しやすい',
+              body: 'キッチン用品や食べ物周辺の対象は、具体的な活動や説明につなげやすいです。',
+            },
+            {
+              title: '家庭でも授業でも使える',
+              body: '同じ対象群を語彙学習、静物画、宝探し、説明練習に使い回しやすくなります。',
+            },
+            {
+              title: 'テーマ一覧を作りやすい',
+              body: '一括生成で、キッチンだけに絞ったお題セットをすぐに作れます。',
+            },
+          ],
+          categoryTitle: 'キッチン向きのカテゴリ',
+          categoryLead:
+            'キッチンは日用品と食べ物の中間にあるため、この二つのカテゴリが特に自然に機能します。',
+          useCasesTitle: 'よくある使い方',
+          useCases: [
+            '料理語彙の練習',
+            'キッチン宝探し',
+            '静物スケッチ',
+            '家庭学習ゲーム',
+            '説明文の練習',
+            '親子アクティビティ',
+          ],
+          faqTitle: 'キッチンページ FAQ',
+          faqs: [
+            {
+              question: 'なぜキッチン専用ページが必要ですか？',
+              answer: 'キッチン関連の使い方では、テーマに合った対象だけを出せる方が実用的だからです。',
+            },
+            {
+              question: '料理授業以外にも使えますか？',
+              answer: 'はい。描画、ライティング、語彙練習、家庭内ゲームなどにも使いやすいです。',
+            },
+            {
+              question: 'まとめて一覧化できますか？',
+              answer: 'できます。一括生成でキッチンテーマの対象をまとめて出力できます。',
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    slug: 'random-classroom-objects',
+    categories: ['household', 'funny', 'food'],
+    defaultVisualCount: 5,
+    i18n: {
+      en: {
+        heroEyebrow: 'Classroom prompts',
+        title: 'Random Classroom Objects',
+        description:
+          'Generate school-friendly object prompts for warmups, speaking games, scavenger hunts, and classroom routines.',
+        visualTitle: 'Pull a classroom-safe object prompt',
+        visualDescription:
+          'This page keeps the results closer to objects that are easy to explain, easy to use in class, and less likely to derail the activity.',
+        bulkTitle: 'Build a classroom object set',
+        bulkDescription:
+          'Generate a larger list when you need object prompts for stations, quick games, worksheet work, or review rounds.',
+        seoTitle: 'Random Classroom Objects Generator',
+        seoDescription:
+          'Generate classroom-friendly random objects with visual cards and copyable lists for warmups, ESL, games, and school activities.',
+        landing: {
+          introTitle: 'A classroom object page should help a teacher move faster, not create more filtering work.',
+          introBody:
+            'When teachers or tutors search for random classroom objects, they usually want prompts they can use immediately in school-friendly contexts. That means the objects need to be familiar, easy to explain, and adaptable to warmups, vocabulary tasks, and short games. This page tightens the object pool so the results feel more usable for instruction than a wide-open generator.',
+          featureTitle: 'Why this page works better for classroom use',
+          featureLead: 'The page is built around teachability, quick comprehension, and repeatable classroom tasks.',
+          features: [
+            {
+              title: 'School-friendly prompt pool',
+              body: 'Objects are easier to adapt for warmups, group work, quick descriptions, and teacher-led activities.',
+            },
+            {
+              title: 'Fast classroom setup',
+              body: 'Visual cards make it easier to present prompts quickly without long explanation or extra prep.',
+            },
+            {
+              title: 'Useful in multiple formats',
+              body: 'The same page can support scavenger hunts, ESL practice, drawing tasks, and pair discussions.',
+            },
+          ],
+          categoryTitle: 'Best categories for classroom objects',
+          categoryLead:
+            'Simple household objects, familiar foods, and light playful items often translate best to class-friendly tasks.',
+          useCasesTitle: 'Common classroom uses',
+          useCases: [
+            'Morning warmups',
+            'Vocabulary review',
+            'Pair speaking rounds',
+            'Classroom scavenger hunts',
+            'Quick drawing tasks',
+            'Exit-ticket prompts',
+          ],
+          faqTitle: 'Classroom objects page FAQ',
+          faqs: [
+            {
+              question: 'Why use a classroom-specific page instead of the homepage?',
+              answer:
+                'Because classroom tasks benefit from more predictable, school-friendly objects. A focused page cuts down on irrelevant results and prep time.',
+            },
+            {
+              question: 'Is this page only for teachers?',
+              answer:
+                'No. Tutors, parents, activity leaders, and anyone running structured group tasks can use it as well.',
+            },
+            {
+              question: 'Can I build a full prompt set for one lesson?',
+              answer:
+                'Yes. Use a custom count or bulk mode to generate a longer list for one class period or activity block.',
+            },
+          ],
+        },
+      },
+      zh: {
+        heroEyebrow: '课堂活动',
+        title: '随机课堂物品',
+        description:
+          '生成更适合课堂环境的随机物品，用于热身、口语活动、寻物游戏和日常教学任务。',
+        visualTitle: '抽一个适合课堂使用的物品',
+        visualDescription:
+          '这里更强调容易讲、容易看懂、容易放进课堂活动里的对象，而不是无边界的随机结果。',
+        bulkTitle: '生成一组课堂物品题目',
+        bulkDescription:
+          '如果你要做分组任务、练习纸、课堂游戏或复习活动，可以一次生成更长的题目清单。',
+        seoTitle: '随机课堂物品生成器',
+        seoDescription:
+          '生成适合课堂场景的随机物品，支持视觉卡片和批量清单，适用于热身、ESL、课堂游戏和教学活动。',
+        landing: {
+          introTitle: '课堂物品页应该帮助老师更快进入活动，而不是再花时间筛结果。',
+          introBody:
+            '搜索“随机课堂物品”的人，往往要的是能立刻用进课堂的小对象，而不是随便一个随机名词。对象需要足够熟悉、足够容易解释，也要能灵活放进热身、词汇练习、口语任务或小游戏里。这个页面把对象池往更适合学校环境的方向收窄，让结果更省准备时间。',
+          featureTitle: '为什么这个页面更适合课堂',
+          featureLead: '它的重点是教学可用性、理解速度和活动复用率。',
+          features: [
+            {
+              title: '对象更适合学校环境',
+              body: '结果更容易直接拿来做热身、小组任务、描述练习和教师主导的课堂活动。',
+            },
+            {
+              title: '课堂准备更快',
+              body: '视觉卡片能帮助老师快速展示题目，减少额外解释和准备工作。',
+            },
+            {
+              title: '一页能服务多种玩法',
+              body: '同一组对象既能做寻物、ESL、画画，也能做配对讨论和口头表达。',
+            },
+          ],
+          categoryTitle: '更适合课堂的分类',
+          categoryLead:
+            '简单家居物、熟悉食物和轻松一点的趣味对象，通常最容易转成课堂任务。',
+          useCasesTitle: '常见课堂使用场景',
+          useCases: [
+            '晨间热身',
+            '词汇复习',
+            '双人口语轮次',
+            '课堂寻物游戏',
+            '快速绘画任务',
+            '课末出口卡',
+          ],
+          faqTitle: '课堂物品页常见问题',
+          faqs: [
+            {
+              question: '为什么要单独做一个课堂物品页？',
+              answer: '因为课堂活动更依赖可预测、可讲解的对象。独立页面能减少不相关结果，也能减少备课时间。',
+            },
+            {
+              question: '只有老师才能用这个页面吗？',
+              answer: '不是。家教、家长、活动组织者，以及任何在带结构化小组任务的人都可以用。',
+            },
+            {
+              question: '可以直接生成一整节课的题目吗？',
+              answer: '可以。你可以输入数量或用批量模式，一次准备完整一轮活动素材。',
+            },
+          ],
+        },
+      },
+      ja: {
+        heroEyebrow: '授業向け',
+        title: 'ランダムな教室向けオブジェクト',
+        description:
+          '授業の導入、会話活動、宝探し、日常のクラス運営に使いやすいオブジェクトを生成します。',
+        visualTitle: '授業向けのオブジェクトを引く',
+        visualDescription:
+          '結果は、説明しやすく、授業に組み込みやすい対象へ寄せています。',
+        bulkTitle: '授業用オブジェクト一覧を作る',
+        bulkDescription:
+          'グループ活動、ワークシート、授業ゲーム向けに、複数のお題をまとめて作れます。',
+        seoTitle: 'ランダムな教室向けオブジェクトジェネレーター',
+        seoDescription:
+          '授業向けのランダムオブジェクトを生成。ウォームアップ、ESL、授業ゲーム、学習活動に便利です。',
+        landing: {
+          introTitle: '教室向けページは、先生の準備を増やさずに活動へつなげられることが大切です。',
+          introBody:
+            '授業で使うランダムオブジェクトは、奇抜さよりも使いやすさが重要です。生徒に説明しやすく、すぐに活動へ変換しやすい対象の方が、授業の流れを壊しません。このページは学校で使いやすい対象へ絞ることで、ホームページよりも授業利用に向いた着地先になっています。',
+          featureTitle: '授業向けに使いやすい理由',
+          featureLead: '教えやすさ、理解しやすさ、再利用しやすさを優先しています。',
+          features: [
+            {
+              title: '学校向きの対象',
+              body: 'ウォームアップ、説明練習、グループ活動にそのまま使いやすい対象を中心にしています。',
+            },
+            {
+              title: '提示が速い',
+              body: 'カード表示なので、長い説明をせずにお題を出しやすくなります。',
+            },
+            {
+              title: '複数の活動形式に対応',
+              body: '宝探し、会話練習、描画、ペアワークなど複数の授業活動に転用できます。',
+            },
+          ],
+          categoryTitle: '教室向けに使いやすいカテゴリ',
+          categoryLead:
+            '日用品、身近な食べ物、少し遊び心のある対象は、授業内で扱いやすいバランスです。',
+          useCasesTitle: 'よくある使い方',
+          useCases: [
+            '授業の導入',
+            '語彙復習',
+            'ペア会話',
+            '教室内宝探し',
+            '短い描画課題',
+            '終了前の小タスク',
+          ],
+          faqTitle: '教室向けページ FAQ',
+          faqs: [
+            {
+              question: 'なぜ教室向けの専用ページが必要ですか？',
+              answer: '授業では使いやすく説明しやすい対象が重要だからです。専用ページにすることで準備の手間を減らせます。',
+            },
+            {
+              question: '教師以外も使えますか？',
+              answer: 'はい。家庭教師、保護者、アクティビティ担当者にも使いやすいです。',
+            },
+            {
+              question: '一授業分のお題をまとめて作れますか？',
+              answer: 'はい。数量指定や一括生成で、授業一回分の素材をまとめて準備できます。',
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    slug: 'random-office-objects',
+    categories: ['household', 'funny', 'food'],
+    defaultVisualCount: 5,
+    i18n: {
+      en: {
+        heroEyebrow: 'Office prompts',
+        title: 'Random Office Objects',
+        description:
+          'Generate office-friendly object prompts for team games, workshops, writing exercises, naming sessions, and icebreakers.',
+        visualTitle: 'Pull an office object prompt',
+        visualDescription:
+          'This page leans toward desk items, familiar workday objects, and prompt types that fit team or work-related settings.',
+        bulkTitle: 'Build an office object list',
+        bulkDescription:
+          'Generate a longer office-themed set for workshops, onboarding activities, brainstorming sessions, or team facilitation.',
+        seoTitle: 'Random Office Objects Generator',
+        seoDescription:
+          'Generate random office objects with visual cards and copyable lists for workshops, team games, icebreakers, and writing prompts.',
+        landing: {
+          introTitle: 'Office-object searches usually want context, not just randomness.',
+          introBody:
+            'People looking for random office objects often need them for specific tasks: team warmups, workplace charades, product naming exercises, facilitation sessions, or descriptive writing around work settings. A generic generator can produce technically valid objects that still feel off-theme. This page narrows the pool toward everyday office-adjacent prompts so the results are more immediately useful.',
+          featureTitle: 'Why this page works for office-themed tasks',
+          featureLead: 'The page is built to keep the prompts grounded in familiar workday contexts.',
+          features: [
+            {
+              title: 'More relevant workday prompts',
+              body: 'Objects feel closer to desks, meeting rooms, snacks, and shared spaces than to unrelated random nouns.',
+            },
+            {
+              title: 'Good for facilitation',
+              body: 'The prompts are easier to reuse in icebreakers, workshop exercises, and team games without extra rewriting.',
+            },
+            {
+              title: 'Helpful for creative exercises',
+              body: 'Office-themed batches work well for naming sessions, short writing tasks, improv, and communication drills.',
+            },
+          ],
+          categoryTitle: 'Best categories for office objects',
+          categoryLead:
+            'Household-style tools, light novelty items, and familiar snack objects tend to map well onto office use cases.',
+          useCasesTitle: 'Common office-object uses',
+          useCases: [
+            'Workshop icebreakers',
+            'Team charades',
+            'Creative writing prompts',
+            'Naming exercises',
+            'Onboarding games',
+            'Meeting warmups',
+          ],
+          faqTitle: 'Office objects page FAQ',
+          faqs: [
+            {
+              question: 'Why use an office-specific random object page?',
+              answer:
+                'Because work-related activities often need prompts that feel familiar in desk, meeting, or team settings. A narrower pool makes the results easier to use.',
+            },
+            {
+              question: 'Is this only for corporate workshops?',
+              answer:
+                'No. It can also be useful for remote teams, coworking groups, trainers, and anyone running work-themed creative exercises.',
+            },
+            {
+              question: 'Can I generate enough prompts for a full workshop?',
+              answer:
+                'Yes. You can generate a larger batch and copy it into slides, facilitation notes, or activity docs.',
+            },
+          ],
+        },
+      },
+      zh: {
+        heroEyebrow: '办公场景',
+        title: '随机办公物品',
+        description:
+          '生成更适合办公室、团队活动和工作坊的随机物品，用于破冰、写作、命名和小游戏。',
+        visualTitle: '抽一个办公相关物品',
+        visualDescription:
+          '这里的结果会更贴近日常工位、会议和团队场景，而不是完全脱离上下文的随机对象。',
+        bulkTitle: '生成一组办公物品清单',
+        bulkDescription:
+          '如果你要做工作坊、培训、入职活动或团队游戏，可以一次生成更长的办公主题列表。',
+        seoTitle: '随机办公物品生成器',
+        seoDescription:
+          '生成随机办公物品，支持视觉卡片和批量清单，适用于工作坊、团队破冰、写作练习和命名活动。',
+        landing: {
+          introTitle: '搜办公物品的人，通常需要的是“贴合工作场景”的结果，而不是更随机。',
+          introBody:
+            '办公物品的使用场景通常很具体，比如团队破冰、会议热身、工作坊活动、命名练习，或者围绕办公室写短文。泛用随机生成器虽然也会给出对象，但很容易缺乏场景感。这个页面会把结果拉回到工位、会议室、零食角和共享空间这类更熟悉的办公语境里。',
+          featureTitle: '为什么这个页面更适合办公场景',
+          featureLead: '重点是让结果更贴近日常工作环境，减少主持人再加工的成本。',
+          features: [
+            {
+              title: '更贴近日常办公',
+              body: '对象更容易让人联想到工位、会议、茶水间和共享空间，而不是跑偏到无关名词。',
+            },
+            {
+              title: '适合工作坊和带领活动',
+              body: '这些对象更容易直接拿去做破冰、互动题和团队小游戏，不需要额外改写。',
+            },
+            {
+              title: '也适合创意练习',
+              body: '办公主题列表可以直接用于命名、短写作、即兴表达和沟通训练。',
+            },
+          ],
+          categoryTitle: '更适合办公主题的分类',
+          categoryLead:
+            '家居工具类、轻趣味对象和熟悉零食类物品，往往更容易映射到真实办公场景。',
+          useCasesTitle: '常见使用场景',
+          useCases: [
+            '工作坊破冰',
+            '团队你演我猜',
+            '创意写作提示',
+            '命名练习',
+            '入职游戏',
+            '会议热身',
+          ],
+          faqTitle: '办公物品页常见问题',
+          faqs: [
+            {
+              question: '为什么要单独做一个办公物品页？',
+              answer: '因为工作相关活动更依赖有场景感的对象。独立页面能让结果更贴近日常办公环境，也更好直接使用。',
+            },
+            {
+              question: '这个页面只适合企业培训吗？',
+              answer: '不是。远程团队、共享办公群体、培训师和任何围绕工作主题做活动的人都可以用。',
+            },
+            {
+              question: '能不能一次生成一整场活动的题目？',
+              answer: '可以。你可以批量生成并复制进幻灯片、主持稿或活动文档里。',
+            },
+          ],
+        },
+      },
+      ja: {
+        heroEyebrow: 'オフィス向け',
+        title: 'ランダムなオフィスオブジェクト',
+        description:
+          'オフィス、チーム活動、ワークショップで使いやすいオブジェクトを生成。アイスブレイクやライティングにも向いています。',
+        visualTitle: 'オフィス系オブジェクトを引く',
+        visualDescription:
+          '結果はデスク、会議、共有スペースなど、仕事の文脈に近い対象へ寄せています。',
+        bulkTitle: 'オフィス用オブジェクト一覧を作る',
+        bulkDescription:
+          'ワークショップ、研修、オンボーディング、チームゲーム向けに、複数のお題をまとめて作れます。',
+        seoTitle: 'ランダムなオフィスオブジェクトジェネレーター',
+        seoDescription:
+          'オフィス向けのランダムオブジェクトを生成。ワークショップ、アイスブレイク、ライティング、命名活動に便利です。',
+        landing: {
+          introTitle: 'オフィス向け検索では、単なるランダムさよりも場面との一致が重要です。',
+          introBody:
+            'オフィスオブジェクトを探す人の多くは、チームのアイスブレイク、会議のウォームアップ、ワークショップ、命名演習、短いライティング課題などに使いたいと考えています。そこでこのページは、仕事の日常に近い対象へ寄せることで、より使いやすい結果を返せるようにしています。',
+          featureTitle: 'オフィス向けに使いやすい理由',
+          featureLead: '仕事の場面に結びつきやすい対象へ絞り込んでいます。',
+          features: [
+            {
+              title: '仕事の日常に近い',
+              body: 'デスク、会議室、共有スペース、おやつ周辺などを連想しやすい対象が多くなります。',
+            },
+            {
+              title: '進行役が扱いやすい',
+              body: 'アイスブレイク、ゲーム、ワークショップでそのまま使いやすく、追加調整が少なくて済みます。',
+            },
+            {
+              title: '創作課題にも向く',
+              body: '命名、短文作成、即興表現、コミュニケーション練習にも流用しやすいです。',
+            },
+          ],
+          categoryTitle: 'オフィス向きのカテゴリ',
+          categoryLead:
+            '日用品寄りの道具、軽いユーモアのある対象、身近なおやつ系はオフィス文脈に乗せやすいです。',
+          useCasesTitle: 'よくある使い方',
+          useCases: [
+            'ワークショップの導入',
+            'チームのジェスチャーゲーム',
+            '創作ライティング',
+            '命名演習',
+            'オンボーディングゲーム',
+            '会議のウォームアップ',
+          ],
+          faqTitle: 'オフィスページ FAQ',
+          faqs: [
+            {
+              question: 'なぜオフィス専用ページが必要ですか？',
+              answer: '仕事関連の活動では、文脈に合った対象の方が使いやすいからです。狭いプールの方が進行しやすくなります。',
+            },
+            {
+              question: '企業研修以外にも使えますか？',
+              answer: 'はい。リモートチーム、コワーキング、ファシリテーター、トレーナーにも使いやすいです。',
+            },
+            {
+              question: '一度に長い一覧を作れますか？',
+              answer: 'できます。複数のお題をまとめて生成して、スライドや進行メモにコピーできます。',
+            },
           ],
         },
       },

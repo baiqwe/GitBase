@@ -4,7 +4,7 @@ import { GeneratorShell } from '@/components/generators/GeneratorShell'
 import { getLocalizedCategories, getLocalizedObjects } from '@/lib/objects'
 import { createMetadata } from '@/lib/seo'
 import { siteConfig } from '@/lib/site-config'
-import { getLocalizedIntentLinks } from '@/lib/intent-pages'
+import { expandedIntentPageSlugs, getLocalizedIntentLinks } from '@/lib/intent-pages'
 import enDict from '@/dictionaries/en.json'
 
 export const metadata: Metadata = createMetadata({
@@ -21,11 +21,7 @@ export default function Home() {
     .map((id) => items.find((item) => item.id === id))
     .filter((item): item is NonNullable<typeof item> => Boolean(item))
   const editorialLinks = getLocalizedIntentLinks('en')
-    .filter((link) =>
-      ['random-object-to-draw', 'random-objects-for-kids', 'random-objects-for-charades', 'random-objects-for-writing-prompts'].includes(
-        link.href.slice(1)
-      )
-    )
+    .filter((link) => expandedIntentPageSlugs.includes(link.href.slice(1) as (typeof expandedIntentPageSlugs)[number]))
     .map(({ href, title, description }) => ({ href, label: title, description }))
   const trustBlock = {
     title: 'How the homepage stays useful instead of generic',
