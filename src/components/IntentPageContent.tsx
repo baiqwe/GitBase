@@ -22,6 +22,7 @@ export function IntentPageContent({ locale, path, intentPage }: IntentPageConten
     intentPage.categories.includes(category.slug)
   )
   const items = getLocalizedObjectsByCategories(locale, intentPage.categories)
+  const sampleItems = buildSampleItems(items, intentPage.exampleObjectIds)
   const featuredItems = buildFeaturedItems(categories, items)
   const editorialLinks = getLocalizedIntentLinks(locale)
     .filter((link) => link.href !== path)
@@ -85,13 +86,30 @@ export function IntentPageContent({ locale, path, intentPage }: IntentPageConten
       <HomeLandingContent
         locale={locale}
         categories={categories}
-        sampleItems={items}
+        sampleItems={sampleItems}
         editorialLinks={editorialLinks}
+        exampleContent={copy.examples}
         trustBlock={trustBlock}
         content={copy.landing}
       />
     </>
   )
+}
+
+function buildSampleItems(
+  items: ReturnType<typeof getLocalizedObjectsByCategories>,
+  exampleObjectIds?: string[]
+) {
+  if (!exampleObjectIds || exampleObjectIds.length === 0) {
+    return items
+  }
+
+  const selected = exampleObjectIds
+    .map((id) => items.find((item) => item.id === id))
+    .filter((item): item is NonNullable<typeof item> => Boolean(item))
+  const rest = items.filter((item) => !selected.some((selectedItem) => selectedItem.id === item.id))
+
+  return [...selected, ...rest]
 }
 
 function buildFeaturedItems(categories: LocalizedCategory[], items: ReturnType<typeof getLocalizedObjectsByCategories>) {

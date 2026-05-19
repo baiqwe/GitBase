@@ -10,6 +10,10 @@ interface HomeLandingContentProps {
   categories: LocalizedCategory[]
   sampleItems: LocalizedObject[]
   editorialLinks?: Array<{ href: string; label: string; description: string }>
+  exampleContent?: {
+    title: string
+    lead: string
+  }
   trustBlock: {
     title: string
     lead: string
@@ -62,6 +66,7 @@ export function HomeLandingContent({
   categories,
   sampleItems,
   editorialLinks,
+  exampleContent,
   trustBlock,
   content,
 }: HomeLandingContentProps) {
@@ -182,7 +187,12 @@ export function HomeLandingContent({
           </div>
         </section>
 
-        <ExampleObjectsSection locale={locale} title={exampleCopy.title} lead={exampleCopy.lead} items={sampleItems.slice(0, 6)} />
+        <ExampleObjectsSection
+          locale={locale}
+          title={exampleContent?.title ?? exampleCopy.title}
+          lead={exampleContent?.lead ?? exampleCopy.lead}
+          items={sampleItems.slice(0, 6)}
+        />
         <EditorialLinksSection locale={locale} links={editorialLinks ?? []} />
         <TrustBlockSection locale={locale} block={trustBlock} />
       </div>

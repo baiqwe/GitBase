@@ -14,6 +14,11 @@ type IntentLandingContent = {
   faqs: Array<{ question: string; answer: string }>
 }
 
+type IntentExampleContent = {
+  title: string
+  lead: string
+}
+
 type IntentPageCopy = {
   heroEyebrow: string
   title: string
@@ -24,6 +29,7 @@ type IntentPageCopy = {
   bulkDescription: string
   seoTitle: string
   seoDescription: string
+  examples?: IntentExampleContent
   landing: IntentLandingContent
 }
 
@@ -48,6 +54,7 @@ export type IntentPageConfig = {
     | 'random-office-objects'
   categories: string[]
   defaultVisualCount: number
+  exampleObjectIds?: string[]
   i18n: Record<Locale, IntentPageCopy>
 }
 
@@ -1567,6 +1574,7 @@ export const intentPages: IntentPageConfig[] = [
     slug: 'random-objects-for-pictionary',
     categories: ['animals', 'food', 'household', 'nature'],
     defaultVisualCount: 5,
+    exampleObjectIds: ['animal-elephant', 'food-apple', 'house-kettle', 'nature-shell', 'animal-butterfly', 'food-popcorn'],
     i18n: {
       en: {
         heroEyebrow: 'Pictionary prompts',
@@ -1582,6 +1590,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'Random Objects For Pictionary Generator',
         seoDescription:
           'Generate random objects for Pictionary with visual cards, copyable lists, and prompt ideas that are easier to draw and guess.',
+        examples: {
+          title: 'Pictionary examples chosen for clear silhouettes',
+          lead:
+            'These examples show the kind of prompt that works well in a timed drawing game: easy outline, familiar meaning, and enough visual variety for several rounds.',
+        },
         landing: {
           introTitle: 'Pictionary works best when the object is quick to draw and easy to guess.',
           introBody:
@@ -1619,6 +1632,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '你画我猜随机物品生成器',
         seoDescription:
           '生成适合你画我猜的随机物品，支持视觉卡片和批量复制，适合课堂、派对和团队活动。',
+        examples: {
+          title: '更适合你画我猜的示例物品',
+          lead:
+            '这些示例都偏向轮廓清楚、容易画、也容易被猜出来的对象，适合限时出题和多人互动。',
+        },
         landing: {
           introTitle: '你画我猜最怕的，不是题目太简单，而是题目根本不好画。',
           introBody:
@@ -1656,6 +1674,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'ピクショナリー向けランダムオブジェクトジェネレーター',
         seoDescription:
           'ピクショナリー向けのランダムオブジェクトを生成。描きやすいお題をカード表示と一覧で使えます。',
+        examples: {
+          title: 'ピクショナリー向けに選んだサンプル',
+          lead:
+            '短時間で輪郭を描きやすく、相手にも伝わりやすい対象を優先して見せています。',
+        },
         landing: {
           introTitle: 'ピクショナリーでは、描きやすさと伝わりやすさが最優先です。',
           introBody:
@@ -1685,6 +1708,7 @@ export const intentPages: IntentPageConfig[] = [
     slug: 'random-objects-for-improv',
     categories: ['household', 'funny', 'food', 'animals'],
     defaultVisualCount: 5,
+    exampleObjectIds: ['funny-rubber-duck', 'house-key', 'food-taco', 'animal-penguin', 'funny-disco-ball', 'house-clock'],
     i18n: {
       en: {
         heroEyebrow: 'Improv prompts',
@@ -1700,6 +1724,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'Random Objects For Improv Generator',
         seoDescription:
           'Generate random objects for improv scenes, prop games, and acting warmups with visual cards and copyable lists.',
+        examples: {
+          title: 'Improv examples that can become scene props',
+          lead:
+            'These objects are useful because they can be held, hidden, argued over, gifted, misunderstood, or turned into a quick status cue in a scene.',
+        },
         landing: {
           introTitle: 'In improv, the best object prompt is one that creates action, not just recognition.',
           introBody:
@@ -1737,6 +1766,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '即兴表演随机物品生成器',
         seoDescription:
           '生成适合即兴表演的随机物品，用于道具练习、表演热身和创意游戏，支持卡片和批量列表。',
+        examples: {
+          title: '更适合即兴表演的示例道具',
+          lead:
+            '这些对象更容易被拿来做动作、制造关系或触发反应，比纯粹好看的物品更适合舞台练习。',
+        },
         landing: {
           introTitle: '即兴表演最需要的，不是一个词，而是一个能立刻引出动作的物品。',
           introBody:
@@ -1774,6 +1808,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '即興向けランダムオブジェクトジェネレーター',
         seoDescription:
           '即興シーンや小道具ゲームに向いたランダムオブジェクトを生成。カード表示と一覧コピーに対応しています。',
+        examples: {
+          title: '即興で小道具になりやすいサンプル',
+          lead:
+            '持つ、隠す、受け渡す、誤解するといった動きへつなげやすい対象を優先しています。',
+        },
         landing: {
           introTitle: '即興では、見た瞬間に動けるオブジェクトが強いです。',
           introBody:
@@ -1803,6 +1842,7 @@ export const intentPages: IntentPageConfig[] = [
     slug: 'random-objects-for-icebreakers',
     categories: ['household', 'funny', 'food'],
     defaultVisualCount: 5,
+    exampleObjectIds: ['funny-rubber-duck', 'food-popcorn', 'house-lamp', 'funny-tiny-crown', 'house-key', 'food-birthday-cake'],
     i18n: {
       en: {
         heroEyebrow: 'Icebreaker prompts',
@@ -1818,6 +1858,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'Random Objects For Icebreakers Generator',
         seoDescription:
           'Generate random objects for icebreakers, warmups, and group activities with visual cards and copyable prompt lists.',
+        examples: {
+          title: 'Icebreaker examples that are easy to talk about',
+          lead:
+            'These objects are selected because they invite quick stories, preferences, guesses, or comparisons without making the group learn complicated rules first.',
+        },
         landing: {
           introTitle: 'A good icebreaker object should open a conversation instead of stopping one.',
           introBody:
@@ -1855,6 +1900,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '破冰活动随机物品生成器',
         seoDescription:
           '生成适合破冰、暖场和小组交流的随机物品，支持卡片和批量清单。',
+        examples: {
+          title: '更适合破冰开场的示例物品',
+          lead:
+            '这些对象更容易引出故事、偏好、比较和轻松猜测，适合让参与者快速进入交流状态。',
+        },
         landing: {
           introTitle: '好的破冰物品，应该让人更容易开口，而不是先停下来理解规则。',
           introBody:
@@ -1892,6 +1942,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'アイスブレイク向けランダムオブジェクトジェネレーター',
         seoDescription:
           'アイスブレイクや会話ウォームアップ向けのランダムオブジェクトを生成。カード表示と一覧コピーに対応しています。',
+        examples: {
+          title: '会話を始めやすいサンプル',
+          lead:
+            '思い出、好み、比較、ちょっとした推測につなげやすい対象を優先して表示しています。',
+        },
         landing: {
           introTitle: 'アイスブレイクでは、話しやすさがいちばん大切です。',
           introBody:
@@ -1921,6 +1976,7 @@ export const intentPages: IntentPageConfig[] = [
     slug: 'random-objects-for-scavenger-hunt',
     categories: ['household', 'food', 'nature'],
     defaultVisualCount: 5,
+    exampleObjectIds: ['house-key', 'food-apple', 'nature-pinecone', 'house-clock', 'nature-shell', 'food-popcorn'],
     i18n: {
       en: {
         heroEyebrow: 'Scavenger hunt',
@@ -1936,6 +1992,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'Random Objects For Scavenger Hunt Generator',
         seoDescription:
           'Generate random objects for scavenger hunts with visual cards and copyable lists for home, classroom, and team activities.',
+        examples: {
+          title: 'Scavenger-hunt examples that are realistic to find',
+          lead:
+            'These examples stay close to objects people can actually locate in a home, classroom, or nearby environment, which keeps the game moving.',
+        },
         landing: {
           introTitle: 'A scavenger-hunt object should be findable in the real world, not just interesting on paper.',
           introBody:
@@ -1973,6 +2034,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '寻宝游戏随机物品生成器',
         seoDescription:
           '生成适合家庭、课堂和团队活动的随机寻宝物品，支持视觉卡片和批量清单。',
+        examples: {
+          title: '更适合真实寻宝的示例物品',
+          lead:
+            '这些示例更接近家里、教室或周边环境里真的能找到的对象，能减少活动中途卡住的概率。',
+        },
         landing: {
           introTitle: '寻宝活动最重要的，不是随机，而是真的找得到。',
           introBody:
@@ -2010,6 +2076,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '宝探し向けランダムオブジェクトジェネレーター',
         seoDescription:
           '家や教室で使いやすい宝探し向けのランダムオブジェクトを生成。カード表示と一覧コピーに対応しています。',
+        examples: {
+          title: '実際に探しやすいサンプル',
+          lead:
+            '家、教室、近くの環境で見つけやすい対象を優先し、ゲームが止まりにくい例を見せています。',
+        },
         landing: {
           introTitle: '宝探しでは、面白さより先に見つけられるかが重要です。',
           introBody:
@@ -2039,6 +2110,7 @@ export const intentPages: IntentPageConfig[] = [
     slug: 'easy-objects-to-draw',
     categories: ['household', 'food', 'animals', 'nature'],
     defaultVisualCount: 5,
+    exampleObjectIds: ['food-apple', 'house-lamp', 'animal-penguin', 'nature-mushroom', 'house-clock', 'nature-shell'],
     i18n: {
       en: {
         heroEyebrow: 'Easy drawing ideas',
@@ -2054,6 +2126,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'Easy Objects To Draw Generator With Visual Prompts',
         seoDescription:
           'Generate easy objects to draw with visual cards, copyable prompt lists, and beginner-friendly ideas for sketch practice.',
+        examples: {
+          title: 'Easy drawing examples with simple forms',
+          lead:
+            'These examples are chosen for clearer outlines, familiar proportions, and manageable detail so the page feels useful for beginners and warmups.',
+        },
         landing: {
           introTitle: 'Easy drawing prompts should remove friction, not add another decision layer.',
           introBody:
@@ -2120,6 +2197,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '简单物品绘画生成器 - 适合初学者的随机画画题目',
         seoDescription:
           '生成简单好画的随机物品，支持视觉卡片和批量清单，适合初学者、课堂和日常绘画练习。',
+        examples: {
+          title: '适合初学者练习的简单物品示例',
+          lead:
+            '这些对象轮廓更清晰、结构更熟悉、细节压力更低，更适合拿来做速写热身和基础练习。',
+        },
         landing: {
           introTitle: '简单绘画页的意义，不是“更无聊”，而是更容易开始。',
           introBody:
@@ -2183,6 +2265,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '簡単に描けるオブジェクトジェネレーター',
         seoDescription:
           '簡単に描けるランダムオブジェクトを生成。初心者向けのスケッチ練習や授業のお題に便利です。',
+        examples: {
+          title: '簡単に描きやすいサンプル',
+          lead:
+            '輪郭が分かりやすく、細部が多すぎない対象を優先し、初心者やウォームアップに使いやすくしています。',
+        },
         landing: {
           introTitle: '簡単に描けるページの役割は、発想を増やすより先に手を動かしやすくすることです。',
           introBody:
@@ -2238,6 +2325,7 @@ export const intentPages: IntentPageConfig[] = [
     slug: 'random-kitchen-objects',
     categories: ['household', 'food'],
     defaultVisualCount: 5,
+    exampleObjectIds: ['house-kettle', 'food-apple', 'food-ramen', 'house-broom', 'food-taco', 'house-clock'],
     i18n: {
       en: {
         heroEyebrow: 'Kitchen prompts',
@@ -2253,6 +2341,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'Random Kitchen Objects Generator',
         seoDescription:
           'Generate random kitchen objects with visual cards and copyable lists for cooking classes, ESL, drawing, and home games.',
+        examples: {
+          title: 'Kitchen examples that feel usable in real activities',
+          lead:
+            'These examples combine utensils, foods, and familiar home items so the page can support vocabulary, still-life drawing, scavenger hunts, and family games.',
+        },
         landing: {
           introTitle: 'A kitchen-object page should feel practical, not just thematic.',
           introBody:
@@ -2319,6 +2412,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '随机厨房物品生成器',
         seoDescription:
           '生成随机厨房物品，支持视觉卡片和批量清单，适用于烹饪课堂、ESL、绘画和家庭活动。',
+        examples: {
+          title: '更贴近真实厨房场景的示例物品',
+          lead:
+            '这些示例把厨房工具、食物和日常家居对象放在一起，方便用于词汇、静物绘画、寻宝和家庭活动。',
+        },
         landing: {
           introTitle: '厨房物品页的价值，在于它足够具体，能直接进入主题场景。',
           introBody:
@@ -2382,6 +2480,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'ランダムなキッチンオブジェクトジェネレーター',
         seoDescription:
           'キッチン関連のランダムオブジェクトを生成。料理授業、ESL、描画、家庭ゲームに使えます。',
+        examples: {
+          title: '実際のキッチン活動に使いやすいサンプル',
+          lead:
+            '道具、食べ物、家庭内の身近な対象を組み合わせ、語彙、静物画、宝探し、家庭ゲームに使いやすくしています。',
+        },
         landing: {
           introTitle: 'キッチン向けページは、テーマがはっきりしているぶん実用性が上がります。',
           introBody:
@@ -2437,6 +2540,7 @@ export const intentPages: IntentPageConfig[] = [
     slug: 'random-classroom-objects',
     categories: ['household', 'funny', 'food'],
     defaultVisualCount: 5,
+    exampleObjectIds: ['house-key', 'food-apple', 'funny-rubber-duck', 'house-clock', 'food-popcorn', 'house-lamp'],
     i18n: {
       en: {
         heroEyebrow: 'Classroom prompts',
@@ -2452,6 +2556,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'Random Classroom Objects Generator',
         seoDescription:
           'Generate classroom-friendly random objects with visual cards and copyable lists for warmups, ESL, games, and school activities.',
+        examples: {
+          title: 'Classroom examples that are easy to explain',
+          lead:
+            'These objects were picked because they are familiar enough for fast instructions and flexible enough for speaking, guessing, drawing, or review tasks.',
+        },
         landing: {
           introTitle: 'A classroom object page should help a teacher move faster, not create more filtering work.',
           introBody:
@@ -2518,6 +2627,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '随机课堂物品生成器',
         seoDescription:
           '生成适合课堂场景的随机物品，支持视觉卡片和批量清单，适用于热身、ESL、课堂游戏和教学活动。',
+        examples: {
+          title: '适合课堂快速使用的示例物品',
+          lead:
+            '这些对象更容易讲清楚，也更容易转成口语、猜测、绘画和复习任务，适合老师直接放进课堂流程。',
+        },
         landing: {
           introTitle: '课堂物品页应该帮助老师更快进入活动，而不是再花时间筛结果。',
           introBody:
@@ -2581,6 +2695,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'ランダムな教室向けオブジェクトジェネレーター',
         seoDescription:
           '授業向けのランダムオブジェクトを生成。ウォームアップ、ESL、授業ゲーム、学習活動に便利です。',
+        examples: {
+          title: '授業で説明しやすいサンプル',
+          lead:
+            'すぐ説明でき、会話、推測、描画、復習に変換しやすい対象を優先しています。',
+        },
         landing: {
           introTitle: '教室向けページは、先生の準備を増やさずに活動へつなげられることが大切です。',
           introBody:
@@ -2636,6 +2755,7 @@ export const intentPages: IntentPageConfig[] = [
     slug: 'random-office-objects',
     categories: ['household', 'funny', 'food'],
     defaultVisualCount: 5,
+    exampleObjectIds: ['house-lamp', 'house-clock', 'house-key', 'food-popcorn', 'funny-tiny-crown', 'funny-disco-ball'],
     i18n: {
       en: {
         heroEyebrow: 'Office prompts',
@@ -2651,6 +2771,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'Random Office Objects Generator',
         seoDescription:
           'Generate random office objects with visual cards and copyable lists for workshops, team games, icebreakers, and writing prompts.',
+        examples: {
+          title: 'Office examples for team and workshop prompts',
+          lead:
+            'These examples feel closer to desks, meetings, breaks, and shared work spaces, so they are easier to reuse in facilitation and team activities.',
+        },
         landing: {
           introTitle: 'Office-object searches usually want context, not just randomness.',
           introBody:
@@ -2717,6 +2842,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: '随机办公物品生成器',
         seoDescription:
           '生成随机办公物品，支持视觉卡片和批量清单，适用于工作坊、团队破冰、写作练习和命名活动。',
+        examples: {
+          title: '更贴近办公活动的示例物品',
+          lead:
+            '这些对象更容易联想到工位、会议、茶水间和团队互动，适合工作坊、破冰和创意练习。',
+        },
         landing: {
           introTitle: '搜办公物品的人，通常需要的是“贴合工作场景”的结果，而不是更随机。',
           introBody:
@@ -2780,6 +2910,11 @@ export const intentPages: IntentPageConfig[] = [
         seoTitle: 'ランダムなオフィスオブジェクトジェネレーター',
         seoDescription:
           'オフィス向けのランダムオブジェクトを生成。ワークショップ、アイスブレイク、ライティング、命名活動に便利です。',
+        examples: {
+          title: 'チーム活動に使いやすいオフィス系サンプル',
+          lead:
+            'デスク、会議、休憩、共有スペースを連想しやすい対象を優先し、進行やチーム活動に使いやすくしています。',
+        },
         landing: {
           introTitle: 'オフィス向け検索では、単なるランダムさよりも場面との一致が重要です。',
           introBody:
