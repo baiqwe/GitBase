@@ -55,7 +55,7 @@ export function ExampleObjectsSection({
       <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{title}</h2>
       <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">{lead}</p>
       <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {items.map((item) => (
+        {items.map((item, index) => (
           <article
             key={item.id}
             className="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-50 shadow-[0_10px_24px_rgba(15,23,42,0.04)]"
@@ -68,6 +68,7 @@ export function ExampleObjectsSection({
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
+                  priority={index < 3}
                   placeholder={item.blurDataUrl ? 'blur' : 'empty'}
                   blurDataURL={item.blurDataUrl}
                 />

@@ -50,6 +50,36 @@ const howToCopy = {
   }),
 }
 
+const categoryLibraryCopy = {
+  en: {
+    eyebrow: 'Category library',
+    title: 'This page has enough objects for longer non-repeating batches.',
+    body:
+      'A category page should not run out after one click. The pool here is sized for repeated use while keeping the topic narrow enough to satisfy the category intent.',
+    total: 'Objects in this category',
+    images: 'Real image cards',
+    default: 'Default batch',
+  },
+  zh: {
+    eyebrow: '分类对象库',
+    title: '这个分类已经有足够对象支撑更长的不重复生成。',
+    body:
+      '分类页不能点一次就抽空。这里的对象池既能支撑多次使用，又保持主题足够聚焦，避免变成杂项结果页。',
+    total: '本分类物品数',
+    images: '真实图片卡片',
+    default: '默认批量',
+  },
+  ja: {
+    eyebrow: 'カテゴリライブラリ',
+    title: 'このカテゴリは、重複なしの長めの生成にも対応できます。',
+    body:
+      'カテゴリページは一度のクリックで候補が尽きないことが大切です。このページはテーマを絞りつつ、繰り返し使える対象数を確保しています。',
+    total: 'カテゴリ内の対象数',
+    images: '実写カード',
+    default: '初期表示数',
+  },
+}
+
 export function CategoryLandingContent({
   locale,
   categoryName,
@@ -61,6 +91,8 @@ export function CategoryLandingContent({
   const faqJsonLd = buildFaqJsonLd({ faqs: content.faqs })
   const howTo = howToCopy[locale](categoryName)
   const ui = trustPageCopy[locale].ui
+  const library = categoryLibraryCopy[locale]
+  const imageCount = sampleItems.filter((item) => Boolean(item.image)).length
   const exampleCopy = {
     en: {
       title: `Example ${categoryName.toLowerCase()} prompts from this page`,
@@ -118,6 +150,30 @@ export function CategoryLandingContent({
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.whatLabel}</p>
           <h2 className="mt-3 text-4xl leading-tight text-slate-950 md:text-5xl">{content.introTitle}</h2>
           <p className="mt-4 max-w-4xl text-base leading-8 text-slate-600">{content.introBody}</p>
+        </div>
+
+        <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{library.eyebrow}</p>
+          <div className="mt-3 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <h2 className="text-3xl text-slate-950 md:text-4xl">{library.title}</h2>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">{library.body}</p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3">
+              <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{library.total}</p>
+                <p className="mt-2 text-3xl text-slate-950">{sampleItems.length}</p>
+              </div>
+              <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{library.images}</p>
+                <p className="mt-2 text-3xl text-slate-950">{imageCount}</p>
+              </div>
+              <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{library.default}</p>
+                <p className="mt-2 text-3xl text-slate-950">5</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr]">

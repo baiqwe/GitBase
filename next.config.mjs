@@ -4,12 +4,28 @@ import categoriesData from './data/json/categories.json' with { type: 'json' };
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const categoryMatcher = categoriesData.map((category) => category.slug).join('|');
+const objectImageBaseUrl = process.env.NEXT_PUBLIC_OBJECT_IMAGE_BASE_URL;
+const objectImageHostname = objectImageBaseUrl ? new URL(objectImageBaseUrl).hostname : null;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   outputFileTracingRoot: __dirname,
   eslint: {
     ignoreDuringBuilds: true,
+  },
+  images: {
+    // Cloudflare Workers/OpenNext should serve already-compressed WebP assets
+    // directly from R2/CDN instead of relying on Next's dynamic image optimizer.
+    unoptimized: true,
+    remotePatterns: objectImageHostname
+      ? [
+          {
+            protocol: 'https',
+            hostname: objectImageHostname,
+            pathname: '/images/objects/**',
+          },
+        ]
+      : [],
   },
   async redirects() {
     return [

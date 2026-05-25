@@ -17,7 +17,11 @@ export async function Footer() {
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-600">{ui.legal}</h3>
           <p className="mt-4 text-base text-slate-500">
-            {siteConfig.name} is a lightweight multilingual tool for random prompts, object lists, and category-driven idea generation.
+            {locale === 'zh'
+              ? `${siteConfig.name} 是一个面向绘画、课堂、写作和小游戏的多语言随机物品工具。`
+              : locale === 'ja'
+                ? `${siteConfig.name} は、描画、授業、文章作成、ゲーム向けの多言語ランダムオブジェクトツールです。`
+                : `${siteConfig.name} is a lightweight multilingual tool for random prompts, object lists, and category-driven idea generation.`}
           </p>
           <ul className="mt-4 space-y-3">
             <li>
@@ -33,6 +37,16 @@ export async function Footer() {
             <li>
               <Link href={getLocalizedPath(locale, '/terms')} className="text-base text-slate-500 hover:text-slate-900">
                 {ui.terms}
+              </Link>
+            </li>
+            <li>
+              <Link href={getLocalizedPath(locale, '/contact')} className="text-base text-slate-500 hover:text-slate-900">
+                {ui.contact}
+              </Link>
+            </li>
+            <li>
+              <Link href={getLocalizedPath(locale, '/editorial-policy')} className="text-base text-slate-500 hover:text-slate-900">
+                {ui.editorialPolicy}
               </Link>
             </li>
           </ul>
@@ -80,6 +94,11 @@ export async function Footer() {
             <li>
               <a href={siteConfig.feedbackUrl} target="_blank" rel="noreferrer" className="text-base text-slate-500 hover:text-slate-900">
                 {ui.reportIssue}
+              </a>
+            </li>
+            <li>
+              <a href={`mailto:${siteConfig.contactEmail}`} className="text-base text-slate-500 hover:text-slate-900">
+                {ui.emailUs}: {siteConfig.contactEmail}
               </a>
             </li>
           </ul>

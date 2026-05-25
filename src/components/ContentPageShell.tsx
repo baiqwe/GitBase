@@ -5,12 +5,13 @@ import { trustPageCopy } from '@/lib/site-copy'
 
 interface ContentPageShellProps {
   locale: Locale
-  slug: 'about' | 'privacy' | 'terms'
+  slug: 'about' | 'privacy' | 'terms' | 'contact' | 'editorialPolicy'
 }
 
 export function ContentPageShell({ locale, slug }: ContentPageShellProps) {
   const page = trustPageCopy[locale][slug]
   const ui = trustPageCopy[locale].ui
+  const pagePath = slug === 'editorialPolicy' ? '/editorial-policy' : `/${slug}`
 
   return (
     <div className="container mx-auto px-4 py-12 md:px-6">
@@ -18,7 +19,7 @@ export function ContentPageShell({ locale, slug }: ContentPageShellProps) {
         locale={locale}
         items={[
           { label: ui.breadcrumbHome, href: '/' },
-          { label: page.title, href: `/${slug}` },
+          { label: page.title, href: pagePath },
         ]}
       />
 
@@ -36,6 +37,12 @@ export function ContentPageShell({ locale, slug }: ContentPageShellProps) {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-3">
+          <a
+            href={`mailto:${siteConfig.contactEmail}`}
+            className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm text-slate-700 transition hover:border-slate-300 hover:bg-white"
+          >
+            {ui.emailUs}: {siteConfig.contactEmail}
+          </a>
           <a
             href={siteConfig.repositoryUrl}
             target="_blank"

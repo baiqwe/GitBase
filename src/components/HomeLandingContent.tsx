@@ -61,6 +61,36 @@ const howToHomeCopy = {
   },
 }
 
+const libraryCopy = {
+  en: {
+    eyebrow: 'Object library',
+    title: 'A broader object pool makes the generator more useful.',
+    body:
+      'The generator now uses a larger multilingual object library so visitors can request bigger non-repeating batches without exhausting the page after a few clicks.',
+    total: 'Total objects',
+    images: 'Real image cards',
+    unique: 'Unique by default',
+  },
+  zh: {
+    eyebrow: '对象库',
+    title: '更大的对象池，才会让生成器真正耐用。',
+    body:
+      '当前生成器已经扩充为更大的多语言对象库，用户可以生成更长的不重复清单，不会点几次就把页面抽空。',
+    total: '物品总数',
+    images: '真实图片卡片',
+    unique: '默认不重复',
+  },
+  ja: {
+    eyebrow: 'オブジェクトライブラリ',
+    title: '十分な対象数があるほど、ジェネレーターは実用的になります。',
+    body:
+      '現在は多言語のオブジェクトライブラリを拡張しているため、重複なしでもより長いリストを作りやすくなっています。',
+    total: '対象数',
+    images: '実写カード',
+    unique: '初期設定は重複なし',
+  },
+}
+
 export function HomeLandingContent({
   locale,
   categories,
@@ -73,6 +103,8 @@ export function HomeLandingContent({
   const faqJsonLd = buildFaqJsonLd({ faqs: content.faqs })
   const howTo = howToHomeCopy[locale]
   const ui = trustPageCopy[locale].ui
+  const library = libraryCopy[locale]
+  const imageCount = sampleItems.filter((item) => Boolean(item.image)).length
   const exampleCopy = {
     en: {
       title: 'Example objects you can pull from this page',
@@ -127,6 +159,30 @@ export function HomeLandingContent({
               </li>
             ))}
           </ol>
+        </section>
+
+        <section className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{library.eyebrow}</p>
+          <div className="mt-3 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div>
+              <h2 className="text-3xl text-slate-950 md:text-4xl">{library.title}</h2>
+              <p className="mt-3 max-w-3xl text-base leading-7 text-slate-600">{library.body}</p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3">
+              <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{library.total}</p>
+                <p className="mt-2 text-3xl text-slate-950">{sampleItems.length}</p>
+              </div>
+              <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{library.images}</p>
+                <p className="mt-2 text-3xl text-slate-950">{imageCount}</p>
+              </div>
+              <div className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4">
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{library.unique}</p>
+                <p className="mt-2 text-3xl text-slate-950">✓</p>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section className="space-y-5">

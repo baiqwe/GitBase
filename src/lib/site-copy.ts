@@ -1,31 +1,27 @@
 import type { Locale } from '@/lib/i18n-config'
 
+type TrustPage = {
+  title: string
+  description: string
+  eyebrow: string
+  body: string[]
+}
+
 export const trustPageCopy: Record<
   Locale,
   {
-    about: {
-      title: string
-      description: string
-      eyebrow: string
-      body: string[]
-    }
-    privacy: {
-      title: string
-      description: string
-      eyebrow: string
-      body: string[]
-    }
-    terms: {
-      title: string
-      description: string
-      eyebrow: string
-      body: string[]
-    }
+    about: TrustPage
+    privacy: TrustPage
+    terms: TrustPage
+    contact: TrustPage
+    editorialPolicy: TrustPage
     ui: {
       home: string
       about: string
       privacy: string
       terms: string
+      contact: string
+      editorialPolicy: string
       legal: string
       quickLinks: string
       connect: string
@@ -70,6 +66,7 @@ export const trustPageCopy: Record<
       kidsObjectsLink: string
       sourceCode: string
       reportIssue: string
+      emailUs: string
     }
   }
 > = {
@@ -82,6 +79,7 @@ export const trustPageCopy: Record<
       body: [
         'Random Object Generator is an independent utility site built to make prompt generation feel more useful, more visual, and more reusable than the average random noun page. The project is maintained as a lightweight public web tool rather than a closed product with a sign-in wall, which is why the core generator is available immediately on the homepage and on category-specific pages.',
         'The site is designed for people who need fast creative input without friction: teachers planning classroom warmups, artists looking for drawing prompts, facilitators running icebreakers, language tutors preparing speaking rounds, and writers who need a quick object to start from. Instead of burying the result behind forms or content gates, the product tries to show the utility immediately and let people move from idea to activity in seconds.',
+        'The project is maintained by an independent maker-led team under the Random Object Generator name. Updates are guided by Search Console queries, analytics engagement, bug reports, and hands-on review of whether a page actually helps someone use a random object in a real activity.',
         'From an operational perspective, the site currently runs on Cloudflare infrastructure and uses Google Analytics 4 to understand which pages are being used, which generators are clicked, and where the experience needs work. The goal is not to collect unnecessary personal data, but to keep the product stable, measure usefulness, and improve the information architecture over time.',
         'If you need to verify how the site is built or want to suggest improvements, the source repository and issue tracker are the primary public contact points for the project. That makes the site easier to audit, easier to improve, and clearer about who is responsible for its current direction.'
       ],
@@ -95,6 +93,7 @@ export const trustPageCopy: Record<
         'Random Object Generator is designed as a lightweight public utility. You do not need an account to use the core generator, and the site does not intentionally ask for unnecessary personal information in order to show random object results.',
         'Like most websites, the service may collect basic technical data such as server logs, page requests, device and browser information, referrer data, and anonymous usage events. At the time of writing, the product uses Cloudflare for delivery and Google Analytics 4 for basic measurement, which helps the project understand page performance, click behavior, and which pages are actually useful to visitors.',
         'The purpose of this data handling is operational: keep the service stable, improve page quality, measure feature adoption, and identify which search-oriented pages satisfy user intent. The site is not designed as a personal profile system, and the core generator can be used without creating an account or providing a name.',
+        'If advertising is enabled in the future, ad partners such as Google AdSense may use cookies or similar technologies to serve, limit, and measure ads according to their own policies. The site should not display advertising until the production privacy policy reflects the live setup.',
         'If the site later introduces additional third-party services such as advertising, email capture, or richer analytics, this page should be updated so the policy reflects the live production setup. For questions, corrections, or privacy-related concerns, the public repository issue tracker is currently the clearest contact route.'
       ],
     },
@@ -105,16 +104,44 @@ export const trustPageCopy: Record<
       eyebrow: 'Terms',
       body: [
         'Random Object Generator is provided as a free online utility for personal, educational, workshop, and general creative use. The purpose of the product is to help people generate object prompts quickly, not to restrict access behind a paid wall for the core experience.',
+        'Generated objects, lists, and prompts are intended as inspiration rather than professional advice or factual recommendations. You are responsible for deciding whether a generated prompt is appropriate for your classroom, event, publication, game, or creative project.',
         'You agree not to abuse the service, automate excessive requests in ways that damage site stability, attempt to interfere with availability, or reuse the site in a way that harms the project or other users. The content and interface may change as the object pool, intent pages, and multilingual support continue to evolve.',
         'The project may add, remove, or refine features at any time, including category pages, structured content, analytics, or visual assets. Continued use of the site means you accept the live version of the product and these terms as they are presented on the site.',
         'If you discover a factual issue, a policy mismatch, or a technical bug that affects trust or usability, the recommended route today is to report it through the public project issue tracker so it can be reviewed and resolved transparently.'
       ],
     },
+    contact: {
+      title: 'Contact Random Object Generator',
+      description:
+        'Contact the Random Object Generator team for product feedback, privacy questions, content corrections, image concerns, and partnership requests.',
+      eyebrow: 'Contact',
+      body: [
+        'Random Object Generator is maintained as a small independent web utility, so the best contact route depends on the kind of request. For product feedback, bug reports, broken links, inaccurate object data, or requests for new generator pages, the public GitHub issue tracker is the preferred channel because it keeps the discussion visible and makes fixes easier to verify.',
+        'For privacy questions, advertising review questions, image usage concerns, or requests that should not be discussed in public, you can use the contact email listed on this page. The site does not require accounts, but it still treats operational feedback seriously because trust pages, image sources, analytics disclosures, and content quality all affect whether the tool remains useful and safe for everyday visitors.',
+        'When reporting a problem, include the page URL, your device or browser if the issue is technical, and a short description of what you expected to happen. If the issue concerns a generated object, image, alt text, translation, or classroom use case, include the object name and language version so it can be reviewed without guesswork.',
+        'The project is not a general advertising marketplace or a scraped directory. Outreach that helps improve the tool for teachers, artists, writers, ESL tutors, workshop hosts, and party-game players is welcome; bulk spam, unrelated link exchange requests, and automated promotional messages are not useful and may be ignored.'
+      ],
+    },
+    editorialPolicy: {
+      title: 'Editorial Policy',
+      description:
+        'How Random Object Generator selects objects, writes multilingual content, reviews images, handles analytics, and improves pages over time.',
+      eyebrow: 'Editorial standards',
+      body: [
+        'Random Object Generator is built around a simple editorial promise: every indexed page should help a real person do a concrete task. A category page should help someone generate a relevant set of objects, and an intent page should explain how to use those objects in a drawing exercise, classroom activity, writing prompt, icebreaker, party game, or vocabulary practice session.',
+        'Objects are selected for recognizability, usefulness, and prompt value. The pool favors everyday items, foods, animals, classroom materials, office objects, household items, funny props, and nature references because those categories are easy to explain, easy to draw, and easy to reuse in group activities. When a page needs a narrower context, examples are chosen to match the intent instead of being randomly copied from a generic list.',
+        'Images and visual metadata are reviewed as product assets, not decoration. The preferred image should clearly represent the object, avoid misleading scenes, load quickly, and include descriptive alt text. When a real photo is not a good fit, the fallback should still be honest and useful rather than pretending to be a high-quality image reference.',
+        'Multilingual content is written to match the search intent of each language version, not merely swapped word by word. Japanese pages can emphasize common Japanese search phrasing, Chinese pages can explain classroom or creative use in natural Chinese, and English pages can target drawing, games, and brainstorming workflows. The goal is to reduce thin-content risk by giving each page a clear reason to exist.',
+        'Analytics are used to improve usefulness, not to inflate vanity metrics. Google Analytics 4 and Search Console help identify pages with high bounce rates, weak engagement, missing intent coverage, or promising queries such as random object to draw and food randomizer. Those signals guide updates to object pools, page copy, internal links, and generator defaults.'
+      ],
+    },
     ui: {
       home: 'Home',
-      about: 'About',
-      privacy: 'Privacy',
-      terms: 'Terms',
+      about: 'このサイトについて',
+      privacy: 'プライバシー',
+      terms: '利用規約',
+      contact: 'Contact',
+      editorialPolicy: 'Editorial Policy',
       legal: 'Trust & Legal',
       quickLinks: 'Quick Links',
       connect: 'Connect',
@@ -159,6 +186,7 @@ export const trustPageCopy: Record<
       kidsObjectsLink: 'Random objects for kids',
       sourceCode: 'Source code',
       reportIssue: 'Report an issue',
+      emailUs: 'Email us',
     },
   },
   zh: {
@@ -170,6 +198,7 @@ export const trustPageCopy: Record<
       body: [
         'Random Object Generator 是一个由独立开发者维护的小型工具站，目标是把随机提示词做得比普通随机名词网站更直观、更好用、更容易复用。它不是一个需要先登录才能使用的封闭产品，而是一个尽量降低摩擦、打开即可生成结果的公开工具。',
         '这个项目主要服务于那些需要快速灵感输入的人，比如准备课堂热身的老师、寻找绘画提示的画师、组织破冰活动的主持人、做语言训练的老师，以及需要一个起点的写作者。相比只吐出一个词的工具，这个站点更强调视觉化结果、批量复制能力和更清晰的分类结构。',
+        '项目由 Random Object Generator 名义下的独立团队维护。更新优先级会参考 Search Console 查询、GA4 互动数据、用户反馈以及人工检查：一个页面是否真的能帮助用户把随机物品用于绘画、课堂、游戏或写作，而不是只为了生成更多 URL。',
         '从运行方式来看，站点目前部署在 Cloudflare 环境中，并接入 Google Analytics 4 来观察页面访问、按钮点击和使用行为。这样做的目的不是采集多余信息，而是为了让产品更稳定，判断哪些页面真的满足用户意图，并持续优化站点结构。',
         '如果你想确认站点是如何建设的，或者想反馈问题、提出改进建议，当前最明确的公开联系入口是项目源码仓库和 issue 列表。对一个工具站来说，明确的责任主体和公开的反馈通道，本身也是 EEAT 的一部分。'
       ],
@@ -183,6 +212,7 @@ export const trustPageCopy: Record<
         'Random Object Generator 是一个轻量级公开工具，核心生成器不需要注册，也不会为了展示随机结果而主动索取不必要的个人信息。',
         '和大多数网站一样，为了保障稳定性、改进体验以及了解页面使用情况，系统可能会记录基础技术数据，例如服务日志、页面请求、设备与浏览器信息、来源信息以及匿名化的交互事件。当前站点部署在 Cloudflare 环境中，并使用 Google Analytics 4 做基础访问与行为统计。',
         '这些技术数据的用途主要是运维和改进产品，例如判断页面是否正常工作、哪些页面点击率更高、哪些生成器被真正使用，以及哪些专题页需要继续优化，而不是建立用户画像或要求用户先交出身份信息。',
+        '如果未来站点启用广告，Google AdSense 等广告合作方可能会按照其政策使用 Cookie 或类似技术来投放、限制和衡量广告。只有当线上隐私政策能准确反映实际广告配置时，才应该开启相关功能。',
         '如果未来站点接入更多第三方服务，例如广告、邮件订阅或更复杂的统计方案，本页面应同步更新为真实运行状态。若你认为隐私描述与实际行为不一致，当前推荐通过公开 issue 入口提出反馈。'
       ],
     },
@@ -193,9 +223,35 @@ export const trustPageCopy: Record<
       eyebrow: '条款',
       body: [
         'Random Object Generator 目前作为免费的在线工具提供服务，你可以将其用于个人、教育、活动组织和一般创意场景。当前产品定位是一个公开的随机灵感工具，而不是对核心能力设置付费墙的封闭 SaaS。',
+        '网站生成的物品、清单和提示词主要用于启发灵感，不构成专业建议或事实推荐。你需要自行判断某个生成结果是否适合你的课堂、活动、出版物、小游戏或创意项目。',
         '你不得滥用服务、进行过量自动请求、影响网站稳定性，或以损害项目和其他用户的方式使用网站内容。站点中的图片、文案、结构化页面和分类功能可能会持续调整，以便更好地服务课堂、创作和游戏类使用场景。',
         '随着产品迭代，我们可能会新增、修改或删除功能，包括分类页、专题页、分析埋点、对象素材和多语言支持。继续使用网站，即表示你接受当下线上版本及其展示出来的服务规则。',
         '如果你发现条款、事实描述或页面行为存在明显问题，建议通过公开 issue 入口提交反馈，这样站点维护者可以以可追踪的方式处理问题。'
+      ],
+    },
+    contact: {
+      title: '联系 Random Object Generator',
+      description:
+        '联系 Random Object Generator，反馈产品问题、隐私疑问、内容修正、图片问题或合作请求。',
+      eyebrow: '联系入口',
+      body: [
+        'Random Object Generator 是一个由独立团队维护的小型工具站，因此不同类型的问题适合走不同的反馈入口。如果你发现按钮不可用、页面 404、生成结果不准确、分类不够完整、翻译不自然，或者希望新增某个专题生成器，推荐优先通过公开 GitHub issue 反馈。公开反馈更容易追踪，也方便后续确认问题是否已经修复。',
+        '如果你的问题涉及隐私、广告审核、图片使用、品牌合作，或不适合公开讨论，可以使用本页列出的联系邮箱。这个网站不要求用户注册账号，但我们仍然认真对待信任相关问题，因为清晰的联系方式、真实的隐私说明、可解释的图片来源和可持续维护的内容质量，都会影响用户是否愿意继续使用这个工具。',
+        '提交问题时，建议附上页面 URL、使用设备或浏览器、你看到的具体问题，以及你期望发生的结果。如果问题和某个物品、图片、alt 文本、语言版本或课堂活动场景有关，也请尽量写出对应物品名称和语言版本，这样维护者可以更快定位。',
+        '我们欢迎能让工具对老师、画师、写作者、英语学习者、工作坊主持人和小游戏玩家更有帮助的建议。但与站点主题无关的批量推广、垃圾外链交换和自动化营销信息不会被优先处理。'
+      ],
+    },
+    editorialPolicy: {
+      title: '编辑与内容政策',
+      description:
+        '了解 Random Object Generator 如何选择物品、编写多语言内容、审核图片、使用统计数据并持续改进页面。',
+      eyebrow: '内容标准',
+      body: [
+        'Random Object Generator 的内容原则很简单：每一个被索引的页面都应该帮助真实用户完成一个具体任务。分类页应该让用户快速得到相关物品集合；专题页则应该解释这些物品如何用于绘画练习、课堂活动、写作提示、破冰游戏、派对游戏或词汇训练。',
+        '物品选择优先考虑可识别性、实用性和提示价值。对象库会优先覆盖日常物品、食物、动物、教室用品、办公用品、家庭用品、搞笑道具和自然元素，因为这些类别更容易解释、绘制和在集体活动中复用。当某个页面服务更明确的搜索意图时，示例会按照场景挑选，而不是从通用清单里机械替换几个词。',
+        '图片与视觉元数据被当作产品资产处理，而不是装饰。理想图片应该清楚展示物品本身，不误导用户，加载速度足够快，并配有准确的 alt 文本。如果某个真实图片不适合用作物品参考，我们宁可使用诚实、清楚的备用展示，也不会用不相干的图片冒充高质量素材。',
+        '多语言内容不会只做逐字替换。日文页面会尽量贴近日语用户实际搜索表达，中文页面会用自然中文解释课堂和创作场景，英文页面会重点覆盖 drawing prompts、games 和 brainstorming 等工作流。这样做的目标是让每个页面都有独立存在的价值，而不是制造薄内容。',
+        '统计数据用于改进实用性，而不是追求表面数字。Google Analytics 4 和 Search Console 会帮助我们识别跳出率高、互动不足、搜索意图覆盖不完整或正在出现机会的页面，例如 random object to draw、食べ物 ランダム、随机物品生成器等查询。后续更新会围绕对象库、页面文案、内链结构和默认交互配置展开。'
       ],
     },
     ui: {
@@ -203,6 +259,8 @@ export const trustPageCopy: Record<
       about: '关于我们',
       privacy: '隐私政策',
       terms: '服务条款',
+      contact: '联系我们',
+      editorialPolicy: '编辑政策',
       legal: '信任与合规',
       quickLinks: '快速入口',
       connect: '相关链接',
@@ -247,6 +305,7 @@ export const trustPageCopy: Record<
       kidsObjectsLink: '适合孩子的随机物品',
       sourceCode: '源码仓库',
       reportIssue: '反馈问题',
+      emailUs: '发送邮件',
     },
   },
   ja: {
@@ -258,6 +317,7 @@ export const trustPageCopy: Record<
       body: [
         'Random Object Generator は、一般的なランダム名詞サイトよりも、見やすく、使いやすく、再利用しやすい発想ツールを目指して作られた独立系のユーティリティサイトです。ログインを前提にした閉じたサービスではなく、まず結果を見せることを重視した公開ツールとして設計されています。',
         'このプロジェクトは、授業の導入ネタを探す先生、描画のお題が欲しい人、アイスブレイクを回すファシリテーター、語彙練習をしたい講師、そして物語のきっかけが欲しい書き手のように、短時間で発想の起点が必要な人のために存在しています。視覚カード、コピーできる一覧、カテゴリ別ページを組み合わせて、単なるランダム単語サイトよりも実用性を高めています。',
+        'プロジェクトは Random Object Generator 名義の独立した運営チームによって維持されています。更新の優先順位は、Search Console の検索語、GA4 の利用傾向、ユーザーからの報告、そして各ページが実際の活動に役立つかどうかの手作業レビューをもとに決めています。',
         '現在のサイトは Cloudflare 環境で配信され、Google Analytics 4 を使って閲覧やクリックの傾向を把握しています。目的は余計な個人情報を集めることではなく、どのページが役に立っているか、どこに改善余地があるかを判断して、情報設計を良くしていくことです。',
         '技術的な実装や改善方針を確認したい場合は、公開リポジトリと issue 一覧が現時点で最も明確な問い合わせ先です。誰が運営していて、どう改善しているかが見えることも、信頼性の一部だと考えています。'
       ],
@@ -271,6 +331,7 @@ export const trustPageCopy: Record<
         'Random Object Generator は、ログイン不要で使える軽量な公開ツールです。コア機能の利用にあたり、不要な個人情報の提出は求めません。',
         '多くのウェブサイトと同様に、安定運用、使い勝手の改善、どのページが使われているかの把握のために、基本的な技術データが記録される場合があります。これには、サーバーログ、ページリクエスト、端末やブラウザ情報、参照元、匿名の利用イベントなどが含まれます。現在のサイトは Cloudflare 環境で配信され、Google Analytics 4 を用いて基礎的なアクセス計測を行っています。',
         'こうしたデータ処理の目的は、サービスを安定させ、役に立つページを判断し、ジェネレーターや導線の改善点を見つけることです。ユーザーアカウントを作らせたり、個人プロフィールを構築したりするための設計ではありません。',
+        '将来広告を導入する場合、Google AdSense などの広告パートナーが Cookie または類似技術を用いて広告の配信、制御、測定を行う可能性があります。実際の広告構成がこのポリシーに反映されてから有効化するべきです。',
         '将来、広告やメール購読、追加の解析ツールなど別の第三者サービスを導入する場合は、このページを更新して実際の本番構成と一致させるべきです。説明と実態に差があると思われる場合は、公開 issue を通じて知らせてください。'
       ],
     },
@@ -281,9 +342,35 @@ export const trustPageCopy: Record<
       eyebrow: '利用規約',
       body: [
         'Random Object Generator は、個人利用、教育利用、ワークショップ、一般的な創作目的で利用できる無料オンラインツールです。現時点では、コア機能を有料の壁で囲うよりも、すぐ使える公開ツールとしての価値を優先しています。',
+        '生成されるオブジェクト、一覧、プロンプトは発想のきっかけであり、専門的な助言や事実上の推奨ではありません。授業、イベント、出版物、ゲーム、創作プロジェクトで使う場合は、利用者自身が適切性を判断してください。',
         'サービスを乱用したり、過剰な自動リクエストを送ったり、可用性を妨げたり、プロジェクトや他ユーザーに害を与える形でコンテンツを利用したりしてはいけません。画像、カテゴリページ、構造化された説明文、多言語ページなどは、品質改善のために随時見直される可能性があります。',
         '今後の改善にあわせて、機能は追加・変更・削除される場合があります。カテゴリ構成、意図別ページ、分析タグ、画像素材、多言語サポートもその対象です。サイトを使い続けることで、その時点の公開版に同意したものとみなされます。',
         'もし事実誤認、ポリシーの不一致、または利用に関わる重大な問題を見つけた場合は、公開 issue を通じて知らせるのが現在の推奨ルートです。'
+      ],
+    },
+    contact: {
+      title: 'Random Object Generator へのお問い合わせ',
+      description:
+        'Random Object Generator への連絡方法です。製品フィードバック、プライバシー、内容修正、画像に関する相談を受け付けます。',
+      eyebrow: 'お問い合わせ',
+      body: [
+        'Random Object Generator は小さな独立系ユーティリティとして運営されているため、内容によって適した連絡方法が異なります。バグ、リンク切れ、翻訳の違和感、オブジェクトデータの誤り、新しいジェネレーター案などは、公開 GitHub issue で知らせてもらうのが最も確認しやすい方法です。',
+        'プライバシー、広告審査、画像利用、または公開の場で扱いにくい相談については、このページに記載されたメールアドレスを利用できます。このサイトはアカウント登録を必要としませんが、信頼に関わる連絡先、画像の扱い、解析ツールの説明、内容品質は、利用者が安心して使えるかどうかに直結します。',
+        '問題を報告する場合は、対象ページの URL、利用端末やブラウザ、実際に起きたこと、期待していた動作を簡潔に書いてください。特定のオブジェクト、画像、alt テキスト、翻訳、授業やゲームでの利用シーンに関する指摘であれば、対象名と言語版もあると確認が早くなります。',
+        '教師、イラスト制作者、ライター、語学学習者、ワークショップ進行役、パーティーゲーム利用者にとって役立つ改善提案は歓迎します。一方で、テーマと関係のない大量営業、リンク交換、機械的な宣伝依頼は優先的には扱いません。'
+      ],
+    },
+    editorialPolicy: {
+      title: '編集ポリシー',
+      description:
+        'Random Object Generator がオブジェクト、画像、多言語コンテンツ、解析データをどのように扱うかを説明します。',
+      eyebrow: '編集基準',
+      body: [
+        'Random Object Generator の編集方針は、インデックスされる各ページが実際の利用場面に役立つことです。カテゴリページは関連するオブジェクトをすばやく生成できるべきであり、目的別ページはそれらを描画練習、授業、文章作成、アイスブレイク、パーティーゲーム、語彙練習にどう使うかを説明する必要があります。',
+        'オブジェクトは、認識しやすさ、実用性、お題としての使いやすさを基準に選びます。日用品、食べ物、動物、教室用品、オフィス用品、家庭用品、面白い小物、自然物を優先するのは、説明しやすく、描きやすく、複数人の活動でも再利用しやすいからです。',
+        '画像とメタデータは、単なる装飾ではなくプロダクトの一部として扱います。理想的な画像は対象物を明確に示し、誤解を招かず、読み込みが速く、説明的な alt テキストを持つものです。実物写真が目的に合わない場合は、無関係な画像を使うより、正直で分かりやすい代替表現を選びます。',
+        '多言語コンテンツは機械的な置換ではなく、各言語の検索意図に合わせて調整します。日本語ページでは日本語の検索表現を意識し、中国語ページでは授業や創作での使い方を自然に説明し、英語ページでは drawing prompts、games、brainstorming といった具体的なワークフローを重視します。',
+        'Google Analytics 4 と Search Console のデータは、ページの改善に使います。直帰率が高いページ、検索表示はあるがクリックされないページ、または random object to draw や 食べ物 ランダム のように伸び始めている検索語を確認し、オブジェクトプール、本文、内部リンク、既定の生成設定を見直します。'
       ],
     },
     ui: {
@@ -291,6 +378,8 @@ export const trustPageCopy: Record<
       about: 'About',
       privacy: 'Privacy',
       terms: 'Terms',
+      contact: 'お問い合わせ',
+      editorialPolicy: '編集ポリシー',
       legal: '信頼と法務',
       quickLinks: 'クイックリンク',
       connect: 'リンク',
@@ -335,6 +424,7 @@ export const trustPageCopy: Record<
       kidsObjectsLink: '子ども向けランダムオブジェクト',
       sourceCode: 'ソースコード',
       reportIssue: '問題を報告',
+      emailUs: 'メールする',
     },
   },
 }

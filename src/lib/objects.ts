@@ -3,7 +3,9 @@ import type { Locale } from '@/lib/i18n-config'
 import categoriesData from '../../data/json/categories.json'
 import objectsData from '../../data/json/objects.json'
 import objectsExtraData from '../../data/json/objects-extra.json'
+import objectsExpandedData from '../../data/json/objects-expanded.json'
 import objectImageMetaData from '../../data/json/object-image-meta.json'
+import { siteConfig } from '@/lib/site-config'
 
 type SeoFaq = {
   question: string
@@ -64,8 +66,20 @@ export const getCategories = cache((): CategoryRecord[] => {
   return categoriesData as CategoryRecord[]
 })
 
+function resolveObjectImageUrl(image?: string) {
+  if (!image || !siteConfig.objectImageBaseUrl || /^https?:\/\//i.test(image)) {
+    return image
+  }
+
+  return `${siteConfig.objectImageBaseUrl}${image.startsWith('/') ? image : `/${image}`}`
+}
+
 export const getObjects = cache((): ObjectRecord[] => {
-  const baseObjects = [...(objectsData as ObjectRecord[]), ...(objectsExtraData as ObjectRecord[])]
+  const baseObjects = [
+    ...(objectsData as ObjectRecord[]),
+    ...(objectsExtraData as ObjectRecord[]),
+    ...(objectsExpandedData as ObjectRecord[]),
+  ]
   const imageMeta = objectImageMetaData as Record<
     string,
     { image?: string; blurDataUrl?: string; alt?: Partial<Record<Locale, string>> }
@@ -73,7 +87,7 @@ export const getObjects = cache((): ObjectRecord[] => {
 
   return baseObjects.map((item) => ({
     ...item,
-    image: imageMeta[item.id]?.image ?? item.image,
+    image: resolveObjectImageUrl(imageMeta[item.id]?.image ?? item.image),
     blurDataUrl: imageMeta[item.id]?.blurDataUrl,
     imageAlt: imageMeta[item.id]?.alt,
   }))

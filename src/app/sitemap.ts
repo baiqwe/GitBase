@@ -5,7 +5,15 @@ import { intentPages } from '@/lib/intent-pages'
 import { siteConfig } from '@/lib/site-config'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ['', '/random-object-generator', '/about', '/privacy', '/terms']
+  const staticRoutes = [
+    '',
+    '/random-object-generator',
+    '/about',
+    '/privacy',
+    '/terms',
+    '/contact',
+    '/editorial-policy',
+  ]
   const categoryRoutes = getCategories().map((category) => `/${getCategoryPageSlug(category.slug)}`)
   const intentRoutes = intentPages.map((page) => `/${page.slug}`)
 

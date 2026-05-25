@@ -1,0 +1,4752 @@
+[
+  {
+    "id": "animal-dog",
+    "category": "animals",
+    "icon": "🐶",
+    "i18n": {
+      "en": {
+        "name": "Dog",
+        "description": "Dog works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "狗",
+        "description": "狗适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "イヌ",
+        "description": "イヌ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-cat",
+    "category": "animals",
+    "icon": "🐱",
+    "i18n": {
+      "en": {
+        "name": "Cat",
+        "description": "Cat works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "猫",
+        "description": "猫适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ネコ",
+        "description": "ネコ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-horse",
+    "category": "animals",
+    "icon": "🐴",
+    "i18n": {
+      "en": {
+        "name": "Horse",
+        "description": "Horse works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "马",
+        "description": "马适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ウマ",
+        "description": "ウマ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-zebra",
+    "category": "animals",
+    "icon": "🦓",
+    "i18n": {
+      "en": {
+        "name": "Zebra",
+        "description": "Zebra works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "斑马",
+        "description": "斑马适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "シマウマ",
+        "description": "シマウマ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-kangaroo",
+    "category": "animals",
+    "icon": "🦘",
+    "i18n": {
+      "en": {
+        "name": "Kangaroo",
+        "description": "Kangaroo works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "袋鼠",
+        "description": "袋鼠适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "カンガルー",
+        "description": "カンガルー は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-koala",
+    "category": "animals",
+    "icon": "🐨",
+    "i18n": {
+      "en": {
+        "name": "Koala",
+        "description": "Koala works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "考拉",
+        "description": "考拉适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "コアラ",
+        "description": "コアラ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-panda",
+    "category": "animals",
+    "icon": "🐼",
+    "i18n": {
+      "en": {
+        "name": "Panda",
+        "description": "Panda works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "熊猫",
+        "description": "熊猫适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "パンダ",
+        "description": "パンダ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-bear",
+    "category": "animals",
+    "icon": "🐻",
+    "i18n": {
+      "en": {
+        "name": "Bear",
+        "description": "Bear works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "熊",
+        "description": "熊适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "クマ",
+        "description": "クマ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-wolf",
+    "category": "animals",
+    "icon": "🐺",
+    "i18n": {
+      "en": {
+        "name": "Wolf",
+        "description": "Wolf works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "狼",
+        "description": "狼适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "オオカミ",
+        "description": "オオカミ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-deer",
+    "category": "animals",
+    "icon": "🦌",
+    "i18n": {
+      "en": {
+        "name": "Deer",
+        "description": "Deer works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "鹿",
+        "description": "鹿适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "シカ",
+        "description": "シカ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-monkey",
+    "category": "animals",
+    "icon": "🐒",
+    "i18n": {
+      "en": {
+        "name": "Monkey",
+        "description": "Monkey works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "猴子",
+        "description": "猴子适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "サル",
+        "description": "サル は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-gorilla",
+    "category": "animals",
+    "icon": "🦍",
+    "i18n": {
+      "en": {
+        "name": "Gorilla",
+        "description": "Gorilla works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "大猩猩",
+        "description": "大猩猩适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ゴリラ",
+        "description": "ゴリラ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-dolphin",
+    "category": "animals",
+    "icon": "🐬",
+    "i18n": {
+      "en": {
+        "name": "Dolphin",
+        "description": "Dolphin works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "海豚",
+        "description": "海豚适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "イルカ",
+        "description": "イルカ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-whale",
+    "category": "animals",
+    "icon": "🐋",
+    "i18n": {
+      "en": {
+        "name": "Whale",
+        "description": "Whale works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "鲸鱼",
+        "description": "鲸鱼适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "クジラ",
+        "description": "クジラ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-shark",
+    "category": "animals",
+    "icon": "🦈",
+    "i18n": {
+      "en": {
+        "name": "Shark",
+        "description": "Shark works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "鲨鱼",
+        "description": "鲨鱼适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "サメ",
+        "description": "サメ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-seal",
+    "category": "animals",
+    "icon": "🦭",
+    "i18n": {
+      "en": {
+        "name": "Seal",
+        "description": "Seal works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "海豹",
+        "description": "海豹适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "アザラシ",
+        "description": "アザラシ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-crab",
+    "category": "animals",
+    "icon": "🦀",
+    "i18n": {
+      "en": {
+        "name": "Crab",
+        "description": "Crab works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "螃蟹",
+        "description": "螃蟹适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "カニ",
+        "description": "カニ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-lobster",
+    "category": "animals",
+    "icon": "🦞",
+    "i18n": {
+      "en": {
+        "name": "Lobster",
+        "description": "Lobster works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "龙虾",
+        "description": "龙虾适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ロブスター",
+        "description": "ロブスター は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-frog",
+    "category": "animals",
+    "icon": "🐸",
+    "i18n": {
+      "en": {
+        "name": "Frog",
+        "description": "Frog works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "青蛙",
+        "description": "青蛙适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "カエル",
+        "description": "カエル は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-snake",
+    "category": "animals",
+    "icon": "🐍",
+    "i18n": {
+      "en": {
+        "name": "Snake",
+        "description": "Snake works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "蛇",
+        "description": "蛇适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ヘビ",
+        "description": "ヘビ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-lizard",
+    "category": "animals",
+    "icon": "🦎",
+    "i18n": {
+      "en": {
+        "name": "Lizard",
+        "description": "Lizard works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "蜥蜴",
+        "description": "蜥蜴适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "トカゲ",
+        "description": "トカゲ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-crocodile",
+    "category": "animals",
+    "icon": "🐊",
+    "i18n": {
+      "en": {
+        "name": "Crocodile",
+        "description": "Crocodile works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "鳄鱼",
+        "description": "鳄鱼适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ワニ",
+        "description": "ワニ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-eagle",
+    "category": "animals",
+    "icon": "🦅",
+    "i18n": {
+      "en": {
+        "name": "Eagle",
+        "description": "Eagle works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "老鹰",
+        "description": "老鹰适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ワシ",
+        "description": "ワシ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-parrot",
+    "category": "animals",
+    "icon": "🦜",
+    "i18n": {
+      "en": {
+        "name": "Parrot",
+        "description": "Parrot works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "鹦鹉",
+        "description": "鹦鹉适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "オウム",
+        "description": "オウム は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-flamingo",
+    "category": "animals",
+    "icon": "🦩",
+    "i18n": {
+      "en": {
+        "name": "Flamingo",
+        "description": "Flamingo works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "火烈鸟",
+        "description": "火烈鸟适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "フラミンゴ",
+        "description": "フラミンゴ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-duck",
+    "category": "animals",
+    "icon": "🦆",
+    "i18n": {
+      "en": {
+        "name": "Duck",
+        "description": "Duck works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "鸭子",
+        "description": "鸭子适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "アヒル",
+        "description": "アヒル は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-swan",
+    "category": "animals",
+    "icon": "🦢",
+    "i18n": {
+      "en": {
+        "name": "Swan",
+        "description": "Swan works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "天鹅",
+        "description": "天鹅适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ハクチョウ",
+        "description": "ハクチョウ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-chicken",
+    "category": "animals",
+    "icon": "🐔",
+    "i18n": {
+      "en": {
+        "name": "Chicken",
+        "description": "Chicken works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "鸡",
+        "description": "鸡适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ニワトリ",
+        "description": "ニワトリ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-cow",
+    "category": "animals",
+    "icon": "🐄",
+    "i18n": {
+      "en": {
+        "name": "Cow",
+        "description": "Cow works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "奶牛",
+        "description": "奶牛适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ウシ",
+        "description": "ウシ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-pig",
+    "category": "animals",
+    "icon": "🐷",
+    "i18n": {
+      "en": {
+        "name": "Pig",
+        "description": "Pig works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "猪",
+        "description": "猪适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ブタ",
+        "description": "ブタ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-goat",
+    "category": "animals",
+    "icon": "🐐",
+    "i18n": {
+      "en": {
+        "name": "Goat",
+        "description": "Goat works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "山羊",
+        "description": "山羊适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ヤギ",
+        "description": "ヤギ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-sheep",
+    "category": "animals",
+    "icon": "🐑",
+    "i18n": {
+      "en": {
+        "name": "Sheep",
+        "description": "Sheep works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "绵羊",
+        "description": "绵羊适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ヒツジ",
+        "description": "ヒツジ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-camel",
+    "category": "animals",
+    "icon": "🐫",
+    "i18n": {
+      "en": {
+        "name": "Camel",
+        "description": "Camel works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "骆驼",
+        "description": "骆驼适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ラクダ",
+        "description": "ラクダ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-llama",
+    "category": "animals",
+    "icon": "🦙",
+    "i18n": {
+      "en": {
+        "name": "Llama",
+        "description": "Llama works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "羊驼",
+        "description": "羊驼适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ラマ",
+        "description": "ラマ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-hedgehog",
+    "category": "animals",
+    "icon": "🦔",
+    "i18n": {
+      "en": {
+        "name": "Hedgehog",
+        "description": "Hedgehog works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "刺猬",
+        "description": "刺猬适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ハリネズミ",
+        "description": "ハリネズミ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-bat",
+    "category": "animals",
+    "icon": "🦇",
+    "i18n": {
+      "en": {
+        "name": "Bat",
+        "description": "Bat works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "蝙蝠",
+        "description": "蝙蝠适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "コウモリ",
+        "description": "コウモリ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-mouse",
+    "category": "animals",
+    "icon": "🐭",
+    "i18n": {
+      "en": {
+        "name": "Mouse",
+        "description": "Mouse works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "老鼠",
+        "description": "老鼠适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ネズミ",
+        "description": "ネズミ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-squirrel",
+    "category": "animals",
+    "icon": "🐿️",
+    "i18n": {
+      "en": {
+        "name": "Squirrel",
+        "description": "Squirrel works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "松鼠",
+        "description": "松鼠适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "リス",
+        "description": "リス は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-raccoon",
+    "category": "animals",
+    "icon": "🦝",
+    "i18n": {
+      "en": {
+        "name": "Raccoon",
+        "description": "Raccoon works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "浣熊",
+        "description": "浣熊适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "アライグマ",
+        "description": "アライグマ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-peacock",
+    "category": "animals",
+    "icon": "🦚",
+    "i18n": {
+      "en": {
+        "name": "Peacock",
+        "description": "Peacock works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "孔雀",
+        "description": "孔雀适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "クジャク",
+        "description": "クジャク は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-bee",
+    "category": "animals",
+    "icon": "🐝",
+    "i18n": {
+      "en": {
+        "name": "Bee",
+        "description": "Bee works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "蜜蜂",
+        "description": "蜜蜂适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "ハチ",
+        "description": "ハチ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-ant",
+    "category": "animals",
+    "icon": "🐜",
+    "i18n": {
+      "en": {
+        "name": "Ant",
+        "description": "Ant works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "蚂蚁",
+        "description": "蚂蚁适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "アリ",
+        "description": "アリ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-ladybug",
+    "category": "animals",
+    "icon": "🐞",
+    "i18n": {
+      "en": {
+        "name": "Ladybug",
+        "description": "Ladybug works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "瓢虫",
+        "description": "瓢虫适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "テントウムシ",
+        "description": "テントウムシ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-dragonfly",
+    "category": "animals",
+    "icon": "🪽",
+    "i18n": {
+      "en": {
+        "name": "Dragonfly",
+        "description": "Dragonfly works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "蜻蜓",
+        "description": "蜻蜓适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "トンボ",
+        "description": "トンボ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-snail",
+    "category": "animals",
+    "icon": "🐌",
+    "i18n": {
+      "en": {
+        "name": "Snail",
+        "description": "Snail works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "蜗牛",
+        "description": "蜗牛适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "カタツムリ",
+        "description": "カタツムリ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-fish",
+    "category": "animals",
+    "icon": "🐟",
+    "i18n": {
+      "en": {
+        "name": "Fish",
+        "description": "Fish works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "鱼",
+        "description": "鱼适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "魚",
+        "description": "魚 は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-seahorse",
+    "category": "animals",
+    "icon": "🐠",
+    "i18n": {
+      "en": {
+        "name": "Seahorse",
+        "description": "Seahorse works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "海马",
+        "description": "海马适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "タツノオトシゴ",
+        "description": "タツノオトシゴ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-jellyfish",
+    "category": "animals",
+    "icon": "🪼",
+    "i18n": {
+      "en": {
+        "name": "Jellyfish",
+        "description": "Jellyfish works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "水母",
+        "description": "水母适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "クラゲ",
+        "description": "クラゲ は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-turkey",
+    "category": "animals",
+    "icon": "🦃",
+    "i18n": {
+      "en": {
+        "name": "Turkey",
+        "description": "Turkey works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "火鸡",
+        "description": "火鸡适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "七面鳥",
+        "description": "七面鳥 は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "animal-rooster",
+    "category": "animals",
+    "icon": "🐓",
+    "i18n": {
+      "en": {
+        "name": "Rooster",
+        "description": "Rooster works well for drawing prompts, animal games, and quick storytelling rounds."
+      },
+      "zh": {
+        "name": "公鸡",
+        "description": "公鸡适合绘画提示、动物游戏和快速讲故事练习。"
+      },
+      "ja": {
+        "name": "おんどり",
+        "description": "おんどり は描画のお題、動物ゲーム、短い物語づくりに使いやすい対象です。"
+      }
+    }
+  },
+  {
+    "id": "house-sofa",
+    "category": "household",
+    "icon": "🛋️",
+    "i18n": {
+      "en": {
+        "name": "Sofa",
+        "description": "Sofa is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "沙发",
+        "description": "沙发是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "ソファ",
+        "description": "ソファ は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-table",
+    "category": "household",
+    "icon": "🪑",
+    "i18n": {
+      "en": {
+        "name": "Dining Table",
+        "description": "Dining Table is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "餐桌",
+        "description": "餐桌是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "テーブル",
+        "description": "テーブル は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-bookshelf",
+    "category": "household",
+    "icon": "📚",
+    "i18n": {
+      "en": {
+        "name": "Bookshelf",
+        "description": "Bookshelf is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "书架",
+        "description": "书架是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "本棚",
+        "description": "本棚 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-mirror",
+    "category": "household",
+    "icon": "🪞",
+    "i18n": {
+      "en": {
+        "name": "Mirror",
+        "description": "Mirror is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "镜子",
+        "description": "镜子是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "鏡",
+        "description": "鏡 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-curtain",
+    "category": "household",
+    "icon": "🪟",
+    "i18n": {
+      "en": {
+        "name": "Curtain",
+        "description": "Curtain is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "窗帘",
+        "description": "窗帘是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "カーテン",
+        "description": "カーテン は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-doormat",
+    "category": "household",
+    "icon": "🧺",
+    "i18n": {
+      "en": {
+        "name": "Doormat",
+        "description": "Doormat is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "门垫",
+        "description": "门垫是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "玄関マット",
+        "description": "玄関マット は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-vase",
+    "category": "household",
+    "icon": "🏺",
+    "i18n": {
+      "en": {
+        "name": "Vase",
+        "description": "Vase is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "花瓶",
+        "description": "花瓶是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "花瓶",
+        "description": "花瓶 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-mug",
+    "category": "household",
+    "icon": "☕",
+    "i18n": {
+      "en": {
+        "name": "Coffee Mug",
+        "description": "Coffee Mug is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "马克杯",
+        "description": "马克杯是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "マグカップ",
+        "description": "マグカップ は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-plate",
+    "category": "household",
+    "icon": "🍽️",
+    "i18n": {
+      "en": {
+        "name": "Dinner Plate",
+        "description": "Dinner Plate is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "盘子",
+        "description": "盘子是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "皿",
+        "description": "皿 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-spoon",
+    "category": "household",
+    "icon": "🥄",
+    "i18n": {
+      "en": {
+        "name": "Spoon",
+        "description": "Spoon is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "勺子",
+        "description": "勺子是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "スプーン",
+        "description": "スプーン は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-fork",
+    "category": "household",
+    "icon": "🍴",
+    "i18n": {
+      "en": {
+        "name": "Fork",
+        "description": "Fork is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "叉子",
+        "description": "叉子是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "フォーク",
+        "description": "フォーク は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-knife",
+    "category": "household",
+    "icon": "🔪",
+    "i18n": {
+      "en": {
+        "name": "Kitchen Knife",
+        "description": "Kitchen Knife is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "菜刀",
+        "description": "菜刀是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "包丁",
+        "description": "包丁 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-cutting-board",
+    "category": "household",
+    "icon": "🧑‍🍳",
+    "i18n": {
+      "en": {
+        "name": "Cutting Board",
+        "description": "Cutting Board is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "砧板",
+        "description": "砧板是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "まな板",
+        "description": "まな板 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-blanket",
+    "category": "household",
+    "icon": "🛏️",
+    "i18n": {
+      "en": {
+        "name": "Blanket",
+        "description": "Blanket is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "毯子",
+        "description": "毯子是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "毛布",
+        "description": "毛布 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-towel",
+    "category": "household",
+    "icon": "🧻",
+    "i18n": {
+      "en": {
+        "name": "Towel",
+        "description": "Towel is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "毛巾",
+        "description": "毛巾是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "タオル",
+        "description": "タオル は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-soap",
+    "category": "household",
+    "icon": "🧼",
+    "i18n": {
+      "en": {
+        "name": "Soap",
+        "description": "Soap is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "肥皂",
+        "description": "肥皂是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "石けん",
+        "description": "石けん は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-shampoo",
+    "category": "household",
+    "icon": "🧴",
+    "i18n": {
+      "en": {
+        "name": "Shampoo Bottle",
+        "description": "Shampoo Bottle is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "洗发水",
+        "description": "洗发水是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "シャンプー",
+        "description": "シャンプー は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-laundry-basket",
+    "category": "household",
+    "icon": "🧺",
+    "i18n": {
+      "en": {
+        "name": "Laundry Basket",
+        "description": "Laundry Basket is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "洗衣篮",
+        "description": "洗衣篮是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "洗濯かご",
+        "description": "洗濯かご は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-iron",
+    "category": "household",
+    "icon": "🧺",
+    "i18n": {
+      "en": {
+        "name": "Clothes Iron",
+        "description": "Clothes Iron is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "熨斗",
+        "description": "熨斗是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "アイロン",
+        "description": "アイロン は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-vacuum",
+    "category": "household",
+    "icon": "🧹",
+    "i18n": {
+      "en": {
+        "name": "Vacuum Cleaner",
+        "description": "Vacuum Cleaner is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "吸尘器",
+        "description": "吸尘器是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "掃除機",
+        "description": "掃除機 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-trash-can",
+    "category": "household",
+    "icon": "🗑️",
+    "i18n": {
+      "en": {
+        "name": "Trash Can",
+        "description": "Trash Can is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "垃圾桶",
+        "description": "垃圾桶是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "ごみ箱",
+        "description": "ごみ箱 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-remote-control",
+    "category": "household",
+    "icon": "📺",
+    "i18n": {
+      "en": {
+        "name": "Remote Control",
+        "description": "Remote Control is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "遥控器",
+        "description": "遥控器是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "リモコン",
+        "description": "リモコン は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-television",
+    "category": "household",
+    "icon": "📺",
+    "i18n": {
+      "en": {
+        "name": "Television",
+        "description": "Television is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "电视",
+        "description": "电视是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "テレビ",
+        "description": "テレビ は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-fan",
+    "category": "household",
+    "icon": "🌀",
+    "i18n": {
+      "en": {
+        "name": "Electric Fan",
+        "description": "Electric Fan is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "电风扇",
+        "description": "电风扇是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "扇風機",
+        "description": "扇風機 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-heater",
+    "category": "household",
+    "icon": "🔥",
+    "i18n": {
+      "en": {
+        "name": "Space Heater",
+        "description": "Space Heater is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "取暖器",
+        "description": "取暖器是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "ヒーター",
+        "description": "ヒーター は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-air-conditioner",
+    "category": "household",
+    "icon": "❄️",
+    "i18n": {
+      "en": {
+        "name": "Air Conditioner",
+        "description": "Air Conditioner is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "空调",
+        "description": "空调是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "エアコン",
+        "description": "エアコン は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-candle",
+    "category": "household",
+    "icon": "🕯️",
+    "i18n": {
+      "en": {
+        "name": "Candle",
+        "description": "Candle is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "蜡烛",
+        "description": "蜡烛是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "キャンドル",
+        "description": "キャンドル は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-photo-frame",
+    "category": "household",
+    "icon": "🖼️",
+    "i18n": {
+      "en": {
+        "name": "Photo Frame",
+        "description": "Photo Frame is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "相框",
+        "description": "相框是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "写真立て",
+        "description": "写真立て は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-plant-pot",
+    "category": "household",
+    "icon": "🪴",
+    "i18n": {
+      "en": {
+        "name": "Plant Pot",
+        "description": "Plant Pot is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "花盆",
+        "description": "花盆是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "植木鉢",
+        "description": "植木鉢 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-doorbell",
+    "category": "household",
+    "icon": "🔔",
+    "i18n": {
+      "en": {
+        "name": "Doorbell",
+        "description": "Doorbell is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "门铃",
+        "description": "门铃是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "ドアベル",
+        "description": "ドアベル は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-coat-hanger",
+    "category": "household",
+    "icon": "🧥",
+    "i18n": {
+      "en": {
+        "name": "Coat Hanger",
+        "description": "Coat Hanger is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "衣架",
+        "description": "衣架是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "ハンガー",
+        "description": "ハンガー は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-shoe-rack",
+    "category": "household",
+    "icon": "👟",
+    "i18n": {
+      "en": {
+        "name": "Shoe Rack",
+        "description": "Shoe Rack is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "鞋架",
+        "description": "鞋架是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "靴ラック",
+        "description": "靴ラック は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-calendar",
+    "category": "household",
+    "icon": "📅",
+    "i18n": {
+      "en": {
+        "name": "Wall Calendar",
+        "description": "Wall Calendar is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "日历",
+        "description": "日历是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "カレンダー",
+        "description": "カレンダー は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-notebook",
+    "category": "household",
+    "icon": "📓",
+    "i18n": {
+      "en": {
+        "name": "Notebook",
+        "description": "Notebook is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "笔记本",
+        "description": "笔记本是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "ノート",
+        "description": "ノート は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-pen",
+    "category": "household",
+    "icon": "🖊️",
+    "i18n": {
+      "en": {
+        "name": "Pen",
+        "description": "Pen is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "笔",
+        "description": "笔是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "ペン",
+        "description": "ペン は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-scissors",
+    "category": "household",
+    "icon": "✂️",
+    "i18n": {
+      "en": {
+        "name": "Scissors",
+        "description": "Scissors is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "剪刀",
+        "description": "剪刀是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "はさみ",
+        "description": "はさみ は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-tape",
+    "category": "household",
+    "icon": "🧻",
+    "i18n": {
+      "en": {
+        "name": "Tape Roll",
+        "description": "Tape Roll is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "胶带",
+        "description": "胶带是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "テープ",
+        "description": "テープ は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-flashlight",
+    "category": "household",
+    "icon": "🔦",
+    "i18n": {
+      "en": {
+        "name": "Flashlight",
+        "description": "Flashlight is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "手电筒",
+        "description": "手电筒是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "懐中電灯",
+        "description": "懐中電灯 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-toolbox",
+    "category": "household",
+    "icon": "🧰",
+    "i18n": {
+      "en": {
+        "name": "Toolbox",
+        "description": "Toolbox is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "工具箱",
+        "description": "工具箱是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "工具箱",
+        "description": "工具箱 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-hammer",
+    "category": "household",
+    "icon": "🔨",
+    "i18n": {
+      "en": {
+        "name": "Hammer",
+        "description": "Hammer is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "锤子",
+        "description": "锤子是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "ハンマー",
+        "description": "ハンマー は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-screwdriver",
+    "category": "household",
+    "icon": "🪛",
+    "i18n": {
+      "en": {
+        "name": "Screwdriver",
+        "description": "Screwdriver is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "螺丝刀",
+        "description": "螺丝刀是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "ドライバー",
+        "description": "ドライバー は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-wrench",
+    "category": "household",
+    "icon": "🔧",
+    "i18n": {
+      "en": {
+        "name": "Wrench",
+        "description": "Wrench is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "扳手",
+        "description": "扳手是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "レンチ",
+        "description": "レンチ は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-bucket",
+    "category": "household",
+    "icon": "🪣",
+    "i18n": {
+      "en": {
+        "name": "Bucket",
+        "description": "Bucket is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "水桶",
+        "description": "水桶是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "バケツ",
+        "description": "バケツ は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-mop",
+    "category": "household",
+    "icon": "🧹",
+    "i18n": {
+      "en": {
+        "name": "Mop",
+        "description": "Mop is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "拖把",
+        "description": "拖把是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "モップ",
+        "description": "モップ は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-sponge",
+    "category": "household",
+    "icon": "🧽",
+    "i18n": {
+      "en": {
+        "name": "Sponge",
+        "description": "Sponge is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "海绵",
+        "description": "海绵是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "スポンジ",
+        "description": "スポンジ は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-rug",
+    "category": "household",
+    "icon": "🧶",
+    "i18n": {
+      "en": {
+        "name": "Rug",
+        "description": "Rug is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "地毯",
+        "description": "地毯是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "ラグ",
+        "description": "ラグ は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-door",
+    "category": "household",
+    "icon": "🚪",
+    "i18n": {
+      "en": {
+        "name": "Front Door",
+        "description": "Front Door is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "前门",
+        "description": "前门是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "玄関ドア",
+        "description": "玄関ドア は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-window",
+    "category": "household",
+    "icon": "🪟",
+    "i18n": {
+      "en": {
+        "name": "Window",
+        "description": "Window is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "窗户",
+        "description": "窗户是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "窓",
+        "description": "窓 は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "house-drawer",
+    "category": "household",
+    "icon": "🗄️",
+    "i18n": {
+      "en": {
+        "name": "Drawer",
+        "description": "Drawer is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "抽屉",
+        "description": "抽屉是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "引き出し",
+        "description": "引き出し は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  },
+  {
+    "id": "food-bread",
+    "category": "food",
+    "icon": "🍞",
+    "i18n": {
+      "en": {
+        "name": "Bread Loaf",
+        "description": "Bread Loaf adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "面包",
+        "description": "面包是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "パン",
+        "description": "パン は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-bagel",
+    "category": "food",
+    "icon": "🥯",
+    "i18n": {
+      "en": {
+        "name": "Bagel",
+        "description": "Bagel adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "贝果",
+        "description": "贝果是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ベーグル",
+        "description": "ベーグル は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-pancakes",
+    "category": "food",
+    "icon": "🥞",
+    "i18n": {
+      "en": {
+        "name": "Pancakes",
+        "description": "Pancakes adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "煎饼",
+        "description": "煎饼是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "パンケーキ",
+        "description": "パンケーキ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-waffle",
+    "category": "food",
+    "icon": "🧇",
+    "i18n": {
+      "en": {
+        "name": "Waffle",
+        "description": "Waffle adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "华夫饼",
+        "description": "华夫饼是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ワッフル",
+        "description": "ワッフル は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-egg",
+    "category": "food",
+    "icon": "🍳",
+    "i18n": {
+      "en": {
+        "name": "Fried Egg",
+        "description": "Fried Egg adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "煎蛋",
+        "description": "煎蛋是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "目玉焼き",
+        "description": "目玉焼き は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-cheese",
+    "category": "food",
+    "icon": "🧀",
+    "i18n": {
+      "en": {
+        "name": "Cheese",
+        "description": "Cheese adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "奶酪",
+        "description": "奶酪是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "チーズ",
+        "description": "チーズ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-burger",
+    "category": "food",
+    "icon": "🍔",
+    "i18n": {
+      "en": {
+        "name": "Burger",
+        "description": "Burger adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "汉堡",
+        "description": "汉堡是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ハンバーガー",
+        "description": "ハンバーガー は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-fries",
+    "category": "food",
+    "icon": "🍟",
+    "i18n": {
+      "en": {
+        "name": "French Fries",
+        "description": "French Fries adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "薯条",
+        "description": "薯条是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "フライドポテト",
+        "description": "フライドポテト は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-hot-dog",
+    "category": "food",
+    "icon": "🌭",
+    "i18n": {
+      "en": {
+        "name": "Hot Dog",
+        "description": "Hot Dog adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "热狗",
+        "description": "热狗是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ホットドッグ",
+        "description": "ホットドッグ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-sandwich",
+    "category": "food",
+    "icon": "🥪",
+    "i18n": {
+      "en": {
+        "name": "Sandwich",
+        "description": "Sandwich adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "三明治",
+        "description": "三明治是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "サンドイッチ",
+        "description": "サンドイッチ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-salad",
+    "category": "food",
+    "icon": "🥗",
+    "i18n": {
+      "en": {
+        "name": "Salad Bowl",
+        "description": "Salad Bowl adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "沙拉",
+        "description": "沙拉是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "サラダ",
+        "description": "サラダ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-dumpling",
+    "category": "food",
+    "icon": "🥟",
+    "i18n": {
+      "en": {
+        "name": "Dumpling",
+        "description": "Dumpling adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "饺子",
+        "description": "饺子是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "餃子",
+        "description": "餃子 は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-rice-ball",
+    "category": "food",
+    "icon": "🍙",
+    "i18n": {
+      "en": {
+        "name": "Rice Ball",
+        "description": "Rice Ball adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "饭团",
+        "description": "饭团是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "おにぎり",
+        "description": "おにぎり は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-curry-rice",
+    "category": "food",
+    "icon": "🍛",
+    "i18n": {
+      "en": {
+        "name": "Curry Rice",
+        "description": "Curry Rice adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "咖喱饭",
+        "description": "咖喱饭是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "カレーライス",
+        "description": "カレーライス は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-spaghetti",
+    "category": "food",
+    "icon": "🍝",
+    "i18n": {
+      "en": {
+        "name": "Spaghetti",
+        "description": "Spaghetti adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "意大利面",
+        "description": "意大利面是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "スパゲッティ",
+        "description": "スパゲッティ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-noodles",
+    "category": "food",
+    "icon": "🍜",
+    "i18n": {
+      "en": {
+        "name": "Noodles",
+        "description": "Noodles adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "面条",
+        "description": "面条是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "麺",
+        "description": "麺 は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-corn",
+    "category": "food",
+    "icon": "🌽",
+    "i18n": {
+      "en": {
+        "name": "Corn",
+        "description": "Corn adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "玉米",
+        "description": "玉米是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "とうもろこし",
+        "description": "とうもろこし は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-carrot",
+    "category": "food",
+    "icon": "🥕",
+    "i18n": {
+      "en": {
+        "name": "Carrot",
+        "description": "Carrot adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "胡萝卜",
+        "description": "胡萝卜是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "にんじん",
+        "description": "にんじん は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-broccoli",
+    "category": "food",
+    "icon": "🥦",
+    "i18n": {
+      "en": {
+        "name": "Broccoli",
+        "description": "Broccoli adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "西兰花",
+        "description": "西兰花是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ブロッコリー",
+        "description": "ブロッコリー は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-tomato",
+    "category": "food",
+    "icon": "🍅",
+    "i18n": {
+      "en": {
+        "name": "Tomato",
+        "description": "Tomato adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "番茄",
+        "description": "番茄是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "トマト",
+        "description": "トマト は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-potato",
+    "category": "food",
+    "icon": "🥔",
+    "i18n": {
+      "en": {
+        "name": "Potato",
+        "description": "Potato adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "土豆",
+        "description": "土豆是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "じゃがいも",
+        "description": "じゃがいも は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-mushroom-food",
+    "category": "food",
+    "icon": "🍄",
+    "i18n": {
+      "en": {
+        "name": "Mushroom",
+        "description": "Mushroom adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "蘑菇",
+        "description": "蘑菇是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "きのこ",
+        "description": "きのこ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-grapes",
+    "category": "food",
+    "icon": "🍇",
+    "i18n": {
+      "en": {
+        "name": "Grapes",
+        "description": "Grapes adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "葡萄",
+        "description": "葡萄是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ぶどう",
+        "description": "ぶどう は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-strawberry",
+    "category": "food",
+    "icon": "🍓",
+    "i18n": {
+      "en": {
+        "name": "Strawberry",
+        "description": "Strawberry adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "草莓",
+        "description": "草莓是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "いちご",
+        "description": "いちご は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-watermelon",
+    "category": "food",
+    "icon": "🍉",
+    "i18n": {
+      "en": {
+        "name": "Watermelon",
+        "description": "Watermelon adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "西瓜",
+        "description": "西瓜是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "スイカ",
+        "description": "スイカ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-orange",
+    "category": "food",
+    "icon": "🍊",
+    "i18n": {
+      "en": {
+        "name": "Orange",
+        "description": "Orange adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "橙子",
+        "description": "橙子是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "オレンジ",
+        "description": "オレンジ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-lemon",
+    "category": "food",
+    "icon": "🍋",
+    "i18n": {
+      "en": {
+        "name": "Lemon",
+        "description": "Lemon adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "柠檬",
+        "description": "柠檬是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "レモン",
+        "description": "レモン は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-pineapple",
+    "category": "food",
+    "icon": "🍍",
+    "i18n": {
+      "en": {
+        "name": "Pineapple",
+        "description": "Pineapple adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "菠萝",
+        "description": "菠萝是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "パイナップル",
+        "description": "パイナップル は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-avocado",
+    "category": "food",
+    "icon": "🥑",
+    "i18n": {
+      "en": {
+        "name": "Avocado",
+        "description": "Avocado adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "牛油果",
+        "description": "牛油果是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "アボカド",
+        "description": "アボカド は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-pear",
+    "category": "food",
+    "icon": "🍐",
+    "i18n": {
+      "en": {
+        "name": "Pear",
+        "description": "Pear adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "梨",
+        "description": "梨是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "梨",
+        "description": "梨 は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-peach",
+    "category": "food",
+    "icon": "🍑",
+    "i18n": {
+      "en": {
+        "name": "Peach",
+        "description": "Peach adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "桃子",
+        "description": "桃子是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "桃",
+        "description": "桃 は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-cherries",
+    "category": "food",
+    "icon": "🍒",
+    "i18n": {
+      "en": {
+        "name": "Cherries",
+        "description": "Cherries adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "樱桃",
+        "description": "樱桃是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "さくらんぼ",
+        "description": "さくらんぼ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-cookie",
+    "category": "food",
+    "icon": "🍪",
+    "i18n": {
+      "en": {
+        "name": "Cookie",
+        "description": "Cookie adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "饼干",
+        "description": "饼干是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "クッキー",
+        "description": "クッキー は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-donut",
+    "category": "food",
+    "icon": "🍩",
+    "i18n": {
+      "en": {
+        "name": "Donut",
+        "description": "Donut adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "甜甜圈",
+        "description": "甜甜圈是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ドーナツ",
+        "description": "ドーナツ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-cupcake",
+    "category": "food",
+    "icon": "🧁",
+    "i18n": {
+      "en": {
+        "name": "Cupcake",
+        "description": "Cupcake adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "纸杯蛋糕",
+        "description": "纸杯蛋糕是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "カップケーキ",
+        "description": "カップケーキ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-chocolate",
+    "category": "food",
+    "icon": "🍫",
+    "i18n": {
+      "en": {
+        "name": "Chocolate Bar",
+        "description": "Chocolate Bar adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "巧克力",
+        "description": "巧克力是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "チョコレート",
+        "description": "チョコレート は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-candy",
+    "category": "food",
+    "icon": "🍬",
+    "i18n": {
+      "en": {
+        "name": "Candy",
+        "description": "Candy adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "糖果",
+        "description": "糖果是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "キャンディ",
+        "description": "キャンディ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-lollipop",
+    "category": "food",
+    "icon": "🍭",
+    "i18n": {
+      "en": {
+        "name": "Lollipop",
+        "description": "Lollipop adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "棒棒糖",
+        "description": "棒棒糖是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ロリポップ",
+        "description": "ロリポップ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-honey",
+    "category": "food",
+    "icon": "🍯",
+    "i18n": {
+      "en": {
+        "name": "Honey Jar",
+        "description": "Honey Jar adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "蜂蜜",
+        "description": "蜂蜜是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "はちみつ",
+        "description": "はちみつ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-milk",
+    "category": "food",
+    "icon": "🥛",
+    "i18n": {
+      "en": {
+        "name": "Milk Carton",
+        "description": "Milk Carton adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "牛奶",
+        "description": "牛奶是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "牛乳",
+        "description": "牛乳 は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-tea",
+    "category": "food",
+    "icon": "🍵",
+    "i18n": {
+      "en": {
+        "name": "Tea Cup",
+        "description": "Tea Cup adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "茶",
+        "description": "茶是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "お茶",
+        "description": "お茶 は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-coffee",
+    "category": "food",
+    "icon": "☕",
+    "i18n": {
+      "en": {
+        "name": "Coffee",
+        "description": "Coffee adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "咖啡",
+        "description": "咖啡是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "コーヒー",
+        "description": "コーヒー は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-juice",
+    "category": "food",
+    "icon": "🧃",
+    "i18n": {
+      "en": {
+        "name": "Juice Box",
+        "description": "Juice Box adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "果汁",
+        "description": "果汁是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ジュース",
+        "description": "ジュース は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-soda",
+    "category": "food",
+    "icon": "🥤",
+    "i18n": {
+      "en": {
+        "name": "Soda Can",
+        "description": "Soda Can adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "汽水",
+        "description": "汽水是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ソーダ",
+        "description": "ソーダ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-bento",
+    "category": "food",
+    "icon": "🍱",
+    "i18n": {
+      "en": {
+        "name": "Bento Box",
+        "description": "Bento Box adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "便当",
+        "description": "便当是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "弁当",
+        "description": "弁当 は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-pretzel",
+    "category": "food",
+    "icon": "🥨",
+    "i18n": {
+      "en": {
+        "name": "Pretzel",
+        "description": "Pretzel adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "椒盐卷饼",
+        "description": "椒盐卷饼是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "プレッツェル",
+        "description": "プレッツェル は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-pie",
+    "category": "food",
+    "icon": "🥧",
+    "i18n": {
+      "en": {
+        "name": "Pie",
+        "description": "Pie adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "派",
+        "description": "派是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "パイ",
+        "description": "パイ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-rice",
+    "category": "food",
+    "icon": "🍚",
+    "i18n": {
+      "en": {
+        "name": "Rice Bowl",
+        "description": "Rice Bowl adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "米饭",
+        "description": "米饭是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "ご飯",
+        "description": "ご飯 は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-soup",
+    "category": "food",
+    "icon": "🥣",
+    "i18n": {
+      "en": {
+        "name": "Soup Bowl",
+        "description": "Soup Bowl adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "汤",
+        "description": "汤是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "スープ",
+        "description": "スープ は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "food-fish-cake",
+    "category": "food",
+    "icon": "🍥",
+    "i18n": {
+      "en": {
+        "name": "Fish Cake",
+        "description": "Fish Cake adds a recognizable food prompt for drawing, ESL vocabulary, and party games."
+      },
+      "zh": {
+        "name": "鱼饼",
+        "description": "鱼饼是容易识别的食物提示，适合绘画、词汇练习和小游戏。"
+      },
+      "ja": {
+        "name": "なると",
+        "description": "なると は分かりやすい食べ物のお題で、描画や語彙練習、ゲームに向いています。"
+      }
+    }
+  },
+  {
+    "id": "nature-tree",
+    "category": "nature",
+    "icon": "🌳",
+    "i18n": {
+      "en": {
+        "name": "Tree",
+        "description": "Tree gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "树",
+        "description": "树能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "木",
+        "description": "木 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-palm-tree",
+    "category": "nature",
+    "icon": "🌴",
+    "i18n": {
+      "en": {
+        "name": "Palm Tree",
+        "description": "Palm Tree gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "棕榈树",
+        "description": "棕榈树能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "ヤシの木",
+        "description": "ヤシの木 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-flower",
+    "category": "nature",
+    "icon": "🌸",
+    "i18n": {
+      "en": {
+        "name": "Flower",
+        "description": "Flower gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "花",
+        "description": "花能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "花",
+        "description": "花 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-rose",
+    "category": "nature",
+    "icon": "🌹",
+    "i18n": {
+      "en": {
+        "name": "Rose",
+        "description": "Rose gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "玫瑰",
+        "description": "玫瑰能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "バラ",
+        "description": "バラ は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-tulip",
+    "category": "nature",
+    "icon": "🌷",
+    "i18n": {
+      "en": {
+        "name": "Tulip",
+        "description": "Tulip gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "郁金香",
+        "description": "郁金香能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "チューリップ",
+        "description": "チューリップ は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-seedling",
+    "category": "nature",
+    "icon": "🌱",
+    "i18n": {
+      "en": {
+        "name": "Seedling",
+        "description": "Seedling gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "幼苗",
+        "description": "幼苗能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "苗",
+        "description": "苗 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-herb",
+    "category": "nature",
+    "icon": "🌿",
+    "i18n": {
+      "en": {
+        "name": "Herb",
+        "description": "Herb gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "香草",
+        "description": "香草能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "ハーブ",
+        "description": "ハーブ は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-fern",
+    "category": "nature",
+    "icon": "🌿",
+    "i18n": {
+      "en": {
+        "name": "Fern",
+        "description": "Fern gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "蕨类植物",
+        "description": "蕨类植物能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "シダ",
+        "description": "シダ は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-moss",
+    "category": "nature",
+    "icon": "🌿",
+    "i18n": {
+      "en": {
+        "name": "Moss",
+        "description": "Moss gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "苔藓",
+        "description": "苔藓能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "苔",
+        "description": "苔 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-rock",
+    "category": "nature",
+    "icon": "🪨",
+    "i18n": {
+      "en": {
+        "name": "Rock",
+        "description": "Rock gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "石头",
+        "description": "石头能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "石",
+        "description": "石 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-mountain",
+    "category": "nature",
+    "icon": "⛰️",
+    "i18n": {
+      "en": {
+        "name": "Mountain",
+        "description": "Mountain gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "山",
+        "description": "山能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "山",
+        "description": "山 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-volcano",
+    "category": "nature",
+    "icon": "🌋",
+    "i18n": {
+      "en": {
+        "name": "Volcano",
+        "description": "Volcano gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "火山",
+        "description": "火山能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "火山",
+        "description": "火山 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-island",
+    "category": "nature",
+    "icon": "🏝️",
+    "i18n": {
+      "en": {
+        "name": "Island",
+        "description": "Island gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "岛屿",
+        "description": "岛屿能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "島",
+        "description": "島 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-desert",
+    "category": "nature",
+    "icon": "🏜️",
+    "i18n": {
+      "en": {
+        "name": "Desert",
+        "description": "Desert gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "沙漠",
+        "description": "沙漠能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "砂漠",
+        "description": "砂漠 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-river",
+    "category": "nature",
+    "icon": "🌊",
+    "i18n": {
+      "en": {
+        "name": "River",
+        "description": "River gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "河流",
+        "description": "河流能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "川",
+        "description": "川 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-lake",
+    "category": "nature",
+    "icon": "🏞️",
+    "i18n": {
+      "en": {
+        "name": "Lake",
+        "description": "Lake gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "湖",
+        "description": "湖能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "湖",
+        "description": "湖 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-ocean-wave",
+    "category": "nature",
+    "icon": "🌊",
+    "i18n": {
+      "en": {
+        "name": "Ocean Wave",
+        "description": "Ocean Wave gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "海浪",
+        "description": "海浪能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "波",
+        "description": "波 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-snowflake",
+    "category": "nature",
+    "icon": "❄️",
+    "i18n": {
+      "en": {
+        "name": "Snowflake",
+        "description": "Snowflake gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "雪花",
+        "description": "雪花能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "雪の結晶",
+        "description": "雪の結晶 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-raindrop",
+    "category": "nature",
+    "icon": "💧",
+    "i18n": {
+      "en": {
+        "name": "Raindrop",
+        "description": "Raindrop gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "雨滴",
+        "description": "雨滴能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "雨粒",
+        "description": "雨粒 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-lightning",
+    "category": "nature",
+    "icon": "⚡",
+    "i18n": {
+      "en": {
+        "name": "Lightning",
+        "description": "Lightning gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "闪电",
+        "description": "闪电能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "稲妻",
+        "description": "稲妻 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-cloudy-sky",
+    "category": "nature",
+    "icon": "☁️",
+    "i18n": {
+      "en": {
+        "name": "Cloudy Sky",
+        "description": "Cloudy Sky gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "多云天空",
+        "description": "多云天空能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "曇り空",
+        "description": "曇り空 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-star",
+    "category": "nature",
+    "icon": "⭐",
+    "i18n": {
+      "en": {
+        "name": "Star",
+        "description": "Star gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "星星",
+        "description": "星星能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "星",
+        "description": "星 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-comet",
+    "category": "nature",
+    "icon": "☄️",
+    "i18n": {
+      "en": {
+        "name": "Comet",
+        "description": "Comet gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "彗星",
+        "description": "彗星能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "彗星",
+        "description": "彗星 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-planet",
+    "category": "nature",
+    "icon": "🪐",
+    "i18n": {
+      "en": {
+        "name": "Planet",
+        "description": "Planet gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "行星",
+        "description": "行星能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "惑星",
+        "description": "惑星 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-acorn",
+    "category": "nature",
+    "icon": "🌰",
+    "i18n": {
+      "en": {
+        "name": "Acorn",
+        "description": "Acorn gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "橡果",
+        "description": "橡果能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "どんぐり",
+        "description": "どんぐり は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-pine-tree",
+    "category": "nature",
+    "icon": "🌲",
+    "i18n": {
+      "en": {
+        "name": "Pine Tree",
+        "description": "Pine Tree gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "松树",
+        "description": "松树能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "松",
+        "description": "松 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-bamboo",
+    "category": "nature",
+    "icon": "🎋",
+    "i18n": {
+      "en": {
+        "name": "Bamboo",
+        "description": "Bamboo gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "竹子",
+        "description": "竹子能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "竹",
+        "description": "竹 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-lotus",
+    "category": "nature",
+    "icon": "🪷",
+    "i18n": {
+      "en": {
+        "name": "Lotus",
+        "description": "Lotus gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "莲花",
+        "description": "莲花能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "蓮",
+        "description": "蓮 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-coral",
+    "category": "nature",
+    "icon": "🪸",
+    "i18n": {
+      "en": {
+        "name": "Coral",
+        "description": "Coral gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "珊瑚",
+        "description": "珊瑚能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "サンゴ",
+        "description": "サンゴ は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-shell-spiral",
+    "category": "nature",
+    "icon": "🐚",
+    "i18n": {
+      "en": {
+        "name": "Spiral Shell",
+        "description": "Spiral Shell gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "螺旋贝壳",
+        "description": "螺旋贝壳能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "巻き貝",
+        "description": "巻き貝 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-feather",
+    "category": "nature",
+    "icon": "🪶",
+    "i18n": {
+      "en": {
+        "name": "Feather",
+        "description": "Feather gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "羽毛",
+        "description": "羽毛能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "羽",
+        "description": "羽 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-nest",
+    "category": "nature",
+    "icon": "🪹",
+    "i18n": {
+      "en": {
+        "name": "Bird Nest",
+        "description": "Bird Nest gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "鸟巢",
+        "description": "鸟巢能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "鳥の巣",
+        "description": "鳥の巣 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-pond",
+    "category": "nature",
+    "icon": "🏞️",
+    "i18n": {
+      "en": {
+        "name": "Pond",
+        "description": "Pond gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "池塘",
+        "description": "池塘能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "池",
+        "description": "池 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-cave",
+    "category": "nature",
+    "icon": "🕳️",
+    "i18n": {
+      "en": {
+        "name": "Cave",
+        "description": "Cave gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "洞穴",
+        "description": "洞穴能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "洞窟",
+        "description": "洞窟 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-cliff",
+    "category": "nature",
+    "icon": "⛰️",
+    "i18n": {
+      "en": {
+        "name": "Cliff",
+        "description": "Cliff gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "悬崖",
+        "description": "悬崖能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "崖",
+        "description": "崖 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-meadow",
+    "category": "nature",
+    "icon": "🌾",
+    "i18n": {
+      "en": {
+        "name": "Meadow",
+        "description": "Meadow gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "草地",
+        "description": "草地能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "草原",
+        "description": "草原 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-field",
+    "category": "nature",
+    "icon": "🌾",
+    "i18n": {
+      "en": {
+        "name": "Field",
+        "description": "Field gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "田野",
+        "description": "田野能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "畑",
+        "description": "畑 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-wheat",
+    "category": "nature",
+    "icon": "🌾",
+    "i18n": {
+      "en": {
+        "name": "Wheat",
+        "description": "Wheat gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "小麦",
+        "description": "小麦能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "小麦",
+        "description": "小麦 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-leaf",
+    "category": "nature",
+    "icon": "🍃",
+    "i18n": {
+      "en": {
+        "name": "Green Leaf",
+        "description": "Green Leaf gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "绿叶",
+        "description": "绿叶能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "葉",
+        "description": "葉 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-autumn-leaf",
+    "category": "nature",
+    "icon": "🍂",
+    "i18n": {
+      "en": {
+        "name": "Autumn Leaf",
+        "description": "Autumn Leaf gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "秋叶",
+        "description": "秋叶能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "落ち葉",
+        "description": "落ち葉 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-dew",
+    "category": "nature",
+    "icon": "💧",
+    "i18n": {
+      "en": {
+        "name": "Morning Dew",
+        "description": "Morning Dew gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "露珠",
+        "description": "露珠能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "朝露",
+        "description": "朝露 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-fog",
+    "category": "nature",
+    "icon": "🌫️",
+    "i18n": {
+      "en": {
+        "name": "Fog",
+        "description": "Fog gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "雾",
+        "description": "雾能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "霧",
+        "description": "霧 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-sun",
+    "category": "nature",
+    "icon": "☀️",
+    "i18n": {
+      "en": {
+        "name": "Sun",
+        "description": "Sun gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "太阳",
+        "description": "太阳能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "太陽",
+        "description": "太陽 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-sunrise",
+    "category": "nature",
+    "icon": "🌅",
+    "i18n": {
+      "en": {
+        "name": "Sunrise",
+        "description": "Sunrise gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "日出",
+        "description": "日出能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "日の出",
+        "description": "日の出 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-glacier",
+    "category": "nature",
+    "icon": "🧊",
+    "i18n": {
+      "en": {
+        "name": "Glacier",
+        "description": "Glacier gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "冰川",
+        "description": "冰川能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "氷河",
+        "description": "氷河 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-geode",
+    "category": "nature",
+    "icon": "💎",
+    "i18n": {
+      "en": {
+        "name": "Geode",
+        "description": "Geode gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "晶洞",
+        "description": "晶洞能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "晶洞",
+        "description": "晶洞 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-crystal",
+    "category": "nature",
+    "icon": "💎",
+    "i18n": {
+      "en": {
+        "name": "Crystal",
+        "description": "Crystal gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "水晶",
+        "description": "水晶能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "水晶",
+        "description": "水晶 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-vine",
+    "category": "nature",
+    "icon": "🌿",
+    "i18n": {
+      "en": {
+        "name": "Vine",
+        "description": "Vine gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "藤蔓",
+        "description": "藤蔓能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "つる",
+        "description": "つる は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-water-lily",
+    "category": "nature",
+    "icon": "🪷",
+    "i18n": {
+      "en": {
+        "name": "Water Lily",
+        "description": "Water Lily gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "睡莲",
+        "description": "睡莲能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "睡蓮",
+        "description": "睡蓮 は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "nature-sand-dollar",
+    "category": "nature",
+    "icon": "🐚",
+    "i18n": {
+      "en": {
+        "name": "Sand Dollar",
+        "description": "Sand Dollar gives the generator a nature prompt with clear mood, shape, or scene potential."
+      },
+      "zh": {
+        "name": "海钱",
+        "description": "海钱能提供自然主题灵感，适合延展出形状、情绪或场景。"
+      },
+      "ja": {
+        "name": "タコノマクラ",
+        "description": "タコノマクラ は形、雰囲気、場面づくりにつなげやすい自然のお題です。"
+      }
+    }
+  },
+  {
+    "id": "funny-whoopee-cushion",
+    "category": "funny",
+    "icon": "🎈",
+    "i18n": {
+      "en": {
+        "name": "Whoopee Cushion",
+        "description": "Whoopee Cushion is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "整蛊坐垫",
+        "description": "整蛊坐垫适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ブーブークッション",
+        "description": "ブーブークッション は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-rubber-chicken",
+    "category": "funny",
+    "icon": "🐔",
+    "i18n": {
+      "en": {
+        "name": "Rubber Chicken",
+        "description": "Rubber Chicken is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "橡胶鸡",
+        "description": "橡胶鸡适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ゴムチキン",
+        "description": "ゴムチキン は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-fake-mustache",
+    "category": "funny",
+    "icon": "🥸",
+    "i18n": {
+      "en": {
+        "name": "Fake Mustache",
+        "description": "Fake Mustache is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "假胡子",
+        "description": "假胡子适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "つけひげ",
+        "description": "つけひげ は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-googly-eyes",
+    "category": "funny",
+    "icon": "👀",
+    "i18n": {
+      "en": {
+        "name": "Googly Eyes",
+        "description": "Googly Eyes is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "活动眼睛",
+        "description": "活动眼睛适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "動く目玉シール",
+        "description": "動く目玉シール は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-oversized-glasses",
+    "category": "funny",
+    "icon": "👓",
+    "i18n": {
+      "en": {
+        "name": "Oversized Glasses",
+        "description": "Oversized Glasses is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "超大眼镜",
+        "description": "超大眼镜适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "大きなメガネ",
+        "description": "大きなメガネ は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-tiny-umbrella",
+    "category": "funny",
+    "icon": "☂️",
+    "i18n": {
+      "en": {
+        "name": "Tiny Umbrella",
+        "description": "Tiny Umbrella is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "迷你小伞",
+        "description": "迷你小伞适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "小さな傘",
+        "description": "小さな傘 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-squeaky-toy",
+    "category": "funny",
+    "icon": "🧸",
+    "i18n": {
+      "en": {
+        "name": "Squeaky Toy",
+        "description": "Squeaky Toy is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "吱吱玩具",
+        "description": "吱吱玩具适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "音の鳴るおもちゃ",
+        "description": "音の鳴るおもちゃ は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-wind-up-toy",
+    "category": "funny",
+    "icon": "🧸",
+    "i18n": {
+      "en": {
+        "name": "Wind-Up Toy",
+        "description": "Wind-Up Toy is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "发条玩具",
+        "description": "发条玩具适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ゼンマイおもちゃ",
+        "description": "ゼンマイおもちゃ は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-toy-robot",
+    "category": "funny",
+    "icon": "🤖",
+    "i18n": {
+      "en": {
+        "name": "Toy Robot",
+        "description": "Toy Robot is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "玩具机器人",
+        "description": "玩具机器人适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "おもちゃロボット",
+        "description": "おもちゃロボット は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-sock-puppet",
+    "category": "funny",
+    "icon": "🧦",
+    "i18n": {
+      "en": {
+        "name": "Sock Puppet",
+        "description": "Sock Puppet is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "袜子木偶",
+        "description": "袜子木偶适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "靴下人形",
+        "description": "靴下人形 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-foam-finger",
+    "category": "funny",
+    "icon": "☝️",
+    "i18n": {
+      "en": {
+        "name": "Foam Finger",
+        "description": "Foam Finger is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "泡棉手指",
+        "description": "泡棉手指适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "応援フォームフィンガー",
+        "description": "応援フォームフィンガー は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-kazoo",
+    "category": "funny",
+    "icon": "🎺",
+    "i18n": {
+      "en": {
+        "name": "Kazoo",
+        "description": "Kazoo is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "卡祖笛",
+        "description": "卡祖笛适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "カズー",
+        "description": "カズー は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-party-popper",
+    "category": "funny",
+    "icon": "🎉",
+    "i18n": {
+      "en": {
+        "name": "Party Popper",
+        "description": "Party Popper is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "礼花筒",
+        "description": "礼花筒适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "クラッカー",
+        "description": "クラッカー は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-bubble-wand",
+    "category": "funny",
+    "icon": "🫧",
+    "i18n": {
+      "en": {
+        "name": "Bubble Wand",
+        "description": "Bubble Wand is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "泡泡棒",
+        "description": "泡泡棒适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "シャボン玉スティック",
+        "description": "シャボン玉スティック は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-silly-straw",
+    "category": "funny",
+    "icon": "🥤",
+    "i18n": {
+      "en": {
+        "name": "Silly Straw",
+        "description": "Silly Straw is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "弯弯吸管",
+        "description": "弯弯吸管适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "くねくねストロー",
+        "description": "くねくねストロー は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-juggling-ball",
+    "category": "funny",
+    "icon": "🤹",
+    "i18n": {
+      "en": {
+        "name": "Juggling Ball",
+        "description": "Juggling Ball is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "杂耍球",
+        "description": "杂耍球适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ジャグリングボール",
+        "description": "ジャグリングボール は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-magic-wand",
+    "category": "funny",
+    "icon": "🪄",
+    "i18n": {
+      "en": {
+        "name": "Magic Wand",
+        "description": "Magic Wand is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "魔法棒",
+        "description": "魔法棒适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "魔法の杖",
+        "description": "魔法の杖 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-toy-crown",
+    "category": "funny",
+    "icon": "👑",
+    "i18n": {
+      "en": {
+        "name": "Toy Crown",
+        "description": "Toy Crown is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "玩具皇冠",
+        "description": "玩具皇冠适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "おもちゃの王冠",
+        "description": "おもちゃの王冠 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-cape",
+    "category": "funny",
+    "icon": "🦸",
+    "i18n": {
+      "en": {
+        "name": "Superhero Cape",
+        "description": "Superhero Cape is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "英雄披风",
+        "description": "英雄披风适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ヒーローマント",
+        "description": "ヒーローマント は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-clown-shoes",
+    "category": "funny",
+    "icon": "👞",
+    "i18n": {
+      "en": {
+        "name": "Clown Shoes",
+        "description": "Clown Shoes is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "小丑鞋",
+        "description": "小丑鞋适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ピエロ靴",
+        "description": "ピエロ靴 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-banana-peel",
+    "category": "funny",
+    "icon": "🍌",
+    "i18n": {
+      "en": {
+        "name": "Banana Peel",
+        "description": "Banana Peel is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "香蕉皮",
+        "description": "香蕉皮适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "バナナの皮",
+        "description": "バナナの皮 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-rubber-fish",
+    "category": "funny",
+    "icon": "🐟",
+    "i18n": {
+      "en": {
+        "name": "Rubber Fish",
+        "description": "Rubber Fish is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "橡胶鱼",
+        "description": "橡胶鱼适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ゴムの魚",
+        "description": "ゴムの魚 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-mini-traffic-cone",
+    "category": "funny",
+    "icon": "🚧",
+    "i18n": {
+      "en": {
+        "name": "Mini Traffic Cone",
+        "description": "Mini Traffic Cone is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "迷你路锥",
+        "description": "迷你路锥适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ミニコーン",
+        "description": "ミニコーン は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-toy-dinosaur",
+    "category": "funny",
+    "icon": "🦖",
+    "i18n": {
+      "en": {
+        "name": "Toy Dinosaur",
+        "description": "Toy Dinosaur is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "玩具恐龙",
+        "description": "玩具恐龙适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "おもちゃ恐竜",
+        "description": "おもちゃ恐竜 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-finger-puppet",
+    "category": "funny",
+    "icon": "🖐️",
+    "i18n": {
+      "en": {
+        "name": "Finger Puppet",
+        "description": "Finger Puppet is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "手指偶",
+        "description": "手指偶适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "指人形",
+        "description": "指人形 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-paper-crown",
+    "category": "funny",
+    "icon": "👑",
+    "i18n": {
+      "en": {
+        "name": "Paper Crown",
+        "description": "Paper Crown is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "纸皇冠",
+        "description": "纸皇冠适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "紙の王冠",
+        "description": "紙の王冠 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-balloon-animal",
+    "category": "funny",
+    "icon": "🎈",
+    "i18n": {
+      "en": {
+        "name": "Balloon Animal",
+        "description": "Balloon Animal is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "气球动物",
+        "description": "气球动物适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "バルーンアート",
+        "description": "バルーンアート は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-sticky-note-face",
+    "category": "funny",
+    "icon": "📝",
+    "i18n": {
+      "en": {
+        "name": "Sticky Note Face",
+        "description": "Sticky Note Face is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "便利贴表情",
+        "description": "便利贴表情适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "付箋の顔",
+        "description": "付箋の顔 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-rubber-stamp",
+    "category": "funny",
+    "icon": "🔖",
+    "i18n": {
+      "en": {
+        "name": "Rubber Stamp",
+        "description": "Rubber Stamp is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "橡皮印章",
+        "description": "橡皮印章适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ゴム印",
+        "description": "ゴム印 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-novelty-mug",
+    "category": "funny",
+    "icon": "☕",
+    "i18n": {
+      "en": {
+        "name": "Novelty Mug",
+        "description": "Novelty Mug is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "搞怪杯子",
+        "description": "搞怪杯子适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "面白マグ",
+        "description": "面白マグ は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-tiny-trophy",
+    "category": "funny",
+    "icon": "🏆",
+    "i18n": {
+      "en": {
+        "name": "Tiny Trophy",
+        "description": "Tiny Trophy is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "迷你奖杯",
+        "description": "迷你奖杯适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "小さなトロフィー",
+        "description": "小さなトロフィー は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-toy-sword",
+    "category": "funny",
+    "icon": "⚔️",
+    "i18n": {
+      "en": {
+        "name": "Toy Sword",
+        "description": "Toy Sword is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "玩具剑",
+        "description": "玩具剑适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "おもちゃの剣",
+        "description": "おもちゃの剣 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-pirate-eye-patch",
+    "category": "funny",
+    "icon": "🏴‍☠️",
+    "i18n": {
+      "en": {
+        "name": "Pirate Eye Patch",
+        "description": "Pirate Eye Patch is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "海盗眼罩",
+        "description": "海盗眼罩适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "海賊の眼帯",
+        "description": "海賊の眼帯 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-costume-wig",
+    "category": "funny",
+    "icon": "🎭",
+    "i18n": {
+      "en": {
+        "name": "Costume Wig",
+        "description": "Costume Wig is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "假发",
+        "description": "假发适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "かつら",
+        "description": "かつら は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-fake-spider",
+    "category": "funny",
+    "icon": "🕷️",
+    "i18n": {
+      "en": {
+        "name": "Fake Spider",
+        "description": "Fake Spider is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "假蜘蛛",
+        "description": "假蜘蛛适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "偽物のクモ",
+        "description": "偽物のクモ は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-spring-snake",
+    "category": "funny",
+    "icon": "🐍",
+    "i18n": {
+      "en": {
+        "name": "Spring Snake",
+        "description": "Spring Snake is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "弹簧蛇",
+        "description": "弹簧蛇适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "びっくりヘビ",
+        "description": "びっくりヘビ は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-joy-buzzer",
+    "category": "funny",
+    "icon": "🔔",
+    "i18n": {
+      "en": {
+        "name": "Joy Buzzer",
+        "description": "Joy Buzzer is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "整蛊震动器",
+        "description": "整蛊震动器适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "びっくりブザー",
+        "description": "びっくりブザー は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-mini-drum",
+    "category": "funny",
+    "icon": "🥁",
+    "i18n": {
+      "en": {
+        "name": "Mini Drum",
+        "description": "Mini Drum is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "迷你鼓",
+        "description": "迷你鼓适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "小さな太鼓",
+        "description": "小さな太鼓 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-toy-microphone",
+    "category": "funny",
+    "icon": "🎤",
+    "i18n": {
+      "en": {
+        "name": "Toy Microphone",
+        "description": "Toy Microphone is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "玩具麦克风",
+        "description": "玩具麦克风适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "おもちゃマイク",
+        "description": "おもちゃマイク は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-whistle",
+    "category": "funny",
+    "icon": "📣",
+    "i18n": {
+      "en": {
+        "name": "Whistle",
+        "description": "Whistle is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "哨子",
+        "description": "哨子适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ホイッスル",
+        "description": "ホイッスル は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-sticker-pack",
+    "category": "funny",
+    "icon": "🏷️",
+    "i18n": {
+      "en": {
+        "name": "Sticker Pack",
+        "description": "Sticker Pack is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "贴纸包",
+        "description": "贴纸包适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "シールセット",
+        "description": "シールセット は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-glitter-jar",
+    "category": "funny",
+    "icon": "✨",
+    "i18n": {
+      "en": {
+        "name": "Glitter Jar",
+        "description": "Glitter Jar is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "亮片罐",
+        "description": "亮片罐适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ラメ入り瓶",
+        "description": "ラメ入り瓶 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-paper-airplane",
+    "category": "funny",
+    "icon": "✈️",
+    "i18n": {
+      "en": {
+        "name": "Paper Airplane",
+        "description": "Paper Airplane is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "纸飞机",
+        "description": "纸飞机适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "紙飛行機",
+        "description": "紙飛行機 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-cardboard-box",
+    "category": "funny",
+    "icon": "📦",
+    "i18n": {
+      "en": {
+        "name": "Cardboard Box",
+        "description": "Cardboard Box is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "纸箱",
+        "description": "纸箱适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "段ボール箱",
+        "description": "段ボール箱 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-slinky",
+    "category": "funny",
+    "icon": "🌀",
+    "i18n": {
+      "en": {
+        "name": "Slinky",
+        "description": "Slinky is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "弹簧圈",
+        "description": "弹簧圈适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "スリンキー",
+        "description": "スリンキー は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-toy-car",
+    "category": "funny",
+    "icon": "🚗",
+    "i18n": {
+      "en": {
+        "name": "Toy Car",
+        "description": "Toy Car is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "玩具车",
+        "description": "玩具车适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "おもちゃの車",
+        "description": "おもちゃの車 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-maracas",
+    "category": "funny",
+    "icon": "🪇",
+    "i18n": {
+      "en": {
+        "name": "Maracas",
+        "description": "Maracas is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "沙锤",
+        "description": "沙锤适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "マラカス",
+        "description": "マラカス は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-rubber-ball",
+    "category": "funny",
+    "icon": "⚽",
+    "i18n": {
+      "en": {
+        "name": "Rubber Ball",
+        "description": "Rubber Ball is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "橡胶球",
+        "description": "橡胶球适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ゴムボール",
+        "description": "ゴムボール は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-puppet-stage",
+    "category": "funny",
+    "icon": "🎪",
+    "i18n": {
+      "en": {
+        "name": "Puppet Stage",
+        "description": "Puppet Stage is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "木偶小舞台",
+        "description": "木偶小舞台适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "人形劇の舞台",
+        "description": "人形劇の舞台 は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "funny-mystery-box",
+    "category": "funny",
+    "icon": "🎁",
+    "i18n": {
+      "en": {
+        "name": "Mystery Box",
+        "description": "Mystery Box is a playful prompt for improv, party games, icebreakers, and silly drawing rounds."
+      },
+      "zh": {
+        "name": "神秘盒子",
+        "description": "神秘盒子适合即兴表演、派对游戏、破冰和轻松绘画题。"
+      },
+      "ja": {
+        "name": "ミステリーボックス",
+        "description": "ミステリーボックス は即興、パーティーゲーム、アイスブレイク、ゆるい描画お題に向いています。"
+      }
+    }
+  },
+  {
+    "id": "house-storage-bin",
+    "category": "household",
+    "icon": "🧺",
+    "i18n": {
+      "en": {
+        "name": "Storage Bin",
+        "description": "Storage Bin is a familiar household prompt that is easy to describe, sketch, or act out."
+      },
+      "zh": {
+        "name": "收纳箱",
+        "description": "收纳箱是熟悉的日常物品，适合描述、速写或表演。"
+      },
+      "ja": {
+        "name": "収納ボックス",
+        "description": "収納ボックス は身近な日用品で、説明、スケッチ、ジェスチャーに使いやすいです。"
+      }
+    }
+  }
+]
