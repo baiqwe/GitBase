@@ -62,9 +62,92 @@ export type LocalizedObject = ObjectRecord & {
   imageAltText?: string
 }
 
+const categoryFallbackImages: Record<string, string[]> = {
+  animals: [
+    '/images/objects/animal-fox.webp',
+    '/images/objects/animal-rabbit.webp',
+    '/images/objects/animal-owl.webp',
+    '/images/objects/animal-butterfly.webp',
+    '/images/objects/animal-elephant.webp',
+    '/images/objects/animal-lion.webp',
+    '/images/objects/animal-penguin.webp',
+    '/images/objects/animal-turtle.webp',
+    '/images/objects/animal-giraffe.webp',
+    '/images/objects/animal-octopus.webp',
+  ],
+  household: [
+    '/images/objects/house-chair.webp',
+    '/images/objects/house-lamp.webp',
+    '/images/objects/house-clock.webp',
+    '/images/objects/house-key.webp',
+    '/images/objects/house-kettle.webp',
+    '/images/objects/house-pillow.webp',
+    '/images/objects/house-broom.webp',
+    '/images/objects/house-frying-pan.webp',
+    '/images/objects/house-toothbrush.webp',
+    '/images/objects/house-umbrella.webp',
+  ],
+  food: [
+    '/images/objects/food-apple.webp',
+    '/images/objects/food-banana.webp',
+    '/images/objects/food-pizza.webp',
+    '/images/objects/food-sushi.webp',
+    '/images/objects/food-croissant.webp',
+    '/images/objects/food-ice-cream.webp',
+    '/images/objects/food-popcorn.webp',
+    '/images/objects/food-ramen.webp',
+    '/images/objects/food-taco.webp',
+    '/images/objects/food-birthday-cake.webp',
+  ],
+  nature: [
+    '/images/objects/nature-cactus.webp',
+    '/images/objects/nature-sunflower.webp',
+    '/images/objects/nature-maple-leaf.webp',
+    '/images/objects/nature-mushroom.webp',
+    '/images/objects/nature-pinecone.webp',
+    '/images/objects/nature-shell.webp',
+    '/images/objects/nature-cloud.webp',
+    '/images/objects/nature-rainbow.webp',
+    '/images/objects/nature-moon.webp',
+    '/images/objects/nature-waterfall.webp',
+  ],
+  funny: [
+    '/images/objects/funny-rubber-duck.webp',
+    '/images/objects/funny-party-hat.webp',
+    '/images/objects/funny-yoyo.webp',
+    '/images/objects/funny-disco-ball.webp',
+    '/images/objects/funny-confetti.webp',
+    '/images/objects/funny-tiny-crown.webp',
+    '/images/objects/funny-pirate-hat.webp',
+    '/images/objects/funny-clown-nose.webp',
+    '/images/objects/funny-banana-phone.webp',
+    '/images/objects/funny-toothbrush-mustache.webp',
+  ],
+}
+
 export const getCategories = cache((): CategoryRecord[] => {
   return categoriesData as CategoryRecord[]
 })
+
+function getStableIndex(value: string, length: number) {
+  let hash = 0
+
+  for (let index = 0; index < value.length; index += 1) {
+    hash = (hash * 31 + value.charCodeAt(index)) >>> 0
+  }
+
+  return hash % length
+}
+
+function getFallbackImage(item: ObjectRecord) {
+  const images = categoryFallbackImages[item.category]
+
+  if (!images?.length) {
+    return undefined
+  }
+
+  return images[getStableIndex(item.id, images.length)]
+}
 
 function resolveObjectImageUrl(image?: string) {
   if (!image || !siteConfig.objectImageBaseUrl || /^https?:\/\//i.test(image)) {
@@ -87,7 +170,7 @@ export const getObjects = cache((): ObjectRecord[] => {
 
   return baseObjects.map((item) => ({
     ...item,
-    image: resolveObjectImageUrl(imageMeta[item.id]?.image ?? item.image),
+    image: resolveObjectImageUrl(imageMeta[item.id]?.image ?? item.image ?? getFallbackImage(item)),
     blurDataUrl: imageMeta[item.id]?.blurDataUrl,
     imageAlt: imageMeta[item.id]?.alt,
   }))

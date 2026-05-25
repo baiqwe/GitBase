@@ -167,8 +167,8 @@ export function VisualGenerator({
                   />
                 </div>
               ) : (
-                <div className="flex aspect-square items-center justify-center bg-gradient-to-br from-amber-50 via-white to-teal-50 text-6xl shadow-inner">
-                  {item.icon}
+                <div className="flex aspect-square items-center justify-center bg-gradient-to-br from-amber-50 via-white to-teal-50 px-6 text-center text-xs font-semibold uppercase tracking-[0.22em] text-slate-500 shadow-inner">
+                  {item.translation.name}
                 </div>
               )}
             </CardHeader>

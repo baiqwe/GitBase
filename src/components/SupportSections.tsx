@@ -74,8 +74,8 @@ export function ExampleObjectsSection({
                 />
               </div>
             ) : (
-              <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-amber-50 via-white to-teal-50 text-5xl">
-                {item.icon}
+              <div className="flex aspect-[4/3] items-center justify-center bg-gradient-to-br from-amber-50 via-white to-teal-50 px-6 text-center text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">
+                {item.translation.name}
               </div>
             )}
             <div className="space-y-2 p-5">

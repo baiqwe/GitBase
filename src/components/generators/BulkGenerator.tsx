@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { Copy, ListFilter } from 'lucide-react'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
@@ -112,8 +113,26 @@ export function BulkGenerator({ locale, items, heading, helperText }: BulkGenera
               <TableRow key={`${item.id}-${index}`}>
                 <TableCell>{index + 1}</TableCell>
                 <TableCell className="font-medium">
-                  <span className="mr-2">{item.icon}</span>
-                  {item.translation.name}
+                  <span className="flex items-center gap-3">
+                    {item.image ? (
+                      <span className="relative h-10 w-10 shrink-0 overflow-hidden rounded-xl border border-slate-200 bg-slate-50">
+                        <Image
+                          src={item.image}
+                          alt={item.imageAltText ?? item.translation.name}
+                          fill
+                          sizes="40px"
+                          className="object-cover"
+                          placeholder={item.blurDataUrl ? 'blur' : 'empty'}
+                          blurDataURL={item.blurDataUrl}
+                        />
+                      </span>
+                    ) : (
+                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50 text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500">
+                        {item.translation.name.slice(0, 2)}
+                      </span>
+                    )}
+                    <span>{item.translation.name}</span>
+                  </span>
                 </TableCell>
                 <TableCell className="text-slate-600">{item.translation.description}</TableCell>
               </TableRow>
