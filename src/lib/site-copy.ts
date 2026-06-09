@@ -43,6 +43,7 @@ export const trustPageCopy: Record<
       jumpToCards: string
       jumpToList: string
       refreshList: string
+      copyObject: string
       copyList: string
       copied: string
       object: string
@@ -163,6 +164,7 @@ export const trustPageCopy: Record<
       jumpToCards: 'Jump to cards',
       jumpToList: 'Open bulk list',
       refreshList: 'Refresh list',
+      copyObject: 'Copy object',
       copyList: 'Copy list',
       copied: 'Copied',
       object: 'Object',
@@ -282,6 +284,7 @@ export const trustPageCopy: Record<
       jumpToCards: '查看卡片结果',
       jumpToList: '打开批量列表',
       refreshList: '刷新列表',
+      copyObject: '复制物品',
       copyList: '复制列表',
       copied: '已复制',
       object: '物品',
@@ -401,6 +404,7 @@ export const trustPageCopy: Record<
       jumpToCards: 'カードを見る',
       jumpToList: '一覧を見る',
       refreshList: '一覧を更新',
+      copyObject: '項目をコピー',
       copyList: '一覧をコピー',
       copied: 'コピー済み',
       object: '項目',

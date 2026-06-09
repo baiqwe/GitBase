@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { Shuffle } from 'lucide-react'
+import { Copy, Shuffle } from 'lucide-react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -54,6 +54,7 @@ export function VisualGenerator({
   const [appliedCount, setAppliedCount] = useState(defaultCount)
   const [appliedAllowDuplicates, setAppliedAllowDuplicates] = useState(false)
   const [seed, setSeed] = useState(1)
+  const [copiedItemId, setCopiedItemId] = useState<string | null>(null)
   const count = Math.max(1, Math.min(100, Number.parseInt(countInput || '1', 10) || 1))
   const visibleCount = appliedAllowDuplicates ? appliedCount : Math.min(appliedCount, items.length)
 
@@ -77,12 +78,33 @@ export function VisualGenerator({
     setAppliedCount(count)
     setAppliedAllowDuplicates(allowDuplicates)
     setSeed((current) => current + 1)
-    window.gtag?.('event', 'generate_visual', {
-      event_category: 'engagement',
+    window.gtag?.('event', 'generate_click', {
+      event_category: 'conversion',
       event_label: locale,
+      page_path: window.location.pathname,
       count,
       allow_repeats: allowDuplicates,
     })
+    window.gtag?.('event', 'generate_visual', {
+      event_category: 'engagement',
+      event_label: locale,
+      page_path: window.location.pathname,
+      count,
+      allow_repeats: allowDuplicates,
+    })
+  }
+
+  async function handleCopyItem(item: LocalizedObject) {
+    await navigator.clipboard.writeText(item.translation.name)
+    setCopiedItemId(item.id)
+    window.gtag?.('event', 'copy_result', {
+      event_category: 'conversion',
+      event_label: locale,
+      page_path: window.location.pathname,
+      item_id: item.id,
+      item_category: item.category,
+    })
+    window.setTimeout(() => setCopiedItemId(null), 1200)
   }
 
   return (
@@ -182,6 +204,15 @@ export function VisualGenerator({
               <CardDescription className="line-clamp-2 text-xs leading-5 text-slate-600 md:text-sm">
                 {item.translation.description}
               </CardDescription>
+              <Button
+                variant="outline"
+                size="sm"
+                className="w-full justify-center gap-2 rounded-full"
+                onClick={() => void handleCopyItem(item)}
+              >
+                <Copy className="h-3.5 w-3.5" />
+                {copiedItemId === item.id ? ui.copied : ui.copyObject}
+              </Button>
             </CardContent>
           </Card>
         ))}

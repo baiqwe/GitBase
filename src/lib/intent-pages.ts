@@ -2329,18 +2329,18 @@ export const intentPages: IntentPageConfig[] = [
     i18n: {
       en: {
         heroEyebrow: 'Kitchen prompts',
-        title: 'Random Kitchen Objects',
+        title: 'Random Kitchen Objects Generator',
         description:
-          'Generate kitchen-related objects for cooking classes, vocabulary practice, drawing prompts, and home activity ideas.',
-        visualTitle: 'Pull a kitchen object prompt',
+          'Pick random kitchen objects for cooking classes, vocabulary practice, drawing prompts, scavenger hunts, and home activity ideas.',
+        visualTitle: 'Pick a random kitchen object',
         visualDescription:
-          'This page keeps the results centered on kitchen tools, food-adjacent objects, and familiar home items instead of fully open random results.',
+          'This page keeps the results centered on kitchen tools, foods, utensils, and familiar home items instead of fully open random results.',
         bulkTitle: 'Build a kitchen object list',
         bulkDescription:
           'Generate a larger kitchen-themed set for lesson plans, scavenger hunts, writing prompts, or family activities.',
         seoTitle: 'Random Kitchen Objects Generator',
         seoDescription:
-          'Generate random kitchen objects with visual cards and copyable lists for cooking classes, ESL, drawing, and home games.',
+          'Pick random kitchen objects with visual cards and copyable lists for cooking classes, ESL vocabulary, drawing prompts, scavenger hunts, and home games.',
         examples: {
           title: 'Kitchen examples that feel usable in real activities',
           lead:
@@ -2380,6 +2380,11 @@ export const intentPages: IntentPageConfig[] = [
           ],
           faqTitle: 'Kitchen objects page FAQ',
           faqs: [
+            {
+              question: 'Can I pick just one random kitchen object?',
+              answer:
+                'Yes. Use visual mode for a single kitchen object prompt, then switch to bulk mode when you need a longer themed list.',
+            },
             {
               question: 'Why use a kitchen-specific random object page?',
               answer:

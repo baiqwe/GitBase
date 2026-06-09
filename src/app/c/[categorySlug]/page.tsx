@@ -9,6 +9,7 @@ import {
   getLocalizedCategories,
   getLocalizedObjects,
 } from '@/lib/objects'
+import { getCategoryPageCopy } from '@/lib/category-page-copy'
 import { createMetadata } from '@/lib/seo'
 
 type CategoryPageProps = {
@@ -31,10 +32,12 @@ export async function generateMetadata({
     return {}
   }
 
+  const copy = getCategoryPageCopy(category, 'en')
+
   return createMetadata({
     locale: 'en',
-    title: `${category.i18n.en.name} Random Generator With Visual Cards`,
-    description: category.i18n.en.description,
+    title: copy.seoTitle,
+    description: copy.seoDescription,
     path: `/${getCategoryPageSlug(category.slug)}`,
   })
 }
@@ -47,18 +50,20 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     notFound()
   }
 
+  const copy = getCategoryPageCopy(category, 'en')
+
   return (
     <>
       <GeneratorShell
         locale="en"
         path={`/${getCategoryPageSlug(category.slug)}`}
         heroEyebrow={category.i18n.en.shortName ?? category.i18n.en.name}
-        title={`${category.i18n.en.name} Random Generator`}
-        description={category.i18n.en.description}
-        visualTitle={`Generate random ${category.i18n.en.name.toLowerCase()} prompts`}
-        visualDescription={`Each click pulls a fresh ${category.i18n.en.name.toLowerCase()} pick from the curated ${category.i18n.en.name.toLowerCase()} set for this page.`}
-        bulkTitle={`Build a quick ${category.i18n.en.name.toLowerCase()} list`}
-        bulkDescription={`Need a longer batch for writing sprints, classroom rounds, or improv games? Generate and copy a clean list in one tap.`}
+        title={copy.title}
+        description={copy.description}
+        visualTitle={copy.visualTitle}
+        visualDescription={copy.visualDescription}
+        bulkTitle={copy.bulkTitle}
+        bulkDescription={copy.bulkDescription}
         categories={getLocalizedCategories('en')}
         items={getLocalizedObjects('en', category.slug)}
         activeCategorySlug={category.slug}

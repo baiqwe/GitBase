@@ -50,8 +50,9 @@ export function BulkGenerator({ locale, items, heading, helperText }: BulkGenera
     await navigator.clipboard.writeText(payload)
     setCopied(true)
     window.gtag?.('event', 'copy_bulk_list', {
-      event_category: 'engagement',
+      event_category: 'conversion',
       event_label: locale,
+      page_path: window.location.pathname,
       count,
     })
     window.setTimeout(() => setCopied(false), 1200)
@@ -83,9 +84,16 @@ export function BulkGenerator({ locale, items, heading, helperText }: BulkGenera
             className="rounded-full"
             onClick={() => {
               setSeed((current) => current + 1)
+              window.gtag?.('event', 'bulk_generate', {
+                event_category: 'conversion',
+                event_label: locale,
+                page_path: window.location.pathname,
+                count,
+              })
               window.gtag?.('event', 'refresh_bulk_list', {
                 event_category: 'engagement',
                 event_label: locale,
+                page_path: window.location.pathname,
                 count,
               })
             }}

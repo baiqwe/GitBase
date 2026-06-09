@@ -22,6 +22,10 @@ export function getLocalizedPath(locale: Locale, path: string) {
     return path
   }
 
+  if (path === '/') {
+    return `/${locale}`
+  }
+
   return `/${locale}${path}`
 }
 

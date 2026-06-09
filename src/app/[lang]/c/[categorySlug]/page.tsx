@@ -11,6 +11,7 @@ import {
   getLocalizedCategories,
   getLocalizedObjects,
 } from '@/lib/objects'
+import { getCategoryPageCopy } from '@/lib/category-page-copy'
 import { createMetadata } from '@/lib/seo'
 
 type LocalizedCategoryPageProps = {
@@ -37,12 +38,12 @@ export async function generateMetadata({
     return {}
   }
 
-  const translation = category.i18n[locale] ?? category.i18n.en
+  const copy = getCategoryPageCopy(category, locale)
 
   return createMetadata({
     locale,
-    title: `${translation.name} Random Generator With Visual Cards`,
-    description: translation.description,
+    title: copy.seoTitle,
+    description: copy.seoDescription,
     path: `/${getCategoryPageSlug(category.slug)}`,
   })
 }
@@ -59,6 +60,7 @@ export default async function LocalizedCategoryPage({
   }
 
   const translation = category.i18n[locale] ?? category.i18n.en
+  const copy = getCategoryPageCopy(category, locale)
 
   return (
     <>
@@ -66,12 +68,12 @@ export default async function LocalizedCategoryPage({
         locale={locale}
         path={`/${getCategoryPageSlug(category.slug)}`}
         heroEyebrow={translation.shortName ?? translation.name}
-        title={`${translation.name} Random Generator`}
-        description={translation.description}
-        visualTitle={`Generate random ${translation.name.toLowerCase()} prompts`}
-        visualDescription={`Each click pulls a fresh ${translation.name.toLowerCase()} pick from the curated ${translation.name.toLowerCase()} set for this page.`}
-        bulkTitle={`Build a quick ${translation.name.toLowerCase()} list`}
-        bulkDescription={`Need a longer batch for writing sprints, classroom rounds, or improv games? Generate and copy a clean list in one tap.`}
+        title={copy.title}
+        description={copy.description}
+        visualTitle={copy.visualTitle}
+        visualDescription={copy.visualDescription}
+        bulkTitle={copy.bulkTitle}
+        bulkDescription={copy.bulkDescription}
         categories={getLocalizedCategories(locale)}
         items={getLocalizedObjects(locale, category.slug)}
         activeCategorySlug={category.slug}
