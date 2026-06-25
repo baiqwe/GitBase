@@ -36,6 +36,20 @@
           "body": "Animals, household items, food, nature, and funny objects each have their own crawlable destination."
         }
       ],
+      "intentTitle": "This page also covers object prompts, random object lists, and quick idea picking.",
+      "intentBody": "Searches such as object prompt generator, random object list, random list of objects, and random thing picker are closely related, but they are not identical. Some visitors want one prompt to draw, some want a longer copyable list, and others want a neutral object idea for a game, class, or writing sprint. The homepage now answers that broader intent first, then points users toward narrower pages when a category or use case matters more.",
+      "intentBullets": [
+        "Use visual mode when a single object prompt is enough.",
+        "Use bulk mode when you need a random object list for worksheets, games, or prompt libraries.",
+        "Use category and intent pages when the query is really about animals, drawing, charades, ESL, or classroom use."
+      ],
+      "qualityTitle": "How we keep the homepage helpful instead of keyword-stuffed",
+      "qualityBody": "The page is built around a real generator, recognizable object examples, copyable output, and internal paths to deeper resources. Content decisions are guided by Search Console and Analytics patterns, but the copy is written for real classroom, creative, and game use rather than only repeating exact-match keywords.",
+      "qualityBullets": [
+        "Examples are concrete objects users can actually draw, describe, act out, or copy.",
+        "The page explains when to use broad object prompts and when a narrower generator is better.",
+        "Trust, FAQ, privacy, terms, and about pages support a clearer E-E-A-T footprint for a utility site."
+      ],
       "categoryTitle": "Explore keyword-rich category pages without turning the site into thin pSEO sludge",
       "categoryLead": "Each category has its own generator page, its own localized copy, and enough specificity to support real search intent. That makes the site easier to navigate and gives us cleaner expansion paths for future long-tail pages.",
       "useCasesTitle": "Good for more than just a random laugh",

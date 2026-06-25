@@ -12,6 +12,12 @@ type IntentLandingContent = {
   useCases: string[]
   faqTitle: string
   faqs: Array<{ question: string; answer: string }>
+  intentTitle?: string
+  intentBody?: string
+  intentBullets?: string[]
+  qualityTitle?: string
+  qualityBody?: string
+  qualityBullets?: string[]
 }
 
 type IntentExampleContent = {
@@ -52,6 +58,8 @@ export type IntentPageConfig = {
     | 'random-kitchen-objects'
     | 'random-classroom-objects'
     | 'random-office-objects'
+    | 'animal-prompt-generator'
+    | 'random-object-list-generator'
   categories: string[]
   defaultVisualCount: number
   exampleObjectIds?: string[]
@@ -74,6 +82,8 @@ export const expandedIntentPageSlugs = [
   'random-kitchen-objects',
   'random-classroom-objects',
   'random-office-objects',
+  'animal-prompt-generator',
+  'random-object-list-generator',
 ] as const
 
 export const intentPages: IntentPageConfig[] = [
@@ -2965,6 +2975,574 @@ export const intentPages: IntentPageConfig[] = [
             {
               question: '一度に長い一覧を作れますか？',
               answer: 'できます。複数のお題をまとめて生成して、スライドや進行メモにコピーできます。',
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    slug: 'animal-prompt-generator',
+    categories: ['animals'],
+    defaultVisualCount: 5,
+    exampleObjectIds: ['animal-elephant', 'animal-cat', 'animal-dolphin', 'animal-eagle', 'animal-penguin', 'animal-turtle'],
+    i18n: {
+      en: {
+        heroEyebrow: 'Animal prompts',
+        title: 'Animal Prompt Generator',
+        description:
+          'Generate animal prompts for drawing, classroom games, charades, ESL warmups, and story ideas.',
+        visualTitle: 'Generate one animal prompt',
+        visualDescription:
+          'Use the visual card when you need a quick animal idea that is easy to picture, draw, describe, or act out.',
+        bulkTitle: 'Create an animal prompt list',
+        bulkDescription:
+          'Bulk mode builds a copyable animal list for worksheets, game rounds, sketch challenges, and lesson plans.',
+        seoTitle: 'Animal Prompt Generator for Drawing, Games, and Classes',
+        seoDescription:
+          'Generate animal prompts for drawing, charades, ESL classes, storytelling, and creative warmups with visual cards and copyable lists.',
+        examples: {
+          title: 'Example animal prompts from this page',
+          lead:
+            'These examples show the kind of recognizable animals this page prioritizes, so the prompts stay useful for drawing, classrooms, games, and story exercises.',
+        },
+        landing: {
+          introTitle: 'An animal prompt generator should be more specific than a generic random animal picker.',
+          introBody:
+            'People searching for animal prompts usually have a task in mind. They might need an animal to draw, an animal for charades, an ESL vocabulary warmup, a classroom question, or a story starter. This page keeps the generator focused on recognizable animals and explains how to use the results in real activities instead of treating every animal keyword as the same search.',
+          featureTitle: 'Why this page is built around prompt use',
+          featureLead: 'The page combines a narrower animal pool with examples, batch generation, FAQ, and links to nearby creative intents.',
+          features: [
+            {
+              title: 'Drawable animals',
+              body: 'Animals with clear shapes and familiar features work better for sketch practice and classroom drawing tasks.',
+            },
+            {
+              title: 'Game-ready prompts',
+              body: 'Animal names are easy to act out, describe, guess, and adapt into party games or group warmups.',
+            },
+            {
+              title: 'Copyable lists',
+              body: 'Bulk mode helps teachers and facilitators prepare a full animal prompt set instead of clicking one card at a time.',
+            },
+          ],
+          intentTitle: 'The page covers animal prompt generator and animals to draw intent together.',
+          intentBody:
+            'Search Console data shows interest around animal prompt generator and animals to draw generator terms. Rather than creating several thin pages for the same need, this page acts as a stronger hub for animal prompts and sends users toward drawing, charades, ESL, and classroom pages when the use case becomes narrower.',
+          intentBullets: [
+            'Use it as an animal drawing prompt generator when the goal is sketch practice.',
+            'Use it as a classroom animal prompt list for vocabulary, description, or speaking practice.',
+            'Use related intent pages when the activity is clearly charades, ESL, drawing, or classroom use.',
+          ],
+          qualityTitle: 'E-E-A-T notes for this animal prompt page',
+          qualityBody:
+            'This is a creative and educational utility page. It does not provide animal care, wildlife safety, veterinary, or biological advice. The content is written around observable user tasks, and future updates should be guided by query data, engagement data, and whether the examples remain useful to teachers, artists, and facilitators.',
+          qualityBullets: [
+            'Recognizable animals are preferred over obscure species for broad usefulness.',
+            'Prompt language is kept simple so children, ESL learners, and casual players can use it.',
+            'The page links to relevant internal generators to keep users on a clearer path.',
+          ],
+          categoryTitle: 'Related animal prompt categories',
+          categoryLead:
+            'The animal category is intentionally narrow here, but it connects to nearby pages for drawing, classroom, ESL, and game use.',
+          useCasesTitle: 'Best ways to use animal prompts',
+          useCases: [
+            'Animals to draw',
+            'Animal charades',
+            'ESL vocabulary',
+            'Classroom warmups',
+            'Story starters',
+            'Daily sketch practice',
+          ],
+          faqTitle: 'Animal prompt generator FAQ',
+          faqs: [
+            {
+              question: 'What is an animal prompt generator?',
+              answer:
+                'It is a tool that picks animal ideas you can use for drawing, games, lessons, writing, or quick creative warmups.',
+            },
+            {
+              question: 'Can I use it as an animals to draw generator?',
+              answer:
+                'Yes. The animal results are concrete and visual, so they work well for sketch practice, drawing classes, and art challenges.',
+            },
+            {
+              question: 'Is this page for professional animal advice?',
+              answer:
+                'No. It is for creative prompts and educational activities, not animal care, veterinary, wildlife, or safety guidance.',
+            },
+            {
+              question: 'Can I generate a full animal prompt list?',
+              answer:
+                'Yes. Bulk mode creates multiple animal prompts at once so you can copy them into worksheets, slides, or game notes.',
+            },
+          ],
+        },
+      },
+      zh: {
+        heroEyebrow: '动物提示词',
+        title: '动物提示词生成器',
+        description:
+          '生成适合绘画、课堂、你演我猜、英语热身和故事创作的动物提示词。',
+        visualTitle: '抽一个动物提示词',
+        visualDescription:
+          '当你只需要一个容易画、容易描述或容易表演的动物灵感时，用卡片模式最快。',
+        bulkTitle: '生成动物提示词清单',
+        bulkDescription:
+          '批量模式可以生成一整组动物题目，适合课件、游戏、速写挑战和活动主持稿。',
+        seoTitle: '动物提示词生成器 - 绘画、课堂和游戏动物题目',
+        seoDescription:
+          '生成动物提示词和动物绘画题目，支持视觉卡片和批量清单，适合课堂、你演我猜、ESL 和故事创作。',
+        examples: {
+          title: '这个页面会生成的动物提示词示例',
+          lead:
+            '这些示例展示了页面会优先使用的熟悉动物，方便用于绘画、课堂、游戏和故事练习。',
+        },
+        landing: {
+          introTitle: '动物提示词页应该比普通随机动物页更明确。',
+          introBody:
+            '搜索动物提示词的人，通常已经有具体任务：想找一个动物来画、课堂上做词汇热身、玩动物你演我猜、写故事，或者准备一组儿童活动题目。这个页面会把对象池、示例、FAQ 和内链都围绕“动物提示”组织起来，而不是简单复用首页文本。',
+          featureTitle: '为什么这个页面围绕提示词来写',
+          featureLead: '它不仅能抽动物，还解释这些动物结果适合怎样被使用。',
+          features: [
+            {
+              title: '适合绘画',
+              body: '清晰、熟悉的动物更容易形成轮廓、动作和细节，适合速写和绘画课。',
+            },
+            {
+              title: '适合游戏',
+              body: '动物名很容易表演、描述和猜测，适合你演我猜、派对和课堂互动。',
+            },
+            {
+              title: '方便整理清单',
+              body: '批量模式能直接生成一组动物提示词，方便复制进课件或活动文档。',
+            },
+          ],
+          intentTitle: '这个页面同时承接动物提示词和动物绘画题目需求。',
+          intentBody:
+            '从搜索数据看，动物提示词、动物绘画题目、动物随机抽取这类需求高度相关。与其拆成多个薄页面，不如把它们集中成一个更厚的动物提示词页，再通过内链分流到绘画、课堂、ESL 和游戏专题。',
+          intentBullets: [
+            '想找动物来画时，可以把它当动物绘画题目生成器。',
+            '想做课堂活动时，可以批量生成动物词汇或描述题。',
+            '如果活动已经明确是你演我猜、课堂或绘画，可继续进入对应专题页。'
+          ],
+          qualityTitle: '这个动物提示词页面的 E-E-A-T 边界',
+          qualityBody:
+            '这个页面是创意和教育用途的轻量工具，不提供动物饲养、野外安全、兽医或生物学专业建议。内容会围绕老师、创作者、活动主持人和普通玩家的真实任务整理，后续更新也会结合搜索表现和页面参与度。',
+          qualityBullets: [
+            '优先选择大众熟悉、全年龄更容易使用的动物。',
+            '提示词语言保持简单，方便儿童、ESL 学习者和普通玩家理解。',
+            '页面通过相关内链把用户继续带到更明确的用途页。'
+          ],
+          categoryTitle: '相关动物提示分类',
+          categoryLead:
+            '这个页面以动物为核心，同时连接绘画、课堂、ESL 和游戏等相邻需求。',
+          useCasesTitle: '动物提示词最适合这些场景',
+          useCases: [
+            '动物绘画题目',
+            '动物你演我猜',
+            'ESL 词汇练习',
+            '课堂热身',
+            '故事开头',
+            '每日速写',
+          ],
+          faqTitle: '动物提示词生成器常见问题',
+          faqs: [
+            {
+              question: '动物提示词生成器是什么？',
+              answer:
+                '它会随机给出动物灵感，可用于绘画、游戏、课堂、写作和快速创意热身。',
+            },
+            {
+              question: '可以当动物绘画题目生成器用吗？',
+              answer:
+                '可以。动物结果比较具体、容易想象，适合速写练习、绘画课和日常绘画挑战。',
+            },
+            {
+              question: '这个页面提供专业动物建议吗？',
+              answer:
+                '不提供。它只面向创意提示和教育活动，不替代动物饲养、兽医、野外安全或生物学专业建议。',
+            },
+            {
+              question: '能一次生成一整组动物提示词吗？',
+              answer:
+                '可以。批量模式可以一次生成多个动物提示词，方便复制到课件、幻灯片或游戏说明里。',
+            },
+          ],
+        },
+      },
+      ja: {
+        heroEyebrow: '動物のお題',
+        title: '動物プロンプトジェネレーター',
+        description:
+          '描画、授業、ジェスチャーゲーム、語学練習、物語づくりに使える動物のお題を生成します。',
+        visualTitle: '動物のお題を一つ生成',
+        visualDescription:
+          'すぐに一つ決めたいときは、見やすいカードで動物のお題を引けます。',
+        bulkTitle: '動物のお題リストを作る',
+        bulkDescription:
+          '授業、ゲーム、スケッチ練習、進行メモ用に複数の動物お題をまとめて作れます。',
+        seoTitle: '動物プロンプトジェネレーター：描画、授業、ゲーム向け',
+        seoDescription:
+          '描画、授業、ジェスチャーゲーム、語学練習、物語づくりに使える動物のお題をカードと一覧で生成します。',
+        examples: {
+          title: 'このページで出る動物のお題例',
+          lead:
+            '描画、授業、ゲーム、物語づくりに使いやすい、見分けやすい動物を中心にしています。',
+        },
+        landing: {
+          introTitle: '動物プロンプトページは、普通のランダム動物ページより用途を明確にします。',
+          introBody:
+            '動物のお題を探す人は、絵を描く、授業で使う、ジェスチャーゲームをする、語彙を練習する、物語を作るなど、具体的な目的を持っていることが多いです。このページは動物プール、例、FAQ、関連リンクをその用途に合わせて整理しています。',
+          featureTitle: 'お題として使いやすい理由',
+          featureLead: 'ただ動物名を出すだけでなく、使う場面まで分かる構成です。',
+          features: [
+            {
+              title: '描きやすい',
+              body: '形や特徴を想像しやすい動物は、スケッチや授業のお題に向いています。',
+            },
+            {
+              title: 'ゲームに使いやすい',
+              body: '動物名は演じる、説明する、当てる活動に自然に使えます。',
+            },
+            {
+              title: '一覧化できる',
+              body: '一括生成で授業やゲーム用の動物リストをすぐ作れます。',
+            },
+          ],
+          intentTitle: '動物のお題と描く動物の検索意図を一つにまとめます。',
+          intentBody:
+            '動物プロンプト、描く動物、ランダム動物リストは近い検索意図です。このページは薄い複数ページに分けず、動物のお題用ハブとしてまとめ、必要に応じて描画、授業、ゲーム系ページへつなげます。',
+          intentBullets: [
+            '描く対象が欲しいときは、動物のお題として使えます。',
+            '授業では語彙、説明、会話練習に使えます。',
+            '用途が明確な場合は関連ページへ進めます。'
+          ],
+          qualityTitle: 'このページの E-E-A-T 上の位置づけ',
+          qualityBody:
+            'このページは創作と教育向けの軽いツールであり、動物飼育、獣医、野生動物、安全に関する専門助言ではありません。教師、進行役、アーティスト、プレイヤーが実際に使いやすいかを基準に内容を改善します。',
+          qualityBullets: [
+            '多くの人が知っている動物を優先します。',
+            '子どもや語学学習者にも分かりやすい表現にします。',
+            '関連する内部リンクで近い用途へ移動しやすくします。'
+          ],
+          categoryTitle: '関連する動物お題カテゴリ',
+          categoryLead:
+            '動物を中心にしながら、描画、授業、語学、ゲームの近い用途につなげます。',
+          useCasesTitle: '動物のお題の使い方',
+          useCases: [
+            '描く動物',
+            'ジェスチャーゲーム',
+            '語彙練習',
+            '授業の導入',
+            '物語の出発点',
+            '毎日のスケッチ',
+          ],
+          faqTitle: '動物プロンプトジェネレーター FAQ',
+          faqs: [
+            {
+              question: '動物プロンプトジェネレーターとは何ですか？',
+              answer:
+                '描画、授業、ゲーム、文章、短い創作練習に使える動物のお題をランダムに出すツールです。',
+            },
+            {
+              question: '描く動物を決める用途に使えますか？',
+              answer:
+                'はい。具体的で想像しやすい動物が多いため、スケッチや授業のお題に使えます。',
+            },
+            {
+              question: '専門的な動物情報として使えますか？',
+              answer:
+                'いいえ。創作と教育活動向けであり、獣医、飼育、安全、生物学の専門助言ではありません。',
+            },
+            {
+              question: '複数のお題をまとめて作れますか？',
+              answer:
+                'はい。一括生成で複数の動物お題を作り、資料やゲームメモにコピーできます。',
+            },
+          ],
+        },
+      },
+    },
+  },
+  {
+    slug: 'random-object-list-generator',
+    categories: ['animals', 'household', 'food', 'nature', 'funny'],
+    defaultVisualCount: 10,
+    exampleObjectIds: ['animal-elephant', 'house-kettle', 'food-apple', 'nature-rainbow', 'funny-rubber-duck', 'house-key'],
+    i18n: {
+      en: {
+        heroEyebrow: 'Copyable lists',
+        title: 'Random Object List Generator',
+        description:
+          'Generate a random object list for drawing prompts, classroom games, charades, writing, and quick brainstorms.',
+        visualTitle: 'Preview object cards before you copy',
+        visualDescription:
+          'Use visual cards to check whether the object mix fits your activity before creating a longer list.',
+        bulkTitle: 'Generate a copyable object list',
+        bulkDescription:
+          'Choose a quantity, generate a list, and copy it into worksheets, slides, docs, game sheets, or prompt libraries.',
+        seoTitle: 'Random Object List Generator for Prompts and Games',
+        seoDescription:
+          'Generate random object lists with visual cards and copyable bulk output for drawing prompts, classroom games, writing, charades, and brainstorms.',
+        examples: {
+          title: 'Example objects that can appear in a generated list',
+          lead:
+            'A strong random object list should mix familiar items, animals, food, nature, and playful prompts so it works across different activities.',
+        },
+        landing: {
+          introTitle: 'A random object list generator is for people who need usable output, not just one surprise word.',
+          introBody:
+            'Many searches around random object list, random list of objects, object prompt generator, and random things list come from users who need multiple ideas at once. A teacher may need worksheet prompts, a facilitator may need a game sheet, an artist may need ten drawing ideas, and a writer may need a compact prompt bank. This page focuses on the list workflow so users can generate, review, and copy results quickly.',
+          featureTitle: 'What makes the list workflow different',
+          featureLead: 'The page emphasizes quantity, copyability, and practical reuse while still keeping the visual generator available.',
+          features: [
+            {
+              title: 'Built for batches',
+              body: 'The default flow supports longer output, making it better for worksheets, group activities, and prompt libraries.',
+            },
+            {
+              title: 'Broad object mix',
+              body: 'Animals, household items, food, nature prompts, and funny objects keep lists varied without becoming abstract.',
+            },
+            {
+              title: 'Easy to repurpose',
+              body: 'Generated lists can be copied into documents, slides, notes, or game instructions without extra formatting work.',
+            },
+          ],
+          intentTitle: 'This page targets random object list and object prompt generator searches.',
+          intentBody:
+            'The homepage covers the broad random object generator intent, while this page is tuned for people who specifically want a list. That distinction matters for SEO and usability: list-searchers expect multiple results, copy behavior, examples, and guidance on how to use the output in a real setting.',
+          intentBullets: [
+            'Use it for a random object list when you need many prompts at once.',
+            'Use it as an object prompt generator when the output will feed drawing, writing, or game activities.',
+            'Use category links when the list should contain only animals, food, household items, or another narrower type.',
+          ],
+          qualityTitle: 'How this list page avoids becoming thin pSEO',
+          qualityBody:
+            'This page has a distinct workflow, distinct copy, examples, FAQ, and internal links. It does not replace the homepage or duplicate category pages. Its job is to serve users who need a copyable list, while the homepage remains the broad entry point and category pages remain the best answer for narrower object types.',
+          qualityBullets: [
+            'The page explains list-specific use cases rather than repeating homepage copy.',
+            'The generator supports practical output that can be copied into real materials.',
+            'Internal links keep users moving to more precise pages when their list needs a narrower theme.',
+          ],
+          categoryTitle: 'Object categories that work well in lists',
+          categoryLead:
+            'Mixed lists are most useful when the object pool stays concrete. These categories keep prompts recognizable enough for games, classrooms, drawing, and writing.',
+          useCasesTitle: 'Common list generator use cases',
+          useCases: [
+            'Drawing prompt lists',
+            'Classroom worksheets',
+            'Charades word banks',
+            'Writing prompt banks',
+            'Improv warmups',
+            'Brainstorming sessions',
+          ],
+          faqTitle: 'Random object list generator FAQ',
+          faqs: [
+            {
+              question: 'What is a random object list generator?',
+              answer:
+                'It is a tool that generates multiple object prompts at once so you can copy the list into games, classes, writing sessions, or creative exercises.',
+            },
+            {
+              question: 'How is this different from the homepage?',
+              answer:
+                'The homepage is built around broad discovery and single-card generation. This page is specifically focused on creating longer copyable lists.',
+            },
+            {
+              question: 'Can I make the list more specific?',
+              answer:
+                'Yes. Use the related category pages if you only want animals, food, household items, nature prompts, or funny objects.',
+            },
+            {
+              question: 'Is the list safe for classroom use?',
+              answer:
+                'The object pool is designed for light educational and creative use, but teachers and facilitators should still review generated lists before sharing them.',
+            },
+          ],
+        },
+      },
+      zh: {
+        heroEyebrow: '可复制清单',
+        title: '随机物品清单生成器',
+        description:
+          '生成随机物品清单，适合绘画提示、课堂活动、你演我猜、写作和快速脑暴。',
+        visualTitle: '先预览物品卡片',
+        visualDescription:
+          '生成清单前，可以先用卡片看对象组合是否适合你的活动。',
+        bulkTitle: '生成可复制的随机物品清单',
+        bulkDescription:
+          '输入数量后生成一组结果，直接复制到课件、文档、游戏题卡或提示词库里。',
+        seoTitle: '随机物品清单生成器 - 物品提示词和游戏题库',
+        seoDescription:
+          '生成随机物品清单和对象提示词，支持视觉卡片和批量复制，适合绘画、课堂、写作、你演我猜和脑暴。',
+        examples: {
+          title: '随机物品清单里可能出现的示例',
+          lead:
+            '好的随机物品清单应该混合熟悉物品、动物、食物、自然元素和轻松有趣的对象，方便不同活动直接使用。',
+        },
+        landing: {
+          introTitle: '随机物品清单生成器服务的是“需要一组结果”的用户。',
+          introBody:
+            '搜索随机物品清单、random object list、随机物品列表或 object prompt generator 的用户，通常不是只想抽一个词。他们可能要准备课堂题目、游戏题卡、绘画练习、写作提示或团队活动素材。这个页面专门围绕“生成、查看、复制一整组结果”的流程来写。',
+          featureTitle: '清单页和首页有什么不同',
+          featureLead: '它更重视数量、复制和实际复用，同时保留视觉卡片方便预览。',
+          features: [
+            {
+              title: '适合批量生成',
+              body: '默认更适合输出一组结果，用于课件、工作坊、小游戏和素材库。',
+            },
+            {
+              title: '对象类型更丰富',
+              body: '动物、家居、食物、自然和搞怪对象混合出现，让清单不至于太单调。',
+            },
+            {
+              title: '方便二次使用',
+              body: '生成结果可以直接复制进文档、幻灯片、笔记或游戏说明。',
+            },
+          ],
+          intentTitle: '这个页面承接随机物品清单和对象提示词需求。',
+          intentBody:
+            '首页继续承接宽泛的随机物品生成器主词，而这个页面专门服务想要“多个结果”的用户。这样既不会稀释首页，也能让搜索随机物品清单、随机物品列表、object prompt generator 的用户看到更匹配的内容。',
+          intentBullets: [
+            '需要一次拿到很多提示时，用它生成随机物品清单。',
+            '要做绘画、写作或游戏素材时，可以把它当对象提示词生成器。',
+            '如果只想要动物、食物或家居等单一主题，可以进入对应分类页。'
+          ],
+          qualityTitle: '这个清单页怎样避免变成薄 SEO 页面',
+          qualityBody:
+            '它有独立的使用流程、正文、示例、FAQ 和内链，并不是把首页换个标题。首页负责宽泛入口，分类页负责更窄主题，而这个页面负责可复制清单场景。三者分工清楚，才能减少重复和门页风险。',
+          qualityBullets: [
+            '正文围绕清单场景写，不复用首页话术。',
+            '生成器输出能直接复制进真实材料里。',
+            '内链会把更明确的需求引导到动物、食物、家居等页面。'
+          ],
+          categoryTitle: '适合组成随机物品清单的分类',
+          categoryLead:
+            '混合清单最好保持对象具体可理解，这些分类适合课堂、游戏、绘画和写作。',
+          useCasesTitle: '随机物品清单常见用途',
+          useCases: [
+            '绘画题目清单',
+            '课堂练习题',
+            '你演我猜题库',
+            '写作提示库',
+            '即兴热身',
+            '团队脑暴',
+          ],
+          faqTitle: '随机物品清单生成器常见问题',
+          faqs: [
+            {
+              question: '随机物品清单生成器是什么？',
+              answer:
+                '它可以一次生成多个物品提示词，方便复制到游戏、课堂、写作或创意练习里。',
+            },
+            {
+              question: '它和首页有什么不同？',
+              answer:
+                '首页更适合宽泛浏览和单张卡片生成，这个页面更专注于生成更长、更方便复制的物品清单。',
+            },
+            {
+              question: '清单可以更具体吗？',
+              answer:
+                '可以。如果你只想要动物、食物、家居、自然或搞怪对象，可以进入对应分类页。',
+            },
+            {
+              question: '适合课堂使用吗？',
+              answer:
+                '对象池面向轻量教育和创意用途，但老师或主持人在分享前仍建议快速检查一次生成结果。',
+            },
+          ],
+        },
+      },
+      ja: {
+        heroEyebrow: 'コピーできる一覧',
+        title: 'ランダムオブジェクト一覧ジェネレーター',
+        description:
+          '描画、授業、ゲーム、文章、ブレストに使えるランダムオブジェクト一覧を生成します。',
+        visualTitle: '一覧化する前にカードで確認',
+        visualDescription:
+          '活動に合う対象かどうか、カード表示で先に雰囲気を確認できます。',
+        bulkTitle: 'コピーできる一覧を生成',
+        bulkDescription:
+          '必要な数を指定して、資料、スライド、ゲーム用シート、メモに貼り付けられる一覧を作れます。',
+        seoTitle: 'ランダムオブジェクト一覧ジェネレーター：お題とゲーム向け',
+        seoDescription:
+          '描画、授業、文章、ゲーム、ブレスト向けに、カード表示と一括コピー対応のランダムオブジェクト一覧を生成します。',
+        examples: {
+          title: '一覧に出てくるオブジェクト例',
+          lead:
+            '使いやすい一覧は、身近な物、動物、食べ物、自然、おもしろい対象をバランスよく含みます。',
+        },
+        landing: {
+          introTitle: 'ランダムオブジェクト一覧は、一つではなく複数のお題が必要な人のためのページです。',
+          introBody:
+            'ランダムオブジェクト一覧、ランダムな物リスト、オブジェクトプロンプトを探す人は、授業、ゲーム、描画、文章、ブレストで使うために複数の候補を欲しがっています。このページは生成、確認、コピーという一覧向けの流れを中心にしています。',
+          featureTitle: '一覧向けページとしての違い',
+          featureLead: '量、コピーしやすさ、実際の再利用を重視しています。',
+          features: [
+            {
+              title: 'まとめて作れる',
+              body: '授業、ゲーム、ワークショップ、プロンプト集に使える複数候補を作れます。',
+            },
+            {
+              title: '対象が広い',
+              body: '動物、日用品、食べ物、自然、おもしろ系を混ぜて、使いやすい一覧にします。',
+            },
+            {
+              title: '転用しやすい',
+              body: '生成した一覧は、資料、スライド、メモ、ゲーム説明に貼り付けやすいです。',
+            },
+          ],
+          intentTitle: 'このページは、一覧とオブジェクトプロンプトの検索意図を受け止めます。',
+          intentBody:
+            'トップページは広いランダム生成を担い、このページは複数候補をコピーしたい人に合わせています。検索意図を分けることで、ユーザーにも検索エンジンにもページの役割が分かりやすくなります。',
+          intentBullets: [
+            '複数のお題が必要なときは一覧生成として使えます。',
+            '描画、文章、ゲームの素材としてオブジェクトプロンプトを作れます。',
+            'テーマを絞りたい場合はカテゴリページに進めます。'
+          ],
+          qualityTitle: '薄い SEO ページにしないために',
+          qualityBody:
+            'このページは一覧生成という明確なワークフローを持ち、本文、例、FAQ、内部リンクもその用途に合わせています。トップページやカテゴリページを置き換えるのではなく、コピー可能なリストが必要な場面を担当します。',
+          qualityBullets: [
+            '本文は一覧利用に特化し、トップページの言い換えにしません。',
+            '出力は実際の資料や活動に貼り付けやすい形を目指します。',
+            '内部リンクで、より具体的なテーマのページへ進めます。'
+          ],
+          categoryTitle: '一覧に向くカテゴリ',
+          categoryLead:
+            '具体的で分かりやすいカテゴリを組み合わせることで、授業、ゲーム、描画、文章に使いやすい一覧になります。',
+          useCasesTitle: '一覧ジェネレーターの使い方',
+          useCases: [
+            '描画お題リスト',
+            '授業プリント',
+            'ゲーム用単語集',
+            '文章プロンプト集',
+            '即興練習',
+            'ブレスト',
+          ],
+          faqTitle: 'ランダムオブジェクト一覧ジェネレーター FAQ',
+          faqs: [
+            {
+              question: 'ランダムオブジェクト一覧ジェネレーターとは何ですか？',
+              answer:
+                '複数の物のお題を一度に生成し、授業、ゲーム、文章、創作練習にコピーして使えるツールです。',
+            },
+            {
+              question: 'トップページと何が違いますか？',
+              answer:
+                'トップページは広い発見と単発カード向けで、このページは長めのコピー可能な一覧作成に特化しています。',
+            },
+            {
+              question: 'テーマを絞った一覧にできますか？',
+              answer:
+                'はい。動物、食べ物、日用品、自然、おもしろ系だけが欲しい場合はカテゴリページを使えます。',
+            },
+            {
+              question: '授業で使えますか？',
+              answer:
+                '軽い教育用途を想定していますが、共有前には教師や進行役が生成結果を確認してください。',
             },
           ],
         },

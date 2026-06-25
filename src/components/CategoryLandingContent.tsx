@@ -20,6 +20,12 @@ interface CategoryLandingContentProps {
     useCases: string[]
     faqTitle: string
     faqs: Array<{ question: string; answer: string }>
+    intentTitle?: string
+    intentBody?: string
+    intentBullets?: string[]
+    qualityTitle?: string
+    qualityBody?: string
+    qualityBullets?: string[]
   }
 }
 
@@ -219,6 +225,41 @@ export function CategoryLandingContent({
         </div>
 
         <ExampleObjectsSection locale={locale} title={exampleCopy.title} lead={exampleCopy.lead} items={sampleItems.slice(0, 6)} />
+
+        {content.intentTitle && content.intentBody ? (
+          <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.whatLabel}</p>
+            <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{content.intentTitle}</h2>
+            <p className="mt-4 max-w-4xl text-base leading-8 text-slate-600">{content.intentBody}</p>
+            {content.intentBullets?.length ? (
+              <ul className="mt-6 grid gap-3 md:grid-cols-3">
+                {content.intentBullets.map((bullet) => (
+                  <li key={bullet} className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        ) : null}
+
+        {content.qualityTitle && content.qualityBody ? (
+          <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.whyLabel}</p>
+            <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{content.qualityTitle}</h2>
+            <p className="mt-4 max-w-4xl text-base leading-8 text-slate-600">{content.qualityBody}</p>
+            {content.qualityBullets?.length ? (
+              <ul className="mt-6 grid gap-3 md:grid-cols-3">
+                {content.qualityBullets.map((bullet) => (
+                  <li key={bullet} className="rounded-[1.25rem] border border-slate-200 bg-slate-50 p-4 text-sm leading-6 text-slate-700">
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+          </div>
+        ) : null}
+
         <RelatedGenerators locale={locale} categories={categories} currentSlug={currentSlug} />
         <TrustBlockSection locale={locale} block={trustBlock} />
 

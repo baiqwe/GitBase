@@ -26,6 +26,12 @@ type SeoContent = {
   useCases: string[]
   faqTitle: string
   faqs: SeoFaq[]
+  intentTitle?: string
+  intentBody?: string
+  intentBullets?: string[]
+  qualityTitle?: string
+  qualityBody?: string
+  qualityBullets?: string[]
 }
 
 type LocalizedText = {

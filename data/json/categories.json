@@ -35,6 +35,20 @@
             "ESL vocabulary warmups",
             "Storytelling rounds"
           ],
+          "intentTitle": "Animal searches split into prompts, drawing ideas, games, and quick pickers.",
+          "intentBody": "The same visitor may describe this need as a random animal generator, an animal prompt generator, an animals to draw generator, or a random animal picker. This page now covers those related intents in one strong category hub: one-click animal cards for fast inspiration, bulk animal lists for worksheets or games, and clear examples for drawing, classroom, charades, ESL, and storytelling use.",
+          "intentBullets": [
+            "Use the single-card view when you need one animal prompt for a drawing or game round.",
+            "Use bulk mode when you need an animal list for students, teams, or a prompt library.",
+            "Use the linked intent pages when the activity is specifically drawing, charades, ESL, or classroom practice."
+          ],
+          "qualityTitle": "How we keep animal prompts useful and trustworthy",
+          "qualityBody": "The animal pool favors recognizable animals that are easy to visualize, describe, draw, or act out. The page is written for light creative and educational use, not veterinary, wildlife, or safety advice. Search Console and Analytics data help prioritize future additions, but the content is reviewed around real user tasks so it stays helpful rather than keyword-stuffed.",
+          "qualityBullets": [
+            "Recognizable animals come first because they work better for all-age drawing, games, and classroom use.",
+            "Use-case copy is written for teachers, facilitators, artists, and casual players instead of only matching exact keywords.",
+            "Analytics and feedback guide future subpages, examples, and internal links without replacing editorial judgment."
+          ],
           "faqTitle": "Animal generator FAQ",
           "faqs": [
             {
@@ -48,6 +62,14 @@
             {
               "question": "Why not keep animals on the main random object page only?",
               "answer": "Because animal intent is specific. A dedicated random animal generator page gives users cleaner results and gives search engines a more relevant page to rank."
+            },
+            {
+              "question": "Is this also an animal prompt generator?",
+              "answer": "Yes. The page can be used as an animal prompt generator for drawing, storytelling, classroom games, charades, and quick creative warmups."
+            },
+            {
+              "question": "Can I use these animals as things to draw?",
+              "answer": "Yes. Most animal results are concrete and recognizable, so they work well as animals to draw for sketch practice, art classes, and daily drawing challenges."
             }
           ]
         }
@@ -83,6 +105,20 @@
             "英语词汇热身",
             "讲故事接龙"
           ],
+          "intentTitle": "随机动物相关搜索，往往同时包含绘画、提示词、游戏和课堂需求。",
+          "intentBody": "有人会搜随机动物生成器，也有人会搜动物提示词、随机动物抽取、动物绘画题目或动物游戏素材。这个页面会把这些相近意图集中到一个更厚的分类页里：卡片模式适合快速抽一个动物，批量模式适合做清单，正文和 FAQ 则解释它如何用于绘画、课堂、你演我猜、英语词汇和故事创作。",
+          "intentBullets": [
+            "只需要一个动物灵感时，用单张卡片快速抽取。",
+            "需要给学生、团队或题库准备一组动物时，用批量模式。",
+            "如果活动更具体，比如绘画、你演我猜或课堂热身，可以继续进入相关专题页。"
+          ],
+          "qualityTitle": "我们怎样让动物提示更实用、更可信",
+          "qualityBody": "动物对象池会优先选择容易识别、容易画、容易描述和容易表演的动物。这个页面面向轻量创意和教育场景，不提供兽医、野外安全或专业生物学建议。后续内容会参考 Search Console 和 Analytics 的表现，但仍会围绕真实使用任务进行人工整理。",
+          "qualityBullets": [
+            "优先保留大众熟悉、适合全年龄使用的动物。",
+            "正文围绕老师、创作者、主持人和普通玩家的真实用法来写。",
+            "数据会帮助决定后续新增哪些子页面、示例和内链，但不会机械堆词。"
+          ],
           "faqTitle": "动物页常见问题",
           "faqs": [
             {
@@ -96,6 +132,14 @@
             {
               "question": "为什么不把动物都放在首页里就好？",
               "answer": "因为动物属于非常明确的子意图。独立页面更方便用户直接命中，也更有利于搜索引擎理解页面主题。"
+            },
+            {
+              "question": "这个页面也能当动物提示词生成器用吗？",
+              "answer": "可以。它可以用于动物绘画题目、故事提示、课堂游戏、你演我猜和快速创意热身。"
+            },
+            {
+              "question": "这些动物适合拿来画吗？",
+              "answer": "适合。大多数动物结果都比较具体、容易识别，适合速写、绘画课和日常练习。"
             }
           ]
         }
@@ -131,6 +175,20 @@
             "語彙練習",
             "アイスブレイク"
           ],
+          "intentTitle": "動物検索には、描画、ゲーム、授業、物語づくりの意図が重なります。",
+          "intentBody": "このページは、ランダム動物ジェネレーター、動物のお題、描く動物、動物ゲーム用リストといった近い意図を一つのカテゴリページで受け止めます。単発カードはすぐに一つ決めたいときに、一括生成は授業、ゲーム、練習用のリストを作りたいときに使いやすい構成です。",
+          "intentBullets": [
+            "一つだけ動物のお題が欲しいときはカード表示を使います。",
+            "授業やゲーム用に複数必要なときは一括生成を使います。",
+            "描画、ジェスチャー、語学など目的が決まっている場合は関連ページへ進めます。"
+          ],
+          "qualityTitle": "動物のお題を使いやすく保つために",
+          "qualityBody": "動物プールは、見分けやすく、描きやすく、説明しやすい対象を優先しています。このページは創作、授業、ゲーム向けの軽い用途を想定しており、獣医、野生動物、安全に関する専門助言ではありません。検索データは改善の参考にしますが、実際の使いやすさを優先します。",
+          "qualityBullets": [
+            "全年齢で扱いやすい、よく知られた動物を優先します。",
+            "本文は教師、進行役、アーティスト、プレイヤーの利用場面を前提にしています。",
+            "データを見ながら、必要な例、子ページ、内部リンクを追加していきます。"
+          ],
           "faqTitle": "動物ページ FAQ",
           "faqs": [
             {
@@ -144,6 +202,14 @@
             {
               "question": "なぜトップページとは別に動物ページがあるのですか？",
               "answer": "動物だけを探している人に対して、より意図に合ったページを用意するためです。"
+            },
+            {
+              "question": "動物のお題ジェネレーターとして使えますか？",
+              "answer": "はい。描画、物語、授業ゲーム、ジェスチャー、短い創作ウォームアップに使えます。"
+            },
+            {
+              "question": "描く対象として使いやすいですか？",
+              "answer": "はい。多くの動物は形や特徴を想像しやすいため、スケッチや授業のお題に向いています。"
             }
           ]
         }
@@ -337,6 +403,20 @@
             "Classroom games",
             "Creative branding exercises"
           ],
+          "intentTitle": "Food queries often mean pick one idea, build a list, or spark a game.",
+          "intentBody": "A visitor might type give me random food, pick a random food, random food picker, favorite food generator, or random food generator and still expect a useful result from the same page. This category now makes those paths clearer: one visual food card for fast choice, bulk food lists for games and classes, and use-case copy for drawing, naming, charades, writing, and brainstorming.",
+          "intentBullets": [
+            "Use single-card mode when you just want one random food idea.",
+            "Use bulk mode when you need a food list for a class, party, menu game, or prompt set.",
+            "Use the examples and FAQ to decide whether the page fits a creative task instead of a meal-planning task."
+          ],
+          "qualityTitle": "How we keep random food content helpful and safe",
+          "qualityBody": "The food pool favors familiar foods, snacks, drinks, and simple dishes that are easy to picture and use in creative prompts. It is not nutrition, allergy, medical, or restaurant advice. The page is written for classroom games, drawing prompts, naming exercises, and light creative work, with analytics used to guide future additions rather than to stuff repeated food keywords.",
+          "qualityBullets": [
+            "Familiar foods are prioritized because they work better for visual prompts and group activities.",
+            "The page explains creative use cases clearly so users do not mistake it for dietary guidance.",
+            "Search data helps identify useful next pages while editorial review keeps the content readable."
+          ],
           "faqTitle": "Food generator FAQ",
           "faqs": [
             {
@@ -350,6 +430,14 @@
             {
               "question": "Why should this page exist separately from the homepage?",
               "answer": "Because food-related searches have their own intent. A dedicated page serves those queries better and helps the site avoid overly generic category handling."
+            },
+            {
+              "question": "Can this pick one random food for me?",
+              "answer": "Yes. Use the visual generator when you want one random food idea quickly, or switch to bulk mode when you need a longer list."
+            },
+            {
+              "question": "Is this page for nutrition or meal advice?",
+              "answer": "No. It is a creative random food picker for games, prompts, naming, and classroom activities, not professional nutrition, allergy, or health advice."
             }
           ]
         }
@@ -385,6 +473,20 @@
             "课堂小游戏",
             "品牌创意练习"
           ],
+          "intentTitle": "随机食物搜索，可能是想抽一个，也可能是想生成一整组。",
+          "intentBody": "用户搜索随机食物、随机食物生成器、帮我选一个食物或食物选择器时，背后可能是游戏、课堂、绘画、命名或创作需求。这个页面会把单张食物卡片、批量食物清单和具体场景说明放在一起，让用户更快判断它适不适合自己的任务。",
+          "intentBullets": [
+            "只想快速决定一个食物灵感时，用单张卡片。",
+            "需要食物清单、题库或游戏素材时，用批量模式。",
+            "通过示例和 FAQ 判断它更适合创意任务，而不是饮食建议。"
+          ],
+          "qualityTitle": "我们怎样让随机食物内容既好用又不过界",
+          "qualityBody": "食物对象池会优先选择大家熟悉、容易想象、适合做提示词的食物、零食和饮品。这个页面不是营养、过敏、医疗或餐厅建议，而是面向课堂游戏、绘画提示、命名发想和轻量创作的随机选择器。数据会帮助后续扩展，但内容会避免机械堆关键词。",
+          "qualityBullets": [
+            "优先保留熟悉、易描述、适合群体活动的食物。",
+            "页面明确说明它适合创意用途，不替代专业饮食或健康建议。",
+            "搜索数据用于判断后续页面方向，正文仍以可读性和真实使用为先。"
+          ],
           "faqTitle": "食物页常见问题",
           "faqs": [
             {
@@ -398,6 +500,14 @@
             {
               "question": "为什么食物页不直接并到首页？",
               "answer": "因为食物类搜索意图本身就很清晰。独立页面更利于用户直达，也更利于 SEO。"
+            },
+            {
+              "question": "这个页面可以帮我随机选一个食物吗？",
+              "answer": "可以。你可以用卡片模式快速抽一个食物，也可以用批量模式生成更长的食物清单。"
+            },
+            {
+              "question": "它能提供营养或饮食建议吗？",
+              "answer": "不能。这个页面是面向游戏、提示词、课堂和命名创意的随机食物工具，不提供营养、过敏、医疗或健康建议。"
             }
           ]
         }
@@ -433,6 +543,20 @@
             "授業ゲーム",
             "ブランド発想"
           ],
+          "intentTitle": "食べ物検索では、一つ選びたい場合と一覧が欲しい場合があります。",
+          "intentBody": "ランダムな食べ物、食べ物ピッカー、食べ物のお題、好きな食べ物ジェネレーターといった検索は、近いけれど少しずつ違う意図を持っています。このページは、すぐに一つ決めるカード表示と、授業やゲーム用の一覧を作る一括生成の両方に対応します。",
+          "intentBullets": [
+            "一つだけ食べ物アイデアが欲しいときはカード表示を使います。",
+            "授業、ゲーム、メニュー遊び用のリストが欲しいときは一括生成を使います。",
+            "FAQ と例で、創作用途かどうかを確認できます。"
+          ],
+          "qualityTitle": "食べ物のお題を安全で使いやすく保つために",
+          "qualityBody": "食べ物プールは、見た目を想像しやすく、ゲームや授業で扱いやすい食品、軽食、飲み物を優先しています。このページは栄養、アレルギー、医療、レストランの助言ではなく、創作と軽い活動向けのランダムピッカーです。検索データは改善の参考にしつつ、読みやすさを優先します。",
+          "qualityBullets": [
+            "身近で説明しやすい食べ物を優先します。",
+            "創作やゲーム向けであり、専門的な食事助言ではないことを明確にします。",
+            "データを見ながら、必要な例や次のページを追加します。"
+          ],
           "faqTitle": "食べ物ページ FAQ",
           "faqs": [
             {
@@ -446,6 +570,14 @@
             {
               "question": "なぜトップページとは別に食べ物ページがあるのですか？",
               "answer": "食べ物だけを探している人のために、より意図に合うページを用意するためです。"
+            },
+            {
+              "question": "一つだけ食べ物を選べますか？",
+              "answer": "はい。カード表示で一つ選ぶことも、一括生成で長いリストを作ることもできます。"
+            },
+            {
+              "question": "栄養や食事の助言として使えますか？",
+              "answer": "いいえ。このページはゲーム、お題、授業、ネーミング向けの創作ツールで、栄養、アレルギー、医療の助言ではありません。"
             }
           ]
         }
