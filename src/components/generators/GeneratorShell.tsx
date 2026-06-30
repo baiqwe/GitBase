@@ -23,6 +23,7 @@ interface GeneratorShellProps {
   breadcrumbItems?: Array<{ label: string; href: string }>
   activeCategorySlug?: string
   defaultVisualCount?: number
+  quickLinks?: Array<{ href: string; label: string }>
 }
 
 export function GeneratorShell({
@@ -41,6 +42,7 @@ export function GeneratorShell({
   breadcrumbItems,
   activeCategorySlug,
   defaultVisualCount,
+  quickLinks,
 }: GeneratorShellProps) {
   const jsonLd = buildSoftwareApplicationJsonLd({
     locale,
@@ -97,6 +99,22 @@ export function GeneratorShell({
               )
             })}
           </div>
+          {quickLinks?.length ? (
+            <div className="flex flex-wrap items-center gap-2 border-t border-black/5 pt-3">
+              <span className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+                {trustPageCopy[locale].ui.internalLinksLabel}
+              </span>
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={getLocalizedPath(locale, link.href)}
+                  className="rounded-full border border-slate-200 bg-white/85 px-3 py-1.5 text-xs font-medium text-slate-600 transition hover:border-slate-300 hover:text-slate-950 md:text-sm"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          ) : null}
         </section>
 
         <VisualGenerator

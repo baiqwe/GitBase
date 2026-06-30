@@ -11,10 +11,20 @@ import {
 } from '@/lib/objects'
 import { getCategoryPageCopy } from '@/lib/category-page-copy'
 import { createMetadata } from '@/lib/seo'
+import { getLocalizedIntentLinks } from '@/lib/intent-pages'
 
 type CategoryPageProps = {
   params: Promise<{ categorySlug: string }>
 }
+
+const intentLinkPriority = [
+  'animal-prompt-generator',
+  'random-object-list-generator',
+  'random-object-to-draw',
+  'random-objects-for-esl',
+  'random-objects-for-charades',
+  'random-objects-for-classroom',
+]
 
 export function generateStaticParams() {
   return getCategories().map((category) => ({
@@ -51,6 +61,16 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   }
 
   const copy = getCategoryPageCopy(category, 'en')
+  const intentLinks = getLocalizedIntentLinks('en')
+    .filter((link) => link.categories.includes(category.slug))
+    .sort((a, b) => {
+      const aIndex = intentLinkPriority.indexOf(a.href.slice(1))
+      const bIndex = intentLinkPriority.indexOf(b.href.slice(1))
+      return (aIndex === -1 ? 99 : aIndex) - (bIndex === -1 ? 99 : bIndex)
+    })
+    .slice(0, 4)
+  const quickLinks = intentLinks.map(({ href, title }) => ({ href, label: title }))
+  const editorialLinks = intentLinks.map(({ href, title, description }) => ({ href, label: title, description }))
 
   return (
     <>
@@ -67,6 +87,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         categories={getLocalizedCategories('en')}
         items={getLocalizedObjects('en', category.slug)}
         activeCategorySlug={category.slug}
+        quickLinks={quickLinks}
       />
       {category.i18n.en.seo ? (
         <CategoryLandingContent
@@ -75,6 +96,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           categories={getLocalizedCategories('en')}
           sampleItems={getLocalizedObjects('en', category.slug)}
           currentSlug={category.slug}
+          editorialLinks={editorialLinks}
           content={category.i18n.en.seo}
         />
       ) : null}

@@ -74,6 +74,10 @@ export type LocalizedIntentLink = {
 }
 
 export const expandedIntentPageSlugs = [
+  'random-object-list-generator',
+  'animal-prompt-generator',
+  'random-object-to-draw',
+  'random-objects-for-esl',
   'random-objects-for-pictionary',
   'random-objects-for-improv',
   'random-objects-for-icebreakers',
@@ -82,8 +86,6 @@ export const expandedIntentPageSlugs = [
   'random-kitchen-objects',
   'random-classroom-objects',
   'random-office-objects',
-  'animal-prompt-generator',
-  'random-object-list-generator',
 ] as const
 
 export const intentPages: IntentPageConfig[] = [

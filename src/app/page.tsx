@@ -23,6 +23,7 @@ export default function Home() {
   const editorialLinks = getLocalizedIntentLinks('en')
     .filter((link) => expandedIntentPageSlugs.includes(link.href.slice(1) as (typeof expandedIntentPageSlugs)[number]))
     .map(({ href, title, description }) => ({ href, label: title, description }))
+  const quickLinks = editorialLinks.slice(0, 4).map(({ href, label }) => ({ href, label }))
   const trustBlock = {
     title: 'How the homepage stays useful instead of generic',
     lead:
@@ -50,6 +51,7 @@ export default function Home() {
         items={items}
         featuredItems={featuredItems}
         defaultVisualCount={5}
+        quickLinks={quickLinks}
       />
       <HomeLandingContent
         locale="en"

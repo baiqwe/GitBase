@@ -3,7 +3,7 @@ import type { LocalizedCategory, LocalizedObject } from '@/lib/objects'
 import { buildFaqJsonLd } from '@/lib/seo'
 import { trustPageCopy } from '@/lib/site-copy'
 import { RelatedGenerators } from '@/components/RelatedGenerators'
-import { ExampleObjectsSection, TrustBlockSection } from '@/components/SupportSections'
+import { EditorialLinksSection, ExampleObjectsSection, TrustBlockSection } from '@/components/SupportSections'
 
 interface CategoryLandingContentProps {
   locale: Locale
@@ -11,6 +11,7 @@ interface CategoryLandingContentProps {
   categories: LocalizedCategory[]
   sampleItems: LocalizedObject[]
   currentSlug: string
+  editorialLinks?: Array<{ href: string; label: string; description: string }>
   content: {
     introTitle: string
     introBody: string
@@ -92,6 +93,7 @@ export function CategoryLandingContent({
   categories,
   sampleItems,
   currentSlug,
+  editorialLinks,
   content,
 }: CategoryLandingContentProps) {
   const faqJsonLd = buildFaqJsonLd({ faqs: content.faqs })
@@ -261,6 +263,7 @@ export function CategoryLandingContent({
         ) : null}
 
         <RelatedGenerators locale={locale} categories={categories} currentSlug={currentSlug} />
+        <EditorialLinksSection locale={locale} links={editorialLinks ?? []} />
         <TrustBlockSection locale={locale} block={trustBlock} />
 
         <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">

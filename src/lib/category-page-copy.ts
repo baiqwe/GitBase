@@ -24,9 +24,9 @@ const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryP
       bulkTitle: 'Build a random animal list',
       bulkDescription:
         'Generate a copyable animal prompt list for lesson plans, game rounds, drawing practice, or writing exercises.',
-      seoTitle: 'Random Animal Generator',
+      seoTitle: 'Random Animal Generator for Drawing Prompts and Games',
       seoDescription:
-        'Pick a random animal or generate an animal list with visual cards for drawing prompts, charades, ESL lessons, and classroom games.',
+        'Pick a random animal, use it as an animal prompt generator, or create animal lists for drawing prompts, charades, ESL lessons, and classroom games.',
     },
     zh: {
       title: '随机动物生成器',
@@ -68,9 +68,9 @@ const categoryOverrides: Partial<Record<string, Partial<Record<Locale, CategoryP
       bulkTitle: 'Build a random food list',
       bulkDescription:
         'Generate and copy a food prompt list for worksheets, game cards, menu naming, or drawing practice.',
-      seoTitle: 'Random Food Generator',
+      seoTitle: 'Random Food Generator and Food Picker',
       seoDescription:
-        'Pick a random food or generate a copyable food list with visual cards for drawing prompts, ESL games, classrooms, and menu ideas.',
+        'Pick a random food item, use a simple food picker, or generate copyable food lists with visual cards for drawing prompts, ESL games, classrooms, and menu ideas.',
     },
     zh: {
       title: '随机食物生成器',
