@@ -60,6 +60,11 @@ export type IntentPageConfig = {
     | 'random-office-objects'
     | 'animal-prompt-generator'
     | 'random-object-list-generator'
+    | 'random-animal-to-draw'
+    | 'random-food-picker'
+    | 'random-object-picker'
+    | 'random-esl-vocabulary-generator'
+    | 'random-charades-generator'
   categories: string[]
   defaultVisualCount: number
   exampleObjectIds?: string[]
@@ -74,6 +79,11 @@ export type LocalizedIntentLink = {
 }
 
 export const expandedIntentPageSlugs = [
+  'random-object-picker',
+  'random-animal-to-draw',
+  'random-food-picker',
+  'random-esl-vocabulary-generator',
+  'random-charades-generator',
   'random-object-list-generator',
   'animal-prompt-generator',
   'random-object-to-draw',
@@ -88,7 +98,7 @@ export const expandedIntentPageSlugs = [
   'random-office-objects',
 ] as const
 
-export const intentPages: IntentPageConfig[] = [
+const baseIntentPages: IntentPageConfig[] = [
   {
     slug: 'random-object-to-draw',
     categories: ['animals', 'household', 'food', 'nature'],
@@ -3552,6 +3562,714 @@ export const intentPages: IntentPageConfig[] = [
     },
   },
 ]
+
+type GrowthLocaleCopy = {
+  heroEyebrow: string
+  title: string
+  description: string
+  visualTitle: string
+  visualDescription: string
+  bulkTitle: string
+  bulkDescription: string
+  seoTitle: string
+  seoDescription: string
+  exampleTitle: string
+  exampleLead: string
+  primaryPhrase: string
+  audience: string
+  workflow: string
+  featureLead: string
+  categoryLead: string
+  useCasesTitle: string
+  useCases: string[]
+  faqs: Array<{ question: string; answer: string }>
+  disclaimer?: string
+}
+
+type GrowthIntentSeed = {
+  slug: Extract<
+    IntentPageConfig['slug'],
+    | 'random-animal-to-draw'
+    | 'random-food-picker'
+    | 'random-object-picker'
+    | 'random-esl-vocabulary-generator'
+    | 'random-charades-generator'
+  >
+  categories: string[]
+  defaultVisualCount: number
+  exampleObjectIds: string[]
+  i18n: Record<Locale, GrowthLocaleCopy>
+}
+
+const growthIntentSeeds: GrowthIntentSeed[] = [
+  {
+    slug: 'random-animal-to-draw',
+    categories: ['animals', 'nature'],
+    defaultVisualCount: 6,
+    exampleObjectIds: ['animal-fox', 'animal-rabbit', 'animal-owl', 'animal-butterfly', 'animal-elephant', 'animal-turtle'],
+    i18n: {
+      en: {
+        heroEyebrow: 'Animal drawing prompts',
+        title: 'Random Animal To Draw',
+        description:
+          'Pick a drawable animal prompt with visual cards, examples, and copyable lists for sketch practice, art classes, and daily drawing challenges.',
+        visualTitle: 'Pick an animal to draw',
+        visualDescription:
+          'Use this mode when you want one animal with a clear shape, silhouette, and enough visual detail to start sketching immediately.',
+        bulkTitle: 'Build an animal drawing prompt list',
+        bulkDescription:
+          'Generate a longer animal list for warmups, art homework, classroom drawing rounds, or a weekly sketch challenge.',
+        seoTitle: 'Random Animal To Draw Generator',
+        seoDescription:
+          'Generate random animals to draw with visual cards, copyable animal prompt lists, examples, and FAQ for artists, students, and art teachers.',
+        exampleTitle: 'Animal drawing prompt examples',
+        exampleLead:
+          'These examples are recognizable animals with shapes and details that work well for sketching, classroom drawing, and daily prompt lists.',
+        primaryPhrase: 'random animal to draw',
+        audience: 'artists, students, teachers, and anyone who wants an animal sketch prompt without browsing a long list',
+        workflow: 'choose one animal, decide whether to study its silhouette or texture, then copy a longer list if you are planning a full practice session',
+        featureLead: 'The page is tuned for animals that are easy to picture, describe, and turn into a drawing exercise.',
+        categoryLead:
+          'Animal and nature prompts give stronger shapes, textures, and habitat cues than a generic object pool.',
+        useCasesTitle: 'Best uses for animal drawing prompts',
+        useCases: ['Daily sketch warmups', 'Art class prompts', 'Kids drawing games', 'Creature studies', 'Portfolio practice', 'Prompt jar ideas'],
+        faqs: [
+          { question: 'What animal should I draw today?', answer: 'Use the visual generator for one animal prompt, then refresh until you find a subject with a shape or texture you want to practice.' },
+          { question: 'Is this different from the random animal generator?', answer: 'Yes. The random animal page is broader, while this page explains drawing use cases and keeps the content focused on sketch practice.' },
+          { question: 'Can I make a list for an art class?', answer: 'Yes. Bulk mode creates a copyable list so every student can receive a different animal prompt.' },
+          { question: 'Are these prompts beginner friendly?', answer: 'Most animals in the pool are recognizable enough for beginners, but they still leave room for more advanced studies of pose, texture, and habitat.' },
+        ],
+      },
+      zh: {
+        heroEyebrow: '动物绘画提示',
+        title: '随机动物绘画生成器',
+        description:
+          '抽取适合拿来画的动物提示，支持视觉卡片、示例和批量清单，适合速写、课堂和每日练习。',
+        visualTitle: '抽一个今天要画的动物',
+        visualDescription:
+          '当你想快速得到一个有轮廓、有质感、能马上开画的动物题目时，用这个模式最合适。',
+        bulkTitle: '生成一组动物绘画题目',
+        bulkDescription:
+          '批量生成动物清单，适合课堂作业、速写热身、每日挑战或给不同学生分发题目。',
+        seoTitle: '随机动物绘画生成器 - 抽一个动物来画',
+        seoDescription:
+          '生成适合绘画的随机动物提示，支持视觉卡片、批量清单、示例和 FAQ，适合画师、学生和美术课堂。',
+        exampleTitle: '动物绘画提示示例',
+        exampleLead:
+          '这些动物有清晰轮廓和容易观察的特征，适合速写、课堂绘画和每日练习。',
+        primaryPhrase: '随机动物绘画题目',
+        audience: '画师、学生、老师，以及想快速找一个动物来画的人',
+        workflow: '先抽一个动物，再决定练轮廓、质感还是场景；需要整组练习时再复制批量清单',
+        featureLead: '这个页面更重视“可画性”，而不是随机列出动物名。',
+        categoryLead:
+          '动物和自然类对象更容易提供轮廓、纹理和场景线索，比泛物品池更适合绘画。',
+        useCasesTitle: '动物绘画题目适合这些场景',
+        useCases: ['每日速写', '美术课堂', '儿童绘画游戏', '生物造型练习', '作品集练习', '提示词罐子'],
+        faqs: [
+          { question: '今天画什么动物？', answer: '可以先抽一张动物卡片，再根据轮廓、毛发、羽毛或动作选择是否继续练习。' },
+          { question: '它和随机动物生成器有什么区别？', answer: '随机动物页更宽泛，这个页面专门围绕绘画练习、课堂和速写提示来组织内容。' },
+          { question: '可以给美术课批量出题吗？', answer: '可以。批量模式能生成可复制的动物清单，方便给每个学生分配不同题目。' },
+          { question: '新手适合用吗？', answer: '适合。对象池会优先使用容易识别的动物，同时也能支持更高级的姿态、质感和场景练习。' },
+        ],
+      },
+      ja: {
+        heroEyebrow: '動物のお絵描きお題',
+        title: '描く動物ランダムジェネレーター',
+        description:
+          'スケッチ、授業、毎日の練習に使える動物のお題を、カード表示と一覧で生成します。',
+        visualTitle: '描く動物を一つ選ぶ',
+        visualDescription:
+          '輪郭や質感を想像しやすい動物を引いて、すぐにスケッチを始められます。',
+        bulkTitle: '動物のお題リストを作る',
+        bulkDescription:
+          '授業、練習、毎日のチャレンジ向けに、複数の動物お題をまとめて生成できます。',
+        seoTitle: '描く動物ランダムジェネレーター',
+        seoDescription:
+          '描く動物をランダム生成。視覚カード、コピーできる一覧、例、FAQ 付きでスケッチや授業に使えます。',
+        exampleTitle: '動物のお絵描きお題例',
+        exampleLead:
+          '形や特徴が分かりやすい動物を例として見せることで、練習に使いやすくしています。',
+        primaryPhrase: '描く動物のお題',
+        audience: 'アーティスト、学生、先生、すぐに動物スケッチを始めたい人',
+        workflow: '一つ引いて輪郭や質感を決め、長めの練習には一覧生成を使います',
+        featureLead: '描きやすさと視覚的な分かりやすさを重視したページです。',
+        categoryLead:
+          '動物と自然は、形、質感、背景を考えやすく、描画練習に向いています。',
+        useCasesTitle: '動物お題の使い道',
+        useCases: ['毎日のスケッチ', '美術授業', '子どものお絵描き', '生き物の練習', '作品練習', 'お題メモ'],
+        faqs: [
+          { question: '今日は何の動物を描けばいいですか？', answer: 'カードを一つ引き、形や質感が気に入ったものを練習題材にできます。' },
+          { question: 'ランダム動物ページと違いますか？', answer: 'はい。このページは描画練習に特化して、説明や FAQ もその用途に合わせています。' },
+          { question: '授業用に一覧を作れますか？', answer: 'はい。一括生成で、生徒ごとに違う動物お題を用意できます。' },
+          { question: '初心者でも使えますか？', answer: '使えます。見分けやすい動物を中心にしているため、練習の入口に向いています。' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'random-food-picker',
+    categories: ['food'],
+    defaultVisualCount: 5,
+    exampleObjectIds: ['food-apple', 'food-pizza', 'food-sushi', 'food-croissant', 'food-ramen', 'food-taco'],
+    i18n: {
+      en: {
+        heroEyebrow: 'Food picker',
+        title: 'Random Food Picker',
+        description:
+          'Pick a random food item for games, drawing prompts, menu brainstorming, ESL lessons, or a lighthearted decision prompt.',
+        visualTitle: 'Pick one random food',
+        visualDescription:
+          'Use the picker when you need a single food idea quickly, whether for a game, lesson, drawing prompt, or menu brainstorm.',
+        bulkTitle: 'Build a random food list',
+        bulkDescription:
+          'Generate multiple food ideas for classroom cards, party rounds, menu naming, or creative prompt libraries.',
+        seoTitle: 'Random Food Picker and Food Idea Generator',
+        seoDescription:
+          'Use a random food picker to choose one food item or generate copyable food lists for games, ESL lessons, drawing prompts, and menu ideas.',
+        exampleTitle: 'Food picker examples',
+        exampleLead:
+          'A useful food picker should include familiar foods that people can picture, describe, draw, or turn into a quick activity.',
+        primaryPhrase: 'random food picker',
+        audience: 'teachers, game hosts, creators, and anyone who wants a quick food idea without treating it as nutrition advice',
+        workflow: 'pick one food for a fast decision, or generate a longer list when the food theme needs to support a class, game, or brainstorm',
+        featureLead: 'This page separates creative food picking from recipes, dieting, restaurant search, or medical nutrition advice.',
+        categoryLead:
+          'The food category keeps the result set tightly aligned with food items instead of mixing in unrelated objects.',
+        useCasesTitle: 'Best uses for a random food picker',
+        useCases: ['Food drawing prompts', 'Menu naming', 'ESL food vocabulary', 'Party games', 'Writing prompts', 'Classroom warmups'],
+        disclaimer: 'This is a creative picker for prompts and activities, not nutrition, allergy, medical, or restaurant advice.',
+        faqs: [
+          { question: 'Can this picker choose dinner for me?', answer: 'It can give a playful food idea, but it is not a meal planner and does not account for diet, allergies, budget, or local availability.' },
+          { question: 'Is this the same as the random food generator?', answer: 'It is narrower. The food generator is the category hub, while this page targets people who specifically want to pick one food item or build a food idea list.' },
+          { question: 'Can teachers use it for food vocabulary?', answer: 'Yes. Bulk mode is useful for ESL vocabulary cards, speaking prompts, and food-themed classroom games.' },
+          { question: 'Can I use the results for drawing?', answer: 'Yes. Foods are visual and familiar, so they work well as sketch prompts and quick creative warmups.' },
+        ],
+      },
+      zh: {
+        heroEyebrow: '食物选择器',
+        title: '随机食物选择器',
+        description:
+          '随机抽取一个食物，适合游戏、绘画提示、菜单发想、英语课堂和轻松决策。',
+        visualTitle: '随机选一个食物',
+        visualDescription:
+          '当你需要一个食物灵感来做游戏、课堂、绘画或菜单脑暴时，可以直接抽取。',
+        bulkTitle: '生成一组随机食物清单',
+        bulkDescription:
+          '批量生成食物题目，用于课堂卡片、聚会轮次、菜单命名或创意提示库。',
+        seoTitle: '随机食物选择器 - 抽取食物和食物灵感',
+        seoDescription:
+          '使用随机食物选择器抽取一个食物，或生成可复制食物清单，适合游戏、ESL、绘画提示和菜单发想。',
+        exampleTitle: '随机食物示例',
+        exampleLead:
+          '好的食物选择器应该包含熟悉、容易想象、容易描述和容易转化成活动的食物。',
+        primaryPhrase: '随机食物选择器',
+        audience: '老师、游戏主持人、创作者，以及想快速获得食物灵感的人',
+        workflow: '需要一个答案时抽一张卡片；需要课堂、游戏或脑暴时再生成更长清单',
+        featureLead: '这个页面专门区分创意食物选择和菜谱、减肥、餐厅搜索或医疗营养建议。',
+        categoryLead:
+          '食物分类能让结果始终围绕食品和菜品，不会混入其他无关物品。',
+        useCasesTitle: '随机食物选择器适合这些场景',
+        useCases: ['食物绘画提示', '菜单命名', 'ESL 食物词汇', '聚会游戏', '写作提示', '课堂热身'],
+        disclaimer: '这个工具用于创意提示和轻量活动，不提供营养、过敏、医疗或餐厅建议。',
+        faqs: [
+          { question: '它可以帮我决定晚饭吃什么吗？', answer: '可以给你一个轻松的食物灵感，但它不是正餐规划工具，也不会考虑饮食限制、过敏、预算或附近餐厅。' },
+          { question: '它和随机食物生成器一样吗？', answer: '更窄一点。食物生成器是分类中心，这个页面专门承接“随机选一个食物”或“食物灵感清单”的需求。' },
+          { question: '老师可以拿来教食物词汇吗？', answer: '可以。批量模式适合做 ESL 词汇卡、口语题和食物主题课堂游戏。' },
+          { question: '可以当绘画题目吗？', answer: '可以。食物视觉特征明显，适合速写和创意热身。' },
+        ],
+      },
+      ja: {
+        heroEyebrow: '食べ物ピッカー',
+        title: 'ランダム食べ物ピッカー',
+        description:
+          'ゲーム、描画、メニュー発想、ESL 授業に使える食べ物をランダムに選びます。',
+        visualTitle: '食べ物を一つ選ぶ',
+        visualDescription:
+          'ゲーム、授業、描画、メニューの発想に使える食べ物をすばやく選べます。',
+        bulkTitle: '食べ物リストを作る',
+        bulkDescription:
+          '授業カード、パーティー、メニュー案、創作プロンプト用に複数の食べ物を生成できます。',
+        seoTitle: 'ランダム食べ物ピッカー',
+        seoDescription:
+          'ランダム食べ物ピッカーで一つ選ぶ、またはゲーム、ESL、描画、メニュー発想向けの一覧を作れます。',
+        exampleTitle: '食べ物ピッカーの例',
+        exampleLead:
+          '見てすぐ分かり、説明や描画に使いやすい食べ物を中心にしています。',
+        primaryPhrase: 'ランダム食べ物ピッカー',
+        audience: '先生、ゲーム進行役、クリエイター、食べ物の発想が欲しい人',
+        workflow: '一つ選びたいときはカード表示、授業やゲーム用には一覧生成を使います',
+        featureLead: 'このページは創作用の食べ物選びであり、栄養、レシピ、医療助言ではありません。',
+        categoryLead:
+          '食べ物カテゴリに絞ることで、他の物体が混ざらない結果になります。',
+        useCasesTitle: '食べ物ピッカーの使い道',
+        useCases: ['描画お題', 'メニュー発想', 'ESL 食べ物語彙', 'パーティーゲーム', '作文お題', '授業導入'],
+        disclaimer: 'このツールは創作と活動向けで、栄養、アレルギー、医療、レストラン助言ではありません。',
+        faqs: [
+          { question: '夕食を決めるために使えますか？', answer: '軽い食べ物アイデアには使えますが、食事計画、アレルギー、予算、近くの店は考慮しません。' },
+          { question: 'ランダム食べ物ジェネレーターと同じですか？', answer: 'こちらは一つ選ぶ意図や食べ物リスト作成により寄せたページです。' },
+          { question: '授業で使えますか？', answer: 'はい。ESL の語彙カード、会話練習、食べ物テーマのゲームに使えます。' },
+          { question: '描画にも使えますか？', answer: '使えます。食べ物は形や色を想像しやすく、スケッチ題材に向いています。' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'random-object-picker',
+    categories: ['animals', 'household', 'food', 'nature', 'funny'],
+    defaultVisualCount: 5,
+    exampleObjectIds: ['animal-elephant', 'house-kettle', 'food-apple', 'nature-rainbow', 'funny-rubber-duck', 'house-key'],
+    i18n: {
+      en: {
+        heroEyebrow: 'Object picker',
+        title: 'Random Object Picker',
+        description:
+          'Pick one random object fast, or generate a clean object list for games, classrooms, writing prompts, and brainstorming.',
+        visualTitle: 'Pick one random object',
+        visualDescription:
+          'Use this picker when the decision should be quick and neutral: one object, one prompt, one next step.',
+        bulkTitle: 'Build a random object picker list',
+        bulkDescription:
+          'Generate multiple objects for games, worksheets, idea sessions, writing prompts, or facilitation notes.',
+        seoTitle: 'Random Object Picker With Visual Cards',
+        seoDescription:
+          'Pick one random object or generate a copyable object list with visual cards for games, classrooms, writing, drawing, and brainstorming.',
+        exampleTitle: 'Object picker examples',
+        exampleLead:
+          'A broad picker works best when the object pool mixes familiar, visual, and playful items without becoming a thin noun list.',
+        primaryPhrase: 'random object picker',
+        audience: 'people who need a quick neutral prompt for games, classes, writing, drawing, or group facilitation',
+        workflow: 'pick one object when you need a fast prompt, or switch to bulk mode when the activity needs a balanced set of objects',
+        featureLead: 'This page is the decision-oriented version of the main generator, with clearer language around picking one object.',
+        categoryLead:
+          'A mixed object pool keeps the picker flexible while still linking to narrower animal, food, household, drawing, and classroom pages.',
+        useCasesTitle: 'Best uses for a random object picker',
+        useCases: ['One-click decisions', 'Drawing prompts', 'Classroom warmups', 'Writing sparks', 'Group games', 'Workshop facilitation'],
+        faqs: [
+          { question: 'What is a random object picker?', answer: 'It is a simple tool that chooses one object from a curated pool so you can use it as a prompt, game item, or quick creative constraint.' },
+          { question: 'How is this different from the homepage?', answer: 'The homepage is a broad landing page. This page targets users who specifically describe the task as picking one random object.' },
+          { question: 'Can I pick more than one object?', answer: 'Yes. Bulk mode lets you generate a longer list while keeping the picker useful for single-card decisions.' },
+          { question: 'Can I narrow the result type?', answer: 'Yes. Use the related animal, food, household, drawing, classroom, or game pages when the activity needs a tighter theme.' },
+        ],
+      },
+      zh: {
+        heroEyebrow: '物品选择器',
+        title: '随机物品选择器',
+        description:
+          '快速抽取一个随机物品，或生成清晰的物品清单，用于游戏、课堂、写作、绘画和脑暴。',
+        visualTitle: '随机选一个物品',
+        visualDescription:
+          '当你只需要一个中性的提示物、一个游戏对象或一个下一步灵感时，用这个选择器。',
+        bulkTitle: '生成一组随机物品',
+        bulkDescription:
+          '批量生成物品清单，适合游戏题库、课堂练习、写作提示和工作坊记录。',
+        seoTitle: '随机物品选择器 - 物品卡片和可复制清单',
+        seoDescription:
+          '使用随机物品选择器抽取一个物品，或生成可复制清单，适合游戏、课堂、写作、绘画和脑暴。',
+        exampleTitle: '随机物品选择器示例',
+        exampleLead:
+          '宽泛选择器需要混合熟悉、直观和有趣的对象，而不是只给一堆薄薄的名词。',
+        primaryPhrase: '随机物品选择器',
+        audience: '需要快速获得中性提示物的人，比如老师、主持人、写作者、画师和团队引导师',
+        workflow: '需要一个灵感时抽单张卡片；需要一组对象时切换到批量模式',
+        featureLead: '这个页面是首页的“选择器版本”，更明确承接随机选一个物品的搜索需求。',
+        categoryLead:
+          '混合对象池保证选择器足够灵活，同时继续通过内链连接到动物、食物、家居、绘画和课堂页。',
+        useCasesTitle: '随机物品选择器适合这些场景',
+        useCases: ['一键决策', '绘画提示', '课堂热身', '写作灵感', '小组游戏', '工作坊引导'],
+        faqs: [
+          { question: '随机物品选择器是什么？', answer: '它会从整理过的对象池里选择一个物品，让你把它当作提示、游戏题目或创意限制使用。' },
+          { question: '它和首页有什么不同？', answer: '首页是宽泛落地页，这个页面专门承接“随机选一个物品”这种更明确的任务描述。' },
+          { question: '可以一次选多个物品吗？', answer: '可以。批量模式可以生成更长清单，同时保留单张卡片的快速选择体验。' },
+          { question: '可以限制结果类型吗？', answer: '可以。如果你需要更窄主题，可以进入动物、食物、家居、绘画、课堂或游戏专题页。' },
+        ],
+      },
+      ja: {
+        heroEyebrow: 'オブジェクトピッカー',
+        title: 'ランダムオブジェクトピッカー',
+        description:
+          '一つのランダムな物をすばやく選ぶ、または授業、ゲーム、創作向けの一覧を作れます。',
+        visualTitle: 'ランダムな物を一つ選ぶ',
+        visualDescription:
+          '一つだけ中立的なお題が欲しいとき、すぐに選べるページです。',
+        bulkTitle: 'オブジェクト一覧を作る',
+        bulkDescription:
+          'ゲーム、授業、文章、ワークショップ向けに複数の物を生成できます。',
+        seoTitle: 'ランダムオブジェクトピッカー',
+        seoDescription:
+          'ランダムな物を一つ選ぶ、またはゲーム、授業、文章、描画向けのコピー可能な一覧を作れます。',
+        exampleTitle: 'オブジェクトピッカーの例',
+        exampleLead:
+          '幅広いピッカーでは、身近で視覚的な対象を混ぜることで使いやすさを保ちます。',
+        primaryPhrase: 'ランダムオブジェクトピッカー',
+        audience: 'ゲーム、授業、文章、描画、進行用に中立的なお題が欲しい人',
+        workflow: '一つ欲しいときはカード表示、複数必要なときは一括生成を使います',
+        featureLead: 'トップページよりも、一つ選ぶ行為を明確にしたページです。',
+        categoryLead:
+          '混合カテゴリにより柔軟に使え、必要なら動物、食べ物、描画、授業ページへ進めます。',
+        useCasesTitle: 'オブジェクトピッカーの使い道',
+        useCases: ['一つ選ぶ', '描画お題', '授業導入', '文章の発想', 'グループゲーム', '進行補助'],
+        faqs: [
+          { question: 'ランダムオブジェクトピッカーとは何ですか？', answer: '整理された対象プールから一つの物を選び、お題やゲームの材料に使うツールです。' },
+          { question: 'トップページと違いますか？', answer: 'トップページは広い入口で、このページは一つ選ぶ検索意図に寄せています。' },
+          { question: '複数選べますか？', answer: 'はい。一括生成で長めの一覧も作れます。' },
+          { question: 'テーマを絞れますか？', answer: 'はい。動物、食べ物、日用品、描画、授業、ゲーム向けページに進めます。' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'random-esl-vocabulary-generator',
+    categories: ['animals', 'household', 'food', 'nature'],
+    defaultVisualCount: 8,
+    exampleObjectIds: ['animal-rabbit', 'food-apple', 'house-chair', 'nature-cloud', 'house-key', 'food-banana'],
+    i18n: {
+      en: {
+        heroEyebrow: 'ESL vocabulary',
+        title: 'Random ESL Vocabulary Generator',
+        description:
+          'Generate concrete object vocabulary for ESL speaking warmups, guessing games, worksheets, pronunciation practice, and classroom review.',
+        visualTitle: 'Pick ESL vocabulary cards',
+        visualDescription:
+          'Use visual cards when learners need concrete nouns they can see, describe, pronounce, and reuse in short speaking tasks.',
+        bulkTitle: 'Build an ESL vocabulary list',
+        bulkDescription:
+          'Create copyable vocabulary sets for worksheets, pair work, flashcards, classroom games, and quick review rounds.',
+        seoTitle: 'Random ESL Vocabulary Generator With Object Cards',
+        seoDescription:
+          'Generate ESL vocabulary with random object cards and copyable lists for speaking games, worksheets, flashcards, and classroom warmups.',
+        exampleTitle: 'ESL vocabulary examples',
+        exampleLead:
+          'Concrete nouns are easier for learners to describe, spell, pronounce, and reuse than abstract prompt words.',
+        primaryPhrase: 'random ESL vocabulary generator',
+        audience: 'ESL teachers, tutors, homeschool parents, and language learners who need concrete vocabulary prompts',
+        workflow: 'pick visual cards for quick speaking practice, then copy a longer list for worksheets, flashcards, or group games',
+        featureLead: 'This page focuses on teachable objects and classroom reuse rather than random novelty.',
+        categoryLead:
+          'Animals, food, household items, and nature prompts create familiar vocabulary sets that work across beginner and intermediate lessons.',
+        useCasesTitle: 'Best uses for ESL vocabulary prompts',
+        useCases: ['Vocabulary review', 'Speaking warmups', 'Flashcards', 'Worksheet creation', 'Pronunciation drills', 'Guessing games'],
+        faqs: [
+          { question: 'How can I use random objects for ESL vocabulary?', answer: 'Ask learners to name, spell, describe, compare, or use each object in a sentence. The visual card gives context before speaking starts.' },
+          { question: 'Is this better for beginners or advanced learners?', answer: 'It works best for beginner to intermediate learners, but advanced students can use the same objects for longer descriptions and storytelling.' },
+          { question: 'Can I make printable vocabulary lists?', answer: 'Yes. Bulk mode creates a copyable list that can be moved into a worksheet, slide deck, or flashcard tool.' },
+          { question: 'Why make this separate from the ESL objects page?', answer: 'The ESL objects page covers activities broadly. This page targets vocabulary generation and classroom material preparation more directly.' },
+        ],
+      },
+      zh: {
+        heroEyebrow: 'ESL 词汇',
+        title: '随机 ESL 词汇生成器',
+        description:
+          '生成具体物品词汇，适合 ESL 口语热身、猜词游戏、练习纸、发音练习和课堂复习。',
+        visualTitle: '抽取 ESL 词汇卡片',
+        visualDescription:
+          '当学生需要看得见、说得出、能描述和能造句的具体名词时，用视觉卡片更高效。',
+        bulkTitle: '生成 ESL 词汇清单',
+        bulkDescription:
+          '生成可复制词汇组，用于练习纸、双人活动、闪卡、课堂游戏和快速复习。',
+        seoTitle: '随机 ESL 词汇生成器 - 物品词汇卡片',
+        seoDescription:
+          '生成 ESL 物品词汇卡片和可复制清单，适合口语游戏、练习纸、闪卡和课堂热身。',
+        exampleTitle: 'ESL 词汇示例',
+        exampleLead:
+          '具体名词比抽象提示更容易被学习者描述、拼写、发音和造句。',
+        primaryPhrase: '随机 ESL 词汇生成器',
+        audience: 'ESL 老师、家教、家庭学习者，以及需要具体词汇提示的语言学习者',
+        workflow: '先用视觉卡片做快速口语练习，再复制长清单用于练习纸、闪卡或小组游戏',
+        featureLead: '这个页面强调可教学、可复用的具体名词，而不是新奇随机词。',
+        categoryLead:
+          '动物、食物、家居和自然对象更适合初中级课程中的词汇和描述任务。',
+        useCasesTitle: 'ESL 词汇提示适合这些场景',
+        useCases: ['词汇复习', '口语热身', '闪卡制作', '练习纸制作', '发音练习', '猜词游戏'],
+        faqs: [
+          { question: '随机物品怎么用于 ESL 词汇课？', answer: '可以让学生命名、拼写、描述、比较，或者用这个物品造句。视觉卡片能降低开口前的理解成本。' },
+          { question: '更适合初学者还是进阶学习者？', answer: '最适合初中级学习者，但高阶学生也可以用同一组对象做更长的描述和故事表达。' },
+          { question: '可以做成可打印词汇表吗？', answer: '可以。批量模式会生成可复制清单，可以放进练习纸、课件或闪卡工具。' },
+          { question: '为什么要和 ESL objects 页面分开？', answer: 'ESL objects 页面覆盖活动更宽泛，这个页面更直接服务词汇生成和课堂材料准备。' },
+        ],
+      },
+      ja: {
+        heroEyebrow: 'ESL 語彙',
+        title: 'ランダム ESL 語彙ジェネレーター',
+        description:
+          'ESL のスピーキング、語彙復習、ワークシート、発音練習に使える具体名詞を生成します。',
+        visualTitle: 'ESL 語彙カードを引く',
+        visualDescription:
+          '見て、言って、説明し、文にしやすい具体名詞をカードで表示します。',
+        bulkTitle: 'ESL 語彙リストを作る',
+        bulkDescription:
+          'ワークシート、ペア活動、フラッシュカード、授業ゲーム用の一覧を作れます。',
+        seoTitle: 'ランダム ESL 語彙ジェネレーター',
+        seoDescription:
+          'ESL 語彙をランダム生成。物体カードとコピーできる一覧で、授業、ワークシート、会話練習に使えます。',
+        exampleTitle: 'ESL 語彙の例',
+        exampleLead:
+          '具体名詞は、抽象的なお題よりも説明、発音、文作りに使いやすいです。',
+        primaryPhrase: 'ランダム ESL 語彙ジェネレーター',
+        audience: 'ESL 教師、家庭学習、チューター、具体語彙のお題が欲しい学習者',
+        workflow: 'カードで会話練習をし、必要なら一覧をコピーして教材にします',
+        featureLead: '新奇さよりも、授業で再利用できる具体名詞を重視しています。',
+        categoryLead:
+          '動物、食べ物、日用品、自然は、初中級の語彙練習に使いやすいカテゴリです。',
+        useCasesTitle: 'ESL 語彙お題の使い道',
+        useCases: ['語彙復習', 'スピーキング導入', 'フラッシュカード', '教材作成', '発音練習', '当てっこゲーム'],
+        faqs: [
+          { question: 'ランダムな物を ESL 語彙にどう使えますか？', answer: '名前、つづり、説明、比較、例文作りなどに使えます。画像があると話し始めやすくなります。' },
+          { question: '初心者向けですか？', answer: '初中級に特に向いていますが、上級者は長い説明や物語づくりにも使えます。' },
+          { question: '語彙リストを作れますか？', answer: 'はい。一括生成でワークシートやスライドに貼りやすい一覧を作れます。' },
+          { question: 'ESL objects ページと違いますか？', answer: 'こちらは語彙生成と教材準備をより直接的に扱うページです。' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'random-charades-generator',
+    categories: ['animals', 'household', 'food', 'funny'],
+    defaultVisualCount: 8,
+    exampleObjectIds: ['animal-penguin', 'house-broom', 'food-pizza', 'funny-party-hat', 'animal-turtle', 'funny-rubber-duck'],
+    i18n: {
+      en: {
+        heroEyebrow: 'Charades generator',
+        title: 'Random Charades Generator',
+        description:
+          'Generate charades-ready object prompts for parties, classrooms, team icebreakers, family games, and ESL speaking rounds.',
+        visualTitle: 'Pick a charades prompt',
+        visualDescription:
+          'Use visual cards to pick prompts that are easier to act out, guess, and explain before the round starts.',
+        bulkTitle: 'Build a charades prompt list',
+        bulkDescription:
+          'Generate a longer list for teams, multiple rounds, classroom activities, or family game night.',
+        seoTitle: 'Random Charades Generator With Object Prompts',
+        seoDescription:
+          'Generate random charades prompts with object cards and copyable lists for parties, classrooms, teams, family games, and ESL rounds.',
+        exampleTitle: 'Charades prompt examples',
+        exampleLead:
+          'Good charades prompts should be recognizable, physical, and easy enough for a group to guess without stopping the game.',
+        primaryPhrase: 'random charades generator',
+        audience: 'party hosts, teachers, team facilitators, families, and ESL tutors who need quick act-it-out prompts',
+        workflow: 'pick one card for a fast round, or build a longer list when you need team play, classroom rotation, or several rounds',
+        featureLead: 'This page focuses on objects people can act out, not abstract words that slow down the game.',
+        categoryLead:
+          'Animals, household items, foods, and funny objects tend to create clearer gestures and faster guesses.',
+        useCasesTitle: 'Best uses for charades prompts',
+        useCases: ['Party charades', 'Family games', 'Classroom warmups', 'Team icebreakers', 'ESL speaking games', 'Kids activities'],
+        faqs: [
+          { question: 'What makes a good charades prompt?', answer: 'A good prompt is concrete, recognizable, and physical enough that players can act it out without needing a long explanation.' },
+          { question: 'Can I generate prompts for multiple teams?', answer: 'Yes. Bulk mode can create a longer list for teams, rounds, or classroom groups.' },
+          { question: 'How is this different from random objects for charades?', answer: 'The existing page explains the use case broadly. This page targets people searching for a charades generator and emphasizes gameplay flow.' },
+          { question: 'Can ESL teachers use this?', answer: 'Yes. Charades prompts are useful for movement-based vocabulary review, speaking warmups, and low-pressure classroom interaction.' },
+        ],
+      },
+      zh: {
+        heroEyebrow: '你演我猜生成器',
+        title: '随机你演我猜生成器',
+        description:
+          '生成适合你演我猜的物品题目，适用于聚会、课堂、团队破冰、家庭游戏和 ESL 口语活动。',
+        visualTitle: '抽取一个你演我猜题目',
+        visualDescription:
+          '用视觉卡片快速选择更容易表演、更容易猜、更容易解释的题目。',
+        bulkTitle: '生成一组你演我猜题库',
+        bulkDescription:
+          '批量生成题目，适合分组、多轮游戏、课堂活动和家庭游戏夜。',
+        seoTitle: '随机你演我猜生成器 - 物品题目和批量题库',
+        seoDescription:
+          '生成适合你演我猜的随机物品题目，支持卡片和可复制清单，适合聚会、课堂、团队、家庭和 ESL。',
+        exampleTitle: '你演我猜题目示例',
+        exampleLead:
+          '好的你演我猜题目应该具体、容易表演、容易被猜到，不会让游戏停下来解释半天。',
+        primaryPhrase: '随机你演我猜生成器',
+        audience: '聚会主持人、老师、团队引导师、家庭玩家和 ESL 老师',
+        workflow: '快速一轮时抽一张卡片；需要分组、多轮或课堂轮转时生成长清单',
+        featureLead: '这个页面专门选择更容易表演的对象，而不是拖慢游戏节奏的抽象词。',
+        categoryLead:
+          '动物、家居、食物和搞怪对象通常更容易做动作，也更容易让别人猜到。',
+        useCasesTitle: '你演我猜题目适合这些场景',
+        useCases: ['聚会游戏', '家庭游戏', '课堂热身', '团队破冰', 'ESL 口语游戏', '儿童活动'],
+        faqs: [
+          { question: '什么样的题目适合你演我猜？', answer: '好的题目应该具体、辨识度高、能转化成动作，不需要长时间解释规则或背景。' },
+          { question: '可以给多个队伍生成题目吗？', answer: '可以。批量模式能生成更长清单，适合分组、多轮或课堂小组活动。' },
+          { question: '它和 random objects for charades 页面有什么区别？', answer: '原页面更宽泛解释场景，这个页面专门承接“你演我猜生成器”这种搜索意图，并强调游戏流程。' },
+          { question: 'ESL 老师可以用吗？', answer: '可以。你演我猜很适合词汇复习、口语热身和低压力课堂互动。' },
+        ],
+      },
+      ja: {
+        heroEyebrow: 'ジェスチャーゲーム',
+        title: 'ランダムジェスチャーお題ジェネレーター',
+        description:
+          'パーティー、授業、チームのアイスブレイク、家族ゲーム、ESL に使えるお題を生成します。',
+        visualTitle: 'ジェスチャーお題を一つ選ぶ',
+        visualDescription:
+          '演じやすく、当てやすいお題をカードで選べます。',
+        bulkTitle: 'ジェスチャーお題リストを作る',
+        bulkDescription:
+          'チーム戦、複数ラウンド、授業、家族ゲーム向けに長めの一覧を生成できます。',
+        seoTitle: 'ランダムジェスチャーお題ジェネレーター',
+        seoDescription:
+          'ジェスチャーゲームのお題をランダム生成。カード表示とコピーできる一覧で、パーティー、授業、ESL に使えます。',
+        exampleTitle: 'ジェスチャーお題の例',
+        exampleLead:
+          '良いお題は、分かりやすく、体で表現しやすく、説明なしでも当てやすいものです。',
+        primaryPhrase: 'ランダムジェスチャーお題',
+        audience: 'パーティー主催者、先生、進行役、家族、ESL チューター',
+        workflow: '一つのラウンドにはカード表示、複数ラウンドやチーム戦には一覧生成を使います',
+        featureLead: '抽象語ではなく、演じやすい具体物を重視したページです。',
+        categoryLead:
+          '動物、日用品、食べ物、おもしろアイテムは動作にしやすく、当てやすいカテゴリです。',
+        useCasesTitle: 'ジェスチャーお題の使い道',
+        useCases: ['パーティー', '家族ゲーム', '授業導入', 'チーム交流', 'ESL 会話ゲーム', '子ども活動'],
+        faqs: [
+          { question: '良いジェスチャーお題とは何ですか？', answer: '具体的で、見て分かりやすく、体で表現しやすいお題です。' },
+          { question: '複数チーム用に作れますか？', answer: 'はい。一括生成でチームやラウンド分の一覧を作れます。' },
+          { question: '既存の charades ページと違いますか？', answer: 'こちらはジェネレーターとして検索する人向けに、ゲームの流れをより強調しています。' },
+          { question: 'ESL 授業でも使えますか？', answer: '使えます。語彙復習、会話導入、低負荷のクラス活動に向いています。' },
+        ],
+      },
+    },
+  },
+]
+
+function buildGrowthLanding(locale: Locale, copy: GrowthLocaleCopy): IntentLandingContent {
+  const featureTitle = {
+    en: `Why this ${copy.primaryPhrase} page is useful`,
+    zh: `为什么这个${copy.primaryPhrase}页面值得单独做`,
+    ja: `この${copy.primaryPhrase}ページが役立つ理由`,
+  }[locale]
+  const intentTitle = {
+    en: `Search intent covered by this ${copy.primaryPhrase} page`,
+    zh: `这个页面承接的搜索意图`,
+    ja: `このページが受け止める検索意図`,
+  }[locale]
+  const qualityTitle = {
+    en: `How this page avoids thin SEO content`,
+    zh: `这个页面如何避免薄 SEO 内容`,
+    ja: `薄い SEO ページにしないために`,
+  }[locale]
+  const categoryTitle = {
+    en: 'Best categories for this generator',
+    zh: '更适合这个生成器的分类',
+    ja: 'このジェネレーターに向いたカテゴリ',
+  }[locale]
+
+  return {
+    introTitle: copy.title,
+    introBody:
+      locale === 'en'
+        ? `This page is built for ${copy.audience}. Instead of sending every visitor back to the broad homepage, it narrows the generator, examples, FAQ, and internal links around the ${copy.primaryPhrase} intent. The practical workflow is simple: ${copy.workflow}.`
+        : locale === 'zh'
+          ? `这个页面面向${copy.audience}。它不会把所有用户都推回宽泛首页，而是围绕“${copy.primaryPhrase}”这个明确意图来组织生成器、示例、FAQ 和内链。实际流程很简单：${copy.workflow}。`
+          : `このページは${copy.audience}のために作っています。広いトップページへ戻すだけではなく、「${copy.primaryPhrase}」という意図に合わせて、生成器、例、FAQ、内部リンクを整理しています。使い方はシンプルで、${copy.workflow}。`,
+    featureTitle,
+    featureLead: copy.featureLead,
+    features: [
+      {
+        title: locale === 'en' ? 'Clearer intent match' : locale === 'zh' ? '更贴近搜索意图' : '検索意図に合う',
+        body:
+          locale === 'en'
+            ? `People searching for ${copy.primaryPhrase} need a page that answers that task directly, not a generic list with a swapped heading.`
+            : locale === 'zh'
+              ? `搜索“${copy.primaryPhrase}”的人，需要的是直接回答这个任务的页面，而不是只换标题的通用列表。`
+              : `「${copy.primaryPhrase}」を探す人には、見出しだけを変えた汎用ページではなく、その用途に合うページが必要です。`,
+      },
+      {
+        title: locale === 'en' ? 'Practical examples' : locale === 'zh' ? '示例更能落地' : '具体例がある',
+        body:
+          locale === 'en'
+            ? 'The example section shows concrete results so users and search engines can understand what the tool actually produces.'
+            : locale === 'zh'
+              ? '示例区会展示具体结果，让用户和搜索引擎都能理解这个工具实际会生成什么。'
+              : 'サンプルを見せることで、ユーザーにも検索エンジンにも実際の出力が伝わります。',
+      },
+      {
+        title: locale === 'en' ? 'Better next clicks' : locale === 'zh' ? '更好的下一步内链' : '次の導線が明確',
+        body:
+          locale === 'en'
+            ? 'Related pages point visitors toward narrower generators when the task becomes more specific.'
+            : locale === 'zh'
+              ? '相关页面会把用户导向更窄的生成器，避免所有需求都挤在一个页面里。'
+              : '関連ページに進めることで、より具体的な用途にも自然につながります。',
+      },
+    ],
+    categoryTitle,
+    categoryLead: copy.categoryLead,
+    useCasesTitle: copy.useCasesTitle,
+    useCases: copy.useCases,
+    faqTitle: locale === 'en' ? `${copy.title} FAQ` : locale === 'zh' ? `${copy.title}常见问题` : `${copy.title} FAQ`,
+    faqs: copy.faqs,
+    intentTitle,
+    intentBody:
+      locale === 'en'
+        ? `The target query is ${copy.primaryPhrase}, but related searches often include list, picker, prompt, classroom, game, drawing, and copyable-output language. This page supports those adjacent needs without taking over the broader homepage.`
+        : locale === 'zh'
+          ? `这个页面的核心词是“${copy.primaryPhrase}”，但相近搜索常常会带上清单、选择器、提示词、课堂、游戏、绘画和可复制结果等表达。这个页面会承接这些相邻需求，同时不挤占首页主词定位。`
+          : `中心となる検索語は「${copy.primaryPhrase}」ですが、一覧、ピッカー、お題、授業、ゲーム、描画、コピー可能な出力などの近い意図も含まれます。このページはトップページの役割を奪わず、その周辺意図を受け止めます。`,
+    intentBullets: [
+      locale === 'en'
+        ? 'Use visual mode when one prompt is enough.'
+        : locale === 'zh'
+          ? '只需要一个提示时，用视觉卡片模式。'
+          : '一つだけ欲しいときはカード表示を使います。',
+      locale === 'en'
+        ? 'Use bulk mode when the activity needs a reusable list.'
+        : locale === 'zh'
+          ? '需要可复用清单时，用批量模式。'
+          : '再利用できる一覧が必要なときは一括生成を使います。',
+      locale === 'en'
+        ? 'Use related links when a narrower category or use case would answer the visitor better.'
+        : locale === 'zh'
+          ? '如果需求更窄，用相关内链进入更匹配的分类或专题页。'
+          : 'より狭い用途には、関連リンクから専用ページへ進みます。',
+    ],
+    qualityTitle,
+    qualityBody:
+      locale === 'en'
+        ? `This page has its own generator settings, examples, FAQ, use cases, and internal links. ${copy.disclaimer ?? 'The copy is written for real creative, educational, and facilitation tasks instead of repeating exact-match keywords.'}`
+        : locale === 'zh'
+          ? `这个页面有独立的生成器设置、示例、FAQ、使用场景和内链。${copy.disclaimer ?? '正文围绕真实创意、教育和活动组织任务来写，而不是机械重复关键词。'}`
+          : `このページには独自の生成設定、例、FAQ、利用場面、内部リンクがあります。${copy.disclaimer ?? '本文はキーワードの繰り返しではなく、実際の創作、教育、進行の用途を前提にしています。'}`,
+    qualityBullets: [
+      locale === 'en'
+        ? 'The page explains who should use it and when a narrower page is better.'
+        : locale === 'zh'
+          ? '页面会说明谁适合使用，以及什么时候应该进入更窄的页面。'
+          : '誰が使うべきか、いつ専用ページに進むべきかを説明します。',
+      locale === 'en'
+        ? 'Examples and FAQ make the content useful even before the visitor clicks generate.'
+        : locale === 'zh'
+          ? '示例和 FAQ 让页面在点击生成之前也有实际信息价值。'
+          : '例と FAQ により、生成前からページの価値が伝わります。',
+      locale === 'en'
+        ? 'Canonical, hreflang, sitemap, FAQ schema, and breadcrumb schema remain handled by the shared site system.'
+        : locale === 'zh'
+          ? 'Canonical、hreflang、sitemap、FAQ schema 和面包屑 schema 继续由站点系统统一处理。'
+          : 'canonical、hreflang、sitemap、FAQ schema、パンくず schema は共通システムで扱います。',
+    ],
+  }
+}
+
+const growthIntentPages: IntentPageConfig[] = growthIntentSeeds.map((seed) => ({
+  slug: seed.slug,
+  categories: seed.categories,
+  defaultVisualCount: seed.defaultVisualCount,
+  exampleObjectIds: seed.exampleObjectIds,
+  i18n: {
+    en: {
+      ...seed.i18n.en,
+      examples: { title: seed.i18n.en.exampleTitle, lead: seed.i18n.en.exampleLead },
+      landing: buildGrowthLanding('en', seed.i18n.en),
+    },
+    zh: {
+      ...seed.i18n.zh,
+      examples: { title: seed.i18n.zh.exampleTitle, lead: seed.i18n.zh.exampleLead },
+      landing: buildGrowthLanding('zh', seed.i18n.zh),
+    },
+    ja: {
+      ...seed.i18n.ja,
+      examples: { title: seed.i18n.ja.exampleTitle, lead: seed.i18n.ja.exampleLead },
+      landing: buildGrowthLanding('ja', seed.i18n.ja),
+    },
+  },
+}))
+
+export const intentPages: IntentPageConfig[] = [...baseIntentPages, ...growthIntentPages]
 
 export function getIntentPageBySlug(slug: string) {
   return intentPages.find((page) => page.slug === slug) ?? null

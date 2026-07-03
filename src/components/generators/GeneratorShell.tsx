@@ -6,6 +6,7 @@ import { BulkGenerator } from '@/components/generators/BulkGenerator'
 import { VisualGenerator } from '@/components/generators/VisualGenerator'
 import { Breadcrumbs } from '@/components/Breadcrumbs'
 import { trustPageCopy } from '@/lib/site-copy'
+import { TrackedLink } from '@/components/TrackedLink'
 
 interface GeneratorShellProps {
   locale: Locale
@@ -105,13 +106,15 @@ export function GeneratorShell({
                 {trustPageCopy[locale].ui.internalLinksLabel}
               </span>
               {quickLinks.map((link) => (
-                <Link
+                <TrackedLink
                   key={link.href}
                   href={getLocalizedPath(locale, link.href)}
+                  trackingArea="generator_quick_links"
+                  trackingLabel={link.label}
                   className="rounded-full border border-slate-200 bg-white/85 px-3 py-1.5 text-xs font-medium text-slate-600 transition hover:border-slate-300 hover:text-slate-950 md:text-sm"
                 >
                   {link.label}
-                </Link>
+                </TrackedLink>
               ))}
             </div>
           ) : null}

@@ -94,8 +94,9 @@ export const trustPageCopy: Record<
         'Random Object Generator is designed as a lightweight public utility. You do not need an account to use the core generator, and the site does not intentionally ask for unnecessary personal information in order to show random object results.',
         'Like most websites, the service may collect basic technical data such as server logs, page requests, device and browser information, referrer data, and anonymous usage events. At the time of writing, the product uses Cloudflare for delivery and Google Analytics 4 for basic measurement, which helps the project understand page performance, click behavior, and which pages are actually useful to visitors.',
         'The purpose of this data handling is operational: keep the service stable, improve page quality, measure feature adoption, and identify which search-oriented pages satisfy user intent. The site is not designed as a personal profile system, and the core generator can be used without creating an account or providing a name.',
-        'If advertising is enabled in the future, ad partners such as Google AdSense may use cookies or similar technologies to serve, limit, and measure ads according to their own policies. The site should not display advertising until the production privacy policy reflects the live setup.',
-        'If the site later introduces additional third-party services such as advertising, email capture, or richer analytics, this page should be updated so the policy reflects the live production setup. For questions, corrections, or privacy-related concerns, the public repository issue tracker is currently the clearest contact route.'
+        'The site uses Google AdSense to request and display advertising. Third-party vendors, including Google, may use cookies or similar technologies to serve ads based on a user’s prior visits to this website or to other websites. Google’s use of advertising cookies enables Google and its partners to serve ads to visitors based on visits to this site and other sites on the Internet.',
+        'Users may opt out of personalized advertising by visiting Google Ads Settings at https://www.google.com/settings/ads. Visitors may also learn more about third-party advertising choices at https://www.aboutads.info. If additional advertising vendors or ad networks are used, this policy should be updated with the relevant vendor information and opt-out links.',
+        'If the site later introduces additional third-party services such as email capture, account features, or richer analytics, this page should be updated so the policy reflects the live production setup. For questions, corrections, or privacy-related concerns, the public repository issue tracker and contact email are the clearest contact routes.'
       ],
     },
     terms: {
@@ -133,14 +134,15 @@ export const trustPageCopy: Record<
         'Objects are selected for recognizability, usefulness, and prompt value. The pool favors everyday items, foods, animals, classroom materials, office objects, household items, funny props, and nature references because those categories are easy to explain, easy to draw, and easy to reuse in group activities. When a page needs a narrower context, examples are chosen to match the intent instead of being randomly copied from a generic list.',
         'Images and visual metadata are reviewed as product assets, not decoration. The preferred image should clearly represent the object, avoid misleading scenes, load quickly, and include descriptive alt text. When a real photo is not a good fit, the fallback should still be honest and useful rather than pretending to be a high-quality image reference.',
         'Multilingual content is written to match the search intent of each language version, not merely swapped word by word. Japanese pages can emphasize common Japanese search phrasing, Chinese pages can explain classroom or creative use in natural Chinese, and English pages can target drawing, games, and brainstorming workflows. The goal is to reduce thin-content risk by giving each page a clear reason to exist.',
-        'Analytics are used to improve usefulness, not to inflate vanity metrics. Google Analytics 4 and Search Console help identify pages with high bounce rates, weak engagement, missing intent coverage, or promising queries such as random object to draw and food randomizer. Those signals guide updates to object pools, page copy, internal links, and generator defaults.'
+        'Analytics are used to improve usefulness, not to inflate vanity metrics. Google Analytics 4 and Search Console help identify pages with high bounce rates, weak engagement, missing intent coverage, or promising queries such as random object to draw and food randomizer. Those signals guide updates to object pools, page copy, internal links, and generator defaults.',
+        'Advertising does not decide which objects, examples, FAQs, or internal links appear on the site. Ad placements should stay clearly separated from generator controls, copy buttons, navigation links, and result cards so visitors are not pushed into accidental clicks. Sponsored areas should be treated as advertising, while editorial and utility content should remain useful on its own.'
       ],
     },
     ui: {
       home: 'Home',
-      about: 'このサイトについて',
-      privacy: 'プライバシー',
-      terms: '利用規約',
+      about: 'About',
+      privacy: 'Privacy',
+      terms: 'Terms',
       contact: 'Contact',
       editorialPolicy: 'Editorial Policy',
       legal: 'Trust & Legal',
@@ -214,8 +216,9 @@ export const trustPageCopy: Record<
         'Random Object Generator 是一个轻量级公开工具，核心生成器不需要注册，也不会为了展示随机结果而主动索取不必要的个人信息。',
         '和大多数网站一样，为了保障稳定性、改进体验以及了解页面使用情况，系统可能会记录基础技术数据，例如服务日志、页面请求、设备与浏览器信息、来源信息以及匿名化的交互事件。当前站点部署在 Cloudflare 环境中，并使用 Google Analytics 4 做基础访问与行为统计。',
         '这些技术数据的用途主要是运维和改进产品，例如判断页面是否正常工作、哪些页面点击率更高、哪些生成器被真正使用，以及哪些专题页需要继续优化，而不是建立用户画像或要求用户先交出身份信息。',
-        '如果未来站点启用广告，Google AdSense 等广告合作方可能会按照其政策使用 Cookie 或类似技术来投放、限制和衡量广告。只有当线上隐私政策能准确反映实际广告配置时，才应该开启相关功能。',
-        '如果未来站点接入更多第三方服务，例如广告、邮件订阅或更复杂的统计方案，本页面应同步更新为真实运行状态。若你认为隐私描述与实际行为不一致，当前推荐通过公开 issue 入口提出反馈。'
+        '本站已接入 Google AdSense 用于请求和展示广告。包括 Google 在内的第三方供应商可能会使用 Cookie 或类似技术，根据用户此前访问本站或其他网站的情况投放广告。Google 使用广告 Cookie 后，可以让 Google 及其合作伙伴基于用户对本站和互联网上其他网站的访问情况展示广告。',
+        '用户可以访问 Google Ads Settings（https://www.google.com/settings/ads）退出个性化广告。访客也可以通过 https://www.aboutads.info 了解更多第三方广告选择。如果本站未来使用更多广告供应商或广告网络，本政策应继续补充相关供应商信息和退出链接。',
+        '如果未来站点接入更多第三方服务，例如邮件订阅、账号功能或更复杂的统计方案，本页面应同步更新为真实运行状态。若你认为隐私描述与实际行为不一致，当前推荐通过公开 issue 或联系邮箱提出反馈。'
       ],
     },
     terms: {
@@ -253,7 +256,8 @@ export const trustPageCopy: Record<
         '物品选择优先考虑可识别性、实用性和提示价值。对象库会优先覆盖日常物品、食物、动物、教室用品、办公用品、家庭用品、搞笑道具和自然元素，因为这些类别更容易解释、绘制和在集体活动中复用。当某个页面服务更明确的搜索意图时，示例会按照场景挑选，而不是从通用清单里机械替换几个词。',
         '图片与视觉元数据被当作产品资产处理，而不是装饰。理想图片应该清楚展示物品本身，不误导用户，加载速度足够快，并配有准确的 alt 文本。如果某个真实图片不适合用作物品参考，我们宁可使用诚实、清楚的备用展示，也不会用不相干的图片冒充高质量素材。',
         '多语言内容不会只做逐字替换。日文页面会尽量贴近日语用户实际搜索表达，中文页面会用自然中文解释课堂和创作场景，英文页面会重点覆盖 drawing prompts、games 和 brainstorming 等工作流。这样做的目标是让每个页面都有独立存在的价值，而不是制造薄内容。',
-        '统计数据用于改进实用性，而不是追求表面数字。Google Analytics 4 和 Search Console 会帮助我们识别跳出率高、互动不足、搜索意图覆盖不完整或正在出现机会的页面，例如 random object to draw、食べ物 ランダム、随机物品生成器等查询。后续更新会围绕对象库、页面文案、内链结构和默认交互配置展开。'
+        '统计数据用于改进实用性，而不是追求表面数字。Google Analytics 4 和 Search Console 会帮助我们识别跳出率高、互动不足、搜索意图覆盖不完整或正在出现机会的页面，例如 random object to draw、食べ物 ランダム、随机物品生成器等查询。后续更新会围绕对象库、页面文案、内链结构和默认交互配置展开。',
+        '广告不会决定网站展示哪些物品、示例、FAQ 或站内链接。广告位应该和生成器控件、复制按钮、导航链接、结果卡片保持清晰区分，避免诱导或造成误点。带有商业属性的区域应被当作广告处理，而编辑内容和工具功能本身仍应独立有用。'
       ],
     },
     ui: {
@@ -334,8 +338,9 @@ export const trustPageCopy: Record<
         'Random Object Generator は、ログイン不要で使える軽量な公開ツールです。コア機能の利用にあたり、不要な個人情報の提出は求めません。',
         '多くのウェブサイトと同様に、安定運用、使い勝手の改善、どのページが使われているかの把握のために、基本的な技術データが記録される場合があります。これには、サーバーログ、ページリクエスト、端末やブラウザ情報、参照元、匿名の利用イベントなどが含まれます。現在のサイトは Cloudflare 環境で配信され、Google Analytics 4 を用いて基礎的なアクセス計測を行っています。',
         'こうしたデータ処理の目的は、サービスを安定させ、役に立つページを判断し、ジェネレーターや導線の改善点を見つけることです。ユーザーアカウントを作らせたり、個人プロフィールを構築したりするための設計ではありません。',
-        '将来広告を導入する場合、Google AdSense などの広告パートナーが Cookie または類似技術を用いて広告の配信、制御、測定を行う可能性があります。実際の広告構成がこのポリシーに反映されてから有効化するべきです。',
-        '将来、広告やメール購読、追加の解析ツールなど別の第三者サービスを導入する場合は、このページを更新して実際の本番構成と一致させるべきです。説明と実態に差があると思われる場合は、公開 issue を通じて知らせてください。'
+        'このサイトでは、広告のリクエストと表示のために Google AdSense を利用しています。Google を含む第三者ベンダーは、ユーザーがこのサイトまたは他のウェブサイトを過去に訪問した情報に基づいて広告を配信するため、Cookie または類似技術を使用する場合があります。Google の広告 Cookie により、Google とそのパートナーは、このサイトおよびインターネット上の他サイトへの訪問に基づく広告を表示できます。',
+        'ユーザーは Google Ads Settings（https://www.google.com/settings/ads）でパーソナライズ広告を無効にできます。また、https://www.aboutads.info で第三者広告に関する選択肢を確認できます。今後、追加の広告ベンダーまたは広告ネットワークを使用する場合は、関連するベンダー情報とオプトアウト方法をこのポリシーに追記します。',
+        '将来、メール購読、アカウント機能、追加の解析ツールなど別の第三者サービスを導入する場合は、このページを更新して実際の本番構成と一致させるべきです。説明と実態に差があると思われる場合は、公開 issue または連絡先メールを通じて知らせてください。'
       ],
     },
     terms: {
@@ -373,7 +378,8 @@ export const trustPageCopy: Record<
         'オブジェクトは、認識しやすさ、実用性、お題としての使いやすさを基準に選びます。日用品、食べ物、動物、教室用品、オフィス用品、家庭用品、面白い小物、自然物を優先するのは、説明しやすく、描きやすく、複数人の活動でも再利用しやすいからです。',
         '画像とメタデータは、単なる装飾ではなくプロダクトの一部として扱います。理想的な画像は対象物を明確に示し、誤解を招かず、読み込みが速く、説明的な alt テキストを持つものです。実物写真が目的に合わない場合は、無関係な画像を使うより、正直で分かりやすい代替表現を選びます。',
         '多言語コンテンツは機械的な置換ではなく、各言語の検索意図に合わせて調整します。日本語ページでは日本語の検索表現を意識し、中国語ページでは授業や創作での使い方を自然に説明し、英語ページでは drawing prompts、games、brainstorming といった具体的なワークフローを重視します。',
-        'Google Analytics 4 と Search Console のデータは、ページの改善に使います。直帰率が高いページ、検索表示はあるがクリックされないページ、または random object to draw や 食べ物 ランダム のように伸び始めている検索語を確認し、オブジェクトプール、本文、内部リンク、既定の生成設定を見直します。'
+        'Google Analytics 4 と Search Console のデータは、ページの改善に使います。直帰率が高いページ、検索表示はあるがクリックされないページ、または random object to draw や 食べ物 ランダム のように伸び始めている検索語を確認し、オブジェクトプール、本文、内部リンク、既定の生成設定を見直します。',
+        '広告は、このサイトに表示されるオブジェクト、例、FAQ、内部リンクを決めるものではありません。広告枠は、生成ボタン、コピー操作、ナビゲーション、結果カードと明確に分け、誤クリックを誘発しない配置にするべきです。広告領域は広告として扱い、編集コンテンツとツール機能はそれ自体で役に立つ状態を保ちます。'
       ],
     },
     ui: {

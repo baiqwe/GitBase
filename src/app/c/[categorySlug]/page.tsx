@@ -18,6 +18,11 @@ type CategoryPageProps = {
 }
 
 const intentLinkPriority = [
+  'random-animal-to-draw',
+  'random-food-picker',
+  'random-object-picker',
+  'random-esl-vocabulary-generator',
+  'random-charades-generator',
   'animal-prompt-generator',
   'random-object-list-generator',
   'random-object-to-draw',

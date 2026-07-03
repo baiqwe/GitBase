@@ -25,6 +25,9 @@ export const metadata: Metadata = {
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   manifest: '/site.webmanifest',
+  other: {
+    'google-adsense-account': 'ca-pub-2499950673294937',
+  },
 }
 
 interface RootLayoutProps {
@@ -38,6 +41,12 @@ export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang={currentLocale}>
       <body>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2499950673294937"
+          crossOrigin="anonymous"
+          strategy="beforeInteractive"
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-X4MF66BLMK"
           strategy="afterInteractive"

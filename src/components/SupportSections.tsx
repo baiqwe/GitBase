@@ -1,8 +1,8 @@
-import Link from 'next/link'
 import Image from 'next/image'
 import type { Locale } from '@/lib/i18n-config'
 import { getLocalizedPath } from '@/lib/seo'
 import type { LocalizedObject } from '@/lib/objects'
+import { TrackedLink } from '@/components/TrackedLink'
 
 type EditorialLink = {
   href: string
@@ -111,14 +111,16 @@ export function EditorialLinksSection({
       <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{linksLabel[locale]}</h2>
       <div className="mt-6 grid gap-4 md:grid-cols-2">
         {links.map((link) => (
-          <Link
+          <TrackedLink
             key={link.href}
             href={getLocalizedPath(locale, link.href)}
+            trackingArea="editorial_links"
+            trackingLabel={link.label}
             className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5 transition hover:-translate-y-0.5 hover:border-slate-300"
           >
             <h3 className="text-xl text-slate-950">{link.label}</h3>
             <p className="mt-2 text-sm leading-6 text-slate-600">{link.description}</p>
-          </Link>
+          </TrackedLink>
         ))}
       </div>
     </section>
