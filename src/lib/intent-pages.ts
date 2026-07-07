@@ -65,6 +65,9 @@ export type IntentPageConfig = {
     | 'random-object-picker'
     | 'random-esl-vocabulary-generator'
     | 'random-charades-generator'
+    | 'random-object-games'
+    | 'classroom-random-object-activities'
+    | 'esl-object-vocabulary-games'
   categories: string[]
   defaultVisualCount: number
   exampleObjectIds?: string[]
@@ -80,6 +83,9 @@ export type LocalizedIntentLink = {
 
 export const expandedIntentPageSlugs = [
   'random-object-picker',
+  'random-object-games',
+  'classroom-random-object-activities',
+  'esl-object-vocabulary-games',
   'random-animal-to-draw',
   'random-food-picker',
   'random-esl-vocabulary-generator',
@@ -3594,6 +3600,9 @@ type GrowthIntentSeed = {
     | 'random-object-picker'
     | 'random-esl-vocabulary-generator'
     | 'random-charades-generator'
+    | 'random-object-games'
+    | 'classroom-random-object-activities'
+    | 'esl-object-vocabulary-games'
   >
   categories: string[]
   defaultVisualCount: number
@@ -3602,6 +3611,318 @@ type GrowthIntentSeed = {
 }
 
 const growthIntentSeeds: GrowthIntentSeed[] = [
+  {
+    slug: 'random-object-games',
+    categories: ['animals', 'household', 'food', 'funny'],
+    defaultVisualCount: 8,
+    exampleObjectIds: ['animal-fox', 'house-key', 'food-pizza', 'funny-rubber-duck', 'house-clock', 'food-apple'],
+    i18n: {
+      en: {
+        heroEyebrow: 'Game resource',
+        title: 'Random Object Games',
+        description:
+          'Use random objects to run quick party games, classroom warmups, drawing rounds, charades, storytelling, and team icebreakers.',
+        visualTitle: 'Pick objects for a game round',
+        visualDescription:
+          'Generate concrete objects that are easy to describe, draw, act out, compare, or fold into a short game prompt.',
+        bulkTitle: 'Build a game-ready object list',
+        bulkDescription:
+          'Create a reusable prompt list for multiple rounds, teams, worksheets, or a facilitator script.',
+        seoTitle: 'Random Object Games for Classrooms, Parties, and Icebreakers',
+        seoDescription:
+          'Run random object games with visual prompt cards, copyable lists, activity ideas, FAQ, and practical game formats for classrooms and groups.',
+        exampleTitle: 'Game-ready object examples',
+        exampleLead:
+          'These objects are concrete enough for guessing, drawing, describing, sorting, and storytelling games, which makes the page useful beyond a single random click.',
+        primaryPhrase: 'random object games',
+        audience: 'teachers, party hosts, team facilitators, parents, and anyone who needs a fast object-based activity',
+        workflow: 'choose a game format, generate a short object list, remove any poor-fit result, then use the remaining cards as rounds or team prompts',
+        featureLead: 'The page turns random objects into repeatable game formats instead of leaving visitors with a raw list.',
+        categoryLead:
+          'Animals, household items, foods, and funny objects give clearer actions, comparisons, and stories than abstract prompts.',
+        useCasesTitle: 'Object games you can run from this page',
+        useCases: ['Object charades', 'Describe and guess', 'Fast drawing rounds', 'Story chain games', 'Team icebreakers', 'Sorting challenges'],
+        faqs: [
+          { question: 'How do you play a random object game?', answer: 'Pick a format first, such as describe-and-guess, drawing, charades, or story chain. Then generate objects and use each result as one round.' },
+          { question: 'Why use objects instead of general words?', answer: 'Objects are concrete, easier to picture, and easier to turn into actions or descriptions, so games move faster.' },
+          { question: 'Can I use this for a classroom?', answer: 'Yes. Generate a short list, assign one object per student or team, and use the cards for speaking, drawing, or vocabulary review.' },
+          { question: 'Should I keep every generated result?', answer: 'No. For real games, it is normal to remove results that do not fit the age group, room, or activity rules.' },
+        ],
+      },
+      zh: {
+        heroEyebrow: '游戏资源',
+        title: '随机物品游戏',
+        description:
+          '用随机物品快速组织聚会游戏、课堂热身、绘画回合、你演我猜、故事接龙和团队破冰。',
+        visualTitle: '抽取一轮游戏物品',
+        visualDescription:
+          '生成具体、容易描述、容易画、容易表演和容易比较的物品，让活动更快开始。',
+        bulkTitle: '生成一组可直接游戏的物品清单',
+        bulkDescription:
+          '为多轮游戏、小组题卡、课件或主持人流程准备可复制的物品列表。',
+        seoTitle: '随机物品游戏：课堂、聚会和破冰活动题库',
+        seoDescription:
+          '用随机物品组织课堂、聚会和破冰活动，支持视觉卡片、可复制清单、活动玩法和常见问题。',
+        exampleTitle: '适合游戏的物品示例',
+        exampleLead:
+          '这些物品足够具体，适合猜词、绘画、描述、分类和故事接龙，让页面不只是一个随机按钮。',
+        primaryPhrase: '随机物品游戏',
+        audience: '老师、聚会主持人、团队引导师、家长，以及需要快速组织物品活动的人',
+        workflow: '先选一种游戏玩法，再生成短清单，删掉不合适结果，最后把剩下卡片作为回合或小组题目',
+        featureLead: '这个页面会把随机物品转化成可重复的游戏流程，而不是只给用户一串原始词。',
+        categoryLead:
+          '动物、家居、食物和搞怪物品更容易产生动作、比较和故事，比抽象提示更适合游戏。',
+        useCasesTitle: '这个页面可以组织的物品游戏',
+        useCases: ['物品你演我猜', '描述并猜测', '快速绘画回合', '故事接龙', '团队破冰', '分类挑战'],
+        faqs: [
+          { question: '随机物品游戏怎么玩？', answer: '先确定玩法，比如描述猜测、绘画、你演我猜或故事接龙，再生成物品，把每个结果当成一个回合。' },
+          { question: '为什么用物品而不是普通词语？', answer: '物品更具体、更容易想象，也更容易转化成动作和描述，活动节奏会更顺。' },
+          { question: '课堂可以用吗？', answer: '可以。生成短清单后给每个学生或小组分配一个物品，用来练口语、绘画或词汇复习。' },
+          { question: '每个生成结果都要保留吗？', answer: '不用。真实活动里，删掉不适合年龄、场地或规则的结果是正常流程。' },
+        ],
+      },
+      ja: {
+        heroEyebrow: 'ゲーム用リソース',
+        title: 'ランダムオブジェクトゲーム',
+        description:
+          'ランダムなオブジェクトを使って、授業導入、パーティー、描画、ジェスチャー、物語づくり、チーム交流をすぐ始められます。',
+        visualTitle: 'ゲーム用の対象を選ぶ',
+        visualDescription:
+          '説明しやすく、描きやすく、演じやすく、比べやすい具体物を生成します。',
+        bulkTitle: 'ゲーム用オブジェクトリストを作る',
+        bulkDescription:
+          '複数ラウンド、チーム、ワークシート、進行台本に使える一覧を作成できます。',
+        seoTitle: 'ランダムオブジェクトゲーム',
+        seoDescription:
+          '授業、パーティー、アイスブレイク向けのランダムオブジェクトゲーム。カード表示、一覧コピー、活動案、FAQ 付き。',
+        exampleTitle: 'ゲームに使いやすい例',
+        exampleLead:
+          '当てる、描く、説明する、分類する、物語に入れるなどの活動に使いやすい具体物を例として示しています。',
+        primaryPhrase: 'ランダムオブジェクトゲーム',
+        audience: '先生、パーティー主催者、進行役、保護者、短い活動を作りたい人',
+        workflow: 'ゲーム形式を決め、短いリストを生成し、合わない結果を外して、残りをラウンドやチームのお題にします',
+        featureLead: '単なるランダム一覧ではなく、活動として使える形に整理したページです。',
+        categoryLead:
+          '動物、日用品、食べ物、おもしろアイテムは、動作、比較、物語にしやすいカテゴリです。',
+        useCasesTitle: 'このページでできるゲーム',
+        useCases: ['オブジェクトジェスチャー', '説明して当てる', '短時間スケッチ', '物語リレー', 'チーム交流', '分類チャレンジ'],
+        faqs: [
+          { question: 'ランダムオブジェクトゲームはどう遊びますか？', answer: '説明して当てる、描く、ジェスチャー、物語リレーなどの形式を決め、生成した対象を一ラウンドのお題にします。' },
+          { question: 'なぜ普通の単語ではなくオブジェクトを使うのですか？', answer: '具体物は想像しやすく、動作や説明に変えやすいため、ゲームが止まりにくくなります。' },
+          { question: '授業でも使えますか？', answer: '使えます。短い一覧を作って、生徒やチームに一つずつ割り当てると、会話、描画、語彙復習に使えます。' },
+          { question: '生成結果は全部使うべきですか？', answer: 'いいえ。年齢、場所、ルールに合わない結果は外して使うのが自然です。' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'classroom-random-object-activities',
+    categories: ['household', 'animals', 'food', 'nature'],
+    defaultVisualCount: 10,
+    exampleObjectIds: ['house-lamp', 'animal-rabbit', 'food-apple', 'nature-pinecone', 'house-chair', 'nature-shell'],
+    i18n: {
+      en: {
+        heroEyebrow: 'Classroom activities',
+        title: 'Classroom Random Object Activities',
+        description:
+          'Plan quick classroom activities with random object prompts for vocabulary, drawing, speaking, writing, sorting, and group warmups.',
+        visualTitle: 'Pick a classroom object prompt',
+        visualDescription:
+          'Generate classroom-safe prompts that can become a speaking turn, drawing cue, sentence starter, or group challenge.',
+        bulkTitle: 'Build a classroom prompt set',
+        bulkDescription:
+          'Create a copyable list for stations, worksheets, small groups, early finishers, or a full warmup routine.',
+        seoTitle: 'Classroom Random Object Activities and Prompt Ideas',
+        seoDescription:
+          'Use random object prompts for classroom activities, vocabulary practice, drawing, writing, sorting, group warmups, and lesson starters.',
+        exampleTitle: 'Classroom-friendly object examples',
+        exampleLead:
+          'These objects are familiar enough for students to describe, sort, draw, compare, or place into a sentence without long setup.',
+        primaryPhrase: 'classroom random object activities',
+        audience: 'teachers, tutors, homeschool parents, camp leaders, and facilitators who need low-prep classroom prompts',
+        workflow: 'choose the activity goal, generate a list, assign prompts to students or groups, and let students explain, draw, sort, or write with the object',
+        featureLead: 'The page is organized around classroom use, not just a generic random generator.',
+        categoryLead:
+          'Household, animal, food, and nature objects are familiar enough for mixed-age classroom activities.',
+        useCasesTitle: 'Classroom activities this page supports',
+        useCases: ['Vocabulary review', 'Speaking warmups', 'Quick writes', 'Drawing starters', 'Sorting games', 'Exit tickets'],
+        faqs: [
+          { question: 'How can teachers use random objects in class?', answer: 'Use each object as a speaking prompt, drawing subject, sentence starter, sorting card, or group discussion cue.' },
+          { question: 'Is this useful for low-prep lessons?', answer: 'Yes. The page gives fast concrete prompts that can be adapted without printing custom materials.' },
+          { question: 'Can I use it with younger students?', answer: 'Yes, but keep the prompt count low and remove results that do not fit the age group or classroom context.' },
+          { question: 'Can it support writing activities?', answer: 'Yes. Ask students to write a sentence, short description, story detail, or comparison using the generated object.' },
+        ],
+      },
+      zh: {
+        heroEyebrow: '课堂活动',
+        title: '课堂随机物品活动',
+        description:
+          '用随机物品快速设计词汇、绘画、口语、写作、分类和小组热身活动。',
+        visualTitle: '抽取一个课堂物品提示',
+        visualDescription:
+          '生成适合课堂的具体物品，可转化成口语回合、绘画题、造句开头或小组挑战。',
+        bulkTitle: '生成一组课堂提示',
+        bulkDescription:
+          '为学习站、工作纸、小组活动、提前完成任务或完整热身流程准备可复制清单。',
+        seoTitle: '课堂随机物品活动：词汇、口语、绘画和写作提示',
+        seoDescription:
+          '用随机物品组织课堂活动，适合词汇复习、口语热身、绘画、写作、分类游戏和小组任务。',
+        exampleTitle: '适合课堂的物品示例',
+        exampleLead:
+          '这些物品足够熟悉，学生可以直接描述、分类、绘画、比较或放进句子里。',
+        primaryPhrase: '课堂随机物品活动',
+        audience: '老师、家教、家庭教育家长、营地负责人和需要低准备课堂提示的人',
+        workflow: '先确定活动目标，生成清单，把物品分配给学生或小组，再让他们描述、绘画、分类或写作',
+        featureLead: '这个页面围绕课堂使用组织，而不是泛泛的随机生成器。',
+        categoryLead:
+          '家居、动物、食物和自然物品更适合不同年龄段课堂活动，因为学生更容易理解。',
+        useCasesTitle: '这个页面支持的课堂活动',
+        useCases: ['词汇复习', '口语热身', '快速写作', '绘画开场', '分类游戏', '退出票'],
+        faqs: [
+          { question: '老师怎么在课堂上用随机物品？', answer: '可以把每个物品当作口语提示、绘画对象、造句开头、分类卡片或小组讨论题。' },
+          { question: '适合低准备课程吗？', answer: '适合。页面提供具体提示，不需要提前制作复杂材料。' },
+          { question: '低龄学生能用吗？', answer: '可以，但建议减少提示数量，并删掉不适合年龄或课堂场景的结果。' },
+          { question: '能支持写作活动吗？', answer: '可以。学生可以围绕生成物品写一句话、短描述、故事细节或比较句。' },
+        ],
+      },
+      ja: {
+        heroEyebrow: '授業アクティビティ',
+        title: '授業向けランダムオブジェクト活動',
+        description:
+          '語彙、描画、会話、作文、分類、小グループ活動に使えるランダムオブジェクトお題を作れます。',
+        visualTitle: '授業用のお題を一つ選ぶ',
+        visualDescription:
+          '会話、描画、文づくり、グループ課題に変えやすい具体物を生成します。',
+        bulkTitle: '授業用プロンプトセットを作る',
+        bulkDescription:
+          'ステーション活動、ワークシート、小グループ、早く終わった生徒、導入活動に使える一覧を作れます。',
+        seoTitle: '授業向けランダムオブジェクト活動',
+        seoDescription:
+          'ランダムオブジェクトを使った授業活動。語彙、会話、描画、作文、分類、導入活動に使えます。',
+        exampleTitle: '授業で使いやすい例',
+        exampleLead:
+          '生徒が説明、分類、描画、比較、作文に使いやすい身近な対象を例として示しています。',
+        primaryPhrase: '授業向けランダムオブジェクト活動',
+        audience: '先生、チューター、家庭学習の保護者、キャンプリーダー、準備の少ない活動が必要な人',
+        workflow: '活動目的を決め、一覧を生成し、生徒やグループに割り当て、説明、描画、分類、作文に使います',
+        featureLead: '汎用ジェネレーターではなく、授業での使い方を中心に整理しています。',
+        categoryLead:
+          '日用品、動物、食べ物、自然物は、幅広い年齢の授業で扱いやすいカテゴリです。',
+        useCasesTitle: 'このページでできる授業活動',
+        useCases: ['語彙復習', '会話導入', '短い作文', '描画導入', '分類ゲーム', '終了チケット'],
+        faqs: [
+          { question: '授業でランダムオブジェクトをどう使えますか？', answer: '会話のお題、描画対象、文の始まり、分類カード、グループ討論のきっかけとして使えます。' },
+          { question: '準備が少ない授業に向いていますか？', answer: 'はい。具体的なお題をすぐ出せるため、複雑な教材を作らなくても使えます。' },
+          { question: '低学年でも使えますか？', answer: '使えますが、生成数を少なめにし、年齢や教室に合わない結果は外してください。' },
+          { question: '作文にも使えますか？', answer: 'はい。生成された対象を使って文、短い説明、物語の一部、比較文を書けます。' },
+        ],
+      },
+    },
+  },
+  {
+    slug: 'esl-object-vocabulary-games',
+    categories: ['household', 'food', 'animals', 'nature'],
+    defaultVisualCount: 8,
+    exampleObjectIds: ['food-banana', 'house-key', 'animal-fox', 'nature-shell', 'house-lamp', 'food-apple'],
+    i18n: {
+      en: {
+        heroEyebrow: 'ESL vocabulary games',
+        title: 'ESL Object Vocabulary Games',
+        description:
+          'Use random object cards for ESL vocabulary games, speaking practice, description drills, guessing rounds, and classroom warmups.',
+        visualTitle: 'Pick an ESL object card',
+        visualDescription:
+          'Generate familiar objects that learners can name, describe, compare, spell, sort, or act out in English.',
+        bulkTitle: 'Build an ESL vocabulary list',
+        bulkDescription:
+          'Create a copyable set for vocabulary review, pair work, speaking stations, or a no-prep class game.',
+        seoTitle: 'ESL Object Vocabulary Games With Random Object Cards',
+        seoDescription:
+          'Practice ESL object vocabulary with random object cards, copyable lists, speaking games, description drills, guessing rounds, and classroom ideas.',
+        exampleTitle: 'ESL-friendly object examples',
+        exampleLead:
+          'These objects are common enough for learners to name, describe, spell, compare, and use in short speaking activities.',
+        primaryPhrase: 'ESL object vocabulary games',
+        audience: 'ESL teachers, tutors, conversation club hosts, homeschool parents, and learners practicing everyday object vocabulary',
+        workflow: 'generate a small set, model one answer, then ask learners to name, describe, compare, spell, or act out each object',
+        featureLead: 'The page turns object cards into language practice instead of showing an unstructured word list.',
+        categoryLead:
+          'Household, food, animal, and nature prompts are strong ESL categories because they are visual, concrete, and easy to describe.',
+        useCasesTitle: 'ESL games and drills on this page',
+        useCases: ['Name the object', 'Describe and guess', 'Adjective practice', 'Spelling relay', 'Category sorting', 'Act it out'],
+        faqs: [
+          { question: 'How do random objects help ESL learners?', answer: 'Concrete objects give learners something visible and familiar to name, describe, compare, and use in sentences.' },
+          { question: 'What level is this best for?', answer: 'It works best for beginner to intermediate learners, but advanced groups can use the cards for timed speaking and storytelling.' },
+          { question: 'Can I use this without preparing materials?', answer: 'Yes. Generate a small list on screen and run a speaking, spelling, sorting, or guessing round immediately.' },
+          { question: 'Should I translate every object?', answer: 'Not always. For vocabulary practice, it is often better to model the English word, add one sentence, and repeat it in a short activity.' },
+        ],
+      },
+      zh: {
+        heroEyebrow: 'ESL 词汇游戏',
+        title: 'ESL 物品词汇游戏',
+        description:
+          '用随机物品卡片组织 ESL 词汇游戏、口语练习、描述训练、猜词回合和课堂热身。',
+        visualTitle: '抽一张 ESL 物品卡',
+        visualDescription:
+          '生成学习者能命名、描述、比较、拼写、分类或表演的熟悉物品。',
+        bulkTitle: '生成一组 ESL 词汇清单',
+        bulkDescription:
+          '为词汇复习、两人练习、口语学习站或零准备课堂游戏准备可复制清单。',
+        seoTitle: 'ESL 物品词汇游戏：随机物品卡片和口语练习',
+        seoDescription:
+          '用随机物品卡片练习 ESL 物品词汇，适合口语游戏、描述训练、猜词回合、拼写和课堂热身。',
+        exampleTitle: '适合 ESL 的物品示例',
+        exampleLead:
+          '这些物品足够常见，学习者可以命名、描述、拼写、比较，并用于短口语活动。',
+        primaryPhrase: 'ESL 物品词汇游戏',
+        audience: 'ESL 老师、家教、会话俱乐部主持人、家庭教育家长，以及练习日常物品词汇的学习者',
+        workflow: '先生成小清单，示范一个回答，再让学习者围绕每个物品命名、描述、比较、拼写或表演',
+        featureLead: '这个页面会把物品卡片变成语言练习，而不是无结构词表。',
+        categoryLead:
+          '家居、食物、动物和自然物品适合 ESL，因为它们可视、具体、容易描述。',
+        useCasesTitle: '这个页面支持的 ESL 游戏和练习',
+        useCases: ['说出物品名', '描述并猜测', '形容词练习', '拼写接力', '分类游戏', '动作表演'],
+        faqs: [
+          { question: '随机物品为什么适合 ESL？', answer: '具体物品能让学习者围绕可见、熟悉的对象命名、描述、比较和造句。' },
+          { question: '适合什么水平？', answer: '最适合初级到中级学习者，高阶学习者也可以用来做限时口语和故事练习。' },
+          { question: '不备课也能用吗？', answer: '可以。直接在屏幕上生成小清单，就能开始口语、拼写、分类或猜词回合。' },
+          { question: '每个物品都要翻译吗？', answer: '不一定。词汇练习里，通常先示范英文词，再加一个句子，并通过短活动重复会更有效。' },
+        ],
+      },
+      ja: {
+        heroEyebrow: 'ESL 語彙ゲーム',
+        title: 'ESL オブジェクト語彙ゲーム',
+        description:
+          'ランダムオブジェクトカードを使って、ESL 語彙、会話、説明、推測、授業導入を練習できます。',
+        visualTitle: 'ESL 用カードを一つ選ぶ',
+        visualDescription:
+          '名前を言う、説明する、比べる、つづりを言う、分類する、演じることができる身近な対象を生成します。',
+        bulkTitle: 'ESL 語彙リストを作る',
+        bulkDescription:
+          '語彙復習、ペアワーク、会話ステーション、準備なしゲームに使える一覧を作れます。',
+        seoTitle: 'ESL オブジェクト語彙ゲーム',
+        seoDescription:
+          'ランダムオブジェクトカードで ESL 語彙を練習。会話、説明、推測、スペリング、分類、授業導入に使えます。',
+        exampleTitle: 'ESL に使いやすい例',
+        exampleLead:
+          '名前、説明、スペリング、比較、短い発話に使いやすい身近な対象を例として示しています。',
+        primaryPhrase: 'ESL オブジェクト語彙ゲーム',
+        audience: 'ESL の先生、チューター、会話クラブ主催者、家庭学習の保護者、日常語彙を練習する学習者',
+        workflow: '小さなリストを生成し、一つ答えを見せてから、名前、説明、比較、スペリング、ジェスチャーで練習します',
+        featureLead: '単なる単語リストではなく、カードを言語練習に変えるページです。',
+        categoryLead:
+          '日用品、食べ物、動物、自然物は、視覚的で具体的なため ESL に向いています。',
+        useCasesTitle: 'このページでできる ESL ゲーム',
+        useCases: ['名前を言う', '説明して当てる', '形容詞練習', 'スペリングリレー', '分類ゲーム', '演じる'],
+        faqs: [
+          { question: 'ランダムオブジェクトは ESL にどう役立ちますか？', answer: '具体物は、名前、説明、比較、文づくりの対象として分かりやすいためです。' },
+          { question: 'どのレベルに向いていますか？', answer: '初級から中級に特に向いていますが、上級者は制限時間つき会話や物語づくりにも使えます。' },
+          { question: '準備なしで使えますか？', answer: 'はい。画面で短いリストを生成し、会話、スペリング、分類、推測ゲームをすぐ始められます。' },
+          { question: 'すべて翻訳するべきですか？', answer: '必ずしも必要ありません。英語の単語と一文を見せ、短い活動で繰り返す方が効果的なことがあります。' },
+        ],
+      },
+    },
+  },
   {
     slug: 'random-animal-to-draw',
     categories: ['animals', 'nature'],

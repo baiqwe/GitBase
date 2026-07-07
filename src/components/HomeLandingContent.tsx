@@ -97,6 +97,69 @@ const libraryCopy = {
   },
 }
 
+const editorialPromiseCopy = {
+  en: {
+    eyebrow: 'Editorial promise',
+    title: 'What this site is built to do, and what it deliberately avoids.',
+    lead:
+      'Random Object Generator is designed as a lightweight prompt and activity resource. The pages are written for teachers, facilitators, artists, writers, parents, and casual game hosts who need fast concrete prompts, not for medical, financial, legal, safety, or professional advice.',
+    cards: [
+      {
+        title: 'Useful before the click',
+        body: 'Core pages include examples, activity ideas, FAQs, and related links so a visitor can understand the value before using the generator.',
+      },
+      {
+        title: 'Narrow pages have narrow jobs',
+        body: 'Category and intent pages are meant to solve specific tasks such as drawing prompts, ESL vocabulary practice, charades, classroom warmups, and food picker rounds.',
+      },
+      {
+        title: 'Human-maintained structure',
+        body: 'The object library, page groupings, examples, and internal links are reviewed around real use cases instead of publishing endless keyword variants.',
+      },
+    ],
+  },
+  zh: {
+    eyebrow: '编辑承诺',
+    title: '这个网站要解决什么，也明确不做什么。',
+    lead:
+      'Random Object Generator 是一个轻量提示词和活动资源站，面向老师、活动主持人、画画练习者、写作者、家长和游戏组织者。它提供具体灵感，不提供医疗、金融、法律、安全或专业决策建议。',
+    cards: [
+      {
+        title: '点击前也有价值',
+        body: '核心页面会提供示例、活动玩法、FAQ 和相关链接，让用户在点击生成之前就能判断页面是否有用。',
+      },
+      {
+        title: '窄页面解决窄任务',
+        body: '分类页和专题页分别承接绘画提示、ESL 词汇、你演我猜、课堂热身、食物选择等具体需求。',
+      },
+      {
+        title: '结构由真实用途维护',
+        body: '对象库、页面分组、示例和内链会围绕实际使用场景整理，而不是无限发布关键词变体。',
+      },
+    ],
+  },
+  ja: {
+    eyebrow: '編集方針',
+    title: 'このサイトがすること、あえてしないこと。',
+    lead:
+      'Random Object Generator は、先生、進行役、アーティスト、書き手、保護者、ゲーム主催者向けの軽量なお題・活動リソースです。医療、金融、法律、安全、専門的判断の助言を目的としていません。',
+    cards: [
+      {
+        title: 'クリック前から役立つ',
+        body: '主要ページには例、活動案、FAQ、関連リンクを置き、生成する前から用途が分かるようにしています。',
+      },
+      {
+        title: '狭いページには狭い役割',
+        body: 'カテゴリや意図別ページは、描画、ESL 語彙、ジェスチャー、授業導入、食べ物ピッカーなど特定の用途に合わせています。',
+      },
+      {
+        title: '用途ベースで整理',
+        body: '対象ライブラリ、ページ構成、例、内部リンクは、単なるキーワード展開ではなく実際の使い方を基準に見直します。',
+      },
+    ],
+  },
+}
+
 export function HomeLandingContent({
   locale,
   categories,
@@ -111,6 +174,7 @@ export function HomeLandingContent({
   const ui = trustPageCopy[locale].ui
   const library = libraryCopy[locale]
   const imageCount = sampleItems.filter((item) => Boolean(item.image)).length
+  const editorialPromise = editorialPromiseCopy[locale]
   const exampleCopy = {
     en: {
       title: 'Example objects you can pull from this page',
@@ -188,6 +252,20 @@ export function HomeLandingContent({
                 <p className="mt-2 text-3xl text-slate-950">✓</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{editorialPromise.eyebrow}</p>
+          <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{editorialPromise.title}</h2>
+          <p className="mt-4 max-w-4xl text-base leading-8 text-slate-600">{editorialPromise.lead}</p>
+          <div className="mt-6 grid gap-4 lg:grid-cols-3">
+            {editorialPromise.cards.map((card) => (
+              <div key={card.title} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                <h3 className="text-xl text-slate-950">{card.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-600">{card.body}</p>
+              </div>
+            ))}
           </div>
         </section>
 

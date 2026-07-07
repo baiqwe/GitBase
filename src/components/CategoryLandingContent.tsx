@@ -30,6 +30,12 @@ interface CategoryLandingContentProps {
   }
 }
 
+type CategoryPlaybook = {
+  title: string
+  lead: string
+  cards: Array<{ title: string; body: string; bullets: string[] }>
+}
+
 const howToCopy = {
   en: (categoryName: string) => ({
     heading: trustPageCopy.en.ui.howToUse,
@@ -55,6 +61,147 @@ const howToCopy = {
       '納得いく結果が出るまで更新し、必要なら一括リストをコピーして授業や創作に使います。'
     ],
   }),
+}
+
+const categoryPlaybooks: Record<Locale, Record<string, CategoryPlaybook>> = {
+  en: {
+    animals: {
+      title: 'Ready-to-use animal prompt activities',
+      lead:
+        'These activity patterns make the animal page useful before anyone clicks the generator again. They are written for teachers, facilitators, parents, and artists who need a concrete way to use the results.',
+      cards: [
+        {
+          title: 'Five-minute drawing warmup',
+          body: 'Generate three animals, give everyone one minute to choose, then spend four minutes sketching shape first and detail second.',
+          bullets: ['Best for art class starters', 'Works with one shared result or different results per student', 'Keeps the prompt lightweight enough for beginners'],
+        },
+        {
+          title: 'Animal vocabulary loop',
+          body: 'Use a batch of animals as a speaking loop: name the animal, describe one feature, then compare it with the next card.',
+          bullets: ['Good for ESL warmups', 'Encourages adjectives and comparison words', 'Easy to adapt for younger learners'],
+        },
+        {
+          title: 'Charades or story round',
+          body: 'Pull one animal per round and ask players to act it out, invent a habitat, or add the animal to a shared story.',
+          bullets: ['Good for groups and family games', 'Needs almost no preparation', 'Turns random output into a repeatable activity'],
+        },
+      ],
+    },
+    food: {
+      title: 'Practical ways to use random food prompts',
+      lead:
+        'Food prompts are strongest when they lead to a clear task: choose, describe, draw, compare, or build a playful menu. These patterns make the page useful as a classroom and game resource, not only a picker.',
+      cards: [
+        {
+          title: 'Food picker round',
+          body: 'Generate six foods, remove anything that does not fit your setting, then let the group vote or randomly choose from the remaining list.',
+          bullets: ['Useful for party games and simple choices', 'Keeps unsuitable results out of the final set', 'Works better than a totally open random list'],
+        },
+        {
+          title: 'ESL food description drill',
+          body: 'Ask learners to describe taste, texture, temperature, and occasion for each generated food before revealing the next one.',
+          bullets: ['Builds food vocabulary naturally', 'Creates short speaking turns', 'Works with individual or team answers'],
+        },
+        {
+          title: 'Menu naming challenge',
+          body: 'Generate a food list and ask players to combine two items into a menu name, drawing prompt, or silly restaurant concept.',
+          bullets: ['Good for creative writing', 'Useful for brainstorming sessions', 'Makes the output more original than a raw list'],
+        },
+      ],
+    },
+  },
+  zh: {
+    animals: {
+      title: '可以直接拿来用的动物提示活动',
+      lead:
+        '这些玩法让动物页在点击生成之前就有信息价值。它们面向老师、主持人、家长和画画练习者，重点是把随机动物结果变成可执行活动。',
+      cards: [
+        {
+          title: '五分钟动物速写',
+          body: '先生成三个动物，让参与者用一分钟选择题目，再用四分钟先画轮廓、再补特征。',
+          bullets: ['适合美术课开场', '可以全班共用一个结果，也可以每人抽不同结果', '对新手足够轻量'],
+        },
+        {
+          title: '动物词汇循环',
+          body: '批量生成一组动物，让学生依次说出名称、一个特征，再和下一张卡片进行比较。',
+          bullets: ['适合英语词汇热身', '自然练习形容词和比较句', '低龄学生也容易理解'],
+        },
+        {
+          title: '你演我猜或接龙故事',
+          body: '每轮抽一个动物，让玩家表演、描述栖息地，或把这个动物加入共同创作的故事。',
+          bullets: ['适合小组和家庭游戏', '几乎不需要准备材料', '把随机结果变成可重复活动'],
+        },
+      ],
+    },
+    food: {
+      title: '随机食物提示的实际用法',
+      lead:
+        '食物提示最有价值的地方，是能引出明确任务：选择、描述、绘画、比较，或者设计一个有趣菜单。下面这些玩法能让页面更像资源页，而不是单纯选择器。',
+      cards: [
+        {
+          title: '食物选择回合',
+          body: '先生成六个食物，去掉不适合当前场景的结果，再让小组投票或从剩余列表里随机选择。',
+          bullets: ['适合聚会游戏和轻量选择', '能过滤掉不合适结果', '比完全开放的随机清单更可控'],
+        },
+        {
+          title: 'ESL 食物描述练习',
+          body: '让学习者围绕每个食物描述味道、口感、温度和适合的场景，再进入下一张卡片。',
+          bullets: ['自然积累食物词汇', '每个人都能有短口语输出', '适合个人或小组回答'],
+        },
+        {
+          title: '菜单命名挑战',
+          body: '生成一组食物，让玩家把两个结果组合成菜名、绘画题目或搞怪餐厅概念。',
+          bullets: ['适合创意写作', '也能用于脑暴', '让输出不只是原始词表'],
+        },
+      ],
+    },
+  },
+  ja: {
+    animals: {
+      title: 'そのまま使える動物お題アクティビティ',
+      lead:
+        '生成ボタンを押す前から役立つように、動物カードの使い方を具体化しています。先生、進行役、保護者、スケッチ練習をする人向けです。',
+      cards: [
+        {
+          title: '5分スケッチ導入',
+          body: '動物を三つ生成し、一分で選んでから四分で輪郭と特徴を描きます。',
+          bullets: ['美術授業の導入に向く', '全員同じ結果でも一人ずつ別でも使える', '初心者にも軽い課題になる'],
+        },
+        {
+          title: '動物語彙ループ',
+          body: '動物リストを作り、名前、特徴、次のカードとの違いを順番に話します。',
+          bullets: ['ESL のウォームアップに使える', '形容詞や比較表現を練習できる', '低学年にも説明しやすい'],
+        },
+        {
+          title: 'ジェスチャーまたは物語づくり',
+          body: '一ラウンドにつき一匹を引き、演じる、すみかを考える、共同ストーリーに入れるなどして使います。',
+          bullets: ['グループや家族ゲーム向き', '準備がほとんど不要', 'ランダム結果を活動に変えられる'],
+        },
+      ],
+    },
+    food: {
+      title: 'ランダム食べ物お題の使い方',
+      lead:
+        '食べ物のお題は、選ぶ、説明する、描く、比べる、メニューを作るなどのタスクにつなげると実用性が高まります。',
+      cards: [
+        {
+          title: '食べ物ピッカーラウンド',
+          body: '六つ生成し、場面に合わないものを外してから、投票または再抽選で決めます。',
+          bullets: ['パーティーや軽い選択に使える', '不適切な結果を除外しやすい', '完全ランダムより扱いやすい'],
+        },
+        {
+          title: 'ESL 食べ物説明練習',
+          body: '味、食感、温度、食べる場面を説明してから次のカードへ進みます。',
+          bullets: ['食べ物語彙を自然に増やせる', '短い発話練習になる', '個人でもチームでも使える'],
+        },
+        {
+          title: 'メニュー名チャレンジ',
+          body: '生成した食べ物を二つ組み合わせて、メニュー名、絵のお題、架空レストラン案を作ります。',
+          bullets: ['創作練習に向く', 'ブレインストーミングにも使える', '単なる単語一覧以上の活動になる'],
+        },
+      ],
+    },
+  },
 }
 
 const categoryLibraryCopy = {
@@ -100,6 +247,7 @@ export function CategoryLandingContent({
   const howTo = howToCopy[locale](categoryName)
   const ui = trustPageCopy[locale].ui
   const library = categoryLibraryCopy[locale]
+  const playbook = categoryPlaybooks[locale][currentSlug]
   const imageCount = sampleItems.filter((item) => Boolean(item.image)).length
   const exampleCopy = {
     en: {
@@ -210,6 +358,29 @@ export function CategoryLandingContent({
             </div>
           </div>
         </div>
+
+        {playbook ? (
+          <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.howToLabel}</p>
+            <h2 className="mt-3 text-3xl text-slate-950 md:text-4xl">{playbook.title}</h2>
+            <p className="mt-4 max-w-4xl text-base leading-8 text-slate-600">{playbook.lead}</p>
+            <div className="mt-6 grid gap-4 lg:grid-cols-3">
+              {playbook.cards.map((card) => (
+                <div key={card.title} className="rounded-[1.5rem] border border-slate-200 bg-slate-50 p-5">
+                  <h3 className="text-xl text-slate-950">{card.title}</h3>
+                  <p className="mt-2 text-sm leading-7 text-slate-600">{card.body}</p>
+                  <ul className="mt-4 space-y-2">
+                    {card.bullets.map((bullet) => (
+                      <li key={bullet} className="text-sm leading-6 text-slate-700">
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div className="rounded-[2rem] border border-black/5 bg-white/80 p-8 shadow-[0_18px_60px_rgba(15,23,42,0.06)]">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{ui.howToLabel}</p>

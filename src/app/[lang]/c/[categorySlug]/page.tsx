@@ -20,6 +20,14 @@ type LocalizedCategoryPageProps = {
 }
 
 const intentLinkPriority = [
+  'random-object-games',
+  'classroom-random-object-activities',
+  'esl-object-vocabulary-games',
+  'random-animal-to-draw',
+  'random-food-picker',
+  'random-object-picker',
+  'random-esl-vocabulary-generator',
+  'random-charades-generator',
   'animal-prompt-generator',
   'random-object-list-generator',
   'random-object-to-draw',

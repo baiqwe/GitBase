@@ -18,6 +18,9 @@ type CategoryPageProps = {
 }
 
 const intentLinkPriority = [
+  'random-object-games',
+  'classroom-random-object-activities',
+  'esl-object-vocabulary-games',
   'random-animal-to-draw',
   'random-food-picker',
   'random-object-picker',
